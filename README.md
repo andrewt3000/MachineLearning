@@ -32,11 +32,11 @@ Learning rate (&alpha;) - controls the size of the adjustments made during the t
 if &alpha; is too low, convergance is slow.
 if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
 
-Regularization (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda; if the model is overfitting, you need higher lambda.
+Regularization (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
 
-Underfitting - output doesn't fit the training data well. a.k.a has high bias.  
-Overfitting - output fits training data well, but doesn't generalize well. aka has high variance.  
+Underfitting (high bias) - output doesn't fit the training data well.  
+Overfitting (high variance) - output fits training data well, but doesn't generalize well.  
 
 Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
 
