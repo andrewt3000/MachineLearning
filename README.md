@@ -13,3 +13,15 @@ E - experience
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.
 
+### 
+[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
+
+### Terminology
+Features - measurable property being observed. i.e. the input to a neural network. Feature selection is critical, you must pick features that correlate with output.  
+-example: pixel brightness in image object recognition.  
+-example: square feet for program that predicts house prices.  
+
+Hyperparameters - the model’s parameters in a neural net such as learning rate, and regularization factor.	
+
+Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
+
