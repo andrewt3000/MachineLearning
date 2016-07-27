@@ -31,9 +31,9 @@ Hyperparameters - the model’s parameters in a neural net such as learning rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process.  
 if &alpha; is too low, convergance is slow.
 if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
+The learning rate can be annealed i.e. decayed over time. (step decay, exponential decay)  
 
 Regularization (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
-
 
 Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't generalize well.  
