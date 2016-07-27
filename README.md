@@ -5,8 +5,8 @@ P - probability of improved performance
 E - experience  
 
 ### 3 Types of machine learning
-1. Supervised learning - learns uses labeled training data.  Example predict house prices in portland.
-2. Unsupervised learning - learns using unlabled training data.  algorithm finds structure. Clustering is an example of unsupervised learning. Examples: social network analysis, market segmentation, astronomical data analysis.  
+1. Supervised learning - learns uses labeled training data.  Training data has input and output.  
+2. Unsupervised learning - learns using unlabled training data.  Training data is input but has no output.  Algorithm finds structure. Clustering is an example of unsupervised learning. Examples: social network analysis, market segmentation, astronomical data analysis.  
 3. Reinforcement learning - learns to take action by maximizing a cumulative reward.
 
 ### 2 Types of machine learning problems
