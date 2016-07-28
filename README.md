@@ -16,23 +16,22 @@
 
 ### Terminology
 Features - measurable property being observed. i.e. the input to a neural network.  
--example: pixel brightness in image object recognition.  
--example: square feet for program that predicts house prices.  
-
-Feature selection - the process of choosing the features. It is critical, you must pick features that correlate with output.  
+Examples of features are pixel brightness in image object recognition, or square feet for program that predicts house prices.  
+Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. For instance picking area of a house would be a more concise feature than using width and length.  
+  
 Feature scaling - scale features to be approximately in the range of -1 to 1.  
 
 Hyperparameters - the model’s parameters in a neural net such as learning rate, and regularization factor.	
 
-Learning rate (&alpha;) - controls the size of the adjustments made during the training process.  
+Learning rate (&alpha;) - controls the size of the adjustments made during the training process. A typical value is .1 but often the value is a smaller number.  
 if &alpha; is too low, convergance is slow.
 if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
-The learning rate can be annealed i.e. decayed over time. (step decay, exponential decay)  
+The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
 
 Regularization (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
 Underfitting (high bias) - output doesn't fit the training data well.  
-Overfitting (high variance) - output fits training data well, but doesn't generalize well.  
+Overfitting (high variance) - output fits training data well, but doesn't work well on test data.  
 
 Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
 
