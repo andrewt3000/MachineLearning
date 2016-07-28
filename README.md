@@ -1,8 +1,9 @@
-### Definition of Machine Learning
-A program is said to learn from experience E with respect to some task T & some performance measure P, if it’s performance on T, as measured by P, improves with experience E.  
-T - task  
-P - probability of improved performance  
-E - experience  
+[Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs)  
+
+[TensorFlow Neural Network Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.28720&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false)  
+
+[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
+
 
 ### 3 Types of machine learning
 1. Supervised learning - learns uses labeled training data.  Training data has input and output.  
@@ -12,11 +13,6 @@ E - experience
 ### 2 Types of machine learning problems
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.
-
-### 
-[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
-
-[Neural Network Playground, simulator](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.28720&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false)  
 
 ### Terminology
 Features - measurable property being observed. i.e. the input to a neural network.  
