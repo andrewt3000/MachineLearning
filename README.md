@@ -28,10 +28,22 @@ if &alpha; is too low, convergance is slow.
 if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
 The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
 
-Regularization (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
-
 Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't work well on test data.  
 
+Regularization (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
+
+Dropout - a form of regularization.  
+
 Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
+
+Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
+
+[Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)
+
+Epoch - number of times to iterate over the training data. An epoch means you have seen every training example once.
+
+Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
+
+
 
