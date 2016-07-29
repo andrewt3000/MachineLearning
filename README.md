@@ -18,7 +18,8 @@
 
 ### Terminology
 Features - measurable property being observed. i.e. the input to a neural network.  
-Examples of features are pixel brightness in image object recognition, or square feet for program that predicts house prices.    
+Examples of features are pixel brightness in image object recognition, or square feet for program that predicts house prices.      
+  
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. For instance picking area of a house would be a more concise feature than using width and length.  
   
 Feature scaling - scale features to be approximately in the range of -1 to 1.  
