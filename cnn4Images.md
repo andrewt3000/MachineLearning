@@ -3,6 +3,23 @@
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/syllabus.html)   
 Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/playlist?list=PLLvH2FwAQhnpj1WEB-jHmPuUeQ8mX-XXG) were taken down for [legal concerns](https://twitter.com/karpathy/status/727618058471112704?lang=en).   
 
+###CNN Parameters and terminology
+
+Types of hidden layers: convolutional layers, max pooling layers, fully connected layers.  
+
+Convolutional Layers - layers that have filters (aka kernels) that are convolved around the image.  
+
+Number of filters (aka kernels)
+
+Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11. The trend is toward smaller filters.  
+
+Stride: steps to take moving the filter.
+
+Max pool size: max pooling is when you take a section and subsample only the largest value in the pool.
+
+Fully connected layers are normal hidden layers.  
+
+### State of the art research papers
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
 LeCun et al., 1998 LeNet-5.  
 
