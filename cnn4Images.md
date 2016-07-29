@@ -38,7 +38,7 @@ Architecture: First conv layer: 7x7 filter, stride 2.
 
 [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf)  
 Simonyan et al. 2014.  VGGNet.  
-7.3% error rate top 5 error on ImageNet.   
+7.3% top 5 error on ImageNet.   
 Architecture: 16 - 19 layers. 3x3 convolutional filters, stride 1, pad 1. 2x2 max pool, stride 2.    
 
 [Going deeper with convolutions](https://arxiv.org/pdf/1409.4842v1.pdf)
