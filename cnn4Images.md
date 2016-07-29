@@ -20,6 +20,8 @@ Max pool size: max pooling is when you take a section and subsample only the lar
 Fully connected layers are normal hidden layers.  
 
 ### State of the art research papers
+[ImageNet](http://www.image-net.org/) is a dataset of 1.2 million images with 1,000 labels.  
+
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
 LeCun et al., 1998 LeNet-5.  
 
@@ -34,4 +36,4 @@ Zeiler and Fergus, 2013 - ZFNet. 14.8% error rate (eventually got to 11% with co
 Simonyan et al. 2014.  aka VGG. 16 - 19 layers. 3x3 convolutional filters. 7.3% error rate.   
 
 [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385v1.pdf)  
-He et al., 2015 aka resnet. Up to 152 layers. 3.57% top 5 error on ImageNet Test set. Uses skip connections (residual net). That allows gradient can flow back more easily.  
+He et al., 2015 aka resnet. Up to 152 layers. 3.57% top 5 error on ImageNet Test set. Uses skip connections (residual net). That allows diminishes vanishing/exploding gradient problems that occur in deep nets.  
