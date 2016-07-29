@@ -36,7 +36,7 @@ Overfitting (high variance) - output fits training data well, but doesn't work w
 
 Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
-[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training."  
+[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical value is .5 (50%).    
 
 Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
 
@@ -48,5 +48,8 @@ Number of times to iterate over the training - Typically you run the program unt
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
+### Beyond the Basics: Applications
 
+[Convolutional Neural Networks for image recognition](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md)  
 
+[Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md)
