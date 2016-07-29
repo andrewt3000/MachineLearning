@@ -1,7 +1,7 @@
 #Convolutional Neural Networks for image recognition
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/syllabus.html)   
-Class taught by Andrej Karpathy at Stanford.   
+Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/playlist?list=PLLvH2FwAQhnpj1WEB-jHmPuUeQ8mX-XXG) were taken down for [legal concerns](https://twitter.com/karpathy/status/727618058471112704?lang=en).   
 
 [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)  
 Krizhevsky et al. (2012) breakthrough paper for convolutional neural networks. top-1 and top-5 error rates of 37.5%
