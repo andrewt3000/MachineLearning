@@ -14,6 +14,7 @@
 
 [Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
 
+[Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
 
 ### Terminology
 Features - measurable property being observed. i.e. the input to a neural network.  
@@ -39,8 +40,6 @@ Regularization (&lambda;) - variable to control overfitting. If model is underfi
 Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
 
 Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
-
-[Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)
 
 Number of times to iterate over the training - Typically you run the program until the training results in no improvement. An epoch means the network has been been trained on every example once.  
 
