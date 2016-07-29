@@ -33,7 +33,7 @@ Overfitting (high variance) - output fits training data well, but doesn't work w
 
 Regularization (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
-Dropout - a form of regularization.  
+[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training."  
 
 Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
 
