@@ -17,4 +17,4 @@ Zeiler and Fergus, 2013 - ZFNet. 14.8% error rate (eventually got to 11% with co
 Simonyan et al. 2014.  aka VGG. 16 - 19 layers. 3x3 convolutional filters. 7.3% error rate.   
 
 [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385v1.pdf)  
-He et al., 2015 aka resnet. Up to 152 layers. 3.57% top 5 error on ImageNet Test set.
+He et al., 2015 aka resnet. Up to 152 layers. 3.57% top 5 error on ImageNet Test set. Uses skip connections (residual net). That allows gradient can flow back more easily.  
