@@ -1,10 +1,3 @@
-[Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs)  
-
-[TensorFlow Neural Network Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.28720&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false)  - This demo lets you run a neural network in your browser and see results graphically. Be sure to click the play button to start training. The network can easily train for the first three datasets with default parameters but the challenge is to get the network to train to the spiral dataset.  
-
-[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
-
-
 ### 3 Types of machine learning
 1. Supervised learning - learns using labeled training data.  Training data has input and output.  
 2. Unsupervised learning - learns using unlabled training data.  Training data is input but has no output.  Algorithm finds structure. Clustering is an example of unsupervised learning. Examples: social network analysis, market segmentation, astronomical data analysis.  
@@ -14,9 +7,17 @@
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.
 
+### Neural Network Basics
+[Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - these videos explain neural networks to do a regression problem.  
+
+[TensorFlow Neural Network Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.28720&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false)  - This demo lets you run a neural network in your browser and see results graphically. Be sure to click the play button to start training. The network can easily train for the first three datasets with default parameters but the challenge is to get the network to train to the spiral dataset.  
+
+[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
+
+
 ### Terminology
 Features - measurable property being observed. i.e. the input to a neural network.  
-Examples of features are pixel brightness in image object recognition, or square feet for program that predicts house prices.  
+Examples of features are pixel brightness in image object recognition, or square feet for program that predicts house prices.    
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. For instance picking area of a house would be a more concise feature than using width and length.  
   
 Feature scaling - scale features to be approximately in the range of -1 to 1.  
