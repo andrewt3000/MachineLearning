@@ -5,6 +5,8 @@ Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/pl
 
 [A Beginner's Guide To Understanding Convolutional Neural Networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)  
 
+CNNs can be used for [self driving cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)  
+
 ###CNN Parameters and terminology
 
 Types of hidden layers: convolutional layers, max pooling layers, fully connected layers.  
