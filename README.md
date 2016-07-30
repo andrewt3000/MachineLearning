@@ -51,7 +51,7 @@ Mini batch size: Mini batches speed up the training process. Batch size determin
 ### Types of Neural Networks
 Neural Network - Has input layers, hidden layers and output layers. Hidden layer consists of neurons that execute an activation function. Hidden layers are connected by synapsis that are weighted. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network. 
 
-Recurrent Neural Network (RNN) - Used for sequences of inputs of unknown length. Has the same properties as a neural network but also passes it's hidden state as an input to the next sequence. RNNs are trained by backpropagation through time.    
+Recurrent Neural Network (RNN) - Used for sequences of inputs of unknown length. Has the same properties as a neural network but also passes it's hidden state as an input to the next sequence. This architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. RNNs are trained by backpropagation through time.    
 
 ### Beyond the Basics: Applications
 
