@@ -48,6 +48,11 @@ Number of times to iterate over the training - Typically you run the program unt
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
+### Types of Neural Networks
+Neural Network - Has input layers, hidden layers and output layers. Hidden layer consists of neurons that execute an activation function. Hidden layers are connected by synapsis that are weighted. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network. 
+
+Recurrent Neural Network (RNN) - Used for sequences of inputs of unknown length. Has the same properties as a neural network but also passes it's hidden state as an input to the next sequence. RNNs are trained by backpropagation through time.    
+
 ### Beyond the Basics: Applications
 
 [Convolutional Neural Networks for image recognition](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md)  
