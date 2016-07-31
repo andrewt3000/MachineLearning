@@ -51,9 +51,13 @@ Mini batch size: Mini batches speed up the training process. Batch size determin
 ### Types of Neural Networks
 Neural Network - Has input layers, hidden layers and output layers. Hidden layer consists of neurons that execute an activation function. Hidden layers are connected by synapsis that are weighted. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network. 
 
-Recurrent Neural Network (RNN) - Used for sequences of inputs of unknown length. Has the same properties as a neural network but also passes it's hidden state as an input to the next sequence. This architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. RNNs are trained by backpropagation through time.    
+Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
 
-### Beyond the Basics: Applications
+Recurrent Neural Network (RNN) - Used for sequences. Has the same properties as a neural network but also passes it's hidden state as an input to the next sequence. This architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. RNNs are trained by backpropagation through time.    
+
+LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies. Contains memory cells and gates.  
+
+### Applications
 
 [Convolutional Neural Networks for image recognition](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md)  
 
