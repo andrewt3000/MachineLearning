@@ -17,12 +17,13 @@
 [Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
 
 ### Terminology
-Features - measurable property being observed. i.e. the input to a neural network.  
-Examples of features are pixel brightness in image object recognition, or square feet for program that predicts house prices.      
+Features - measurable property being observed. In neural net context, it's  the input to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications, or square feet for program that predicts house prices.  
   
-Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. For instance picking area of a house would be a more concise feature than using width and length.  
-  
-Feature scaling - scale features to be approximately in the range of -1 to 1.  
+Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
+
+Dimensionality reduction - Reducing number of variables.  A simple example is selecting the area of a house as a feature rather than using width and length seperately.    
+
+Feature scaling - scale features to be in a common range for instance -1 to 1.    
 
 Hyperparameters - the model’s parameters in a neural net such as learning rate, and regularization factor.	
 
@@ -38,9 +39,9 @@ Regularization factor (&lambda;) - variable to control overfitting. If model is 
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical value is .5 (50%).    
 
-Architecture - The structure of the network i.e. number of hidden layers, and nodes. 
+Architecture - The structure of a neural network i.e. number of hidden layers, and nodes. 
 
-Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
+Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
 
 Activation function - the "neuron" in the neural network executes an activation function on the inputs. Typical values include sigmoid, ReLu, and tanh.  
 
