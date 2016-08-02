@@ -45,6 +45,12 @@ Number of hidden layers - the higher the number of layers the better it can find
 
 Activation function - the "neuron" in the neural network executes an activation function on the inputs. Typical values include sigmoid, ReLu, and tanh.  
 
+```python
+#sigmoid activation function using numpy
+def sigmoid(z):
+    return 1/(1+np.exp(-z))
+```
+
 Number of times to iterate over the training - Typically you run the program until the training results in no improvement. An epoch means the network has been been trained on every example once.  
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
