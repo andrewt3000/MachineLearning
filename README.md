@@ -49,7 +49,7 @@ Number of times to iterate over the training - Typically you run the program unt
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
-Batch gradient descent versus stochastic gradient descent: batch uses entire dataset and works well for convex errors. stochastic uses a single example and works better if there are lots of minima and maxima. sgd often uses mini-batches.  
+Batch gradient descent versus stochastic gradient descent: batch uses entire dataset and works well for convex errors. stochastic gradient descent uses a single example and works better if there are lots of minima and maxima. sgd often uses mini-batches. sgd is used more often in practice.  
 
 ### Types of Neural Networks
 Neural Network - Has input layers, hidden layers and output layers. Hidden layer consists of neurons that execute an activation function. Hidden layers are connected by synapsis that are weighted. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network. 
