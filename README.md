@@ -43,7 +43,7 @@ Architecture - The structure of a neural network i.e. number of hidden layers, a
 
 Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
 
-Activation function - the "neuron" in the neural network executes an activation function on the inputs. Typical values include sigmoid, ReLu, and tanh.  
+Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical values include sigmoid, ReLu, and tanh.  
 
 ```python
 #sigmoid activation function using numpy
