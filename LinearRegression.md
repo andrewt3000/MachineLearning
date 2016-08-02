@@ -31,3 +31,7 @@ Square the error because
 Repeat until convergence.  
 &theta;<sub>0</sub> := &theta;<sub>0</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>)  
 &theta;<sub>1</sub> := &theta;<sub>1</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>) &bull; x<sup>(i)</sup>  
+
+### Logistic Regression
+Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
+
