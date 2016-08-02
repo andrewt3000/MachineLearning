@@ -35,11 +35,11 @@ The learning rate is often reduced to a smaller number over time. This is often 
 Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't work well on test data.  
 
-Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
+Regularization - a technique to minimize overfitting. L1 and L2 are examples of regularization.  
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical value is .5 (50%).    
 
-Architecture - The structure of a neural network i.e. number of hidden layers, and nodes. 
+Architecture - The structure of a neural network i.e. number of hidden layers, and number of nodes. 
 
 Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
 
@@ -50,6 +50,8 @@ Activation function - the "neuron" in the neural network executes an activation 
 def sigmoid(z):
     return 1/(1+np.exp(-z))
 ```
+
+Cost Function, aka error function - measures how inaccurate a model is. training a model minimizes the cost function. cross entropy is an example of a cost function.  
 
 Number of times to iterate over the training - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
