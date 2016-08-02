@@ -51,7 +51,7 @@ def sigmoid(z):
     return 1/(1+np.exp(-z))
 ```
 
-Cost Function, aka error function - measures how inaccurate a model is. training a model minimizes the cost function. cross entropy is an example of a cost function.  
+Cost Function, aka error function - measures how inaccurate a model is. training a model minimizes the cost function. cross entropy or sum of squared errors are examples of cost functions.  
 
 Number of times to iterate over the training - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
