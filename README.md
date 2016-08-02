@@ -23,7 +23,7 @@ Feature selection - The process of choosing the features. It is important to pic
 
 Dimensionality reduction - Reducing number of variables.  A simple example is selecting the area of a house as a feature rather than using width and length seperately.    
 
-Feature scaling - scale features to be in a common range for instance -1 to 1.    
+Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value.    
 
 Hyperparameters - the model’s parameters in a neural net such as learning rate, and regularization factor.	
 
