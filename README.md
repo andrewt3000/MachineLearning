@@ -37,7 +37,7 @@ Overfitting (high variance) - output fits training data well, but doesn't work w
 
 Regularization - a technique to minimize overfitting. L1 and L2 are examples of regularization.  
 
-[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical value is .5 (50%).    
+[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical value is .5 (50%). As dropout value approaches zero dropout has less effect, as it approaches 1 there are more connections are being zeroed out. See [Hinton's dropout in 3 lines of python](https://iamtrask.github.io/2015/07/28/dropout/)      
 
 Architecture - The structure of a neural network i.e. number of hidden layers, and number of nodes. 
 
