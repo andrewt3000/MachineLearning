@@ -51,7 +51,7 @@ def sigmoid(z):
     return 1/(1+np.exp(-z))
 ```
 
-Cost Function, aka error function - measures how inaccurate a model is. training a model minimizes the cost function. cross entropy or sum of squared errors are examples of cost functions.  
+Cost Function, aka error function or loss function - measures how inaccurate a model is. training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
 
 Number of times to iterate over the training - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
@@ -64,7 +64,7 @@ Neural Network - Has input layers, hidden layers and output layers. Hidden layer
 
 Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
 
-Recurrent Neural Network (RNN) - Used for input sequences such as text, audio, or video. RNNs are the same as a neural network but they also pass the hidden state output of each neuron via a weighted connection as an input to the same neuron during the next sequence. This feedback architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. RNNs are trained by backpropagation through time.  There are many variations such as bi-directional and recursive RNNs.    
+Recurrent Neural Network (RNN) - Used for input sequences such as text, audio, or video. RNNs are the same as a neural network but they also pass the hidden state output of each neuron via a weighted connection as an input to the neurons in the same layer during the next sequence. This feedback architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. RNNs are trained by backpropagation through time.  There are variations such as bi-directional and recursive RNNs.    
 
 LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies. Contains memory cells and gates. The number of memory cells is a hyperparameter. Memory cells pass memory information forward. The gates decide what information is stored in the memory cells. A vanilla LSTM has a forget gates, input gates and output gates. There are [many variations of the LSTM](http://arxiv.org/pdf/1503.04069.pdf).  
 
