@@ -5,7 +5,11 @@
 
 ### 2 Types of machine learning problems
 1. regression - predicting a continuous value attribute (Example: house prices)
-2. classification - predicting a discrete value. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.
+2. classification - predicting a discrete value. (Example: pass or fail)
+
+#### Types of classification  
+Binary classification - classifying elements into one of two groups. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.
+Softmax regression (aka multinomial logistic regression) - outputs multiple binary labels. Example: handwritten single numeric character classification has 10 binary outputs 0 - 9. the outputs are mutually exclusive and output should sum up to 1 predicting probability of each label.  
 
 ### Neural Network Basics
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - these videos explain neural networks to do a regression problem.  
