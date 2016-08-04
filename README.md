@@ -58,6 +58,8 @@ def sigmoid(z):
 
 Cost Function, aka error function or loss function - measures how inaccurate a model is. training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
 
+Training data - input and labeled output used as examples. Data is typically split into training data, cross validation data and test data.  
+
 Number of times to iterate over the training - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
