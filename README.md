@@ -10,7 +10,7 @@
 #### Types of classification  
 Binary classification - classifying elements into one of two groups. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.  
 
-Softmax regression (aka multinomial logistic regression) - outputs multiple binary labels. Example: handwritten single numeric character classification has 10 binary outputs 0 - 9. the outputs are mutually exclusive and output should sum up to 1 predicting probability of each label.  
+Softmax regression (aka multinomial logistic regression) - Outputs are multiple binary labels. The outputs are mutually exclusive values in the range of 0 to 1 and sum up to 1. The output predicts probability of each label. Classic example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary outputs 0 - 9.  
 
 ### Neural Network Basics
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - these videos explain neural networks to do a regression problem.  
