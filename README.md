@@ -12,14 +12,14 @@ Binary classification - classifying elements into one of two groups. Example: be
 
 Softmax regression (aka multinomial logistic regression) - Outputs are multiple binary labels. The outputs are mutually exclusive values in the range of 0 to 1 and sum up to 1. The output predicts probability of each label. Classic example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary outputs 0 - 9.  
 
+[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
+
 ### Neural Network Basics
+Neural Network - Has input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms. 
+
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - these videos explain neural networks to do a regression problem.  
 
 [TensorFlow Neural Network Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.28720&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false)  - This demo lets you run a neural network in your browser and see results graphically. Be sure to click the play button to start training. The network can easily train for the first three datasets with default parameters but the challenge is to get the network to train to the spiral dataset.  
-
-[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
-
-[Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
 
 ### Terminology
 Features - measurable property being observed. In neural net context, it's  the input to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications, or square feet for program that predicts house prices.  
@@ -78,9 +78,9 @@ Number of times to iterate over the training data - Typically you run the progra
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
-### Types of Neural Networks
-Neural Network - Has input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network to distinguis from more complicated neural nets with feedback mechanisms. 
+[Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
 
+### Other Types of Neural Networks
 Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
 
 Recurrent Neural Network (RNN) - Used for input sequences such as text, audio, or video. RNNs are the same as a neural network but they also pass the hidden state output of each neuron via a weighted connection as an input to the neurons in the same layer during the next sequence. This feedback architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. RNNs are trained by backpropagation through time.  There are variations such as bi-directional and recursive RNNs.    
