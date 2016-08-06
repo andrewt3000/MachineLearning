@@ -48,19 +48,25 @@ Architecture - The structure of a neural network i.e. number of hidden layers, a
 
 Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
 
-Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical values include sigmoid, ReLu, and tanh.  
+Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical activation functions include sigmoid, tanh, and ReLu.  
 
+Sigmoid activation functions outputs a value between 0 and 1.  
 ```python
 #sigmoid activation function using numpy
 def sigmoid(z):
     return 1/(1+np.exp(-z))
 ```
+Tanh activation function outputs value between -1 and 1.  
+
+ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image classification.  
 
 Cost Function, aka error function or loss function - measures how inaccurate a model is. training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
 
 Training data - input and labeled output used as examples. Data is typically split into training data, cross validation data and test data.  
 
-Number of times to iterate over the training - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
+Training a network - minimize a cost function. Use backpropagation to adjust weights to make model more accurate. Backpropagation computes the gradient of the loss function with respect to the weights in the network.  
+
+Number of times to iterate over the training data - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
