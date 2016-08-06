@@ -30,6 +30,7 @@ Dimensionality reduction - Reducing number of variables.  A simple example is se
 
 Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value.    
 
+### Hyperparameters
 Hyperparameters - the model’s parameters in a neural net such as learning rate, and regularization factor.	
 
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. A typical value is .1 but often the value is a smaller number.  
@@ -48,6 +49,7 @@ Architecture - The structure of a neural network i.e. number of hidden layers, a
 
 Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
 
+###Activation Functions
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical activation functions include sigmoid, tanh, and ReLu.  
 
 Sigmoid activation functions outputs a value between 0 and 1.  
@@ -60,11 +62,12 @@ Tanh activation function outputs value between -1 and 1.
 
 ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image classification.  
 
-Cost Function, aka error function or loss function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
-
+###Traing a network
 Training data - input and labeled output used as examples. Data is typically split into training data, cross validation data and test data.  
 
 Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
+
+Cost Function, aka error function or loss function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
 
 Backpropagation - computes the gradient of the loss function with respect to the weights in the network.  
 
