@@ -21,7 +21,7 @@ Neural Network - Has input layers, hidden layers and output layers. Layers are c
 
 [TensorFlow Neural Network Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.28720&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false)  - This demo lets you run a neural network in your browser and see results graphically. Be sure to click the play button to start training. The network can easily train for the first three datasets with default parameters but the challenge is to get the network to train to the spiral dataset.  
 
-### Terminology
+### Features / Input
 Features - measurable property being observed. In neural net context, it's  the input to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications, or square feet for program that predicts house prices.  
   
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
@@ -31,7 +31,11 @@ Dimensionality reduction - Reducing number of variables.  A simple example is se
 Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value.    
 
 ### Hyperparameters
-Hyperparameters - the model’s parameters in a neural net such as learning rate, and regularization factor.	
+Hyperparameters - the model’s parameters in a neural net such as architecture, learning rate, and regularization factor.	
+
+Architecture - The structure of a neural network i.e. number of hidden layers, and number of nodes. 
+
+Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
 
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. A typical value is .1 but often the value is a smaller number.  
 if &alpha; is too low, convergance is slow.
@@ -45,9 +49,6 @@ Regularization - a technique to minimize overfitting. L1 and L2 are examples of 
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical value is .5 (50%). As dropout value approaches zero dropout has less effect, as it approaches 1 there are more connections are being zeroed out. See [Hinton's dropout in 3 lines of python](https://iamtrask.github.io/2015/07/28/dropout/)      
 
-Architecture - The structure of a neural network i.e. number of hidden layers, and number of nodes. 
-
-Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
 
 ###Activation Functions
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical activation functions include sigmoid, tanh, and ReLu.  
@@ -62,7 +63,7 @@ Tanh activation function outputs value between -1 and 1.
 
 ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image classification.  
 
-###Traing a network
+###Training a network
 Training data - input and labeled output used as examples. Data is typically split into training data, cross validation data and test data.  
 
 Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
