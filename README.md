@@ -60,20 +60,23 @@ Tanh activation function outputs value between -1 and 1.
 
 ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image classification.  
 
-Cost Function, aka error function or loss function - measures how inaccurate a model is. training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
+Cost Function, aka error function or loss function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
 
 Training data - input and labeled output used as examples. Data is typically split into training data, cross validation data and test data.  
 
-Training a network - minimize a cost function. Use backpropagation to adjust weights to make model more accurate. Backpropagation computes the gradient of the loss function with respect to the weights in the network.  
+Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
+
+Backpropagation - computes the gradient of the loss function with respect to the weights in the network.  
+
+Gradient descent - Iteratively adjusting the weight by learning rate times the gradient.  
+There is batch gradient descent and stochastic gradient descent. Batch uses entire dataset and works well for convex errors. Stochastic gradient descent uses a single example and works better if there are lots of minima and maxima. sgd often uses mini-batches. sgd is used more often in practice.  
 
 Number of times to iterate over the training data - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
 Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
-Batch gradient descent versus stochastic gradient descent: batch uses entire dataset and works well for convex errors. stochastic gradient descent uses a single example and works better if there are lots of minima and maxima. sgd often uses mini-batches. sgd is used more often in practice.  
-
 ### Types of Neural Networks
-Neural Network - Has input layers, hidden layers and output layers. Hidden layer consists of neurons that execute an activation function. Hidden layers are connected by synapsis that are weighted. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network. 
+Neural Network - Has input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network to distinguis from more complicated neural nets with feedback mechanisms. 
 
 Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
 
