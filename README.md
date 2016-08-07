@@ -1,20 +1,11 @@
-### 3 Types of machine learning
-1. Supervised learning - learns using labeled training data.  Training data has input and output.  
-2. Unsupervised learning - learns using unlabled training data.  Training data is input but has no output.  Algorithm finds structure. Clustering is an example of unsupervised learning. Examples: social network analysis, market segmentation, astronomical data analysis.  
-3. Reinforcement learning - learns to take action by maximizing a cumulative reward. [deep mind learns breakout](https://www.youtube.com/watch?v=V1eYniJ0Rnk)  
+[Notes on introductory machine learning coursera class](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
 
-### 2 Types of machine learning problems
-1. regression - predicting a continuous value attribute (Example: house prices)
-2. classification - predicting a discrete value. (Example: pass or fail)
+[Convolutional Neural Networks for image recognition](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md)  
 
-#### Types of classification  
-Binary classification - classifying elements into one of two groups. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.  
+[Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md)
 
-Multi-class classification - Outputs are multiple binary labels, often mutually exclusive. Use softmax regression (aka multinomial logistic regression) -  The outputs are in the range of 0 to 1 and sum up to 1. The output predicts probability of each label. Classic example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary outputs 0 - 9.  
 
-[Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
-
-### Neural Network Basics
+### Neural Network
 Neural Network - Has input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms. 
 
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - these videos explain neural networks to do a regression problem.  
@@ -92,8 +83,3 @@ LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97
 
 GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but simpler than LSTM. It contains one update gate and combines the hidden state and memory cells among other differences.  
 
-### Applications
-
-[Convolutional Neural Networks for image recognition](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md)  
-
-[Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md)
