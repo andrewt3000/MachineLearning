@@ -10,7 +10,7 @@
 #### Types of classification  
 Binary classification - classifying elements into one of two groups. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.  
 
-Softmax regression (aka multinomial logistic regression) - Outputs are multiple binary labels. The outputs are mutually exclusive values in the range of 0 to 1 and sum up to 1. The output predicts probability of each label. Classic example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary outputs 0 - 9.  
+Multi-class classification - Outputs are multiple binary labels, often mutually exclusive. Use softmax regression (aka multinomial logistic regression) -  The outputs are in the range of 0 to 1 and sum up to 1. The output predicts probability of each label. Classic example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary outputs 0 - 9.  
 
 [Linear Regression with one variable](https://github.com/andrewt3000/MachineLearning/blob/master/LinearRegression.md)  
 
@@ -62,6 +62,8 @@ def sigmoid(z):
 Tanh activation function outputs value between -1 and 1.  
 
 ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image classification.  
+
+Softmax can be used as the output's activation function. Useful for modeling probability distributions. Output value is range [0, 1]. The sum of outputs is 1. Sums over all the output neurons in the denominator. Use with cross entropy cost function.  
 
 ###Training a network
 Training data - input and labeled output used as examples. Data is typically split into training data, cross validation data and test data.  
