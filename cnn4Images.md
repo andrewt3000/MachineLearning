@@ -31,7 +31,7 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 LeCun et al., 1998 LeNet-5.  Input 32x32 images.  
 Architecture: 6 5x5 filters, stride 1. Pooling layers 2x2 stride 2. (conv pool conv pool conv fc)  
 
-[ImageNet](http://www.image-net.org/) [paper](http://www.image-net.org/papers/imagenet_cvpr09.pdf) is a dataset of 1.2 million images with 1,000 labels.  
+[ImageNet](http://www.image-net.org/) [[paper](http://www.image-net.org/papers/imagenet_cvpr09.pdf)] is a dataset of 1.2 million images with 1,000 labels.  
 
 [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)  
 Krizhevsky et al. (2012) AlexNet breakthrough paper for convolutional neural networks. First use of Relu (rectified linear units)  
