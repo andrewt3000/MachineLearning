@@ -9,17 +9,17 @@ CNNs can be used for [self driving cars](http://images.nvidia.com/content/tegra/
 
 ###CNN Parameters and terminology
 
-3 types of hidden layers in cnns: convolutional layers, max pooling layers, fully connected layers.  
+Types of hidden layers in cnns: convolutional layers, max pooling layers, fully connected layers.  
 
-1) Convolutional Layers - layers that have filters (aka kernels) that are convolved around the image.  
-  Parmeters: 
+1) Convolutional Layers - layers that have filters (aka kernels) that are convolved around the image. Then perform a Relu activation.    
+  Parmeters: All parameters can vary by layer.  
   a) Number of filters (aka kernels) (K) - typically a power of 2. eg. 32, 64, 128. 
 
   b) Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11. The trend is toward smaller filters.  
 
-  c) Stride (S) - steps to take moving the filter.
+  c) Stride (S) - How much to shift the filter.  
   
-  d) Padding (P) - 
+  d) Padding (P) - zero padding on edges of input volume. Padding can make output volume same size as input volume when padding =  (F - 1)/2. Examples: 3x3 filters / padding = 1, 5x5 filters / padding 2, 7x7 filters / padding 3.
 
 2) Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.
   parameter: size of the section to subsample. example 2x2.
