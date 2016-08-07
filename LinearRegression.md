@@ -34,10 +34,11 @@ Repeat until convergence.
 &theta;<sub>0</sub> := &theta;<sub>0</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>)  
 &theta;<sub>1</sub> := &theta;<sub>1</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>) &bull; x<sup>(i)</sup>  
 
-###Week 2 Logistic Regression
+###Week 2 MultiVariate Linear Regression
 n = the number of features  
 Feature scaling - get features in the range -1 to 1.  
 x<sub>i</sub> = x<sub>i</sub> - average / range (max - min)  
 
+###Week 3 Logistic regression
 Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
