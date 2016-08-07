@@ -1,6 +1,20 @@
 Notes for [Coursera: Machine Learning](https://www.coursera.org/learn/machine-learning/home/welcome?module=tN10A)  
 
 ###Week 1: Linear Regression with one variable
+#### 3 Types of machine learning
+1. Supervised learning - learns using labeled training data.  Training data has input and output.  
+2. Unsupervised learning - learns using unlabled training data.  Training data is input but has no output.  Algorithm finds structure. Clustering is an example of unsupervised learning. Examples: social network analysis, market segmentation, astronomical data analysis.  
+3. Reinforcement learning - learns to take action by maximizing a cumulative reward. [deep mind learns breakout](https://www.youtube.com/watch?v=V1eYniJ0Rnk)  
+
+#### 2 Types of machine learning problems
+1. regression - predicting a continuous value attribute (Example: house prices)
+2. classification - predicting a discrete value. (Example: pass or fail)
+
+#### Types of classification  
+Binary classification - classifying elements into one of two groups. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.  
+
+Multi-class classification - Outputs are multiple binary labels, often mutually exclusive. Classic example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary outputs 0 - 9.  
+
 m = number of training examples  
 x = input features  
 y = output variable / target variable  
