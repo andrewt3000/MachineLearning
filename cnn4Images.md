@@ -13,13 +13,13 @@ CNNs can be used for [self driving cars](http://images.nvidia.com/content/tegra/
 
 1) Convolutional Layers - layers that have filters (aka kernels) that are convolved around the image.  
   Parmeters: 
-  a) Number of filters (aka kernels)
+  a) Number of filters (aka kernels) (K) - typically a power of 2. eg. 32, 64, 128. 
 
   b) Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11. The trend is toward smaller filters.  
 
-  c) Stride - steps to take moving the filter.
+  c) Stride (S) - steps to take moving the filter.
   
-  d) Padding - 
+  d) Padding (P) - 
 
 2) Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.
   parameter: size of the section to subsample. example 2x2.
@@ -30,7 +30,7 @@ CNNs can be used for [self driving cars](http://images.nvidia.com/content/tegra/
 [ImageNet](http://www.image-net.org/) is a dataset of 1.2 million images with 1,000 labels.  
 
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
-LeCun et al., 1998 LeNet-5.  
+LeCun et al., 1998 LeNet-5.  Input 32x32 images.  
 Architecture: 6 5x5 filters, stride 1. Pooling layers 2x2 stride 2. (conv pool conv pool conv fc)  
 
 [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)  
