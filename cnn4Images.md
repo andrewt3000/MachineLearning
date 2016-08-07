@@ -15,7 +15,7 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
   CNN Parmeters: All parameters can vary by layer.  
   1. Number of filters (aka kernels) (K) - typically a power of 2. eg. 32, 64, 128. 
 
-  2. Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11. The trend is toward smaller filters.  
+  2. Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11.  
 
   3. Stride (S) - How much to shift the filter.  
   
