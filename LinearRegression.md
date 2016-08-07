@@ -1,4 +1,6 @@
-###Linear Regression with one variable
+Notes for [Coursera: Machine Learning](https://www.coursera.org/learn/machine-learning/home/welcome?module=tN10A)  
+
+###Week 1: Linear Regression with one variable
 m = number of training examples  
 x = input features  
 y = output variable / target variable  
@@ -32,6 +34,10 @@ Repeat until convergence.
 &theta;<sub>0</sub> := &theta;<sub>0</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>)  
 &theta;<sub>1</sub> := &theta;<sub>1</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>) &bull; x<sup>(i)</sup>  
 
-### Logistic Regression
+###Week 2 Logistic Regression
+n = the number of features  
+Feature scaling - get features in the range -1 to 1.  
+x<sub>i</sub> = x<sub>i</sub> - average / range (max - min)  
+
 Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
