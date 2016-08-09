@@ -27,7 +27,7 @@ h = hypothesis. function that maps x to y
 Predict that y is a linear function of x.  
 <strong>y = h(x) = ϴ<sub>0</sub> + ϴ<sub>1</sub>x</strong>  
 
-###Cost Function
+####Cost Function
 J is the cost function  
 ϴ<sub>i</sub> are parameters. the coefficients of the function.  
 find values of ϴ<sub>0</sub> and ϴ<sub>1</sub> that minimize the cost (error) function.  
@@ -41,7 +41,7 @@ Square the error because
 2) For many applications small errors are not important, but big errors are very important.  example: self driving car. ½ foot steering error no big deal, 5 foot error fatal problem. So it’s not 10x more important… it is 100x more important.  
 3) The convex nature of quadratic equation avoids local minimums.  
 
-###Gradient Descent
+####Gradient Descent
 :=  (assignment operator, not equality)  
 &alpha; = learning rate.  the learning rate controls the size of the adjustments made during the training process. 
 
@@ -62,7 +62,7 @@ L is the number of layers.
 K number of output units.  
 
 
-#How to train a neural network:
+####How to train a neural network:
 1. randomize initial weights.
 2. Implement forward propagation. hϴ(xi)
 3. Implement cost function J(ϴ)
