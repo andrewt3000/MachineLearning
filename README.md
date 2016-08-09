@@ -26,7 +26,7 @@ Hyperparameters - the model’s parameters in a neural net such as architecture,
 
 Architecture - The structure of a neural network i.e. number of hidden layers, and number of nodes. 
 
-Number of hidden layers - the higher the number of layers the better it can find non-linear patterns, but the gradient also vanishes or explodes.  [Resnet](https://arxiv.org/abs/1512.03385) is on the high end at 152 layers.
+Number of hidden layers - the higher the number of layers the more layers of abstraction it can represent. too many layers and the the network suffers from the vanishing or exploding gradient problem.  
 
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. A typical value is .1 but often the value is a smaller number.  
 if &alpha; is too low, convergance is slow.
