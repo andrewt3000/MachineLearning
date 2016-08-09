@@ -57,3 +57,17 @@ x<sub>i</sub> = x<sub>i</sub> - average / range (max - min)
 ###Week 3 Logistic regression
 Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
+###Week 5 Neural Networks
+L is the number of layers.  
+K number of output units.  
+
+
+#How to train a neural network:
+1. randomize initial weights.
+2. Implement forward propagation. hϴ(xi)
+3. Implement cost function J(ϴ)
+4. Implement backprop to compute partial derivative of cost function with respect to theta.
+ for 1 through m  (each training example)
+5. Do gradient checking
+6. Use gradient descent.
+
