@@ -61,7 +61,7 @@ Training data - input and labeled output used as examples. Data is typically spl
 
 Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
 
-Cost Function, aka error function or loss function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss or logistic loss) is a common cost function for binary classification.  
+Cost Function, aka error function or loss function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy is a common cost function for multi-class classification and softmax activations.  
 
 Backpropagation - computes the gradient of the loss function with respect to the weights in the network.  
 
