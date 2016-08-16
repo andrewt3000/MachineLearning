@@ -56,3 +56,8 @@ Architecture: 22 layers.
 He et al., 2015 aka resnet.  Uses skip connections (residual net). That diminishes vanishing/exploding gradient problems that occur in deep nets.  
 3.57% top 5 error on ImageNet  
 Architecture: 152 layers. [ResNet model code](https://github.com/KaimingHe/deep-residual-networks).
+
+[Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning](https://arxiv.org/pdf/1602.07261.pdf)  
+Szegedy et al. 2016 
+3.08% top 5 error on ImageNet  
+Architecture: 75 layers  
