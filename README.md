@@ -60,7 +60,7 @@ ReLu activation is typically the activation function used in state of the art co
 Softmax can be used as the output's activation function. Useful for modeling probability distributions. Output value is range [0, 1]. The sum of outputs is 1. Sums over all the output neurons in the denominator. Use with cross entropy cost function.  
 
 ###Training a network
-Training data - input and labeled output used as examples. Data is typically split into training data, cross validation data and test data.  
+Training data - Input and labeled output used as training examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% training, 20% validation and 20% testing data. Validation is used to tune the model and it's hyperparameters. Testing uses data that the model was never trained on.  
 
 Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
 
