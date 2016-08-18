@@ -1,4 +1,4 @@
-#Convolutional Neural Networks for image recognition
+#Convolutional Neural Networks for image processing
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/syllabus.html)   
 Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/playlist?list=PLLvH2FwAQhnpj1WEB-jHmPuUeQ8mX-XXG) were taken down for [legal concerns](https://twitter.com/karpathy/status/727618058471112704?lang=en).   
@@ -26,7 +26,7 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 
 3. Fully connected layers are normal hidden layers.  Yann Lecun says fully connected is a special case of a convolutional layer with a 1x1 filter, and stride of 1. 
 
-### State of the art research papers
+### Object Classification. State of the art research papers
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
 LeCun et al., 1998 LeNet-5.  Input 32x32 images.  
 Architecture: 6 5x5 filters, stride 1. Pooling layers 2x2 stride 2. (conv pool conv pool conv fc)  
@@ -61,3 +61,7 @@ Architecture: 152 layers. [ResNet model code](https://github.com/KaimingHe/deep-
 Szegedy et al. 2016 
 3.08% top 5 error on ImageNet  
 Architecture: 75 layers  
+
+### Image Captioning
+[Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](http://arxiv.org/pdf/1502.03044v3.pdf)  
+Xu et al. 2015 
