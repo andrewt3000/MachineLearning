@@ -5,8 +5,6 @@ Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/pl
 
 [A Beginner's Guide To Understanding Convolutional Neural Networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)  
 
-CNNs can be used for [self driving cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)  
-
 ###CNN Parameters and terminology
 
 Types of hidden layers in cnns: convolutional layers, max pooling layers, fully connected layers.  
@@ -24,7 +22,18 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 2. Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.
   parameter: size of the section to subsample. example 2x2.
 
-3. Fully connected layers are normal hidden layers.  Yann Lecun says fully connected is a special case of a convolutional layer with a 1x1 filter, and stride of 1. 
+3. Fully connected layers are normal hidden layers.  
+
+### Image applications
+Object classification - identifying an object in an image.  
+Localization - drawing a bounding box around an object. One or fixed number of objects.  
+Detection - drawing a bounding box around an unlimited number of objects.  
+Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.
+Instance segmentation - Segment between different instances of objects.  
+Image cpationing - describing the objects in an image.  
+
+CNNs can be used for [self driving cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)  
+
 
 ### Object Classification. State of the art research papers
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
