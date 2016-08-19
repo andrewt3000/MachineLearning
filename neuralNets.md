@@ -58,10 +58,14 @@ Training a network - minimize a cost function. Use backpropagation and gradient 
 
 Cost Function, aka error function or loss function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy is a common cost function for multi-class classification and softmax activations.  
 
-Backpropagation - computes the gradient of the loss function with respect to the weights in the network. Uses a non-linear optimization method such as stochastic gradient descent, momentum sgd, nesterov momentum sgd, adagrad, and adaDelta. 
+Backpropagation - Apply the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
-Gradient descent - An optimization algorithm. Iteratively adjusting the weight by learning rate times the gradient.  
-There are variations including batch gradient descent and stochastic gradient descent. Batch uses entire dataset and works well for convex errors and small datasets. Stochastic gradient descent uses a single example and works better with many minima and maxima. sgd is used more often in practice for large scale deep learning. 
+####Optimization algorithms
+Batch gradient descent - Iteratively adjusting the weight by learning rate times the gradient. Batch uses entire dataset and works well for convex errors and small datasets. 
+
+Stochastic gradient descent uses a single example and works better with many minima and maxima. sgd is used more often in practice for large scale deep learning. 
+
+Other optimization algorithms include momentum sgd, nesterov momentum sgd, adagrad, and adaDelta. 
 
 Number of times to iterate over the training data - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
