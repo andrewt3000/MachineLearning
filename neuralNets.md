@@ -61,11 +61,11 @@ Cost Function, aka error function or loss function - measures how inaccurate a m
 Backpropagation - computes the gradient of the loss function with respect to the weights in the network. Uses a non-linear optimization method such as stochastic gradient descent, momentum sgd, nesterov momentum sgd, adagrad, and adaDelta. 
 
 Gradient descent - An optimization algorithm. Iteratively adjusting the weight by learning rate times the gradient.  
-There are variations including batch gradient descent and stochastic gradient descent. Batch uses entire dataset and works well for convex errors. Stochastic gradient descent uses a single example and works better if there are lots of minima and maxima. sgd often uses mini-batches. sgd is used more often in practice for deep learning. 
+There are variations including batch gradient descent and stochastic gradient descent. Batch uses entire dataset and works well for convex errors and small datasets. Stochastic gradient descent uses a single example and works better with many minima and maxima. sgd is used more often in practice for large scale deep learning. 
 
 Number of times to iterate over the training data - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
-Mini batch size: Mini batches speed up the training process. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
+Mini batch size: Mini batches speed up the training process for sgd. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
 [Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
 
