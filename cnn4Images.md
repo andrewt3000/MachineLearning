@@ -22,7 +22,7 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 2. Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.
   parameter: size of the section to subsample. example 2x2.
 
-3. Fully connected layers are normal hidden layers.  
+3. Fully connected layers are the same as hidden layers in a vanilla neural network.  
 
 ### Image applications
 Object classification - identifying an object in an image.  
