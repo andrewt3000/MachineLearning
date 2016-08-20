@@ -31,9 +31,7 @@ Detection - drawing a bounding box around an unlimited number of objects.
 Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.
 Instance segmentation - Segment between different instances of objects.  
 Image cpationing - describing the objects in an image.  
-
-CNNs can be used for [self driving cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)  
-
+CNNs can be used for self driving cars.  
 
 ### Object Classification. State of the art research papers
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
@@ -74,3 +72,9 @@ Architecture: 75 layers
 ### Image Captioning
 [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](http://arxiv.org/pdf/1502.03044v3.pdf)  
 Xu et al. 2015 
+
+### Self driving cars
+[Nvidia blog post](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/)  
+
+[self driving cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)  
+
