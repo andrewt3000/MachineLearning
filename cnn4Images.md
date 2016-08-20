@@ -76,5 +76,4 @@ Xu et al. 2015
 ### Self driving cars
 [Nvidia blog post](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/)  
 
-[self driving cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)  
-
+[End to End Learning for Self-Driving Cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)   
