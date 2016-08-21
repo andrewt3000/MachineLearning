@@ -49,7 +49,12 @@ Tanh activation function outputs value between -1 and 1.
 
 ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image classification.  
 
-Softmax can be used as the output's activation function. Useful for modeling probability distributions. Output value is range [0, 1]. The sum of outputs is 1. Sums over all the output neurons in the denominator. Use with cross entropy cost function.  
+Softmax is often used as the output's activation function and is useful for modeling probability distributions for multiclass classification where outputs are mutually exclusive. Output value is range [0, 1]. The sum of outputs is 1. Use with cross entropy cost function.  
+```python
+def softmax(x):
+    e2x = np.exp(x) 
+    return e2x / np.sum(e2x, axis = 0)
+```
 
 ###Training a network
 Training data - Input and labeled output used as training examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% training, 20% validation and 20% testing data. Validation is used to tune the model and it's hyperparameters. Testing uses data that the model was never trained on.  
