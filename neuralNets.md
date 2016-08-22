@@ -33,7 +33,7 @@ Overfitting (high variance) - output fits training data well, but doesn't work w
 
 Regularization - a technique to minimize overfitting. L1 and L2 are examples of regularization.  
 
-[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. See [Hinton's dropout in 3 lines of python](https://iamtrask.github.io/2015/07/28/dropout/) which features the following example:   
+[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. See [Hinton's dropout in 3 lines of python](https://iamtrask.github.io/2015/07/28/dropout/) which features the following example:   
 
 ```python
 layer_1 *= np.random.binomial([np.ones((len(X),hidden_dim))],1-dropout_percent)[0] * (1.0/(1-dropout_percent))
