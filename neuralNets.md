@@ -58,7 +58,7 @@ def relu(x):
 ```
 
 
-Softmax is often used as the output's activation function and is useful for modeling probability distributions for multiclass classification where outputs are mutually exclusive. Output value is range [0, 1]. The sum of outputs is 1. Use with cross entropy cost function.  
+The softmax function is often used as the output's activation function and is useful for modeling probability distributions for multiclass classification where outputs are mutually exclusive (MNIST is an example). Output values are in range [0, 1]. The sum of outputs is 1. Use with cross entropy cost function.  
 ```python
 def softmax(x):
     e2x = np.exp(x) 
