@@ -47,7 +47,16 @@ def sigmoid(z):
 ```
 Tanh activation function outputs value between -1 and 1.  
 
-ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image classification. ReLu stands for rectified linear unit.  
+ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image processing. ReLu stands for rectified linear unit.  
+
+```python
+#relu activation function
+def relu(x):
+    if x > 0:
+      return x
+    return 0
+```
+
 
 Softmax is often used as the output's activation function and is useful for modeling probability distributions for multiclass classification where outputs are mutually exclusive. Output value is range [0, 1]. The sum of outputs is 1. Use with cross entropy cost function.  
 ```python
