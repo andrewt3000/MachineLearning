@@ -70,7 +70,7 @@ Training data - Input and labeled output used as training examples. Data is typi
 
 Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
 
-Number of times to iterate over the training data - Typically you run the program until the training there is no improvement for a long period. Hopefully the training and test losses are converging on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
+Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once. You want to stop training if the validation data has an increasing error rate, this indicates overfitting. This is called early termination.   
 
 Cost Function, aka error function or loss function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy is a common cost function for multi-class classification and softmax activations.  
 
