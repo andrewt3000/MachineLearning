@@ -28,10 +28,9 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 Object classification - identifying an object in an image.  
 Localization - drawing a bounding box around an object. One or fixed number of objects.  
 Detection - drawing a bounding box around an unlimited number of objects.  
-Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.
+Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.  
 Instance segmentation - Segment between different instances of objects.  
 Image cpationing - describing the objects in an image.  
-CNNs can be used for self driving cars.  
 
 ### Object Classification. State of the art research papers
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
