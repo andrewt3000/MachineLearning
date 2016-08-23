@@ -89,7 +89,7 @@ Batch gradient descent - Gradient descent is iteratively adjusting the weight by
 
 Stochastic gradient descent is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
-Mini batch gradient descent: Batch size determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128.  
+Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example befor making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128.  
 
 Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction.  
 
