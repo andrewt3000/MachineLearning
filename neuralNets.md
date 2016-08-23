@@ -85,15 +85,15 @@ Cost Function, aka error function or loss function - measures how inaccurate a m
 Backpropagation - Apply the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
 ####Optimization algorithms
-Batch gradient descent - Graident descent is iteratively adjusting the weight by learning rate times the gradient to mimimize the error function. The term batch refers to the fact it uses the entire dataset. It works well for small datasets that have convex errors functions.  
+Batch gradient descent - Graident descent is iteratively adjusting the weight by learning rate times the gradient to mimimize the error function. The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
 
-Stochastic gradient descent is a variation of gradient descent that uses a small number of randomly choosen examples. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it less likely to get stuck in a local minima.  
+Stochastic gradient descent is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
-Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it uses a small sample of training data to calculate the gradient. It uses the idea of velocity and friction on the error surface. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction.  
+Mini batch gradient descent: Batch size determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128.  
+
+Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction.  
 
 Other optimization algorithms include nesterov momentum sgd, adagrad, and adaDelta. See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)
-
-Mini batch size: Mini batches speed up the training process for sgd. Batch size determines how many training examples you consider before making a weight update. As the batch number gets higher it speeds up the process more, but becomes more noisey. Typical values are factors of 2, such as 32 or 128.
 
 [Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
 
