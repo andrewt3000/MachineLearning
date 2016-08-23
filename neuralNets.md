@@ -85,7 +85,7 @@ Cost Function, aka error function or loss function - measures how inaccurate a m
 Backpropagation - Apply the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
 ####Optimization algorithms
-Batch gradient descent - Graident descent is iteratively adjusting the weight by learning rate times the gradient to mimimize the error function. The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
+Batch gradient descent - Gradient descent is iteratively adjusting the weight by learning rate times the gradient to mimimize the error function. The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
 
 Stochastic gradient descent is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
