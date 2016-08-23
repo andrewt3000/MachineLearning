@@ -50,14 +50,13 @@ def sigmoid(z):
 ```
 Tanh activation function outputs value between -1 and 1.  
 
-ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image processing. ReLu stands for rectified linear unit.  
+ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image processing. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. for x < 0, y = 0. for x>0, y = x.  
 
 ```python
-#relu activation function
-def relu(x):
-    if x > 0:
-      return x
-    return 0
+#relu activation function.
+#numpy maximum - Compare two arrays and returns a new array containing the element-wise maxima
+hidden_layer = np.maximum(0, np.dot(X, W) + b)
+  
 ```
 
 
@@ -72,6 +71,12 @@ def softmax(x):
 Training data - Input and labeled output used as training examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% training, 20% validation and 20% testing data. Validation is used to tune the model and it's hyperparameters. Testing uses data that the model was never trained on.  
 
 Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
+
+Steps to training a network.  
+- initialize weights and biases.  
+- training data is entered feedforward.  
+- error is backpropagated.
+- weights and biases are adjust based on learning rate.  
 
 Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once. You want to stop training if the validation data has an increasing error rate, this indicates overfitting. This is called early termination.   
 
