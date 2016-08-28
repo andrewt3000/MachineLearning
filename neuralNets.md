@@ -1,6 +1,8 @@
 ### Neural Networks
 Neural Network - an acyclical directed graph. Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. Often called artificial neural networks, to distinguish it from biological, or feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms. 
 
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>
+
 [neural nets](http://frnsys.com/ai_notes/machine_learning/neural_nets.html) thorough and concise study notes about neural networks.   
 
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
