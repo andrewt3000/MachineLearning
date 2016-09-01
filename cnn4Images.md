@@ -71,5 +71,4 @@ Architecture: 75 layers
 
 ### Image Captioning
 [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](http://arxiv.org/pdf/1502.03044v3.pdf)  
-Xu et al. 2015 
-
+Xu et al. 2015 Creates captions by feeding image into a CNN which feeds into hidden state of an RNN that generates the caption. At each time step it outputs next word and the next location to pay attention to via a probability over grid locations. Uses 2 types of attention soft and hard. Soft attention is another layer in the neural network and uses gradient descent and backprop. Hard attention selects a single element instead of weighted sum. It picks the element with highest probability. Hard attention uses reinforcement learning, rather than backprop. 
