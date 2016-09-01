@@ -66,7 +66,7 @@ Architecture: 152 layers. [ResNet model code](https://github.com/KaimingHe/deep-
 
 [Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning](https://arxiv.org/pdf/1602.07261.pdf)  
 Szegedy et al. 2016 
-3.08% top 5 error on ImageNet  
+3.08% top 5 error on ImageNet  [blog post](https://research.googleblog.com/2016/08/improving-inception-and-image.html)  
 Architecture: 75 layers  
 
 ### Image Captioning
