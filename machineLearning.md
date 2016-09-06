@@ -71,3 +71,8 @@ K number of output units.
 5. Do gradient checking
 6. Use gradient descent.
 
+### Week 8 Unsupervised learning and dimensionality reduction
+K-means clustering. Example using 2 clusters. Randomly initialize 2 cluster centroids. K-means is an iterative algorithm. 
+Step 1 is to assign each data point to the nearest cluster centroid. Step 2: move the cluster centroid to the location of the mean of the assigned data points.  
+
+K = number of clusters to find.  
