@@ -84,7 +84,9 @@ Steps to training a network.
 
 Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once. You want to stop training if the validation data has an increasing error rate, this indicates overfitting. This is called early termination.   
 
-Cost/error/objective/loss Function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss) is cost function for softmax function and multinomial logistic classification.  
+Cost/error/objective/loss Function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is cost function for softmax function and multinomial logistic classification.   
+
+Cross entropy function is sum of all the target values times the log of their output. Assuming the target output is 0 for all the wrong answers, and 1 for the correct answer, the correct answer is the only value that will contribute to the sum. The cost will be 0 if the correct output value is 1 because the log(1) is 0. The error approaches infinity as the output approaches 0 because the log of zero approaches infinity. See [Geoffery Hinton lecture](https://www.youtube.com/watch?v=mlaLLQofmR8)  
 
 Backpropagation - Apply the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
