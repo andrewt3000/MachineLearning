@@ -117,4 +117,4 @@ LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97
 
 GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but simpler than LSTM. It contains one update gate and combines the hidden state and memory cells among other differences.  
 
-Beam Search - keep track of several of the most probable sequences and then choose the highest probability path. This lowers the risk a single bad probability in the sequence getting you on the wrong track.  
+Beam Search - keep track of several of the most probable sequences and then choose the highest probability path. This lowers the risk a single bad probability in the sequence getting you on the wrong track. [See udacity video](https://classroom.udacity.com/courses/ud730/lessons/6378983156/concepts/63733319420923#)  
