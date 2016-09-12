@@ -29,7 +29,7 @@ Predict that y is a linear function of x.
 
 ####Cost Function
 J is the cost function  
-ϴ<sub>i</sub> are parameters. the coefficients of the function.  
+ϴ<sub>i</sub> are parameters. the coefficients of the function. Similar to weights in a neural net.  
 find values of ϴ<sub>0</sub> and ϴ<sub>1</sub> that minimize the cost (error) function.  
 h(x) - y = difference in function versus actual… we want to minimize this.  
 aka squared error cost function.  
