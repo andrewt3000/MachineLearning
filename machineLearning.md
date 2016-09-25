@@ -60,7 +60,7 @@ Logistic regression is a confusing term because it is a classification algorithm
 
 Multiclass classification is solved using One versus all. There are K output classes. Solve for K binary logistic regression classifiers and choose the one with the highest probability.   
 
-Underfitting (high bias) - output doesn't fit the training data well.
+Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't work well on test data. Failes to generalize.  
 
 Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
