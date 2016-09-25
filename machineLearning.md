@@ -10,9 +10,9 @@ Notes for [Coursera: Machine Learning](https://www.coursera.org/learn/machine-le
 2. classification - predicting a discrete value. (Example: pass or fail)
 
 #### Types of classification  
-Binary classification - classifying elements into one of two groups. Example: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.  
+Binary classification - classifying elements into one of two groups. Examples: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.  
 
-Multi-class classification - Outputs are multiple binary labels, often mutually exclusive. Classic example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary outputs 0 - 9.  
+[Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)/multinomial classification - classify instances into more than 2 classes. Example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary classes 0 - 9.  
 
 ###Week 1: Linear Regression with one variable
 
@@ -58,12 +58,15 @@ x<sub>i</sub> = x<sub>i</sub> - average / range (max - min)
 Logistic regression is a confusing term because it is a classification algorithm, not a regression algorithm.  
 "Logistic regression" is named after the logistic function (aka sigmoid function)  
 
-Multiclass classification is solved using One versus all. There are K output classes. Solve for K binary logistic regression classifiers and choose the one with the highest probability.   
+Multiclass classification is solved using "One versus All." There are K output classes. Solve for K binary logistic regression classifiers and choose the one with the highest probability.    
 
+####Regularization
 Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't work well on test data. Failes to generalize.  
 
 Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
+
+The intuition of &lambda is that as you add the regularization term to the cost function, as you minimize the cost function, you minimize the magnitude of theta (the weights). If theta (weights) is smaller, especially for higher degree polynomials, the hypothesis is simpler.  
 
 ###Week 5 Neural Networks
 L is the number of layers.  
