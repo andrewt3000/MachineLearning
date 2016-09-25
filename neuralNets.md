@@ -35,7 +35,10 @@ The learning rate is often reduced to a smaller number over time. This is often 
 Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't work well on test data.  
 
-Regularization - a technique to minimize overfitting. L1 is a regularization technique optimized for sparse data, L2 is a regularization techinque optimized for dense data.  
+Regularization - a technique to minimize overfitting. 
+
+L1 is a regularization technique optimized that uses sum of absolute value of weights. L1 can yield sparse outputs.  
+L2 is a regularization techinque optimized that uses sum of squared weights. L2 can't yield sparse outputs.    
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. See [Hinton's dropout in 3 lines of python](https://iamtrask.github.io/2015/07/28/dropout/) which features the following example:   
 
