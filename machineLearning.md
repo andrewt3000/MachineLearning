@@ -57,7 +57,12 @@ x<sub>i</sub> = x<sub>i</sub> - average / range (max - min)
 ###Week 3 Logistic regression
 Logistic regression is a confusing term because it is a classification algorithm, not a regression algorithm.  
 "Logistic regression" is named after the logistic function (aka sigmoid function)  
+The sigmoid function is the hypothesis for logistic regression: h(x)= 1 / (1 + e<sup>-&theta; T x</sup>)  
+The cost function for logistic regression is:  
+for y = 1, -log(h<sub>&theta;</sub>(x))  
+for y = 0, -log(1 - h<sub>&theta;</sub>(x))   
 
+#####Multiclass classification
 Multiclass classification is solved using "One versus All." There are K output classes. Solve for K binary logistic regression classifiers and choose the one with the highest probability.    
 
 ####Regularization
