@@ -64,9 +64,9 @@ Multiclass classification is solved using "One versus All." There are K output c
 Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't work well on test data. Failes to generalize.  
 
-Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
+Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.  
 
-The intuition of &lambda is that as you add the regularization term to the cost function, as you minimize the cost function, you minimize the magnitude of theta (the weights). If theta (weights) is smaller, especially for higher degree polynomials, the hypothesis is simpler.  
+The intuition of &lambda; is that you add the regularization term to the cost function, and as you minimize the cost function, you minimize the magnitude of theta (the weights). If theta is smaller, especially for higher order polynomials, the hypothesis is simpler.  
 
 ###Week 5 Neural Networks
 L is the number of layers.  
