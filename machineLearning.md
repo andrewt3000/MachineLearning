@@ -55,6 +55,14 @@ Feature scaling - get features in the range -1 to 1.
 x<sub>i</sub> = x<sub>i</sub> - average / range (max - min)  
 
 ###Week 3 Logistic regression
+Logistic regression is a confusing term because it is a classification algorithm, not a regression algorithm.  
+"Logistic regression" is named after the logistic function (aka sigmoid function)  
+
+Multiclass classification is solved using One versus all. There are K output classes. Solve for K binary logistic regression classifiers and choose the one with the highest probability.   
+
+Underfitting (high bias) - output doesn't fit the training data well.
+Overfitting (high variance) - output fits training data well, but doesn't work well on test data. Failes to generalize.  
+
 Regularization factor (&lambda;) - variable to control overfitting. If model is underfitting, you need lower &lambda;. If the model is overfitting, you need higher lambda.
 
 ###Week 5 Neural Networks
