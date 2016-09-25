@@ -69,7 +69,8 @@ Regularization factor (&lambda;) - variable to control overfitting. If model is 
 The intuition of &lambda; is that you add the regularization term to the cost function, and as you minimize the cost function, you minimize the magnitude of theta (the weights). If theta is smaller, especially for higher order polynomials, the hypothesis is simpler.  
 
 The regularization term is added to the cost function.  
-The regularization term is for linear regression is:  &lambda; times the sum from j=1 to n of &theta;<sub>j</sub><sup>2</sup> The regularization term is for logistic regression is:  &lambda;/2m times the sum from j=1 to n of &theta;<sub>j</sub><sup>2</sup>  
+The regularization term is for linear regression is:  &lambda; times the sum from j=1 to n of &theta;<sub>j</sub><sup>2</sup>  
+The regularization term is for logistic regression is:  &lambda;/2m times the sum from j=1 to n of &theta;<sub>j</sub><sup>2</sup>  
 Notice they sum from j=1, not j=0. i.e. it doesn't consider the bias term.  
 
 ###Week 5 Neural Networks
