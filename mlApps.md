@@ -15,3 +15,7 @@ Google Research
 
 [Unsupervised Learning for Physical Interaction
 through Video Prediction](http://arxiv.org/pdf/1605.07157v3.pdf)
+
+### Medical / Genetics
+Samsung [breast cancer screening ultrasound machine](http://m.pulsenews.co.kr/view.php?sc=30800019&year=2016&no=2929070) using convolutional neural networks.  
+
