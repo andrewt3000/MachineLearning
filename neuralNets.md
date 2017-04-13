@@ -46,7 +46,7 @@ L2 uses sum of squared weights. L2 can't yield sparse outputs.
 layer_1 *= np.random.binomial([np.ones((len(X),hidden_dim))],1-dropout_percent)[0] * (1.0/(1-dropout_percent))
 ```
 
-###Activation Functions
+### Activation Functions
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical activation functions include sigmoid, tanh, and ReLu.  
 
 Sigmoid activation functions outputs a value between 0 and 1.  
@@ -74,7 +74,7 @@ def softmax(x):
     return e2x / np.sum(e2x, axis = 0)
 ```
 
-###Training a network
+### Training a network
 Training data - Input and labeled output used as training examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% training, 20% validation and 20% testing data. Validation is used to tune the model and it's hyperparameters. Testing uses data that the model was never trained on.  
 
 Training a network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
@@ -93,7 +93,7 @@ Cross entropy function is sum of all the target values times the log of their ou
 
 Backpropagation - Apply the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
-####Optimization algorithms
+#### Optimization algorithms
 Batch gradient descent - Gradient descent is iteratively adjusting the weight by learning rate times the gradient to mimimize the error function. The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
 
 Stochastic gradient descent is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
