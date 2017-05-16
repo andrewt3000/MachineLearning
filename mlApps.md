@@ -16,6 +16,8 @@ Google Research
 [Unsupervised Learning for Physical Interaction
 through Video Prediction](http://arxiv.org/pdf/1605.07157v3.pdf)
 
+[OpenAI Computers that learn](https://blog.openai.com/robots-that-learn/) - One shot immitation learning.  
+
 ### Medical / Genetics
 [Stanford Radiology ImageNet](http://langlotzlab.stanford.edu/projects/medical-image-net/)  
 
