@@ -1,4 +1,4 @@
-#Convolutional Neural Networks for image processing
+# Convolutional Neural Networks for image processing
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/syllabus.html)   
 Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/playlist?list=PLLvH2FwAQhnpj1WEB-jHmPuUeQ8mX-XXG) were taken down for [legal concerns](https://twitter.com/karpathy/status/727618058471112704?lang=en).   
@@ -6,7 +6,7 @@ Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/pl
 [A Beginner's Guide To Understanding Convolutional Neural Networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)  
 [An Intuitive Explanation of Convolutional Neural Networks](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/)
 
-###CNN Parameters and terminology
+### CNN Parameters and terminology
 
 Types of hidden layers in cnns: convolutional layers, max pooling layers, fully connected layers.  
 
