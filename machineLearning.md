@@ -14,7 +14,7 @@ Binary classification - classifying elements into one of two groups. Examples: b
 
 [Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)/multinomial classification - classify instances into more than 2 classes. Example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary classes 0 - 9.  
 
-###Week 1: Linear Regression with one variable
+### Week 1: Linear Regression with one variable
 
 m = number of training examples  
 x = input features  
@@ -27,7 +27,7 @@ h = hypothesis. function that maps x to y
 Predict that y is a linear function of x.  
 <strong>y = h(x) = ϴ<sub>0</sub> + ϴ<sub>1</sub>x</strong>  
 
-####Cost Function
+#### Cost Function
 J is the cost function  
 ϴ<sub>i</sub> are parameters. the coefficients of the function. Similar to weights in a neural net.  
 find values of ϴ<sub>0</sub> and ϴ<sub>1</sub> that minimize the cost (error) function.  
@@ -41,7 +41,7 @@ Square the error because
 2) For many applications small errors are not important, but big errors are very important.  example: self driving car. ½ foot steering error no big deal, 5 foot error fatal problem. So it’s not 10x more important… it is 100x more important.  
 3) The convex nature of quadratic equation avoids local minimums.  
 
-####Gradient Descent
+#### Gradient Descent
 :=  (assignment operator, not equality)  
 &alpha; = learning rate.  the learning rate controls the size of the adjustments made during the training process. 
 
@@ -49,12 +49,12 @@ Repeat until convergence.
 &theta;<sub>0</sub> := &theta;<sub>0</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>)  
 &theta;<sub>1</sub> := &theta;<sub>1</sub> - &alpha; (1/m) &#931; i = 1 to m (h<sub>&theta;</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>) &bull; x<sup>(i)</sup>  
 
-###Week 2 MultiVariate Linear Regression
+### Week 2 MultiVariate Linear Regression
 n = the number of features  
 Feature scaling - get features in the range -1 to 1.  
 x<sub>i</sub> = x<sub>i</sub> - average / range (max - min)  
 
-###Week 3 Logistic regression
+### Week 3 Logistic regression
 Logistic regression is a confusing term because it is a classification algorithm, not a regression algorithm.  
 "Logistic regression" is named after the logistic function (aka sigmoid function)  
 The sigmoid function is the hypothesis for logistic regression: h(x)= 1 / (1 + e<sup>-&theta; T x</sup>)  
@@ -62,10 +62,10 @@ The cost function for logistic regression is:
 for y = 1, -log(h<sub>&theta;</sub>(x))  
 for y = 0, -log(1 - h<sub>&theta;</sub>(x))   
 
-#####Multiclass classification
+##### Multiclass classification
 Multiclass classification is solved using "One versus All." There are K output classes. Solve for K binary logistic regression classifiers and choose the one with the highest probability.    
 
-####Regularization
+#### Regularization
 Underfitting (high bias) - output doesn't fit the training data well.  
 Overfitting (high variance) - output fits training data well, but doesn't work well on test data. Failes to generalize.  
 
@@ -78,12 +78,12 @@ The regularization term is for linear regression is:  &lambda; times the sum fro
 The regularization term is for logistic regression is:  &lambda;/2m times the sum from j=1 to n of &theta;<sub>j</sub><sup>2</sup>  
 Notice they sum from j=1, not j=0. i.e. it doesn't consider the bias term.  
 
-###Week 5 Neural Networks
+### Week 5 Neural Networks
 L is the number of layers.  
 K number of output units.  
 
 
-####How to train a neural network:
+#### How to train a neural network:
 1. randomize initial weights.
 2. Implement forward propagation. h<sub>ϴ</sub>(x<sup>i</sup>)
 3. Implement cost function J(ϴ)
