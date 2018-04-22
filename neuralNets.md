@@ -81,13 +81,15 @@ Training a network - minimize a cost function. Use backpropagation and gradient 
 
 Steps to training a network.  
 - initialize weights and biases.  
-- training data is entered feedforward.  
-- error is backpropagated.
-- weights and biases are adjust based on learning rate.  
+- Implement forward propagation  
+- Implement cost (aka error, loss) function
+- Implement backpropagation 
+- Run optimization algorithm such as gradient descent adjusting weights using learning rate.  
 
 Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once. You want to stop training if the validation data has an increasing error rate, this indicates overfitting. This is called early termination.   
 
-Cost/error/objective/loss Function - measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is cost function for softmax function and multinomial logistic classification.   
+### Cost Function - 
+Cost (aka error/objective/loss) function measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is cost function for softmax function.   
 
 Cross entropy function is sum of all the target values times the log of their output. Assuming the target output is 0 for all the wrong answers, and 1 for the correct answer, the correct answer is the only value that will contribute to the sum. The cost will be 0 if the correct output value is 1 because the log(1) is 0. The error approaches infinity as the output approaches 0 because the log of zero approaches infinity. See [Geoffery Hinton lecture](https://www.youtube.com/watch?v=mlaLLQofmR8)  
 
@@ -115,9 +117,10 @@ Recurrent Neural Network (RNN) - Used for input sequences such as text, audio, o
 
 LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem. It contains memory cells and gate units. The number of memory cells is a hyperparameter. Memory cells pass memory information forward. The gates decide what information is stored in the memory cells. A vanilla LSTM has a forget gates, input gates and output gates. There are [many variations of the LSTM](http://arxiv.org/pdf/1503.04069.pdf).  
 [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Blog post by Chris Olah.  
-[RNN/LSTM tutorial for TensorFlow](https://www.tensorflow.org/versions/r0.10/tutorials/recurrent/index.html)  
+[RNN/LSTM tutorial for TensorFlow](https://www.tensorflow.org/versions/r0.10/tutorials/recurrent/index.html)  Often LSTMs use Beam Search to keep track of several of the most probable sequences and then choose the highest probability path. This lowers the risk a single bad probability in the sequence getting you on the wrong track. [See udacity video](https://classroom.udacity.com/courses/ud730/lessons/6378983156/concepts/63733319420923#)  
 
 
 GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but simpler than LSTM. It contains one update gate and combines the hidden state and memory cells among other differences.  
 
-Beam Search - keep track of several of the most probable sequences and then choose the highest probability path. This lowers the risk a single bad probability in the sequence getting you on the wrong track. [See udacity video](https://classroom.udacity.com/courses/ud730/lessons/6378983156/concepts/63733319420923#)  
+
+
