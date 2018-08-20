@@ -16,7 +16,7 @@ Features - measurable property being observed. In neural net context, it's  the 
   
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
 
-Dimensionality reduction - Reducing number of variables.  A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, auto-encoders, and t-SNE (for visualizations).      
+Dimensionality reduction - Reducing number of variables.  A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.      
 
 Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value.    
 
