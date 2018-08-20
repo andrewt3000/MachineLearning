@@ -1,7 +1,7 @@
 # Convolutional Neural Networks for image processing
 
-[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/syllabus.html)   
-Class taught by Andrej Karpathy at Stanford. [videos](https://www.youtube.com/playlist?list=PLLvH2FwAQhnpj1WEB-jHmPuUeQ8mX-XXG) were taken down for [legal concerns](https://twitter.com/karpathy/status/727618058471112704?lang=en).   
+[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)   
+[2017 videos](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)  
 
 [A Beginner's Guide To Understanding Convolutional Neural Networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)  
 [An Intuitive Explanation of Convolutional Neural Networks](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/)
@@ -39,7 +39,8 @@ Semantic segmentation - Label every pixel between classes. Don’t distinguish b
 Instance segmentation - Segment between different instances of objects.  
 Image cpationing - describing the objects in an image.  
 
-### Object Classification. State of the art research papers
+### Object Classification. Case Studies
+[Case Studies](http://cs231n.github.io/convolutional-networks/#case)  
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
 LeCun et al., 1998 LeNet-5.  Input 32x32 images.  
 Architecture: 6 5x5 filters, stride 1. Pooling layers 2x2 stride 2. (conv pool conv pool conv fc)  
