@@ -26,7 +26,7 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 3. Fully connected layers are the same as hidden layers in a vanilla neural network.  
 
 #### Calculate output volume of convolutional layer
-The depth is the number of filters.
+The depth is the number of filters.  
 The width (height is the same assuming image is square) is W2=(W1−F+2P)/S+1  
 W1 is original width of image. F is filter witdth, P is padding, S is stride. example: F=3,S=1,P=1  
 [Source](http://cs231n.github.io/convolutional-networks/)  
