@@ -3,6 +3,7 @@ Neural Network - an acyclical directed graph. Neural nets have input layers, hid
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>
 
+#### Other resources
 [neural nets](http://frnsys.com/ai_notes/machine_learning/neural_nets.html) thorough and concise study notes about neural networks.   
 
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
@@ -40,11 +41,7 @@ Regularization - a technique to minimize overfitting.
 L1 uses sum of absolute value of weights. L1 can yield sparse outputs.  
 L2 uses sum of squared weights. L2 can't yield sparse outputs.    
 
-[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. See [Hinton's dropout in 3 lines of python](https://iamtrask.github.io/2015/07/28/dropout/) which features the following example:   
-
-```python
-layer_1 *= np.random.binomial([np.ones((len(X),hidden_dim))],1-dropout_percent)[0] * (1.0/(1-dropout_percent))
-```
+[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. Dropout is in implemented in training but not present in inference.  
 
 ### Activation Functions
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical activation functions include sigmoid, tanh, and ReLu.  
