@@ -1,5 +1,5 @@
 ### Neural Networks
-Neural Network - an acyclical directed graph. Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. They are often called artificial neural networks, to distinguish it from biological nerons. Also called feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms such as recurrent neural networks. 
+Neural Network - an acyclical directed graph. Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. They are often called artificial neural networks, to distinguish it from biological neurons. Also called feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms such as recurrent neural networks. 
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>
 
@@ -46,14 +46,20 @@ L2 uses sum of squared weights. L2 can't yield sparse outputs.
 ### Activation Functions
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical activation functions include sigmoid, tanh, and ReLu.  
 
+#### Sigmoid
 Sigmoid activation functions outputs a value between 0 and 1.  
 ```python
 #sigmoid activation function using numpy
 def sigmoid(z):
     return 1/(1+np.exp(-z))
 ```
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/sigmoid.png" height='250px' width='250px'/>
+
+#### Tanh
 Tanh activation function outputs value between -1 and 1.  
 
+
+#### ReLu
 ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image processing. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. for x < 0, y = 0. for x>0, y = x.  
 
 ```python
@@ -63,7 +69,7 @@ hidden_layer = np.maximum(0, np.dot(X, W) + b)
   
 ```
 
-
+#### Softmax
 The softmax function is often used as the output's activation function and is useful for modeling probability distributions for multiclass classification where outputs are mutually exclusive (MNIST is an example). Output values are in range [0, 1]. The sum of outputs is 1. Use with cross entropy cost function.  
 ```python
 def softmax(x):
@@ -85,7 +91,7 @@ Steps to training a network.
 
 Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once. You want to stop training if the validation data has an increasing error rate, this indicates overfitting. This is called early termination.   
 
-### Cost Function - 
+### Cost Function 
 Cost (aka error/objective/loss) function measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is cost function for softmax function.   
 
 Cross entropy function is sum of all the target values times the log of their output. Assuming the target output is 0 for all the wrong answers, and 1 for the correct answer, the correct answer is the only value that will contribute to the sum. The cost will be 0 if the correct output value is 1 because the log(1) is 0. The error approaches infinity as the output approaches 0 because the log of zero approaches infinity. See [Geoffery Hinton lecture](https://www.youtube.com/watch?v=mlaLLQofmR8)  
