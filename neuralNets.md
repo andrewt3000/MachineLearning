@@ -26,26 +26,26 @@ Architecture - The structure of a neural network i.e. number of hidden layers, a
 
 Number of hidden layers - the higher the number of layers the more layers of abstraction it can represent. too many layers and the the network suffers from the vanishing or exploding gradient problem.  
 
-Learning rate (&alpha;) - controls the size of the adjustments made during the training process. A typical value is .1 but often the value is a smaller number.  
+Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
 if &alpha; is too low, convergance is slow.
 if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
 The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
 
 Underfitting - output doesn't fit the training data well.  
-Overfitting - output fits training data well, but doesn't work well on test data.  
+Overfitting - output fits training data well, but doesn't work well on validation or test data.  
 
 Regularization - a technique to minimize overfitting.  
 
-L1 uses sum of absolute value of weights. L1 can yield sparse outputs.  
-L2 uses sum of squared weights. L2 can't yield sparse outputs.    
+L1 regularization uses sum of absolute value of weights. L1 can yield sparse outputs.  
+L2 regularization uses sum of squared weights. L2 can't yield sparse outputs.    
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. Dropout is in implemented in training but not present in inference.  
 
 ### Activation Functions
-Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. Typical activation functions include sigmoid, tanh, and ReLu.  
+Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". Typical activation functions include sigmoid, tanh, and ReLu.  
 
 #### Sigmoid
-Sigmoid activation functions outputs a value between 0 and 1.  
+Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues.
 ```python
 #sigmoid activation function using numpy
 def sigmoid(z):
@@ -54,26 +54,17 @@ def sigmoid(z):
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/sigmoid.png" height='250px' width='250px'/>
 
 #### Tanh
-Tanh activation function outputs value between -1 and 1.  
+Tanh activation function outputs value between -1 and 1. Tanh is a rescaled sigmoid function. Tanh is zero centered but still suffers from activation saturation issues similar to sigmoid. 
 
 
 #### ReLu
-ReLu activation is typically the activation function used in state of the art convolutioanal neural nets for image processing. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. for x < 0, y = 0. for x>0, y = x.  
+ReLu activation is currently (2018) the most popular activation function. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. for x < 0, y = 0. for x>0, y = x.  
 
-```python
-#relu activation function.
-#numpy maximum - Compare two arrays and returns a new array containing the element-wise maxima
-hidden_layer = np.maximum(0, np.dot(X, W) + b)
-  
-```
+
 
 #### Softmax
-The softmax function is often used as the output's activation function and is useful for modeling probability distributions for multiclass classification where outputs are mutually exclusive (MNIST is an example). Output values are in range [0, 1]. The sum of outputs is 1. Use with cross entropy cost function.  
-```python
-def softmax(x):
-    e2x = np.exp(x) 
-    return e2x / np.sum(e2x, axis = 0)
-```
+The softmax function is often used as the model's final output activation function. Softmax is used for modeling probability distributions for multiclass classification where outputs are mutually exclusive (MNIST is an example). Output values are in range [0, 1]. The sum of outputs is 1. Use with cross entropy cost function.  
+
 
 ### Training a network
 Training data - The data used in machine learning models to make the model more accurate. In the case of supervised learning it consists of input features and output labels that serve as examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% -80% training, 10%-20% validation and 10%-20% testing data. Validation data is evaluated while the model is training and it indicates if the model is generalizing. Testing data is evaluated after you have stopped training the model to indicate the model's accuracy.  
