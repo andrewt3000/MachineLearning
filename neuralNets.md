@@ -45,16 +45,19 @@ L2 regularization uses sum of squared weights. L2 can't yield sparse outputs.
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". Typical activation functions include sigmoid, tanh, and ReLu.  
 
 #### Sigmoid
-Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues.
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/sigmoid.svg" height='250px' width='250px'/>
+Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/sigmoid.svg" height='600px' width='600px'/>
 
 #### Tanh
-Tanh activation function outputs value between -1 and 1. Tanh is a rescaled sigmoid function. Tanh is zero centered but still suffers from activation saturation issues similar to sigmoid. 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/tanh.svg" height='400px' width='400px'/>
+Tanh activation function outputs value between -1 and 1. Tanh is a rescaled sigmoid function. Tanh is zero centered but still suffers from activation saturation issues similar to sigmoid.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/tanh.svg" height='600px' width='600px'/>
 
 #### ReLu
 ReLu activation is currently (2018) the most popular activation function. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. for x < 0, y = 0. for x>0, y = x.  
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/relu.svg" height='400px' width='400px'/>
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/relu.svg" height='600px' width='600px'/>
 
 
 #### Softmax
