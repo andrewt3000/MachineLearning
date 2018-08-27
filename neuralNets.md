@@ -80,6 +80,8 @@ Cost (aka error/objective/loss) function measures how inaccurate a model is. Tra
 
 Cross entropy function is sum of all the target values times the log of their output. Assuming the target output is 0 for all the wrong answers, and 1 for the correct answer, the correct answer is the only value that will contribute to the sum. The cost will be 0 if the correct output value is 1 because the log(1) is 0. The error approaches infinity as the output approaches 0 because the log of zero approaches infinity. See [Geoffery Hinton lecture](https://www.youtube.com/watch?v=mlaLLQofmR8)  
 
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
+
 Backpropagation - Apply the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
 #### Optimization algorithms
