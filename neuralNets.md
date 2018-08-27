@@ -41,17 +41,13 @@ Activation function - the "neuron" in the neural network executes an activation 
 #### Sigmoid
 Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues.  
 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/sigmoid.svg" height='600px' width='600px'/>
-
 #### Tanh
 Tanh activation function outputs value between -1 and 1. Tanh is a rescaled sigmoid function. Tanh is zero centered but still suffers from activation saturation issues similar to sigmoid.  
-
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/tanh.svg" height='600px' width='600px'/>
 
 #### ReLu
 ReLu activation is currently (2018) the most popular activation function. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. for x < 0, y = 0. for x>0, y = x.  
 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/relu.svg" height='600px' width='600px'/>
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/activation.png" />
 
 
 #### Softmax
