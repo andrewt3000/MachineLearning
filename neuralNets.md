@@ -60,7 +60,7 @@ Steps to training a network.
 - Implement backpropagation 
 - Run optimization algorithm such as gradient descent adjusting weights using learning rate.  
 
-Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once. You want to stop training if the validation data has an increasing error rate, this indicates overfitting. This is called early termination.   
+Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
 
 ### Cost Function 
 Cost (aka error/objective/loss) function measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is a common cost function for softmax function.   
@@ -95,6 +95,10 @@ L1 regularization uses sum of absolute value of weights. L1 can yield sparse out
 L2 regularization uses sum of squared weights. L2 can't yield sparse outputs.    
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. Dropout is in implemented in training but not present in inference.  
+
+You want to stop training if the validation data has an increasing error rate, this indicates overfitting. This is called early termination.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
 ### Other Types of Neural Networks
 Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
