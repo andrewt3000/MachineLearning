@@ -86,13 +86,11 @@ Batch gradient descent - Gradient descent is iteratively adjusting the weight by
 
 Stochastic gradient descent is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
-Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example befor making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128.  
+Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Larger mini-batches result in greater throughput, but can cause overfitting.  
 
 Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction.  
 
 Other optimization algorithms include nesterov momentum sgd, adagrad, and adaDelta. See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)
-
-[Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
 
 ### Other Types of Neural Networks
 Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
@@ -116,3 +114,5 @@ GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but 
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
 
 [TensorFlow Neural Network Playground](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.28720&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false)  - This demo lets you run a neural network in your browser and see results graphically. Be sure to click the play button to start training. The network can easily train for the first three datasets with default parameters but the challenge is to get the network to train to the spiral dataset.  
+
+[Practical tips for deep learning](http://yyue.blogspot.com/2015/01/a-brief-overview-of-deep-learning.html)  
