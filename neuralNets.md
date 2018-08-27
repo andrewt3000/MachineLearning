@@ -91,8 +91,8 @@ Overfitting - output fits training data well, but doesn't work well on validatio
 
 Regularization - a technique to minimize overfitting.  
 
-L1 regularization uses sum of absolute value of weights. L1 can yield sparse outputs.  
-L2 regularization uses sum of squared weights. L2 can't yield sparse outputs.    
+L1 regularization uses sum of absolute value of weights. L1 works best with sparse outputs.  
+L2 regularization uses sum of squared weights. L2 doesn't work well with yielding sparse outputs.    
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. Dropout is in implemented in training but not present in inference.  
 
