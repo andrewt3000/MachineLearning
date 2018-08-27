@@ -96,6 +96,8 @@ L2 regularization uses sum of squared weights. L2 can't yield sparse outputs.
 
 [Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. Dropout is in implemented in training but not present in inference.  
 
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/dropout.png" />  
+
 Early termination - Stop training when the training error is getting lower but the validation error is increasing. This indicates overfitting.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
