@@ -25,15 +25,6 @@ if &alpha; is too low, convergance is slow.
 if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
 The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
 
-Underfitting - output doesn't fit the training data well.  
-Overfitting - output fits training data well, but doesn't work well on validation or test data.  
-
-Regularization - a technique to minimize overfitting.  
-
-L1 regularization uses sum of absolute value of weights. L1 can yield sparse outputs.  
-L2 regularization uses sum of squared weights. L2 can't yield sparse outputs.    
-
-[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. Dropout is in implemented in training but not present in inference.  
 
 ### Activation Functions
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". Typical activation functions include sigmoid, tanh, and ReLu.  
@@ -91,6 +82,19 @@ Mini batch gradient descent: Stochastic gradient descent that considers more tha
 Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction.  
 
 Other optimization algorithms include nesterov momentum sgd, adagrad, and adaDelta. See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)
+
+#### Regularization
+Underfitting - output doesn't fit the training data well.  
+Overfitting - output fits training data well, but doesn't work well on validation or test data.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/over_under.png"/>
+
+Regularization - a technique to minimize overfitting.  
+
+L1 regularization uses sum of absolute value of weights. L1 can yield sparse outputs.  
+L2 regularization uses sum of squared weights. L2 can't yield sparse outputs.    
+
+[Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) - a form of regularization. "The key idea is to randomly drop units (along with their connections) from the neural network during training." Typical hyperparameter value is .5 (50%). As dropout value approaches zero, dropout has less effect, as it approaches 1 there are more connections are being zeroed out. The remaining active connections are scaled up to compensate for the zeroed out connections. Dropout is in implemented in training but not present in inference.  
 
 ### Other Types of Neural Networks
 Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
