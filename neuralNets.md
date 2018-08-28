@@ -56,6 +56,11 @@ Steps to training a network.
 
 You train until the model (hopefully) converges on an acceptablely low error level. An epoch means the network has been trained on every example once.  
 
+### Forward Propagation
+If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
+
+[Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
+
 ### Cost Function 
 Cost (aka error/objective/loss) function measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is a common cost function for softmax function.   
 
@@ -69,6 +74,8 @@ The backpropagation algorithm applies the chain rule to compute the gradients (p
 If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, it has found them minimum loss.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
+
+Calculating the partial derivatieve of the loss function with respect each weight is non-trivial and requires knowledge of calculus. Here is an [example in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb).  
 
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
