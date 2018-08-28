@@ -36,10 +36,11 @@ ReLu activation is currently (2018) the most popular activation function. ReLu s
 
 #### Softmax
 The [softmax function](https://en.wikipedia.org/wiki/Softmax_function) is often used as the model's final output activation function. Softmax is used for modeling probability distributions for multiclass classification where outputs are mutually exclusive (MNIST is an example). 
-Softmax is a "soften" maximum function. It's properties are: 
+Softmax is a "soften" maximum function. It's properties are:  
 Output values are in range [0, 1].  
 The sum of outputs is 1.  
 
+See additonal activations in [Keras activations](https://keras.io/activations/)  
 
 ### Training a network
 Training data - The data used in machine learning models to make the model more accurate. In the case of supervised learning it consists of input features and output labels that serve as examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% -80% training, 10%-20% validation and 10%-20% testing data. Validation data is evaluated while the model is training and it indicates if the model is generalizing. Testing data is evaluated after you have stopped training the model to indicate the model's accuracy.  
