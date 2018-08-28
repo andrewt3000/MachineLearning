@@ -75,7 +75,7 @@ If the gradient (i.e. partial derivative/slope) is positive, that means the loss
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
-Calculating the partial derivatieve of the loss function with respect to each weight is non-trivial and requires knowledge of calculus. It first involves combining the forward propagation into a single equation and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function.  
+Calculating the partial derivatieve of the loss function with respect to each weight is non-trivial and requires knowledge of calculus. It first involves combining the forward propagation into a single equation and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function).  
   
 Here is an [example in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb).  
 
