@@ -54,7 +54,7 @@ Steps to training a network.
 - Implement backpropagation 
 - Run optimization algorithm such as gradient descent adjusting weights using learning rate.  
 
-Number of times to iterate over the training data - You run the program until it hopefully converges on an acceptablely low error level. An epoch means the network has been been trained on every example once.  
+You train until the model (hopefully) converges on an acceptablely low error level. An epoch means the network has been trained on every example once.  
 
 ### Cost Function 
 Cost (aka error/objective/loss) function measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is a common cost function for softmax function.   
@@ -79,7 +79,7 @@ The learning rate is often reduced to a smaller number over time. This is often 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
 
 ### Optimization algorithms
-Gradient descent is iterative algorithm that adjusts the weight by learning rate times the gradient to mimimize the loss function. It assumes the loss function is convex or it may find a local minimum.  
+Gradient descent is iterative algorithm that adjusts the weight by learning rate times the negative of the gradient to mimimize the loss function. It assumes the loss function is convex or it may find a local minimum.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
 
