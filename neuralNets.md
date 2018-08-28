@@ -1,8 +1,7 @@
 ### Neural Networks
-Neural Network - Nueral networks are [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem)  They are acyclical directed graphs. Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis that multiply their input times the weight. Hidden layer consists of neurons that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The input and output are of fixed size. They are often called artificial neural networks, to distinguish it from biological neurons. Also called feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms such as recurrent neural networks. 
+Neural Network - Nueral networks are [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem)  They are acyclical directed graphs. Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The layers are of fixed size. They are often called artificial neural networks, to distinguish it from biological neurons. Also called feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms such as recurrent neural networks. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function.  
 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>
-
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
 ### Features / Input
 Features - measurable property being observed. In neural net context, it's  the input to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications.  
@@ -69,15 +68,15 @@ Cross entropy function is suitable for a classification where the output is a va
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
 
 ### Backpropagation 
-The backpropagation algorithm applies the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
+The backpropagation algorithm applies the chain rule recursively to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
 If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
-Calculating the partial derivatieve of the loss function with respect to each weight is non-trivial and requires knowledge of calculus. It first involves combining the forward propagation into a single equation and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function).  
+Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. It first involves combining the forward propagation into a single equation and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph   
   
-Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function.  
+Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
