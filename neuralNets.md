@@ -55,6 +55,10 @@ Steps to training a network.
 
 You train until the model (hopefully) converges on an acceptablely low error level. An epoch means the network has been trained on every example once.  
 
+### Initialization
+The weights and biases are typically initialized with small random numbers centered on zero. This random process assists symmetry breaking. However, there are a variety of ways to initialize your weights and biases.  
+See available [keras initializations](https://keras.io/initializers/)  
+
 ### Forward Propagation
 If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
@@ -93,7 +97,7 @@ Gradient descent is iterative algorithm that adjusts the weight by learning rate
 
 Batch gradient descent - The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
 
-Stochastic gradient descent is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
+Stochastic gradient descent (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
 Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Larger mini-batches result in greater throughput, but can cause overfitting.  
 
@@ -101,6 +105,7 @@ Momentum sgd is a variation that accelerates sgd. It collects data on each updat
 
 Other optimization algorithms include AdaGrad, AdaDelta, Adam, Adamax, NAdam, and RMSProp. 
 See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)  
+See [Keras Optimizers](https://keras.io/optimizers/)
 
 #### Regularization
 Underfitting - output doesn't fit the training data well.  
