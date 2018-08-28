@@ -20,12 +20,6 @@ Architecture - The structure of a neural network i.e. number of hidden layers, a
 
 Number of hidden layers - the higher the number of layers the more layers of abstraction it can represent. too many layers and the the network suffers from the vanishing or exploding gradient problem.  
 
-Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
-if &alpha; is too low, convergance is slow.
-if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
-The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
-
-
 ### Activation Functions
 Activation function - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". Typical activation functions include sigmoid, tanh, and ReLu.  
 
@@ -72,8 +66,24 @@ Cross entropy function is suitable for a classification where the output is a va
 ### Backpropagation 
 The backpropagation algorithm applies the chain rule to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
+If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, it has found them minimum loss.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
+
+#### Learning Rate
+Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
+if &alpha; is too low, convergance is slow.
+if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
+The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
+
 ### Optimization algorithms
-Batch gradient descent - Gradient descent is iteratively adjusting the weight by learning rate times the gradient to mimimize the error function. The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
+Gradient descent is iterative algorithm that adjusts the weight by learning rate times the gradient to mimimize the loss function. It assumes the loss function is convex or it may find a local minimum.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
+
+Batch gradient descent - The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
 
 Stochastic gradient descent is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
