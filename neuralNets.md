@@ -96,9 +96,10 @@ Stochastic gradient descent is a variation of gradient descent that uses a singl
 
 Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Larger mini-batches result in greater throughput, but can cause overfitting.  
 
-Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction.  
+Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction. Nesterov momentum is another variation.  
 
-Other optimization algorithms include nesterov momentum sgd, adagrad, and adaDelta. See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)
+Other optimization algorithms include adagrad, adaDelta, Adam, Adamax, NAdam, and RMSProp. 
+See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/) or 
 
 #### Regularization
 Underfitting - output doesn't fit the training data well.  
@@ -126,14 +127,11 @@ Convolutional Neural Networks - Specialized to process a grid of information suc
 Recurrent Neural Network (RNN) - Used for input sequences such as text, audio, or video. RNNs are similar to a vanilla neural network but they also pass the hidden state as output of each neuron via a weighted connection as an input to the neurons in the same layer during the next sequence. RNNs are trained by backpropagation through time.  This feedback architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. Exploding gradient can be resolved by gradient clipping. A common hyperparameter is the number of steps to go back or "unroll" during training. There are variations such as bi-directional and recursive RNNs. 
 [Code an RNN](https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/)  
 
-LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem. It contains memory cells and gate units. The number of memory cells is a hyperparameter. Memory cells pass memory information forward. The gates decide what information is stored in the memory cells. A vanilla LSTM has a forget gates, input gates and output gates. There are [many variations of the LSTM](http://arxiv.org/pdf/1503.04069.pdf).  
-[Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Blog post by Chris Olah.  
-[RNN/LSTM tutorial for TensorFlow](https://www.tensorflow.org/versions/r0.10/tutorials/recurrent/index.html)  Often LSTMs use Beam Search to keep track of several of the most probable sequences and then choose the highest probability path. This lowers the risk a single bad probability in the sequence getting you on the wrong track. [See udacity video](https://classroom.udacity.com/courses/ud730/lessons/6378983156/concepts/63733319420923#)  
+LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem.  
 
+[Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Blog post by Chris Olah.  
 
 GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but simpler than LSTM. It contains one update gate and combines the hidden state and memory cells among other differences.  
-
-
 
 ### Other resources
 [neural nets](http://frnsys.com/ai_notes/machine_learning/neural_nets.html) thorough and concise study notes about neural networks.   
