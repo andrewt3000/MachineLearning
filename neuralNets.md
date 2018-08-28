@@ -96,10 +96,10 @@ Stochastic gradient descent is a variation of gradient descent that uses a singl
 
 Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Larger mini-batches result in greater throughput, but can cause overfitting.  
 
-Momentum sgd is a variation that makes sgd less likely to go in the wrong direction because it collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction. Nesterov momentum is another variation.  
+Momentum sgd is a variation that accelerates sgd. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction. .9 is a typical value for the momentum. Nesterov momentum is another variation.  
 
-Other optimization algorithms include adagrad, adaDelta, Adam, Adamax, NAdam, and RMSProp. 
-See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/) or 
+Other optimization algorithms include AdaGrad, AdaDelta, Adam, Adamax, NAdam, and RMSProp. 
+See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)  
 
 #### Regularization
 Underfitting - output doesn't fit the training data well.  
