@@ -62,7 +62,6 @@ See available [keras initializations](https://keras.io/initializers/)
 
 ### Forward Propagation
 If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
-
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
 ### Cost Function 
@@ -104,9 +103,9 @@ Mini batch gradient descent: Stochastic gradient descent that considers more tha
 
 Momentum sgd is a variation that accelerates sgd. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. μ is a hyperparameter that represents the friction. μ is in the range of 0 to 1 and μ=1 is no friction. .9 is a typical value for the momentum. Nesterov momentum is another variation.  
 
-Other optimization algorithms include AdaGrad, AdaDelta, Adam, Adamax, NAdam, and RMSProp. 
+Other optimization algorithms include AdaGrad, AdaDelta, Adam, Adamax, NAdam, and RMSProp.  
 See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)  
-See [Keras Optimizers](https://keras.io/optimizers/)
+See [Keras Optimizers](https://keras.io/optimizers/)  
 
 #### Regularization
 Underfitting - output doesn't fit the training data well.  
