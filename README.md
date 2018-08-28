@@ -1,6 +1,6 @@
 ### My Notes on Machine Learning
 
-Machine Learning is a sub-field of artificial intelligence.  
+Machine Learning is a sub-field of artificial intelligence that uses data to generate predictive models.  
 
 #### 3 Types of machine learning
 1. Supervised learning - learns using labeled training data.  Training data has input and output.  
