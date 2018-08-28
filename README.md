@@ -11,11 +11,6 @@ Machine Learning is a sub-field of artificial intelligence.
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
 
-#### Types of classification  
-Binary classification - classifying elements into one of two groups. Examples: benign/malignant tumor, fraudulent or legitimate financial transaction, spam or non-spam email.  
-
-[Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)/multinomial classification - classify instances into more than 2 classes. Example: MNIST evaluates handwritten single numeric characters and classifies into 10 binary classes 0 - 9.  
-
 ### Popular machine learning and deep learning models and applications
 
 [Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - All the details to implment a vanilla neural network.    
