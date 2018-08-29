@@ -1,5 +1,5 @@
 ### Neural Networks
-Neural Network - Nueral networks are [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem)  They are acyclical directed graphs. Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The layers are of fixed size. They are often called artificial neural networks, to distinguish it from biological neurons. Also called feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms such as recurrent neural networks. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function.  
+Neural Network - Nueral networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem)  Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The layers are of fixed size. They are often called artificial neural networks, to distinguish it from biological neurons. Also called feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms such as recurrent neural networks. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
@@ -32,7 +32,7 @@ ReLu activation is currently (2018) the most popular activation function. ReLu s
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/activation.png" />
 
 #### More activations
-There are newer, experimental variants of the relu: Leaky ReLu (sovlves the dead relu issue) Elu (exponential relu), and MaxOut.   
+There are newer, experimental variants of the relu: Leaky ReLu (solves the dead relu issue) Elu (exponential relu), and MaxOut.   
 
 #### Softmax
 The [softmax function](https://en.wikipedia.org/wiki/Softmax_function) is often used as the model's final output activation function. Softmax is used for modeling probability distributions for multiclass classification where outputs are mutually exclusive (MNIST is an example). 
@@ -73,25 +73,31 @@ In Keras, you can specify kernel and bias initialization on each Dense layer. Se
 
 ### Forward Propagation
 If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
+
+```
+z2 = np.dot(X, W1)
+a2 = activation(z2)
+```
+
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
-### Cost Function 
-Cost (aka error/objective/loss) function measures how inaccurate a model is. Training a model minimizes the cost function. Sum of squared errors is a common cost function for regression. Cross entropy (aka log loss, negative log probability) is a common cost function for softmax function.   
+### Loss Function 
+Loss (aka cost/error/objective) function measures how inaccurate a model is. Training a model minimizes the loss function. Sum of squared errors is a common loss function for regression. Cross entropy (aka log loss, negative log probability) is a common loss function for softmax function.   
 
-Cross entropy function is suitable for a classification where the output is a value between 0 and 1. The cost will be 0 if the output value is 1 and that is the correct classification. Conversely, the error approaches infinity as the output approaches 0 for the correct classification.  
+Cross entropy function is suitable for a classification where the output is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
 
 [Keras loss functions](https://keras.io/losses/)  
 
 ### Backpropagation 
-The backpropagation algorithm applies the chain rule recursively to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
+The backpropagation algorithm applies the chain rule recursively to compute the gradients (partial derivative) of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network.  
 
 If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
-Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. It first involves combining the forward propagation into a single equation and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph   
+Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. It first involves combining the forward propagation into a single equation and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.    
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
@@ -104,11 +110,11 @@ The learning rate is often reduced to a smaller number over time. This is often 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
 
 ### Optimization algorithms
-Gradient descent is iterative algorithm that adjusts the weight by learning rate times the negative of the gradient to mimimize the loss function. It assumes the loss function is convex or it may find a local minimum.  
+Gradient descent is iterative algorithm that adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function. The loss function needs to be convex or it may find a local minimum.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
 
-Batch gradient descent - The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex errors functions.  
+Batch gradient descent - The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex loss functions.  
 
 Stochastic gradient descent (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
