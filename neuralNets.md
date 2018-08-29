@@ -66,7 +66,9 @@ Feature scaling - scale each feature to be in a common range typically -1 to 1 w
 Data augmentation - An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.   
 
 ### Initialization
-The weights and biases are typically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry. There are a variety of ways to initialize your weights and biases.  
+The weights and biases are historically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry.  
+
+As your neural networks get deeper, initialization becomes more important. Consider more advanced initializations such as Xavier and He initialization.   
 In Keras, you can specify kernel and bias initialization on each Dense layer. See all available [keras initializations](https://keras.io/initializers/). Glorot (aka Xavier) initialization is the default.  
 
 ### Forward Propagation
