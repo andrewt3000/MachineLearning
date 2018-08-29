@@ -33,7 +33,15 @@ Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed o
 Tanh activation function outputs value between -1 and 1. Tanh is a rescaled sigmoid function. Tanh is zero centered but still suffers from activation saturation issues similar to sigmoid. Historically popular, but not currently popular.  
 
 #### ReLu
-ReLu activation is currently (2018) the most popular activation function. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. for x < 0, y = 0. for x>0, y = x. Relu can suffer from "dead" relus (vanishing gradient?)    
+ReLu activation is currently (2018) the most popular activation function. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus (vanishing gradient?)    
+
+```python
+def relu(x):
+  if x < 0:
+    return 0
+  if x >= 0:
+    return x
+```
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/activation.png" />
 
@@ -80,7 +88,7 @@ In Keras, you can specify kernel and bias initialization on each Dense layer. Se
 ### Forward Propagation
 If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
-```
+```python
 z2 = np.dot(X, W1)
 a2 = activation(z2)
 ```
