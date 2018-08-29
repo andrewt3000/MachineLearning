@@ -76,6 +76,8 @@ Cross entropy function is suitable for a classification where the output is a va
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
 
+[Keras loss functions](https://keras.io/losses/)  
+
 ### Backpropagation 
 The backpropagation algorithm applies the chain rule recursively to compute the gradients (partial derivative) of the loss function with respect to the weights in the network by moving backwards (output to input) through the network.  
 
