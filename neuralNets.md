@@ -1,10 +1,16 @@
 ### Neural Networks
-Neural Network - Nueral networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem)  Neural nets have input layers, hidden layers and output layers. Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum. The weights are intially set to random values but are trained with backpropagation.  The layers are of fixed size. They are often called artificial neural networks, to distinguish it from biological neurons. Also called feedforward neural network to distinguish from more complicated neural nets with feedback mechanisms such as recurrent neural networks. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function.  
+Neural Network - Nueral networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem).  
+Neural nets have input layers, hidden layers and output layers.  
+Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
+Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
+The layers are of fixed size. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function.  
+
+Aka artificial neural networks, feedforward neural networks, vanilla neural networks.   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
 ### Features / Input
-Features - measurable property being observed. In neural net context, it's  the input to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications.  
+Features - measurable property being observed. In neural net context, it's the input layer to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications.  
   
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
 
