@@ -56,6 +56,10 @@ Steps to training a network.
 
 You train until the model (hopefully) converges on an acceptablely low error level. An epoch means the network has been trained on every example once.  
 
+One tip is to begin by overtraining a small portion of your data by getting rid of regularization to see if you have a reasonalbe architecture. If you can't get the loss to zero, reconsider your architecture.   
+
+Start with small regularization and find a learning rate that makes the loss go down.  
+
 ### Data Preprocessing
 Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value. For instance, in image processing you could subtract the mean pixel intensity for the whole image or by channel before scaling it to zero center the features.    
 
