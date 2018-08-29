@@ -62,7 +62,7 @@ Feature scaling - scale each feature to be in a common range typically -1 to 1 w
 Data augmentation - An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.   
 
 ### Initialization
-The weights and biases are typically initialized with small random numbers centered on zero. This random process assists symmetry breaking. However, there are a variety of ways to initialize your weights and biases.  
+The weights and biases are typically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry. There are a variety of ways to initialize your weights and biases.  
 See available [keras initializations](https://keras.io/initializers/)  
 
 ### Forward Propagation
