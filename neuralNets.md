@@ -63,7 +63,7 @@ Data augmentation - An example of data augmentation for images is mirroring, fli
 
 ### Initialization
 The weights and biases are typically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry. There are a variety of ways to initialize your weights and biases.  
-See available [keras initializations](https://keras.io/initializers/)  
+In Keras, you can specify kernel and bias initialization on each Dense layer. See all available [keras initializations](https://keras.io/initializers/). Glorot (aka Xavier) initialization is the default.  
 
 ### Forward Propagation
 If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
