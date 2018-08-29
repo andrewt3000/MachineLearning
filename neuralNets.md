@@ -10,8 +10,6 @@ Feature selection - The process of choosing the features. It is important to pic
 
 Dimensionality reduction - Reducing number of variables.  A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.      
 
-Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value.    
-
 ### Hyperparameters
 Hyperparameters - the model’s parameters in a neural net such as architecture, learning rate, and regularization factor.	
 
@@ -57,6 +55,11 @@ Steps to training a network.
 - Run optimization algorithm such as gradient descent adjusting weights using learning rate.  
 
 You train until the model (hopefully) converges on an acceptablely low error level. An epoch means the network has been trained on every example once.  
+
+### Data Preprocessing
+Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value. For instance, in image processing you could subtract the mean pixel intensity for the whole image or by channel before scaling it to zero center the features.    
+
+Data augmentation - An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.   
 
 ### Initialization
 The weights and biases are typically initialized with small random numbers centered on zero. This random process assists symmetry breaking. However, there are a variety of ways to initialize your weights and biases.  
