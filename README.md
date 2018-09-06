@@ -13,8 +13,8 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 
 ### Popular machine learning and deep learning models and applications
 
-[Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - All the details to implment a vanilla neural network.    
+[Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - A primer on neural networks.    
 
-[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) State of the art resources for image processing and CNNs.  
+[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) State of the art resources for image processing with CNNs.  
 
 [Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) State of the art deep learning models and nlp applications for applications such as sentiment analysis, translation and dialog generation.  
