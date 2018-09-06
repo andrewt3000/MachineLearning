@@ -15,8 +15,8 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 
 [Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - A primer on neural networks.    
 
-[Recurrent Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) - A primer on recurrent neural networks.    
+[Recurrent Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) - A primer on recurrent neural networks. Typically used to process sequences of information.      
 
-[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) State of the art resources for image processing with CNNs.  
+[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) State of the art resources for image processing with CNNs. Typically used to process a grid of information such as an image.   
 
 [Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) State of the art deep learning models and nlp applications for applications such as sentiment analysis, translation and dialog generation.  
