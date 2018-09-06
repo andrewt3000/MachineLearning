@@ -29,7 +29,7 @@ W1 is original width of image. F is filter witdth, P is padding, S is stride. ex
 ### Image applications
 Object classification - identifying an object in an image.  
 Localization - drawing a bounding box around an object. One or fixed number of objects.  
-Detection - drawing a bounding box around an unlimited number of objects.  
+Object detection - drawing a bounding box around an unlimited number of objects.  
 Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.  
 Instance segmentation - Segment between different instances of objects.  
 Image cpationing - describing the objects in an image.  
