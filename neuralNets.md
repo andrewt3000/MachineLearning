@@ -159,18 +159,6 @@ Early termination - Stop training when the training error is getting lower but t
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
-### Other Types of Neural Networks
-Convolutional Neural Networks - Specialized to process a grid of information such as an image. Convolution neural networks use filters (aka kernels) that convolve over the grid.    
-[My notes on CNNs](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md)
-
-Recurrent Neural Network (RNN) - Used for input sequences such as text, audio, or video. RNNs are similar to a vanilla neural network but they also pass the hidden state as output of each neuron via a weighted connection as an input to the neurons in the same layer during the next sequence. RNNs are trained by backpropagation through time.  This feedback architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. Exploding gradient can be resolved by gradient clipping. A common hyperparameter is the number of steps to go back or "unroll" during training. There are variations such as bi-directional and recursive RNNs. 
-[Code an RNN](https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/)  
-
-LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem.  
-
-[Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Blog post by Chris Olah.  
-
-GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but simpler than LSTM. It contains one update gate and combines the hidden state and memory cells among other differences.  
 
 ### Other resources
 [neural nets](http://frnsys.com/ai_notes/machine_learning/neural_nets.html) another primer on neural networks.   
