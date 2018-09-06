@@ -1,10 +1,5 @@
 # Convolutional Neural Networks for image processing
-
-[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)   
-[2017 videos](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)  
-
-[A Beginner's Guide To Understanding Convolutional Neural Networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)  
-[An Intuitive Explanation of Convolutional Neural Networks](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/)
+[Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers.  
 
 ### CNN Parameters and terminology
 
@@ -77,3 +72,12 @@ Architecture: 152 layers. [ResNet model code](https://github.com/KaimingHe/deep-
 Szegedy et al. 2016 
 3.08% top 5 error on ImageNet  [blog post](https://research.googleblog.com/2016/08/improving-inception-and-image.html)  
 Architecture: 75 layers  
+
+#### Additional Resources
+
+[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)   
+[2017 videos](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)  
+
+[A Beginner's Guide To Understanding Convolutional Neural Networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)  
+[An Intuitive Explanation of Convolutional Neural Networks](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/)
+
