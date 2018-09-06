@@ -1,16 +1,7 @@
 # Convolutional Neural Networks for image processing
 [Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers. Typically used for grids of input such as images.   
 
-### Computer Vision tasks
-Object classification - identifying an object in an image.  
-Localization - drawing a bounding box around an object. One or fixed number of objects.  
-Object detection - drawing a bounding box around an unlimited number of objects.  
-Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.  
-Instance segmentation - Segment between different instances of objects.  
-Image cpationing - describing the objects in an image.  
-
-
-### CNN Parameters and terminology
+### CNN HyperParameters
 
 Types of hidden layers in cnns: convolutional layers, max pooling layers, fully connected layers.  
 
@@ -36,7 +27,17 @@ W1 is original width of image. F is filter witdth, P is padding, S is stride. ex
 [Source](http://cs231n.github.io/convolutional-networks/)  
 
 
-### Object Classification. Case Studies
+### Computer Vision tasks
+Object classification - identifying an object in an image.  
+Classification + Localization - drawing a bounding box around an object. One or fixed number of objects. Train a CNN to classify but also train box coordinates as a regression problem finding (x, y, w, h)    
+Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances. Use a cnn, downsample and then upsample for efficiency.     
+Instance segmentation - Segment between different instances of objects.  
+Object detection - drawing a bounding box around an unlimited number of objects. Get regions of interest, and run algorithms such as R-CNN, fast R-CNN, faster R-CNN, or Yolo and SSD.
+Image cpationing - describing the objects in an image.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cv.png" />  
+
+### Object Classification: Case Studies
 [Case Studies](http://cs231n.github.io/convolutional-networks/#case)  
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
 LeCun et al., 1998 LeNet-5.  Input 32x32 images.  
