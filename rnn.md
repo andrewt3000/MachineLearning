@@ -5,4 +5,13 @@
 
 This feedback architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. Exploding gradient can be mitigated by gradient clipping. A common hyperparameter is the number of steps to go back or "unroll" during training. 
 
-There are variations such as bi-directional and recursive RNNs. Also LSTMs and GRUs.
+There are variations such as bi-directional and recursive RNNs  
+
+### GRU
+GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but simpler than LSTM. It contains one update gate and combines the hidden state and memory cells among other differences.  
+
+### LSTM
+LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem.  
+
+[Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Blog post by Chris Olah.  
+
