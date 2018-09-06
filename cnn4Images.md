@@ -28,12 +28,12 @@ W1 is original width of image. F is filter witdth, P is padding, S is stride. ex
 
 
 ### Computer Vision tasks
-Object classification - identifying an object in an image.  
-Classification + Localization - drawing a bounding box around an object. One or fixed number of objects. Train a CNN to classify but also train box coordinates as a regression problem finding (x, y, w, h)    
-Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances. Use a cnn, downsample and then upsample for efficiency.     
-Instance segmentation - Segment between different instances of objects.  
-Object detection - drawing a bounding box around an unlimited number of objects. Get regions of interest, and run algorithms such as R-CNN, fast R-CNN, faster R-CNN, or Yolo and SSD.
-Image cpationing - describing the objects in an image.  
+**Object classification** - identifying an object in an image.  
+**Classification + Localization** - drawing a bounding box around an object. One or fixed number of objects. Train a CNN to classify but also train box coordinates as a regression problem finding (x, y, w, h)    
+**Semantic segmentation** - Label every pixel between classes. Don’t distinguish between different instances. Use a cnn, downsample and then upsample for efficiency.     
+**Object detection** - drawing a bounding box around an unlimited number of objects. Get regions of interest, and run algorithms such as R-CNN, fast R-CNN, faster R-CNN. There are also new single pass models such as Yolo and SSD.  
+**Instance segmentation** - Segment between different instances of objects.  
+**Image cpationing** - describing the objects in an image.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cv.png" />  
 
