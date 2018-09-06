@@ -1,5 +1,16 @@
 # Convolutional Neural Networks for image processing
-[Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers.  
+[Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers. Typically used for grids of input such as images.   
+
+### Computer Vision tasks
+Object classification - identifying an object in an image.  
+Localization - drawing a bounding box around an object. One or fixed number of objects.  
+Object detection - drawing a bounding box around an unlimited number of objects.  
+Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.  
+Instance segmentation - Segment between different instances of objects.  
+Image cpationing - describing the objects in an image.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cv.png" />  
+
 
 ### CNN Parameters and terminology
 
@@ -26,13 +37,6 @@ The width (height is the same assuming image is square) is W2=(W1−F+2P)/S+1
 W1 is original width of image. F is filter witdth, P is padding, S is stride. example: F=3,S=1,P=1  
 [Source](http://cs231n.github.io/convolutional-networks/)  
 
-### Image applications
-Object classification - identifying an object in an image.  
-Localization - drawing a bounding box around an object. One or fixed number of objects.  
-Object detection - drawing a bounding box around an unlimited number of objects.  
-Semantic segmentation - Label every pixel between classes. Don’t distinguish between different instances.  
-Instance segmentation - Segment between different instances of objects.  
-Image cpationing - describing the objects in an image.  
 
 ### Object Classification. Case Studies
 [Case Studies](http://cs231n.github.io/convolutional-networks/#case)  
