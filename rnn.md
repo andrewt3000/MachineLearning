@@ -11,7 +11,9 @@ There are variations such as bi-directional and recursive RNNs
 GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but simpler than LSTM. It contains one update gate and combines the hidden state and memory cells among other differences.  
 
 ### LSTM
-LSTM - [Long Short Term Memory](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) - A specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem.  
+LSTM - [Long Short Term Memory] - Introduced Hochreiter in 1997, a specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem.  It contains memory cells and gate units. The number of memory cells is a hyperparameter. Memory cells pass memory information forward. The gates decide what information is stored in the memory cells. A vanilla LSTM has a forget gates, input gates and output gates. There are many variations of the LSTM.
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lstm.png" />  
 
 [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Blog post by Chris Olah.  
 
