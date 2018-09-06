@@ -9,8 +9,6 @@ Semantic segmentation - Label every pixel between classes. Don’t distinguish b
 Instance segmentation - Segment between different instances of objects.  
 Image cpationing - describing the objects in an image.  
 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cv.png" />  
-
 
 ### CNN Parameters and terminology
 
