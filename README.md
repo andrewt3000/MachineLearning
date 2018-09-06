@@ -11,7 +11,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
 
-### Popular machine learning and deep learning models and applications
+### Machine learning models and applications
 
 [Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - A primer on neural networks.    
 
