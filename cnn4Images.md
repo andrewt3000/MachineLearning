@@ -7,13 +7,13 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 
 1. Convolutional Layers - layers that have filters (aka kernels) that are convolved around the image. Then perform a Relu activation.    
   CNN Parmeters: All parameters can vary by layer.  
-  1. Number of filters (aka kernels) (K) - typically a power of 2. eg. 32, 64, 128. 
+  a. Number of filters (aka kernels) (K) - typically a power of 2. eg. 32, 64, 128. 
 
-  2. Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11.  
+  b. Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11.  
 
-  3. Stride (S) - How much to shift the filter.  
+  c. Stride (S) - How much to shift the filter.  
   
-  4. Padding (P) - zero padding on edges of input volume. Padding can make output volume same size as input volume when padding =  (F - 1)/2. Examples: 3x3 filters / padding = 1, 5x5 filters / padding 2, 7x7 filters / padding 3.
+  d. Padding (P) - zero padding on edges of input volume. Padding can make output volume same size as input volume when padding =  (F - 1)/2. Examples: 3x3 filters / padding = 1, 5x5 filters / padding 2, 7x7 filters / padding 3.
 
 2. Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.
   parameter: size of the section to subsample. example 2x2.
