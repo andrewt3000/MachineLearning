@@ -15,8 +15,8 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
   
     4. Padding (P) - zero padding on edges of input volume. Padding can make output volume same size as input volume when padding =  (F - 1)/2. Examples: 3x3 filters / padding = 1, 5x5 filters / padding 2, 7x7 filters / padding 3.
 
-2. Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.
-  parameter: size of the section to subsample. example 2x2.
+2. Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.  
+  hyperparameter: size of the section to subsample. example 2x2.
 
 3. Fully connected layers are the same as hidden layers in a vanilla neural network.  
 
