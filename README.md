@@ -3,8 +3,8 @@
 Machine Learning is a sub-field of artificial intelligence that uses data to generate predictive models.  
 
 #### 3 Types of machine learning
-1. Supervised learning - learns using labeled training data.  Training data has input and output.  
-2. Unsupervised learning - learns using unlabled training data.  Training data is input but has no output.  Algorithm finds structure. Clustering is an example of unsupervised learning. Examples: social network analysis, market segmentation, astronomical data analysis.  
+1. Supervised learning - learns using labeled training data.  Training data has features and labels.  
+2. Unsupervised learning - learns using unlabled training data.  Training data has features but no labels.  Algorithm finds structure. Clustering is an example of unsupervised learning. 
 3. Reinforcement learning - an agent interacts with an environment and learns to take action by maximizing a cumulative reward.  
 
 #### 2 Types of machine learning problems
