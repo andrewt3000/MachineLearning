@@ -102,6 +102,15 @@ Cross entropy function is suitable for a classification where the output is a va
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
 
+```python
+def logloss(true_label, predicted_prob):
+  if true_label == 1:
+    return -log(predicted_prob)
+  else:
+    return -log(1 - predicted_prob)
+ ```
+
+[reference](http://wiki.fast.ai/index.php/Log_Loss)  
 [Keras loss functions](https://keras.io/losses/)  
 
 ### Backpropagation 
@@ -124,19 +133,21 @@ The learning rate is often reduced to a smaller number over time. This is often 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
 
 ### Optimization algorithms
-Gradient descent is iterative algorithm that adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function. The loss function needs to be convex or it may find a local minimum.  
+Gradient descent is iterative algorithm that adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function. 
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
 
-Batch gradient descent - The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex loss functions.  
+Batch gradient descent - The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex loss functions. The loss function needs to be convex or it may find a local minimum.    
 
 Stochastic gradient descent (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
 Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Larger mini-batches result in greater throughput, but can cause overfitting.  
 
-Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov momentum is another variation.  
+#### Gradient Descent Optimization
+Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. 
 
-Other optimization algorithms include AdaGrad, AdaDelta, Adam, Adamax, NAdam, and RMSProp.  
+Other optimization algorithms include: Nesterov, AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
+See [10 Gradient Descent Optimisation Algorithms in a Cheat Sheet](https://towardsdatascience.com/10-gradient-descent-optimisation-algorithms-86989510b5e9)
 See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)  
 See [Keras Optimizers](https://keras.io/optimizers/)  
 
