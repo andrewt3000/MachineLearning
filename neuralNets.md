@@ -49,10 +49,12 @@ def relu(x):
 There are newer, experimental variants of the relu: Leaky ReLu (solves the dead relu issue) Elu (exponential relu), and MaxOut.   
 
 #### Softmax
-The [softmax function](https://en.wikipedia.org/wiki/Softmax_function) is often used as the model's final output activation function. Softmax is used for modeling probability distributions for multiclass classification where outputs are mutually exclusive (MNIST is an example). 
+The [softmax function](https://en.wikipedia.org/wiki/Softmax_function) is often used as the model's final output activation function for classification. Softmax is used for modeling probability distributions for classification where outputs are mutually exclusive (MNIST is an example). 
 Softmax is a "soften" maximum function. It's properties are:  
 Output values are in range [0, 1].  
 The sum of outputs is 1.  
+
+The softmax function is e <sup>y^</sup> / sum of all e <sup>y^</sup> 
 
 See additonal activations in [Keras activations](https://keras.io/activations/)  
 
