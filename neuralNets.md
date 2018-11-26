@@ -120,7 +120,7 @@ If the gradient (i.e. partial derivative/slope) is positive, that means the loss
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
-Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. It first involves combining the forward propagation into a single equation and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.    
+Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. It first involves combining the elements into a single equation (Cost = Cost(Activation(Z(WX)))) and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.  
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
