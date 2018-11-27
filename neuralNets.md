@@ -50,7 +50,7 @@ There are newer, experimental variants of the relu: Leaky ReLu (solves the dead 
 
 #### Softmax
 The [softmax function](https://en.wikipedia.org/wiki/Softmax_function) is often used as the model's final output activation function for classification. Softmax is used for modeling probability distributions for classification where outputs are mutually exclusive (MNIST is an example). 
-Softmax is a "soften" maximum function. It's properties are:  
+Softmax is a "soft" maximum function. It's properties are:  
 Output values are in range [0, 1].  
 The sum of outputs is 1.  
 
@@ -122,9 +122,11 @@ The backpropagation algorithm applies the chain rule recursively to compute the 
 
 Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. The cost function of a layer is Cost = Cost(Activation(Z(WX))), where the X (inputs to that layer) is a function of previous layers activations, summed weights and inputs, Activation(Z(WX)). 
 
-Then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.  
+Then use the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.  
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
+
+Packages such Keras handle this part of the training process for you.  
 
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
