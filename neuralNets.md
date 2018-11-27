@@ -116,13 +116,13 @@ def logloss(true_label, predicted_prob):
 [Keras loss functions](https://keras.io/losses/)  
 
 ### Backpropagation 
-The backpropagation algorithm applies the chain rule recursively to compute the gradients (partial derivative) of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network.  
-
-If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
+The backpropagation algorithm applies the chain rule recursively to compute the gradients (partial derivative) of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network. Backprop tells us how to adjust the weights to minimize the loss function. If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
-Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. It first involves combining the elements into a single equation (Cost = Cost(Activation(Z(WX)))) and then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.  
+Calculating the partial derivatieve of the loss function with respect to each weight requires knowledge of calculus. The cost function of a layer is Cost = Cost(Activation(Z(WX))), where the X (inputs to that layer) is a function of previous layers activations, summed weights and inputs, Activation(Z(WX)). 
+
+Then using the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.  
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
@@ -149,7 +149,7 @@ Mini batch gradient descent: Stochastic gradient descent that considers more tha
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. 
 
 Other optimization algorithms include: Nesterov, AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
-See [10 Gradient Descent Optimisation Algorithms in a Cheat Sheet](https://towardsdatascience.com/10-gradient-descent-optimisation-algorithms-86989510b5e9)
+See [10 Gradient Descent Optimisation Algorithms in a Cheat Sheet](https://towardsdatascience.com/10-gradient-descent-optimisation-algorithms-86989510b5e9)  
 See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)  
 See [Keras Optimizers](https://keras.io/optimizers/)  
 
