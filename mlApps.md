@@ -24,3 +24,5 @@ through Video Prediction](http://arxiv.org/pdf/1605.07157v3.pdf)
 Samsung [breast cancer screening ultrasound machine](http://www.fiercebiotech.com/medical-devices/samsung-applies-deep-learning-to-create-breast-cancer-ultrasound-algorithm) using convolutional neural networks.  
 
 [Self-taught artificial intelligence beats doctors at predicting heart attacks](http://www.sciencemag.org/news/2017/04/self-taught-artificial-intelligence-beats-doctors-predicting-heart-attacks)  
+
+[Stanford dermatology skin cancer classification](https://cs.stanford.edu/people/esteva/nature/)  
