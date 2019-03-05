@@ -26,3 +26,10 @@ Samsung [breast cancer screening ultrasound machine](http://www.fiercebiotech.co
 [Self-taught artificial intelligence beats doctors at predicting heart attacks](http://www.sciencemag.org/news/2017/04/self-taught-artificial-intelligence-beats-doctors-predicting-heart-attacks)  
 
 [Stanford dermatology skin cancer classification](https://cs.stanford.edu/people/esteva/nature/)  
+
+
+### Retail
+[Amazon Go stores](https://www.amazon.com/b?ie=UTF8&node=16008589011)
+
+[Prevent shoplifiting](https://www.bloombergquint.com/technology/the-ai-cameras-that-can-spot-shoplifters-even-before-they-steal#gs.R8h2sAah)  detects suspicious behaviour before people shoplift.  
+
