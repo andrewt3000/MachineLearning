@@ -26,7 +26,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 
 [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
 
-Neural architecture search - automatically designing neural networks.  
+[Neural architecture search](https://en.wikipedia.org/wiki/Neural_architecture_search) - automatically designing neural networks.  
 
 Feature visualization - In computer vision, generating images representative of what neural networks are looking for.  
 
