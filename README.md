@@ -20,3 +20,10 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) A primer for CNNs. CNNS are suitable models for 2d grids of information such as an image.   
 
 [Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) State of the art deep learning models and nlp applications such as sentiment analysis, translation and dialog generation.  
+
+
+Neural architecture search - automatically designing neural networks.  
+
+Feature visualization - In computer vision, generating images representative of what neural networks are looking for.  
+
+Feature attribution - In computer vision, determining and representing which pixels contribute to a classification.   
