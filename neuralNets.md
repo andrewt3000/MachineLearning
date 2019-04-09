@@ -84,7 +84,8 @@ Data augmentation - An example of data augmentation for images is mirroring, fli
 ### Initialization
 The weights and biases are historically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry.  
 
-As your neural networks get deeper, initialization becomes more important. Consider more advanced initializations such as Xavier and He initialization.   
+As your neural networks get deeper, initialization becomes more important. If the initial weights are too small, you get a vanishing gradient. If the initial weights are too large, you get an exploding gradient. Consider more advanced initializations such as Xavier and He initialization.   
+
 In Keras, you can specify kernel and bias initialization on each Dense layer. See all available [keras initializations](https://keras.io/initializers/). Glorot (aka Xavier) initialization is the default.  
 
 ### Forward Propagation
