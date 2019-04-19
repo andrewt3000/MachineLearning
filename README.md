@@ -28,6 +28,6 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 
 [Neural architecture search](https://en.wikipedia.org/wiki/Neural_architecture_search) - (a sub-field of automl) automatically designing neural networks, typically with reinforcement learning. [Survey](https://arxiv.org/abs/1808.05377)    
 
-Feature visualization - In computer vision, generating images representative of what neural networks are looking for.  
+Feature visualization - In computer vision, generating images representative of what neural networks are looking for. (Example [Activation Atlas](https://distill.pub/2019/activation-atlas/)  
 
 Feature attribution - In computer vision, determining and representing which pixels contribute to a classification.   
