@@ -31,3 +31,5 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 Feature visualization - In computer vision, generating images representative of what neural networks are looking for. (Example [Activation Atlas](https://distill.pub/2019/activation-atlas/) )  
 
 Feature attribution - In computer vision, determining and representing which pixels contribute to a classification.   
+
+Generative adversarial networks - GANs - 2 Neural networks constest each other. The generative network generates candidates while the discriminative network evaluates them. This technique can generate realistic images. See [StyleGAN](https://arxiv.org/abs/1812.04948)   
