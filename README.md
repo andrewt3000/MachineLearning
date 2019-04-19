@@ -22,7 +22,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to gen
 [Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) State of the art deep learning models and nlp applications such as sentiment analysis, translation and dialog generation.  
 
 
-### Advanced Terminology
+### Advanced Topics  
 
 [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
 
