@@ -76,6 +76,9 @@ Szegedy et al. 2016
 3.08% top 5 error on ImageNet  [blog post](https://research.googleblog.com/2016/08/improving-inception-and-image.html)  
 Architecture: 75 layers  
 
+#### Object Detection
+[Yolo](https://pjreddie.com/darknet/yolo/) [Yolo V2](https://pjreddie.com/darknet/yolov2/) [Yolo V3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)  
+
 #### Additional Resources
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)   
