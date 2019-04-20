@@ -31,7 +31,8 @@ W1 is original width of image. F is filter witdth, P is padding, S is stride. ex
 **Object classification** - identifying an object in an image.  
 **Classification + Localization** - drawing a bounding box around an object. One or fixed number of objects. Train a CNN to classify but also train box coordinates as a regression problem finding (x, y, w, h)    
 **Semantic segmentation** - Label every pixel between classes. Don’t distinguish between different instances. Use a cnn, downsample and then upsample for efficiency.     
-**Object detection** - drawing a bounding box around an unlimited number of objects. Get regions of interest, and run algorithms such as R-CNN, fast R-CNN, faster R-CNN. There are also new single pass models such as Yolo and SSD.  
+**Object detection** - drawing a bounding box around an unlimited number of objects. Get regions of interest, and run algorithms such as R-CNN, fast R-CNN, faster R-CNN. There are also new single pass models such as [Yolo](https://pjreddie.com/darknet/yolo/), [V2](https://pjreddie.com/darknet/yolov2/), [V3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)  
+ and [SSD](https://arxiv.org/abs/1512.02325).  
 **Instance segmentation** - Segment between different instances of objects. State of the art is Mask R-CNN.  
 **Image cpationing** - describing the objects in an image.  
 
@@ -75,9 +76,6 @@ Architecture: 152 layers. [ResNet model code](https://github.com/KaimingHe/deep-
 Szegedy et al. 2016 
 3.08% top 5 error on ImageNet  [blog post](https://research.googleblog.com/2016/08/improving-inception-and-image.html)  
 Architecture: 75 layers  
-
-#### Object Detection
-[Yolo](https://pjreddie.com/darknet/yolo/) [Yolo V2](https://pjreddie.com/darknet/yolov2/) [Yolo V3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)  
 
 #### Additional Resources
 
