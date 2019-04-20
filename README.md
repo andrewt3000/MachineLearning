@@ -23,7 +23,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 
 
 ### Advanced Topics  
-Generative adversarial networks - GANs - 2 Neural networks constest each other. The generative network generates candidates while the discriminative network evaluates them. This technique can generate realistic images. See [GAN](https://arxiv.org/abs/1406.2661), [Lap GAN](https://arxiv.org/abs/1506.05751), [DC GAN](https://arxiv.org/abs/1511.06434), [Big GAN](https://arxiv.org/abs/1809.11096), [StyleGAN](https://arxiv.org/abs/1812.04948)   
+Generative adversarial networks - GANs - 2 Neural networks compete against each other. The generative network generates candidates while the discriminative network evaluates them. This technique can generate realistic images. See [GAN](https://arxiv.org/abs/1406.2661), [Lap GAN](https://arxiv.org/abs/1506.05751), [DC GAN](https://arxiv.org/abs/1511.06434), [Big GAN](https://arxiv.org/abs/1809.11096), [StyleGAN](https://arxiv.org/abs/1812.04948)   
 
 [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
 
