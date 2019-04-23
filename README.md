@@ -34,5 +34,5 @@ Generative adversarial networks - GANs - 2 Neural networks compete against each 
 
 Feature visualization - In computer vision, generating images representative of what neural networks are looking for. (Example [Activation Atlas](https://distill.pub/2019/activation-atlas/) )  
 
-Feature attribution - In computer vision, determining and representing which pixels contribute to a classification.   
+Feature attribution - In computer vision, determining and representing which pixels contribute to a classification. Example: [Saliency maps](https://arxiv.org/pdf/1312.6034.pdf)     
 
