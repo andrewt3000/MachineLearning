@@ -52,8 +52,8 @@ Softmax is a "soft" maximum function. It's properties are:
 Output values are in the range [0, 1].  
 The sum of output nodes is 1.  
 
-The softmax function as applied to each node NN output is the exponent of the output divided by the sum of all the exponent outputs.   
-e <sup>y^1</sup> / (e <sup>y^1</sup> + e <sup>y^2</sup> + e <sup>y^1</sup>)
+The softmax function as applied to each node NN output is the exponent of the output divided by the sum of all the exponent outputs. So for instance, if there are 3 nodes, the output of the 1st node y1 is:     
+e <sup>y^1</sup> / (e <sup>y^1</sup> + e <sup>y^2</sup> + e <sup>y^3</sup>)
 
 See additonal activations in [Keras activations](https://keras.io/activations/)  
 
