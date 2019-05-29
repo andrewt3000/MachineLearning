@@ -130,7 +130,9 @@ We can combine all these functions for cost and forward propagation to get one f
   
 J = Cost(Softmax(DotProduct(Relu(DotProduct(X1,W1)), W2)))
 
-We then calculate the partial derivative of the loss function with respect to each weights. We use the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function). You start from the back of the graph and calculate the partial derivative of the loss function with respect to each weight.  Then move recursively through each layer.  
+We then calculate the partial derivative of the loss function with respect to each weights (dJ/dW). We use the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function).  
+
+Calculating the gradient requires knowledge of calculus. The result is a gradient dJ/dW1 and dJ/dW2 that is the same size as W1, W2.  
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
