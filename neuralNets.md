@@ -146,6 +146,10 @@ def reluprime(x):
         return 0
 ```  
 
+The derivative of the softmax function can be found by the [quotient rule](https://en.wikipedia.org/wiki/Quotient_rule).
+```
+(e<sup>x3<sup> * (e<sup>x2<sup> + e<sup>x3<sup>))/(e<sup>x1<sup> + e<sup>x2<sup> + e<sup>x3<sup>)<sup>2</sup>  
+```
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
