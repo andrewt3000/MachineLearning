@@ -128,7 +128,9 @@ The backpropagation algorithm applies the chain rule recursively to compute the 
 
 We can combine all these functions for cost and forward propagation to get one function. So for instance, the cost function for a NN with one hidden relu layer using a softmax output is (where W1 and W2 are weights for 1st and 2nd layers, and X1 is the input feature nodes:  
   
+```
 J = Cost(Softmax(DotProduct(Relu(DotProduct(X1,W1)), W2)))
+```
 
 We then calculate the partial derivative of the loss function with respect to each weights (dJ/dW). We use the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function).  
 
