@@ -122,7 +122,7 @@ def logloss(true_label, predicted_prob):
 [Keras loss functions](https://keras.io/losses/)  
 
 ### Backpropagation 
-The backpropagation algorithm applies the chain rule recursively to compute the gradient for each weight. The gradient is caulated by taking the partial derivative of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network. Backprop tells us how to adjust the weights to minimize the loss function. If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
+The backpropagation algorithm applies the chain rule recursively to compute the gradient for each weight. The gradient is caulated by taking the partial derivative of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network. Backprop indicates how to adjust the weights to minimize the loss function. If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
