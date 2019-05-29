@@ -135,6 +135,17 @@ J = Cost(Softmax(DotProduct(Relu(DotProduct(X1,W1)), W2)))
 We then calculate the partial derivative of the loss function with respect to each weights (dJ/dW). We use the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). (the derivative of a function of a functions is the derivative of outside function times derivative of inside function).  
 
 Calculating the gradient requires knowledge of calculus. The result is a gradient dJ/dW1 and dJ/dW2 that is the same size as W1, W2.  
+
+As an example of the calculus, the derivative of the relu function is:
+
+```
+def reluprime(x):
+    if x > 0: #the derivative dy/dx of y = x is dy/dx = 1 from the power rule in calculus.
+        return 1
+    else: #The derivative of a constant is zero. if x <0, y = 0 so dy/dx = 0
+        return 0
+```  
+
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
