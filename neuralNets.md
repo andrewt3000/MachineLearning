@@ -14,6 +14,13 @@ Features - measurable property being observed. In neural net context, it's the i
   
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
 
+### Training Data 
+Training data with a larger number of diverse examples reduces likelihood of overfitting.  
+
+It is important to have a balanced number of examples for each label. You're likely to see better results if you maintain at least a 1:2 ratio between the label with the fewest examples and the label with the most examples. 
+
+[Microsoft CV guidelines](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-improving-your-classifier)
+
 ### Hyperparameters
 Hyperparameters - the model’s parameters in a neural net such as architecture, learning rate, and regularization factor.	
 
