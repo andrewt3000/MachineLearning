@@ -7,7 +7,7 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 
 1. Convolutional Layers - layers that have filters (aka kernels) that are convolved around the image. Then perform a Relu activation.    
   CNN Parmeters: All parameters can vary by layer.  
-    1. Number of filters (aka kernels) (K) - typically a power of 2. eg. 32, 64, 128. 
+    1. Number of filters (aka kernels) (K) - typically a power of 2. eg. 32, 64, 128. Typically increases at deeper layers.  
 
     2. Size of filter (F) - typically odd square numbers. typical values are 3x3, 5x5, up to 11x11.  
 
