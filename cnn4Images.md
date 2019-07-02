@@ -90,6 +90,10 @@ Architecture: 75 layers
 Huang et al. 2018  
 Breakthrough: "For each layer, the feature-maps of all preceding layers are used as inputs, and its own feature-maps are used as inputs into all subsequent layers."  
 
+#### EfficientNet
+[EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/abs/1905.11946)  
+[blog post](https://ai.googleblog.com/2019/05/efficientnet-improving-accuracy-and.html)  
+
 #### Additional Resources
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)   
