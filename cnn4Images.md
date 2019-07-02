@@ -40,42 +40,55 @@ W1 is original width of image. F is filter witdth, P is padding, S is stride. ex
 
 ### Object Classification: Case Studies
 [Case Studies](http://cs231n.github.io/convolutional-networks/#case)  
+
+#### LeNet-5
 [Gradient-based learning applied to document recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)  
-LeCun et al., 1998 LeNet-5.  Input 32x32 images.  
+LeCun et al., 1998 .  Input 32x32 images.  
 Architecture: 6 5x5 filters, stride 1. Pooling layers 2x2 stride 2. (conv pool conv pool conv fc)  
 
 [ImageNet](http://www.image-net.org/) [[paper](http://www.image-net.org/papers/imagenet_cvpr09.pdf)] is a dataset of 1.2 million images with 1,000 labels.  
 
+#### AlexNet
 [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)  
-Krizhevsky et al. (2012) AlexNet breakthrough paper for convolutional neural networks. First use of Relu (rectified linear units)  
+Krizhevsky et al. (2012)  breakthrough paper for convolutional neural networks. First use of Relu (rectified linear units)  
 top-1 and top-5 error rates of 37.5% and 17.0% on ImageNet.  
 Architecture: First conv layer: 96 11x11 filters, stride 4. 5 convolutional layers, 3 fully connected layers.  
 
+#### ZFNet
 [Visualizing and Understanding Convolutional Networks](https://arxiv.org/pdf/1311.2901v3.pdf)  
-Zeiler and Fergus, 2013 - ZFNet.  
+Zeiler and Fergus, 2013 -   
 14.8% top 5 error on ImageNet (eventually got to 11% with company clarify)  
 Architecture: First conv layer: 7x7 filter, stride 2.  
 
+#### VGGNet
 [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf)  
-Simonyan et al. 2014.  VGGNet.  
+Simonyan et al. 2014.  .  
 7.3% top 5 error on ImageNet.   
 Architecture: 16 - 19 layers. 3x3 convolutional filters, stride 1, pad 1. 2x2 max pool, stride 2.  
 Smaller filters, deeper layers. Typically there are more filters as you go deeper. 
 
-
+#### Inception
 [Going deeper with convolutions](https://arxiv.org/pdf/1409.4842v1.pdf)
 Szegedy et al., 2014  GoogleNet. Inception.  
 Architecture: 22 layers.  
 
+#### resnet
 [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385v1.pdf)  
-He et al., 2015 aka resnet.  Uses skip connections (residual net). That diminishes vanishing/exploding gradient problems that occur in deep nets.  
+He et al., 2015 aka .  Uses skip connections (residual net). That diminishes vanishing/exploding gradient problems that occur in deep nets.  
 3.57% top 5 error on ImageNet  
 Architecture: 152 layers. [ResNet model code](https://github.com/KaimingHe/deep-residual-networks).
 
+#### Inception v4
 [Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning](https://arxiv.org/pdf/1602.07261.pdf)  
 Szegedy et al. 2016 
+Updated inception to use resnets.  
 3.08% top 5 error on ImageNet  [blog post](https://research.googleblog.com/2016/08/improving-inception-and-image.html)  
 Architecture: 75 layers  
+
+#### DenseNet
+[Densely Connected Convolutional Networks](https://arxiv.org/abs/1608.06993)  
+Huang et al. 2018  
+Breakthrough: "For each layer, the feature-maps of all preceding layers are used as inputs, and its own feature-maps are used as inputs into all subsequent layers."  
 
 #### Additional Resources
 
