@@ -28,7 +28,8 @@ Reducing number of features. A simple example is selecting the area of a house a
 ### Advanced Topics  
 [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
 
-[Neural architecture search](https://en.wikipedia.org/wiki/Neural_architecture_search) - (a sub-field of automl) automatically designing neural networks architecture. [NAS Survey](https://arxiv.org/abs/1808.05377)  / [AutoML papers](https://www.automl.org/automl/literature-on-neural-architecture-search/) / Examples: 
+[Neural architecture search](https://en.wikipedia.org/wiki/Neural_architecture_search) - (a sub-field of automl) automatically designing neural networks architecture. [NAS Survey](https://arxiv.org/abs/1808.05377)  / [AutoML papers](https://www.automl.org/automl/literature-on-neural-architecture-search/) 
+  
 [NAS](https://arxiv.org/abs/1611.01578) - google brain. reinforcement learning.   
 [ENAS](https://arxiv.org/abs/1802.03268) - google brain. effiicent nas.    
 [PNAS](https://arxiv.org/abs/1712.00559)   
