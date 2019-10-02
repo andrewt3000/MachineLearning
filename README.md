@@ -35,6 +35,7 @@ Reducing number of features. A simple example is selecting the area of a house a
 [PNAS](https://arxiv.org/abs/1712.00559)   
 [DARTS](https://arxiv.org/abs/1806.09055) - differentiable     
 [FB Net](https://arxiv.org/abs/1812.03443) - differentiable  
+[Squeeze NAS](https://arxiv.org/abs/1908.01748) - NAS for image segmentation [presentation](https://www.youtube.com/watch?time_continue=64&v=S539F4XqAz8)  
 
 [Microsoft lecture 12/18](https://www.youtube.com/watch?v=wL-p5cjDG64)  
 
