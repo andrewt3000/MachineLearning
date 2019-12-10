@@ -20,7 +20,9 @@ Reducing number of features. A simple example is selecting the area of a house a
 
 [Recurrent Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) - A primer on recurrent neural networks. RNNs are a suitable model for sequences of information.   
 
-[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs basics. CNNS are suitable models for 2d grids of information such as an image. SOA for object classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
+[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs basics. CNNS  are suitable models for 2d grids of information such as an image.   
+Object classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
+segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
 
 [Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) State of the art deep learning models and nlp applications such as sentiment analysis, translation and dialog generation.  
 
