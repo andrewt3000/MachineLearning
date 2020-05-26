@@ -51,4 +51,4 @@ Feature visualization - In computer vision, generating images representative of 
 
 Feature attribution - In computer vision, determining and representing which pixels contribute to a classification. Example: [Saliency maps](https://arxiv.org/pdf/1312.6034.pdf), [Deconvolution](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf), [CAM](https://arxiv.org/pdf/1512.04150.pdf), [Grad-CAM](https://arxiv.org/abs/1610.02391)  
 [Keras-Viz](https://github.com/raghakot/keras-vis) - keras visualization library.  
-
+[fast ai heatmap](https://docs.fast.ai/vision.learner.html#_cl_int_plot_top_losses) - uses grad-cam  
