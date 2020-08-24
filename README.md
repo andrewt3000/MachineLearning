@@ -24,10 +24,11 @@ Reducing number of features. A simple example is selecting the area of a house a
 
 ### Computer Vision
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs basics. CNNS  are suitable models for 2d grids of information such as computer vision problems.   
-Object classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
-object detection: (with bounding boxes) yolo v4 (realtime object detection)   
-instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
-semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
+
+- Object classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
+- Object detection: (with bounding boxes) [yolo v4](https://arxiv.org/abs/2004.10934) (realtime object detection)   
+- Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
+- Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
 
 
 ### Advanced Topics  
