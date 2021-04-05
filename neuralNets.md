@@ -70,7 +70,7 @@ def softmax(X):
 
 See additonal activations in [Keras activations](https://keras.io/activations/)  
 
-### Training a network
+### Training a neural network
 Training data - The data used in machine learning models to make the model more accurate. In the case of supervised learning it consists of input features and output labels that serve as examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% -80% training, 10%-20% validation and 10%-20% testing data. Validation data is evaluated while the model is training and it indicates if the model is generalizing. Testing data is evaluated after you have stopped training the model to indicate the model's accuracy.  
 
 Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
@@ -91,7 +91,7 @@ Start with small regularization and find a learning rate that makes the loss go 
 ### Data Preprocessing
 Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value. For instance, in image processing you could subtract the mean pixel intensity for the whole image or by channel before scaling it to zero center the features.    
 
-Data augmentation - An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.   
+[Data augmentation](https://en.wikipedia.org/wiki/Data_augmentation) - An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.   
 
 ### Initialization
 The weights and biases are historically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry.  
@@ -188,7 +188,7 @@ See [Keras Optimizers](https://keras.io/optimizers/)
 
 #### Regularization
 Underfitting - output doesn't fit the training data well.  
-Overfitting - output fits training data well, but doesn't work well on validation or test data.  
+[Overfitting](https://en.wikipedia.org/wiki/Overfitting) - output fits training data well, but doesn't work well on validation or test data.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/over_under.png"/>
 
