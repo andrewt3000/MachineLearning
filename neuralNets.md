@@ -1,5 +1,5 @@
 ### Neural Networks
-Neural Network - Nueral networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem).  
+[Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Nueral networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem).  
 Neural nets have input layers, hidden layers and output layers.  
 Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
 Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
