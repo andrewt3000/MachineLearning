@@ -168,7 +168,7 @@ The learning rate is often reduced to a smaller number over time. This is often 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
 
 ### Optimization algorithms
-Gradient descent is iterative algorithm that adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function. 
+[Gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) is an iterative algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
 
