@@ -168,13 +168,13 @@ The learning rate is often reduced to a smaller number over time. This is often 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
 
 ### Optimization algorithms
-[Gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) is an iterative algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function.  
+[Gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) is an iterative optimization algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
 
-Batch gradient descent - The term batch refers to the fact it uses the entire dataset. Batch works well for small datasets that have convex loss functions. The loss function needs to be convex or it may find a local minimum.    
+Batch gradient descent - The term batch refers to the fact it uses the entire dataset to make one gradient step. Batch works well for small datasets that have convex loss functions. The loss function needs to be convex or it may find a local minimum.    
 
-Stochastic gradient descent (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
+[Stochastic gradient descent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent) (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
 Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Values are typically in the range of 32-512.  Larger batches are faster to train, but can cause overfitting and require more memory.  Lower batch sizes are the opposite: slower to train, more regularized, and require less memory.  
 
