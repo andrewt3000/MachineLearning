@@ -10,7 +10,7 @@ Aka artificial neural networks, feedforward neural networks, vanilla neural netw
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
 ### Features / Input
-Features - measurable property being observed. In neural net context, it's the input layer to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications.  
+[Features](https://en.wikipedia.org/wiki/Feature_(machine_learning)) - measurable property being observed. In neural net context, it's the input layer to a neural network.  Examples of features are pixel brightness in image object recognition, words encoded as vectors in nlp applications, audio signal in voice recognition applications.  
   
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
 
