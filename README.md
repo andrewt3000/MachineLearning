@@ -12,7 +12,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
 
 ### Dimensionality reduction 
-Reducing number of features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
+Reducing the number of features while preserving important features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
 ### Machine learning models and applications
 
@@ -30,27 +30,18 @@ Reducing number of features. A simple example is selecting the area of a house a
 - Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
 - Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
 
-
-### Advanced Topics  
+### Transfer learning
 [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
 
-[Neural architecture search](https://en.wikipedia.org/wiki/Neural_architecture_search) - (a sub-field of automl) automatically designing neural networks architecture. [NAS Survey](https://arxiv.org/abs/1808.05377)  / [AutoML papers](https://www.automl.org/automl/literature-on-neural-architecture-search/) 
-  
-[NAS](https://arxiv.org/abs/1611.01578) - google brain. reinforcement learning.   
-[ENAS](https://arxiv.org/abs/1802.03268) - google brain. effiicent nas.    
-[PNAS](https://arxiv.org/abs/1712.00559)   
-[DARTS](https://arxiv.org/abs/1806.09055) - differentiable     
-[FB Net](https://arxiv.org/abs/1812.03443) - differentiable  
-[Squeeze NAS](https://arxiv.org/abs/1908.01748) - NAS for image segmentation [presentation](https://www.youtube.com/watch?time_continue=64&v=S539F4XqAz8)  
-
-[Microsoft lecture 12/18](https://www.youtube.com/watch?v=wL-p5cjDG64)  
-
-### Advanced Computer Vision Topics
+### GANS
 Generative adversarial networks - GANs - 2 Neural networks compete against each other. The generative network generates candidates while the discriminative network evaluates them. This technique can generate realistic images. See [GAN](https://arxiv.org/abs/1406.2661), [Lap GAN](https://arxiv.org/abs/1506.05751), [DC GAN](https://arxiv.org/abs/1511.06434), [Big GAN](https://arxiv.org/abs/1809.11096), [StyleGAN](https://arxiv.org/abs/1812.04948)   
 
+### Explainablity
 Feature visualization - In computer vision, generating images representative of what neural networks are looking for.   
 [TensorFlow Lucid](https://github.com/tensorflow/lucid/),  [Activation Atlas](https://distill.pub/2019/activation-atlas/)  
 
 Feature attribution - In computer vision, determining and representing which pixels contribute to a classification. Example: [Saliency maps](https://arxiv.org/pdf/1312.6034.pdf), [Deconvolution](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf), [CAM](https://arxiv.org/pdf/1512.04150.pdf), [Grad-CAM](https://arxiv.org/abs/1610.02391)  
 [tf explain](https://github.com/sicara/tf-explain) - tensorflow visualization library.  
 [fast ai heatmap](https://docs.fast.ai/vision.learner.html#_cl_int_plot_top_losses) - uses grad-cam  
+  
+[Lime](https://github.com/marcotcr/lime) 
