@@ -208,8 +208,6 @@ Early termination - Stop training when the training error is getting lower but t
 
 
 ### Other resources
-[neural nets](http://frnsys.com/ai_notes/machine_learning/neural_nets.html) another primer on neural networks.   
-
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
 
 [Stanford CS231n](http://cs231n.github.io/neural-networks-1/)  
