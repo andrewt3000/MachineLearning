@@ -76,6 +76,7 @@ Training data - The data used in machine learning models to make the model more 
 Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
 
 Steps to training a network.  
+- Prepare the data
 - initialize weights and biases.  
 - Implement forward propagation  
 - Implement cost (aka error, loss) function
@@ -88,8 +89,8 @@ One tip is to begin by overtraining a small portion of your data by getting rid 
 
 Start with small regularization and find a learning rate that makes the loss go down.  
 
-### Data Preprocessing
-Feature scaling - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value. For instance, in image processing you could subtract the mean pixel intensity for the whole image or by channel before scaling it to zero center the features.    
+### Prepare the data
+[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value. For instance, in image processing you could subtract the mean pixel intensity for the whole image or by channel before scaling it to zero center the features.    
 
 [Data augmentation](https://en.wikipedia.org/wiki/Data_augmentation) - An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.   
 
