@@ -1,5 +1,5 @@
 ### Neural Networks
-[Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Nueral networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem).  
+[Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Neural networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem).  
 Neural nets have input layers, hidden layers and output layers.  
 Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
 Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
@@ -128,6 +128,7 @@ def logloss(true_label, predicted_prob):
 
 [reference](http://wiki.fast.ai/index.php/Log_Loss)  
 [Keras loss functions](https://keras.io/losses/)  
+[pytorch loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions)  
 
 ### Backpropagation 
 The backpropagation algorithm applies the chain rule recursively to compute the gradient for each weight. The gradient is caulated by taking the partial derivative of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network. Backprop indicates how to adjust the weights to minimize the loss function. If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
