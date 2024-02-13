@@ -1,5 +1,5 @@
 ### Neural Networks
-[Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Neural networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem). This document explains their architecture and how to traain a neural network.    
+[Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Neural networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
 ### Neural network
 Neural nets have input layers, hidden layers and output layers.  
