@@ -1,5 +1,7 @@
 ### Neural Networks
-[Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Neural networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem).  
+[Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Neural networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem). This document explains their architecture and how to traain a neural network.    
+
+### Neural network
 Neural nets have input layers, hidden layers and output layers.  
 Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
 Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
@@ -8,13 +10,6 @@ The layers are of fixed size. Neural networks also typically have a single bias 
 Aka artificial neural networks, feedforward neural networks, vanilla neural networks.   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
-
-### Training Data 
-Training data with a larger number of diverse examples reduces likelihood of overfitting.  
-
-It is important to have a balanced number of examples for each label. You're likely to see better results if you maintain at least a 1:2 ratio between the label with the fewest examples and the label with the most examples. 
-
-[Microsoft CV guidelines](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-improving-your-classifier)
 
 ### Hyperparameters
 Hyperparameters - the model’s parameters in a neural net such as architecture, learning rate, and regularization factor.	
