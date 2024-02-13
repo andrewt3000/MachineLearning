@@ -12,7 +12,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
 
 #### Input features
-[Features](https://en.wikipedia.org/wiki/Feature_(machine_learning)) - measurable property being observed. Features are the inputs to a machine learning model. An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
+[Features](https://en.wikipedia.org/wiki/Feature_(machine_learning)) - are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
   
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
 
@@ -23,22 +23,24 @@ In suprervised learning data is typically split into training, validation and te
 
 An example is a single instance from your dataset.  
 
-
 ### Machine learning models and applications
 
-[Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - A primer on neural networks.  NNs are a suitable model for fixed input features.  
+[Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are a suitable model for fixed input features.  
 
-[Recurrent Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) - A primer on recurrent neural networks. RNNs are a suitable model for sequences of information.   
+[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS  are suitable models for computer vision problems.   
 
-[Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) State of the art deep learning models and nlp applications such as sentiment analysis, translation and dialog generation.  
+Transformers - are designed to handle sequential data, like text, in a manner that allows for much more parallelization than previous models like recurrent neural networks ([Recurrent Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md)
 
 ### Computer Vision
-[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs basics. CNNS  are suitable models for 2d grids of information such as computer vision problems.   
+These are common computer vision tasks and state of the art methods for solving them.  
 
 - Image classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
 - Object detection: (with bounding boxes) [yolo v4](https://arxiv.org/abs/2004.10934) (realtime object detection)   
 - Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
 - Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
+
+### NLP Natural Language Processing
+[Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) Deep learning models and nlp applications such as sentiment analysis, translation and dialog generation.  
 
 ### Transfer learning
 [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
