@@ -176,8 +176,6 @@ Mini batch gradient descent: Stochastic gradient descent that considers more tha
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov accelerated gradient descent is a variation that builds on moment and adds a look ahead step.  
 
 Other optimization algorithms include: AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
-See [10 Gradient Descent Optimisation Algorithms in a Cheat Sheet](https://towardsdatascience.com/10-gradient-descent-optimisation-algorithms-86989510b5e9)  
-See [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)  
 See [Keras Optimizers](https://keras.io/optimizers/)  
 See [Pytorch optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
 
