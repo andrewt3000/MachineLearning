@@ -58,7 +58,8 @@ def softmax(X):
     return exps / np.sum(exps)
 ```
 
-See additonal activations in [Keras activations](https://keras.io/activations/)  
+[Keras activations](https://keras.io/activations/)  
+[Pytorch activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 ### Training a neural network
 Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
