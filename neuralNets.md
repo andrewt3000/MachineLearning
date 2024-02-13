@@ -9,11 +9,6 @@ Aka artificial neural networks, feedforward neural networks, vanilla neural netw
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
-### Features / Input
-[Features](https://en.wikipedia.org/wiki/Feature_(machine_learning)) - measurable property being observed. In neural net context, it's the input layer to a neural network.  Features can be raw data such as pixel brightness in computer vision tasks.  
-  
-Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
-
 ### Training Data 
 Training data with a larger number of diverse examples reduces likelihood of overfitting.  
 
