@@ -16,7 +16,7 @@ Reducing the number of features while preserving important features. A simple ex
 
 ### Machine learning models and applications
 
-[Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - A primer on neural networks.  NNs are a suitable model for fixed input features and output labels.    
+[Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - A primer on neural networks.  NNs are a suitable model for fixed input features.  
 
 [Recurrent Neural Nets](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) - A primer on recurrent neural networks. RNNs are a suitable model for sequences of information.   
 
