@@ -64,12 +64,12 @@ See additonal activations in [Keras activations](https://keras.io/activations/)
 Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
 
 Steps to training a network.  
-- Prepare the data
-- initialize weights and biases.  
-- Implement forward propagation  
-- Implement cost (aka error, loss) function
-- Implement backpropagation 
-- Run optimization algorithm such as gradient descent adjusting weights using learning rate.  
+- [Prepare the data](#prepare-the-data)
+- [initialize weights and biases](#initialization)  
+- [Implement forward propagation](#forward-propagation)  
+- [Implement cost (aka error, loss) function](#loss-function)
+- [Implement backpropagation](#backpropagation) 
+- [Run optimization algorithm](#optimization-algorithms) such as gradient descent adjusting weights using learning rate.  
 
 You train until the model (hopefully) converges on an acceptablely low error level. An epoch means the network has been trained on every example once.  
 
@@ -117,7 +117,7 @@ def logloss(true_label, predicted_prob):
     return -log(1 - predicted_prob)
  ```
 
-[reference](http://wiki.fast.ai/index.php/Log_Loss)  
+
 [Keras loss functions](https://keras.io/losses/)  
 [pytorch loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions)  
 
