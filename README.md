@@ -11,8 +11,12 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
 
-### Dimensionality reduction 
-Reducing the number of features while preserving important features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
+### ML Terminology
+[Features](https://en.wikipedia.org/wiki/Feature_(machine_learning)) - measurable property being observed. Features are the inputs to a machine learning model. An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
+  
+Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
+
+Dimensoionality Reduction - Reducing the number of features while preserving important features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
 ### Machine learning models and applications
 
