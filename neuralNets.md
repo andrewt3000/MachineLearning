@@ -5,7 +5,7 @@
 Neural nets have input layers, hidden layers and output layers.  
 Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
 Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
-The layers are of fixed size. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function.  
+The layers are of fixed size. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. The weights and biases are often refered to as parameters.   
 
 Aka artificial neural networks, feedforward neural networks, vanilla neural networks.   
 
