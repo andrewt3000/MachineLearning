@@ -16,7 +16,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
   
 Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
 
-Dimensoionality Reduction - Reducing the number of features while preserving important features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
+Dimensionality Reduction - Reducing the number of features while preserving important features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
 #### Data
 In suprervised learning data is typically split into training, validation and test data.  
