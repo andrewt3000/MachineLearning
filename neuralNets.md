@@ -104,7 +104,7 @@ a2 = activation(z2)
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
 ### Loss Function 
-Loss (aka cost/error/objective) function measures how inaccurate a model is. Training a model minimizes the loss function. Sum of squared errors is a common loss function for regression. Cross entropy (aka log loss, negative log probability) is a common loss function for softmax function.   
+Loss (aka cost/error) function measures how inaccurate a model is. Training a model minimizes the loss function. Sum of squared errors is a common loss function for regression. Cross entropy (aka log loss, negative log probability) is a common loss function for softmax function.   
 
 Cross entropy function is suitable for a classification where the output is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
 
