@@ -46,13 +46,3 @@ These are common computer vision tasks and state of the art methods for solving 
 
 ### Transfer learning
 [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
-
-### Explainablity
-Feature visualization - In computer vision, generating images representative of what neural networks are looking for.   
-[TensorFlow Lucid](https://github.com/tensorflow/lucid/),  [Activation Atlas](https://distill.pub/2019/activation-atlas/)  
-
-Feature attribution - In computer vision, determining and representing which pixels contribute to a classification. Example: [Saliency maps](https://arxiv.org/pdf/1312.6034.pdf), [Deconvolution](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf), [CAM](https://arxiv.org/pdf/1512.04150.pdf), [Grad-CAM](https://arxiv.org/abs/1610.02391)  
-[tf explain](https://github.com/sicara/tf-explain) - tensorflow visualization library.  
-[fast ai heatmap](https://docs.fast.ai/vision.learner.html#_cl_int_plot_top_losses) - uses grad-cam  
-  
-[Lime](https://github.com/marcotcr/lime) 
