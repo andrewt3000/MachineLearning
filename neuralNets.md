@@ -108,10 +108,6 @@ The loss function measures how inaccurate a model is for a single example. Train
 
 Cross entropy function is suitable for a classification where the output is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
 
-- The term loss function applies to a single example.  
-- The term error function refers to a single example and whether it's right or wrong for performance measurment, not training.  
-- The terms cost, total loss, and objective function refers to the entire dataset or mini-batch and may include regularization.  
-
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
 
@@ -125,7 +121,12 @@ def logloss(true_label, predicted_prob):
 
 
 [Keras loss functions](https://keras.io/losses/)  
-[pytorch loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions)  
+[pytorch loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions) 
+
+- The term loss function applies to a single example.  
+- The term error function refers to a single example and whether it's right or wrong for performance measurment, not training.  
+- The terms cost function, objective function, and total loss refer to the entire dataset or mini-batch and may also include regularization in addition to the sum of the loss.  
+
 
 ### Backpropagation 
 The backpropagation algorithm applies the chain rule recursively to compute the gradient for each weight. The gradient is caulated by taking the partial derivative of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network. Backprop indicates how to adjust the weights to minimize the loss function. If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
