@@ -68,7 +68,7 @@ Steps to training a network.
 - [Prepare the data](#prepare-the-data)
 - [initialize weights and biases](#initialization)  
 - [Implement forward propagation](#forward-propagation)  
-- [Implement cost (aka error, loss) function](#loss-function)
+- [Implement loss function](#loss-function)
 - [Implement backpropagation](#backpropagation) 
 - [Run optimization algorithm](#optimization-algorithms) such as gradient descent adjusting weights using learning rate.  
 
@@ -104,7 +104,7 @@ a2 = activation(z2)
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
 ### Loss Function 
-The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Sum of squared errors is a common loss function for regression. Cross entropy (aka log loss, negative log probability) is a common loss function for softmax function.   
+The next step is to choose and implment a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Sum of squared errors is a common loss function for regression. Cross entropy (aka log loss, negative log probability) is a common loss function for softmax function.   
 
 Cross entropy function is suitable for a classification where the output is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
 
