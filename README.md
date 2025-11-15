@@ -34,7 +34,7 @@ An example is a single instance from your dataset.
 
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS  are suitable models for computer vision problems.   
 
-Transformers - are designed to handle sequential data, like text, in a manner that allows for much more parallelization than previous models like [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md).  See 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
+[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - were originally designed to handle sequential data, like text, in a manner that allows for much more parallelization than previous models like [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md).  See 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
 Transformer is the architecture for [chat gpt](https://chat.openai.com/). Example [nanogpt](https://github.com/karpathy/nanoGPT)      
 
 ### Computer Vision
