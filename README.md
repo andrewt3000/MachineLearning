@@ -6,8 +6,9 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 1. Supervised learning - learns from labeled training data.  
 2. Unsupervised learning - learns from unlabled training data. Examples include Principal component analysis and clustering. 
 3. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
-4. [Semi-Supervised learning](https://en.wikipedia.org/wiki/Weak_supervision) - Use a mix mostly unlabeled, with a small labeled subset data.  
-5. [Self-supervised learnng](https://en.wikipedia.org/wiki/Self-supervised_learning) - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. (Example: Predict the next word (LLM pretraining))  
+4. [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
+5. [Semi-Supervised learning](https://en.wikipedia.org/wiki/Weak_supervision) - Use a mix mostly unlabeled, with a small labeled subset data.  
+6. [Self-supervised learnng](https://en.wikipedia.org/wiki/Self-supervised_learning) - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. (Example: Predict the next word (LLM pretraining))  
 
 
 
@@ -47,5 +48,3 @@ These are common computer vision tasks and state of the art methods for solving 
 ### NLP Natural Language Processing
 [Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) Deep learning models and nlp applications such as sentiment analysis, translation and dialog generation.  
 
-### Transfer learning
-[Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
