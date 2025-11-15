@@ -44,7 +44,3 @@ These are common computer vision tasks and state of the art methods for solving 
 - Object detection: (with bounding boxes) [yolo v4](https://arxiv.org/abs/2004.10934) (realtime object detection)   
 - Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
 - Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
-
-### NLP Natural Language Processing
-[Deep Learning for NLP](https://github.com/andrewt3000/DL4NLP/blob/master/README.md) Deep learning models and nlp applications such as sentiment analysis, translation and dialog generation.  
-
