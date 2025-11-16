@@ -31,8 +31,8 @@ An example is a single instance from your dataset.
 
 [Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are a suitable model for fixed input features.  
 
-[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences (text, images, audio, video) using a mechanism called attention. [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md).  See 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
-Transformer is the architecture for 
+[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences (text, images, audio, video) using a mechanism called attention. Replacing [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md).  Originally described in 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
+Transformers are the architecture for 
 - LLMs such as [chat gpt](https://chat.openai.com/), [nanogpt](https://github.com/karpathy/nanoGPT) 
 - Vision Transformers (ViT)
 - Multimodal foundation models (CLIP, SigLIP, OpenAI’s Vision models, Gemini, etc.)
@@ -42,11 +42,11 @@ Transformer is the architecture for
 
 
 ### Computer Vision (Obsolete) 
-These are common computer vision tasks and state of the art methods for solving them.  
+These are common computer vision tasks (obsolete) methods for solving them.  
 
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS  are suitable models for computer vision problems.   
 
 - Image classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
-- Object detection: (with bounding boxes) [yolo v4](https://arxiv.org/abs/2004.10934) (realtime object detection)   
+- Object detection: (with bounding boxes) [yolo v4](https://arxiv.org/abs/2004.10934) (still used for realtime object detection)   
 - Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
 - Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
