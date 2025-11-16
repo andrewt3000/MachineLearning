@@ -8,7 +8,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 3. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
 4. [Transfer learning](https://en.wikipedia.org/wiki/Transfer_learning) - storing knowledge gained while solving one problem and applying it to a different but related problem.
 5. [Semi-Supervised learning](https://en.wikipedia.org/wiki/Weak_supervision) - Use a mix mostly unlabeled, with a small labeled subset data.  
-6. [Self-supervised learnng](https://en.wikipedia.org/wiki/Self-supervised_learning) - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. (Example: Predict the next word (LLM pretraining)) (MAE, DINO, iBOT)  
+6. [Self-supervised learnng](https://en.wikipedia.org/wiki/Self-supervised_learning) - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. (Example: Predict the next word (LLM pretraining) or predicting part of a masked image [MAE](https://arxiv.org/abs/2111.06377), [DINO](https://arxiv.org/abs/2104.14294), [iBOT](https://arxiv.org/abs/2111.07832))  
 
 
 
@@ -33,7 +33,7 @@ An example is a single instance from your dataset.
 
 [Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences (text, images, audio, video) using a mechanism called attention. [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md).  See 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
 Transformer is the architecture for 
-- LLMs such as [chat gpt](https://chat.openai.com/). Example [nanogpt](https://github.com/karpathy/nanoGPT) 
+- LLMs such as [chat gpt](https://chat.openai.com/), [nanogpt](https://github.com/karpathy/nanoGPT) 
 - Vision Transformers (ViT)
 - Multimodal foundation models (CLIP, SigLIP, OpenAI’s Vision models, Gemini, etc.)
 
