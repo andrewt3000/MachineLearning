@@ -34,7 +34,7 @@ An example is a single instance from your dataset.
 [Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences (text, images, audio, video) using a mechanism called attention. Replacing [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md).  Originally described in 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
 Transformers are the architecture for 
 - LLMs such as [chat gpt](https://chat.openai.com/), [nanogpt](https://github.com/karpathy/nanoGPT) 
-- Vision Transformers (ViT)
+- Vision Transformers (ViT), and Swin Transformers.
 - Multimodal foundation models (CLIP, SigLIP, OpenAI’s Vision models, Gemini, etc.)
 
 
@@ -42,7 +42,7 @@ Transformers are the architecture for
 
 
 ### Computer Vision 
-These are common computer vision tasks (obsolete) methods for solving them.  
+These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where people use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime mobile devices.      
 
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS  are suitable models for computer vision problems.   
 
