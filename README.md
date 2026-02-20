@@ -41,7 +41,7 @@ Transformers are the architecture for
 
 
 
-### Computer Vision (Obsolete) 
+### Computer Vision 
 These are common computer vision tasks (obsolete) methods for solving them.  
 
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS  are suitable models for computer vision problems.   
