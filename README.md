@@ -16,10 +16,12 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
 
-#### Input features
+#### Features
 [Features](https://en.wikipedia.org/wiki/Feature_(machine_learning)) - are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
   
-Feature selection - The process of choosing the features. It is important to pick features that correlate with the output. 
+Feature selection - the process of choosing the features. Effective features are discriminating and independent.  
+
+[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of independent feature variables. Techniques include min-max scaling, z-score normalization, mean normalization, etc. 
 
 Dimensionality Reduction - Reducing the number of features while preserving important features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
