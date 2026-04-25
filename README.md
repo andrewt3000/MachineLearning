@@ -33,8 +33,8 @@ An example is a single instance from your dataset.
 
 [Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are a suitable model for fixed input features.  
 
-[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences (text, images, audio, video) using a mechanism called attention. Replacing [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md).  Originally described in 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
-Transformers are the architecture for 
+[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences (text, images, audio, video) using attemtion mechansim. Transformers were originally described in the 2017 paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762). Transformers replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
+Transformers are the architecture for: 
 - LLMs such as [llama](https://www.llama.com/), [nanogpt](https://github.com/karpathy/nanoGPT) 
 - Multimodal foundation models (Google Gemini, Open AI GPT-5, Anthropic Claude) 
 - Vision Transformers (ViT), and Swin Transformers.
