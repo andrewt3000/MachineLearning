@@ -23,7 +23,7 @@ Feature selection - the process of choosing the features. Effective features are
 
 [Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of independent feature variables. Techniques include min-max scaling, z-score normalization, mean normalization, etc. 
 
-Dimensionality Reduction - Reducing the number of features while preserving important features. A simple example is selecting the area of a house as a feature rather than using width and length seperately. Other examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
+[Dimensionality Reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction) - Transforming data from high to low dimension but retains properties. Examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
 #### Data
 In suprervised learning data is typically split into training, validation and test data.  
