@@ -21,7 +21,9 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
   
 Feature selection - is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
 
-[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of feature variables. Techniques include min-max scaling, z-score normalization, mean normalization, etc. Min-max scaling is best for non-gaussian distributions such as image processing. Z-score normalization is best for Gaussian distributions. Mean normalization is similar to min-max scaling but centers the data around zero.  
+Feature engineering - is the process of using domain knowledge to extract, transform, or create new variables (features) from raw data. For example, feature Encoding: Converting categorical data into numerical formats such as One-Hot Encoding. Another example is feature scaling and normalization.  
+
+[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of numeric features. Techniques include min-max scaling, z-score normalization, mean normalization. Min-max scaling is best for non-gaussian distributions such as pixel values in image processing. Z-score normalization is best for Gaussian distributions. Mean normalization is similar to min-max scaling but centers the data around zero.  
 
 [Dimensionality Reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction) - Transforming data from high to low dimension but retains properties. Examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
