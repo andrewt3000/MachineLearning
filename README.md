@@ -19,9 +19,9 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 #### Features
 [Features](https://en.wikipedia.org/wiki/Feature_(machine_learning)) - are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
   
-Feature selection - the process of choosing the features. Effective features are discriminating and independent.  
+Feature selection - is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
 
-[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of independent feature variables. Techniques include min-max scaling, z-score normalization, mean normalization, etc. Min-max scaling is best for non-gaussian distributions such as image processing. Z-score normalization is best for Gaussian distributions. Mean normalization is similar to min-max scaling but centers the data around zero.  
+[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of feature variables. Techniques include min-max scaling, z-score normalization, mean normalization, etc. Min-max scaling is best for non-gaussian distributions such as image processing. Z-score normalization is best for Gaussian distributions. Mean normalization is similar to min-max scaling but centers the data around zero.  
 
 [Dimensionality Reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction) - Transforming data from high to low dimension but retains properties. Examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
