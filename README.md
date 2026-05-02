@@ -21,7 +21,9 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
   
 Feature selection - is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
 
-Feature engineering - is the process of using domain knowledge to extract, transform, or create new variables (features) from raw data. For example, feature Encoding: Converting categorical data into numerical formats such as One-Hot Encoding. Another example is feature scaling and normalization.  
+Feature engineering - is the process of using domain knowledge to extract, transform, or create new variables (features) from raw data. For example, feature encoding and feature scaling and normalization.  
+
+Feature Encoding - is converting categorical data into numerical formats such as One-Hot Encoding.  
 
 [Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of numeric features. Techniques include min-max scaling, z-score normalization, mean normalization. Min-max scaling is best for non-gaussian distributions such as pixel values in image processing. Z-score normalization is best for Gaussian distributions. Mean normalization is similar to min-max scaling but centers the data around zero.  
 
