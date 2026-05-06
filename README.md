@@ -23,7 +23,7 @@ Feature selection - is the process of choosing the features. Effective features 
 
 Feature engineering - is the process of using domain knowledge to extract, transform, or create new variables (features) from raw data. For example, feature encoding and feature scaling and normalization.  
 
-Feature Encoding - is converting categorical data into numerical formats such as One-Hot Encoding.  
+Feature Encoding - is converting categorical data into numerical formats such as One-Hot Encoding or word vectors for llms.  
 
 [Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of numeric features. Techniques include min-max scaling, z-score normalization, mean normalization. Min-max scaling is best for non-gaussian distributions such as pixel values in image processing. Z-score normalization is best for Gaussian distributions. Mean normalization is similar to min-max scaling but centers the data around zero.  
 
