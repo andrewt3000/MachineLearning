@@ -50,7 +50,7 @@ Architecture: 6 5x5 filters, stride 1. Pooling layers 2x2 stride 2. (conv pool c
 
 #### AlexNet
 [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)  
-Krizhevsky et al. (2012)  breakthrough paper for convolutional neural networks. First use of Relu (rectified linear units)  
+Krizhevsky et al. (2012)  breakthrough paper for deep learning and using gpus for convolutional neural networks. First use of Relu (rectified linear units)  
 top-1 and top-5 error rates of 37.5% and 17.0% on ImageNet.  
 Architecture: First conv layer: 96 11x11 filters, stride 4. 5 convolutional layers, 3 fully connected layers.  
 
