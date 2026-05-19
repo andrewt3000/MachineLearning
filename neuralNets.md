@@ -57,7 +57,7 @@ def softmax(X):
     exps = np.exp(X)
     return exps / np.sum(exps)
 ```
-
+[pytorch softmax() activation function](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html#torch.nn.Softmax)  
 [Keras activations](https://keras.io/activations/)  
 [Pytorch activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
