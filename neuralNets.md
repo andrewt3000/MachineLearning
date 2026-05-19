@@ -104,7 +104,7 @@ a2 = activation(z2)
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
 ### Loss Function 
-The next step is to choose and implement a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared errors is a common loss function for regression. Cross entropy is a common loss function for classification.
+The next step is to choose and implement a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared errors is a common loss function for regression. Cross entropy is a common loss function for classification. Here are implementations in pytorch: [MSELoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.MSELoss.html#torch.nn.MSELoss) and [CrossEntropyLoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss)
 
 Cross entropy (aka log loss, negative log probability) function is frequently used with classification models that use a softmax activation function for the output layer. The output of the softmax activation is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
 
