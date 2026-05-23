@@ -25,7 +25,11 @@ Feature engineering - is the process of using domain knowledge to extract, trans
 
 Feature Encoding - is converting categorical data into numerical formats such as one-hot encoding or embeddings, such as word embeddings for llms.  
 
-[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of numeric features. Common feature scaling techniques include min-max scaling, and standardization (aka z-score normalization). Min-max scaling squeezes values between a range typically 0 to 1. Min-max scaling is best for non-gaussian distributions such as pixel values in image processing.  Standardization) is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Min-max scaling is implemented in scikit learn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html).  Standardization is implemented by sickit learn's [StandarcScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
+[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of numeric features. Common feature scaling techniques include min-max scaling, and standardization (aka z-score normalization).  
+
+Min-max scaling squeezes values between a range typically 0 to 1. Min-max scaling is best for non-gaussian distributions such as pixel values in image processing. Warning: If you have an outlier (like a single value of 10,000 when everything else is under 10), Min-Max will crush all your normal data into a tiny, indistinguishable band near 0. Min-max scaling is implemented in scikit learn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html).   
+
+Standardization is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by sickit learn's [StandarcScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
 
 [Dimensionality Reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction) - Transforming data from high to low dimension but retains properties. Examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
