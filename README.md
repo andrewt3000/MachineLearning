@@ -23,9 +23,9 @@ Feature selection - is the process of choosing the features. Effective features 
 
 Feature engineering - is the process of using domain knowledge to extract, transform, or create new features from raw data. For example, feature encoding and feature scaling and normalization. Deep learning has changed feature engineering from hand-crafted feature extraction to representing raw data in a way that can be effectively interpreted.   
 
-Feature Encoding - is converting categorical data into numerical formats such as one-hot encoding or word embeddings for llms.  
+Feature Encoding - is converting categorical data into numerical formats such as one-hot encoding or embeddings, such as word embeddings for llms.  
 
-[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of numeric features. Techniques include min-max scaling, z-score normalization, mean normalization. Min-max scaling is best for non-gaussian distributions such as pixel values in image processing. Z-score normalization is best for Gaussian distributions. Mean normalization is similar to min-max scaling but centers the data around zero.  
+[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - the process of normalizing the range of numeric features. Techniques include min-max scaling, mean normalization, z-score normalization. Min-max scaling is best for non-gaussian distributions such as pixel values in image processing. Mean normalization is appropriate for Gaussian distributions.  Z-score normalization (aka standardization) is also appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by sickit learn's [StandarcScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
 
 [Dimensionality Reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction) - Transforming data from high to low dimension but retains properties. Examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
