@@ -21,7 +21,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
   
 Feature selection - is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
 
-Feature engineering - manual, hand-crafted feature extraction. In deep learning, feature engineering is replace by feature learning where the network figures out features automatically.     
+Feature engineering - manual, hand-crafted feature extraction. In deep learning, feature engineering is largely replaced by feature learning where the network figures out features automatically.     
 
 Feature Encoding - is converting non-numeric data, like text or categories, into numerical formats such as one-hot encoding or embeddings, such as word embeddings for llms. An encoding is any representation in vector form. An embedding is an encoding where closeness = similarity.     
 
