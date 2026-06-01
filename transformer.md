@@ -1,4 +1,4 @@
-A Transformer is a neural network architecture built around attention. It was introduced in [“Attention Is All You Need”] (Vaswani et al., 2017)](https://arxiv.org/abs/1706.03762). Transformers are the architecture for llms such as BERT, GPT-3/4/5, etc.
+A Transformer is a neural network architecture built around attention. It was introduced in [“Attention Is All You Need” (Vaswani et al., 2017)](https://arxiv.org/abs/1706.03762). Transformers are the architecture for llms such as BERT, GPT-3/4/5, etc.
 
 ## 🔢 Input Representation
 - The model receives a sequence of tokens (words/subwords), each mapped to a vector embedding.
