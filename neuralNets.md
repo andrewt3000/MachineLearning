@@ -1,7 +1,7 @@
 ### Neural Networks
 [Neural Network](https://en.wikipedia.org/wiki/Neural_network) - Neural networks are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
-Neural networks or artificial neural networks is a broad term that includes other types of neural networks such as CNNs or transformers. It's "artificial" as opposed to a biological neural network. The architecture we are discussing here is also called feedforward neural networks, vanilla neural networks, and MLP multilayer perceptron.   
+Neural networks or artificial neural networks are a broad term that includes other types of neural networks such as CNNs or transformers. The architecture we are discussing here is also called feedforward neural networks, vanilla neural networks, and MLP multilayer perceptron. These feedforward neural networks can also be layers in other types of neural networks (often called a fully connected or dense layer). Feedforward layers are used in other models to combine features or change dimensionality.   
 
 ### Neural network Architecture
 Neural nets have input layers, hidden layers and output layers.  
