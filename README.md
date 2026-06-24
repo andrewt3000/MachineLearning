@@ -55,11 +55,11 @@ Transformers are the architecture for:
 
 
 ### Computer Vision 
-These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where people use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime mobile devices.      
+These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where people use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime mobile devices because they require less resources.      
 
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS  are suitable models for computer vision problems.   
 
 - Image classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
-- Object detection: (with bounding boxes) [yolo v4](https://arxiv.org/abs/2004.10934) (still used for realtime object detection)   
+- Object detection: (with bounding boxes) [ultralytics yolo](https://github.com/ultralytics/ultralytics) [yolo paper](https://arxiv.org/abs/2004.10934) (In 2026, sota for realtime/edge object detection)   
 - Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
 - Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
