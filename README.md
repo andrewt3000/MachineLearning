@@ -19,7 +19,7 @@ Machine learning problems are categorize as discriminative or generative.
 3. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
 
 #### Features
-Features - are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
+**Features** - are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
   
 **Feature selection** - is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
 
