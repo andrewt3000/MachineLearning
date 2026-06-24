@@ -51,8 +51,8 @@ Feed-Forward Networks
 ## Additional Transformer References
 
 ### LLMS
-- open weight face [llama](https://www.llama.com/)
-- open source Andrej Karpathy [nanochat]([https://github.com/karpathy/nanoGPT](https://github.com/karpathy/nanochat)) 
+- open weight facebook [llama](https://www.llama.com/)
+- open source Andrej Karpathy [nanochat](https://github.com/karpathy/nanochat) [nanogpt](https://github.com/karpathy/nanoGPT)
 
 ### Vision Transformers (ViT) Papers
 - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030)
