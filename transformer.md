@@ -1,4 +1,14 @@
-A Transformer is a neural network architecture built around attention. It was introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017). Transformers are the architecture for llms such as BERT, GPT-3/4/5, etc.
+A Transformer is a neural network architecture built with attention layers. It was introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017). Transformers are the large language models in multimodal foundation models such as Google Gemini, Open AI Chat GPT, Anthropic Claude.  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/transformer.png" height='460px' width='326px'/>  
+
+### Original Transformer
+The original “attention is all you need” paper was for language translation. The input is “encoded” from the original language and then the output is decoded in a second target language. 
+The attention paper model has an encoder on the left and a decoder on the right.
+Both encoder and decoder contain “Multi-head attention” MHA layers. [pytorch implementation](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
+The encoder "understands" the input, the decoder generates the output.  
+Encoder only models, such as BERT, produce contextual representations and then perform tasks such as sentiment analysis.  
+Decoder only models, such as ChatGPT, generate text.  
 
 ## 🔢 Input Representation
 - The model receives a sequence of tokens (words/subwords), each mapped to a vector embedding.
@@ -24,20 +34,6 @@ Instead of one attention operation, the model uses h attention heads:
 - Heads are concatenated and combined into a single output.
 
 This lets the model analyze many patterns in parallel.
-
-## 🏛️ Encoder and Decoder
-The original Transformer has two parts:
-### Encoder
-- Uses self-attention
-- Produces contextualized representations
-- Used for understanding
-- BERT = encoder-only
-
-### Decoder
-- Uses masked self-attention (can’t see future tokens)
-- Attends to encoder output
-- Used for text generation
-- GPT / ChatGPT = decoder-only
 
 ## 🎯 Training Tricks
 Label Smoothing
