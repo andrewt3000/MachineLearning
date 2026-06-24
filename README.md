@@ -36,7 +36,7 @@ Standardization is appropriate for Gaussian distributions, and centers the data 
 #### Data
 In suprervised learning data is typically split into training, validation and test data.  
 An example is a single instance from your dataset.  
-Data drift (also known as covariate shift) occurs when the statistical properties of the input data change over time compared to the data the model was trained on. As an example, for predicting house prices inflation might change house values.  
+Data drift (also known as covariate shift) occurs when the statistical properties of the input data change over time compared to the data the model was trained on. For example, for predicting house prices, inflation might change the home values.  
 
 ### Machine learning models and applications
 
