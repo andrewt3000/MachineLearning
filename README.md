@@ -1,6 +1,5 @@
-### My Notes on Deep Learning
+### My Notes on Machine Learning
 
-Deep Learning is synonymous with neural networks and is a sub-field of machine learning.  
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
 #### Types of machine learning
