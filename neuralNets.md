@@ -18,7 +18,9 @@ Hyperparameters - the model’s parameters in a neural net such as architecture,
 
 Architecture - The structure of a neural network i.e. number of hidden layers, and number of nodes. 
 
-Number of hidden layers - the higher the number of layers the more layers of abstraction it can represent. too many layers and the the network suffers from the vanishing or exploding gradient problem.  
+Number of hidden layers - the higher the number of layers the more layers of abstraction it can represent. If the network has too many layers it may suffer from the vanishing or exploding gradient problem.  
+
+Capacity is the model's storage space for patterns and is driven by parameter width (number of hidden units) and depth (number of layers). Generally, a higher number of parameters equates to a higher capacity.   
 
 ### Activation Functions
 [Activation function](https://en.wikipedia.org/wiki/Activation_function) - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
