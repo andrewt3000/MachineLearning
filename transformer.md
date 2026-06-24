@@ -48,16 +48,15 @@ Feed-Forward Networks
 - After attention, each token passes through a small MLP
 - Adds non-linearity and additional modeling capacity
 
-## ✨ Why Transformers Work So Well
-- Parallelizable (no recurrence) → trains fast
-- Long-range dependencies captured easily
-- Multi-head attention discovers rich relationships
-- Scales to billions/trillions of parameters
+### LLMS
+- open weight [llama](https://www.llama.com/)
+- open source [nanochat]([https://github.com/karpathy/nanoGPT](https://github.com/karpathy/nanochat)) 
 
-## Final Concept Summary
-- Inputs = token embeddings + positions
-- Self-attention projects tokens into Q, K, V
-- Multi-head attention runs several attentions in parallel
-- Encoder = understanding; decoder = generation
-- Main formula: attention = softmax(similarity) × values
-- Label smoothing improves training stability
+### Vision Transformers (ViT) Papers
+- [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030)
+- [Swin Transformers](https://arxiv.org/abs/2103.14030)
+- [simCLR](https://arxiv.org/abs/2002.05709)
+- [MAE Masked autoencoders ](https://arxiv.org/abs/2111.06377)
+- [DINO](https://arxiv.org/abs/2104.14294)
+- [iBOT](https://arxiv.org/abs/2111.07832)
+
