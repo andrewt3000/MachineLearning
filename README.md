@@ -15,7 +15,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 #### Types of machine learning problems
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
-3. Ranking - ranking 
+3. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
 
 #### Features
 Features - are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
