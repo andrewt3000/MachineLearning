@@ -2,20 +2,20 @@
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
+#### Types of machine learning problems
+Machine learning problems are categorize as discriminative or generative.  
+
 #### Types of machine learning
 1. Supervised learning - learns from labeled training data.  
 2. Unsupervised learning - learns from unlabled training data. Examples include Principal component analysis and clustering. 
 3. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
 4. Transfer learning - storing knowledge gained while solving one problem and applying it to a different but related problem.
 5. Semi-Supervised learning - Use a mix mostly unlabeled, with a small labeled subset data.  
-6. Self-supervised learnng - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. For example, predict the next word (LLM pretraining) or predict part of a masked image.  
-
-#### Types of machine learning problems
-Machine learning problems are categorize as discriminative or generative.  
+6. Self-supervised learnng - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. For example, the task may be to predict the next word (LLM pretraining) or to predict part of a masked image.  
 
 #### Types of discriminative machine learning problems
 1. regression - predicting a continuous value attribute (Example: house prices)
-2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
+2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)  Classification is further categorized as binary or multi-class classificaition.  
 3. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
 
 #### Features
@@ -39,6 +39,7 @@ Machine learning problems are categorize as discriminative or generative.
 Suprervised learning data is typically split into **training**, **validation** and **test** data.  
 An **example** (or **sample**) is a single instance from your dataset.  
 In supervised learning data, the correct output label is refered to as ground truth.  
+**Data leakage** is when information from outside the training dataset (such as the target variable or the validation/test set) accidentally contaminates the training process.
 **Data drift** (also known as covariate shift) occurs when the statistical properties of the input data change over time compared to the data the model was trained on. For example, for predicting house prices, inflation might change the home values.  
 
 ### Machine learning models and applications
