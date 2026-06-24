@@ -6,10 +6,12 @@ Neural networks or artificial neural networks are a broad term that includes als
 You can also refer to a single layer or block of fully connected layers (also called dense or linear layers) in other types of neural networks. These fully connected layers are used in other neural networks to combine features or change dimensionality.   
 
 ### Neural network Architecture
-Neural nets have input layers, hidden layers and output layers.  
-Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
-Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
-The layers are of fixed size. Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. The weights and biases are often refered to as parameters.   
+The architecture of a neural network is fixed before it is trained and has the following properties. 
+- Neural networks are composed of input layers, hidden layers and output layers.  
+- Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
+- Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
+- Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
+The weights and biases are often refered to as parameters.   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
