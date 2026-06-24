@@ -12,9 +12,10 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 
 
 
-#### 2 Types of machine learning problems
+#### Types of machine learning problems
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
+3. Ranking - ranking 
 
 #### Features
 Features - are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
@@ -36,6 +37,7 @@ Features - are the inputs to a machine learning model. They are the measurable p
 #### Data
 Suprervised learning data is typically split into **training**, **validation** and **test** data.  
 An **example** (or **sample**) is a single instance from your dataset.  
+In supervised learning data, the correct output label is refered to as ground truth.  
 **Data drift** (also known as covariate shift) occurs when the statistical properties of the input data change over time compared to the data the model was trained on. For example, for predicting house prices, inflation might change the home values.  
 
 ### Machine learning models and applications
