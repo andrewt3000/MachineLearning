@@ -8,11 +8,12 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 3. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
 4. Transfer learning - storing knowledge gained while solving one problem and applying it to a different but related problem.
 5. Semi-Supervised learning - Use a mix mostly unlabeled, with a small labeled subset data.  
-6. Self-supervised learnng - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. (Example: Predict the next word (LLM pretraining) or predicting part of a masked image [simCLR](https://arxiv.org/abs/2002.05709), [MAE](https://arxiv.org/abs/2111.06377), [DINO](https://arxiv.org/abs/2104.14294), [iBOT](https://arxiv.org/abs/2111.07832))  
-
-
+6. Self-supervised learnng - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. (Example: Predict the next word (LLM pretraining) or predicting part of a masked image)  
 
 #### Types of machine learning problems
+Machine learning problems are categorize as discriminative or generative.  
+
+#### Types of discriminative machine learning problems
 1. regression - predicting a continuous value attribute (Example: house prices)
 2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
 3. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
@@ -50,7 +51,6 @@ Transformers are the architecture for:
 - Multimodal foundation models (Google Gemini, Open AI GPT-5, Anthropic Claude) 
 - Vision Transformers (ViT), and Swin Transformers.
 
-
 ### Computer Vision 
 These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where people use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime mobile devices because they require less resources.      
 
@@ -59,4 +59,7 @@ These are common computer vision tasks methods for solving them. CNNs have gone 
 - Image classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
 - Object detection: (with bounding boxes) [ultralytics yolo](https://github.com/ultralytics/ultralytics) [yolo paper](https://arxiv.org/abs/2004.10934) (In 2026, sota for realtime/edge object detection)   
 - Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
-- Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)  
+- Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)
+
+
+
