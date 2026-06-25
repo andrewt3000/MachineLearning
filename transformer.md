@@ -1,6 +1,7 @@
 A Transformer is a neural network architecture built with attention layers. It was introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017). Transformers are the large language models in multimodal foundation models such as Google Gemini, Open AI Chat GPT, Anthropic Claude.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/transformer.png" height='460px' width='326px'/>  
+<sub>Transformer from <a href='https://arxiv.org/abs/1706.03762'>Attention Is All You Need</a> (Vaswani et al., 2017)</sub>
 
 ### Original Transformer
 The original “attention is all you need” paper was for language translation. The input is “encoded” from the original language and then the output is decoded in a second target language. 
