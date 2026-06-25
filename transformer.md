@@ -36,8 +36,7 @@ Instead of one attention operation, the model uses h attention heads:
 This lets the model analyze many patterns in parallel.
 
 ## 🎯 Training Tricks
-Label Smoothing is a regularization technique.
-Dropout is typically 0.1 in attention layers (versus 0.5 in fully connected layers)  
+Label Smoothing is a regularization technique.  
 
 Residual Connections + Layer Norm
 - Help gradients flow
