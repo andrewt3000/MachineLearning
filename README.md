@@ -43,7 +43,7 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 Suprervised learning data is typically split into **training**, **validation** and **test** data.  
 An **example** (or **sample**) is a single instance from your dataset.  
 In supervised learning data, the correct output label is refered to as ground truth.  
-**Data leakage** is when information from outside the training dataset (such as the target variable or the validation/test set) accidentally contaminates the training process.
+**Data leakage** is when information from outside the training dataset (such as the target variable or the validation/test set) accidentally contaminates the training process.  
 **Data drift** (also known as covariate shift) occurs when the statistical properties of the input data change over time compared to the data the model was trained on. For example, for predicting house prices, inflation might change the home values.  
 
 ### Machine learning models and applications
