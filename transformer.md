@@ -47,7 +47,7 @@ Feed-Forward Networks
 - Adds non-linearity and additional modeling capacity
 
 ## Bert
-Bert is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
+[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
 Encoder only models were popular from 2018 - 2022.  
 
 ## LLMS
