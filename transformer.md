@@ -1,15 +1,14 @@
+# Transformers
+## Attention is All you need 
 A Transformer is a neural network architecture built with attention layers. It was introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017). Transformers are the large language models in multimodal foundation models such as Google Gemini, Open AI Chat GPT, Anthropic Claude.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/transformer.png" height='460px' width='326px'/>  
 <sub>Transformer from <a href='https://arxiv.org/abs/1706.03762'>Attention Is All You Need</a> (Vaswani et al., 2017)</sub>
 
-### Original Transformer
-The original “attention is all you need” paper was for language translation. The input is “encoded” from the original language and then the output is decoded in a second target language. 
+The original “attention is all you need” paper was for language translation. 
 The attention paper model has an encoder on the left and a decoder on the right.
+The encoder "understands" the input language, the decoder generates the output language.  
 Both encoder and decoder contain “Multi-head attention” MHA layers. [pytorch implementation](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
-The encoder "understands" the input, the decoder generates the output.  
-Encoder only models, such as BERT, produce contextual representations and then perform tasks such as sentiment analysis.  
-Decoder only models, such as ChatGPT, generate text.  
 
 ## 🔢 Input Representation
 - The model receives a sequence of tokens (words/subwords), each mapped to a vector embedding.
@@ -37,9 +36,8 @@ Instead of one attention operation, the model uses h attention heads:
 This lets the model analyze many patterns in parallel.
 
 ## 🎯 Training Tricks
-Label Smoothing
-- Makes the model less overconfident
-- Helps generalization and stability
+Label Smoothing is a regularization technique.
+Dropout is typically 0.1 in attention layers (versus 0.5 in fully connected layers)  
 
 Residual Connections + Layer Norm
 - Help gradients flow
@@ -49,7 +47,18 @@ Feed-Forward Networks
 - After attention, each token passes through a small MLP
 - Adds non-linearity and additional modeling capacity
 
+## Bert
+Bert is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
+Encoder only models were popular from 2018 - 2022.  
+
+## LLMS
+Autoregressive decoder only models, such as ChatGPT, generate text.  
+These models were populare starting in 2022.  
+
+
 ## Additional Transformer References
+[Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy)
+
 
 ### LLMS
 - open weight facebook [llama](https://www.llama.com/)
