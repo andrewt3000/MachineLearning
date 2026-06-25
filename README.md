@@ -7,7 +7,7 @@ Machine learning problems are categorize as discriminative or generative.
 
 #### Types of machine learning
 1. Supervised learning - learns from labeled training data.  
-2. Unsupervised learning - learns from unlabled training data. Examples include Principal component analysis and clustering. 
+2. Unsupervised learning - learns from unlabled training data. Examples include principal component analysis and clustering. 
 3. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
 4. Transfer learning - storing knowledge gained while solving one problem and applying it to a different but related problem.
 5. Semi-Supervised learning - Use a mix mostly unlabeled, with a small labeled subset data.  
