@@ -6,10 +6,8 @@
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
-#### Types of machine learning problems
-Machine learning problems are categorize as discriminative or generative.  
-
 #### Types of machine learning
+Machine learning problems are categorize as discriminative or generative.  
 1. Supervised learning - learns from labeled training data.  
 2. Unsupervised learning - learns from unlabled training data. Examples include principal component analysis and clustering. 
 3. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
