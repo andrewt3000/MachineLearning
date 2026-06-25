@@ -52,7 +52,7 @@ Encoder only models were popular from 2018 - 2022.
 
 ## LLMS
 Autoregressive decoder only models, such as ChatGPT, generate text.  
-These models were populare starting in 2022.  
+These models became popular starting in 2022 with the success of ChatGPT.  
 
 
 ## Additional Transformer References
