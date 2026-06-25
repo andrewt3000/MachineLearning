@@ -1,4 +1,8 @@
 ### My Notes on Machine Learning
+- [Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) 
+
+- [Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) 
+
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
@@ -11,7 +15,7 @@ Machine learning problems are categorize as discriminative or generative.
 3. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
 4. Transfer learning - storing knowledge gained while solving one problem and applying it to a different but related problem.
 5. Semi-Supervised learning - Use a mix mostly unlabeled, with a small labeled subset data.  
-6. Self-supervised learnng - A form of unsupervised learning where the model is trained on a task using the data itself to generate supervisory signals, rather than relying on externally-provided labels. For example, the task may be to predict the next word (LLM pretraining) or to predict part of a masked image.  
+6. Self-supervised learnng - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. For example, the task may be to predict the next word (LLM pretraining) or to predict part of a masked image.  
 
 #### Types of discriminative machine learning problems
 1. regression - predicting a continuous value attribute (Example: house prices)
