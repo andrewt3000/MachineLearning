@@ -18,9 +18,10 @@ Machine learning problems are categorize as discriminative or generative.
 6. Self-supervised learnng - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. For example, the task may be to predict the next word (LLM pretraining) or to predict part of a masked image.  
 
 #### Types of discriminative machine learning problems
-1. regression - predicting a continuous value attribute (Example: house prices)
-2. classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)  Classification is further categorized as binary or multi-class classificaition.  
-3. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
+1. Regression - predicting a continuous value attribute (Example: house prices)
+2. Classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
+   - Classification is further categorized as binary or multi-class classificaition.  
+4. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
 
 #### Features
 **Features** are the inputs to a machine learning model. They are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
