@@ -37,6 +37,7 @@ Tanh activation function outputs value between -1 and 1. Tanh is a rescaled sigm
 
 #### ReLu
 ReLu activation is currently (2018) the most popular activation function. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus (vanishing gradient?)    
+pytorch [nn.ReLU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.ReLU.html)  
 
 ```python
 def relu(x):
