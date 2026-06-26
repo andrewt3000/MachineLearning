@@ -171,6 +171,15 @@ Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neura
 
 pytorch [backward()](https://docs.pytorch.org/docs/stable/generated/torch.Tensor.backward.html)  
 
+#### Learning Rate
+Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
+if &alpha; is too low, convergance is slow.
+if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
+The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
+
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
+
+
 
 ### Optimization algorithms
 **Gradient descent** is an iterative optimization algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function.  
@@ -195,14 +204,6 @@ pytorch [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)
 In pytorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model.  
 
 
-
-#### Learning Rate
-Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
-if &alpha; is too low, convergance is slow.
-if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
-The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
-
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
 
 
 #### Regularization
