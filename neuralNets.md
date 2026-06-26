@@ -85,11 +85,7 @@ One tip is to begin by overtraining a small portion of your data by getting rid 
 Start with small regularization and find a learning rate that makes the loss go down.  
 
 ### Prepare the data
-[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - scale each feature to be in a common range typically -1 to 1 where 0 is the mean value. For instance, in image processing you could subtract the mean pixel intensity for the whole image or by channel before scaling it to zero center the features.    
-
-[Data augmentation](https://en.wikipedia.org/wiki/Data_augmentation) - An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.   
-
-Training data - The data used in machine learning models to make the model more accurate. In the case of supervised learning it consists of input features and output labels that serve as examples. Data is typically split into training data, cross validation data and test data. Typical mix is 60% -80% training, 10%-20% validation and 10%-20% testing data. Validation data is evaluated while the model is training and it indicates if the model is generalizing. Testing data is evaluated after you have stopped training the model to indicate the model's accuracy.  
+[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - scale each feature to be in a common range. See section on [data](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
 
 
 ### Initialization
