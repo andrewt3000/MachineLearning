@@ -102,6 +102,7 @@ If X is the input matrix, and W1 is the weight matrix for the first hidden layer
 def forward(self, X):
   z2 = np.dot(X, self.W1)
   a2 = activation(z2)
+  return a2
 ```
 
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
