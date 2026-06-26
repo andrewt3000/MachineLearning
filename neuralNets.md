@@ -88,9 +88,7 @@ Begin by preparing and scaling the data. See [section on data and features](http
 ### Initialization
 The weights are historically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry (Rumelhart et. al 1986). Bias is typically initialized to 0.     
 
-As your neural networks get deeper, initialization becomes more important. If the initial weights are too small, you get a vanishing gradient. If the initial weights are too large, you get an exploding gradient. Consider more advanced initializations such as Xavier and He initialization.   
-
-In Keras, you can specify kernel and bias initialization on each Dense layer. See all available [keras initializations](https://keras.io/initializers/). Glorot (aka Xavier) initialization is the default.  
+As your neural networks get deeper, initialization becomes more important. If the initial weights are too small, you get a vanishing gradient. If the initial weights are too large, you get an exploding gradient. 
 
 - Xavier (Glorot) Initializations are typically used on symmetric activation functions like Tanh or Sigmoid.  
 - Kaiming (He) initializations are typically used on non-linear activations like ReLU or LeakyReLU
