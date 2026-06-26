@@ -1,7 +1,8 @@
-### My Notes on Machine Learning
+# My Notes on Machine Learning
 These are my notes on machine learning, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md), and [transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) with links to [pytorch](https://pytorch.org/) implementations.  
 
 
+## Machine Learning
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
 ### Types of machine learning
