@@ -16,6 +16,8 @@ The weights and biases are often refered to as parameters.
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
+pytorch layers are compose in [Sequential()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sequential.html) containers.
+
 ### Hyperparameters
 **Hyperparameters** are the model’s parameters in a neural net such as architecture, learning rate, and regularization factor.	
 
@@ -30,7 +32,7 @@ The weights and biases are often refered to as parameters.
 [pytorch activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 #### ReLu
-ReLu activation is currently popular in linear layers and cnns. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus (vanishing gradient?)    
+ReLu activation is currently popular in linear layers and cnns. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus ()    
 pytorch [nn.ReLU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.ReLU.html)  
 
 ```python
