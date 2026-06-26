@@ -42,7 +42,7 @@ An **example** (or **sample**) is a single instance from your dataset.
 
 **Concept drift** occurs when there is a change in input-output relationship over time compared to the data the model was trained on.  
 
-#### Features
+### Features
 **Features** are the inputs to a machine learning model. Features are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
   
 **Feature selection** is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
