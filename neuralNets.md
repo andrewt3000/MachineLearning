@@ -85,7 +85,7 @@ One tip is to begin by overtraining a small portion of your data by getting rid 
 Start with small regularization and find a learning rate that makes the loss go down.  
 
 ### Prepare the data
-[Feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) - scale each feature to be in a common range. See section on [data](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
+Begin by preparing and scaling the data. See [section on data and features](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
 
 
 ### Initialization
