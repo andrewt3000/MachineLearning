@@ -99,11 +99,14 @@ As your neural networks get deeper, initialization becomes more important. If th
 If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
 ```python
-z2 = np.dot(X, W1)
-a2 = activation(z2)
+def forward(self, X):
+  z2 = np.dot(X, self.W1)
+  a2 = activation(z2)
 ```
 
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
+
+In pytorch, implement the forward() method of the [Module](https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html) class  
 
 ### Loss Function 
 The next step is to choose and implement a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared error is a common loss function for regression. Cross entropy is a common loss function for classification.   
