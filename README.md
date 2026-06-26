@@ -22,10 +22,14 @@ Machine learning problems are categorize as discriminative or generative.
 4. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
 
 ### Data
-Data is typically split into **training**, **validation** and **test** data. Typical mix is 70% -80% training, 10%-15% validation and 10%-15% testing data.  
-**Training data** is the data used to learn. 
-**Validation data** is evaluated while the model is training and it indicates if the model is generalizing. 
-**Testing data** is evaluated after you have stopped training the model to indicate the model's accuracy.  
+Data is typically split into **training**, **validation** and **test** data. Typical mix is:
+- 70 - 80% training data
+- 10 - 15% validation data
+- 10 - 15% test data
+  
+**Training data** is the data used to learn.  
+**Validation data** is evaluated while the model is training and indicates if the model is generalizing.  
+**Test data** is evaluated after you training to indicate the model's accuracy.  
 
 An **example** (or **sample**) is a single instance from your dataset.  
 
