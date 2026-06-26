@@ -73,9 +73,9 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 
 ### Computer Vision 
-These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where people use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime mobile devices because they require less resources.      
+These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime and mobile devices because they require less resources.      
 
-[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS  are suitable models for computer vision problems.   
+[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS are suitable models for computer vision problems.   
 
 - Image classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
 - Object detection: (with bounding boxes) [ultralytics yolo](https://github.com/ultralytics/ultralytics) (In 2026, sota for realtime/edge object detection)   
