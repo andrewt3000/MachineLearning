@@ -25,7 +25,7 @@ The weights and biases are often refered to as parameters.
 **Capacity** is the model's storage space for patterns and is driven by parameter width (number of hidden units) and depth (number of layers). Generally, a higher number of parameters equates to a higher capacity.   
 
 ### Activation Functions
-[Activation function](https://en.wikipedia.org/wiki/Activation_function) - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
+**Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
 
 #### Sigmoid
 Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues. Historically popular, but not currently popular.  
@@ -50,7 +50,7 @@ def relu(x):
 There are newer, experimental variants of the relu: Leaky ReLu (solves the dead relu issue) Elu (exponential relu), and MaxOut.   
 
 #### Softmax
-The [softmax function](https://en.wikipedia.org/wiki/Softmax_function) is often used as the model's final output activation function for classification. Softmax is used for modeling probability distributions for classification where outputs are mutually exclusive (MNIST is an example). 
+The softmax function is often used as the model's final output activation function for classification. Softmax is used for modeling probability distributions for classification where outputs are mutually exclusive (MNIST is an example). 
 Softmax is a "soft" maximum function. It's properties are:  
 Output values are in the range [0, 1].  
 The sum of output nodes is 1.  
@@ -64,7 +64,6 @@ def softmax(X):
     return exps / np.sum(exps)
 ```
 [pytorch softmax() activation function](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html#torch.nn.Softmax)  
-[Keras activations](https://keras.io/activations/)  
 [Pytorch activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 ### Training a neural network
@@ -141,7 +140,7 @@ We can combine all these functions for cost and forward propagation to get one f
 J = Cost(Softmax(DotProduct(Relu(DotProduct(X1,W1)), W2)))
 ```
 
-We then calculate the partial derivative of the loss function with respect to each weights (dJ/dW). We use the [chain rule](https://en.wikipedia.org/wiki/Chain_rule). The chain rule is the derivative of f(g(x)) is f'(g(x)) * g'(x)
+We then calculate the partial derivative of the loss function with respect to each weights (dJ/dW). We use the chain rule. The chain rule is the derivative of f(g(x)) is f'(g(x)) * g'(x)
 
 The result is a gradient for each set of weights, dJ/dW1 and dJ/dW2 which are the same size as W1, W2.  
 
@@ -170,26 +169,25 @@ The learning rate is often reduced to a smaller number over time. This is often 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
 
 ### Optimization algorithms
-[Gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) is an iterative optimization algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function.  
+**Gradient descent** is an iterative optimization algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
 
-Batch gradient descent - The term batch refers to the fact it uses the entire dataset to make one gradient step. Batch works well for small datasets that have convex loss functions. The loss function needs to be convex or it may find a local minimum.    
+**Batch gradient descent** - The term batch refers to the fact it uses the entire dataset to make one gradient step. Batch works well for small datasets that have convex loss functions. The loss function needs to be convex or it may find a local minimum.    
 
-[Stochastic gradient descent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent) (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
+**Stochastic gradient descent** (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
 
-Mini batch gradient descent: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Values are typically in the range of 32-512.  Larger batches are faster to train, but can cause overfitting and require more memory.  Lower batch sizes are the opposite: slower to train, more regularized, and require less memory.  
+**Mini batch gradient descent**: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Values are typically in the range of 32-512.  Larger batches are faster to train, but can cause overfitting and require more memory.  Lower batch sizes are the opposite: slower to train, more regularized, and require less memory.  
 
 #### Gradient Descent Optimization
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov accelerated gradient descent is a variation that builds on moment and adds a look ahead step.  
 
 Other optimization algorithms include: AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
-See [Keras Optimizers](https://keras.io/optimizers/)  
 See [Pytorch optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
 
 #### Regularization
 Underfitting - output doesn't fit the training data well.  
-[Overfitting](https://en.wikipedia.org/wiki/Overfitting) - output fits training data well, but doesn't work well on validation or test data.  
+Overfitting - output fits training data well, but doesn't work well on validation or test data.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/over_under.png"/>
 
