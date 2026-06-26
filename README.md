@@ -43,11 +43,21 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 **Dimensionality Reduction** is transforming data from high to low dimension but retaining the properties. Examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
 
 #### Data
-Data is typically split into **training**, **validation** and **test** data.  
+Data is typically split into **training**, **validation** and **test** data. Typical mix is 60% -80% training, 10%-20% validation and 10%-20% testing data.  
+**Training data** is the data used in machine learning models to make the model more accurate. In the case of supervised learning it consists of input features and output labels that serve as examples.  
+**Validation data** is evaluated while the model is training and it indicates if the model is generalizing. 
+**Testing data** is evaluated after you have stopped training the model to indicate the model's accuracy.  
+
 An **example** (or **sample**) is a single instance from your dataset.  
-In supervised learning data, the correct output label is refered to as ground truth.  
+
+**Data augmentation** - artificially increase the diversity and size of a training dataset without actually collecting new data. An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.  
+
+In supervised learning data, the correct output label is refered to as **ground truth**.  
+
 **Data leakage** is when information from outside the training dataset (such as the target variable or the validation/test set) accidentally contaminates the training process.  
+
 **Data drift** (also known as covariate shift) occurs when the statistical properties of the input data change over time compared to the data the model was trained on.  
+
 **Concept drift** occurs when there is a change in input-output relationship over time compared to the data the model was trained on.  
 
 ### Machine learning models and applications
