@@ -15,7 +15,7 @@ Machine learning problems are categorize as discriminative or generative.
 5. Semi-Supervised learning - Use a mix mostly unlabeled, with a small labeled subset data.  
 6. Self-supervised learning - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. For example, the task may be to predict the next word (LLM pretraining) or to predict part of a masked image.  
 
-### Types of discriminative machine learning problems
+### Machine learning problems
 1. Regression - predicting a continuous value attribute (Example: house prices)
 2. Classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
    - Classification is further categorized as binary or multi-class classificaition.  
