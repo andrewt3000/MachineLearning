@@ -29,7 +29,7 @@ pytorch layers are compose in [Sequential()](https://docs.pytorch.org/docs/stabl
 
 ### Activation Functions
 **Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
-[pytorch activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
+pytorch [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 #### ReLu
 ReLu activation is currently popular in linear layers and cnns. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus ()    
@@ -165,7 +165,7 @@ def reluprime(x):
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
-Packages such Keras handle this part of the training process for you.  
+pytorch [backward()](https://docs.pytorch.org/docs/stable/generated/torch.Tensor.backward.html)  
 
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
