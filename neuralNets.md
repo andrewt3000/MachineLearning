@@ -86,11 +86,14 @@ Begin by preparing and scaling the data. See [section on data and features](http
 
 
 ### Initialization
-The weights and biases are historically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry.  
+The weights are historically initialized with small random numbers centered on zero. If the weights are the same (say all 0s) they will remain the same throughout training, making the weights random breaks this symmetry (Rumelhart et. al 1986). Bias is typically initialized to 0.     
 
 As your neural networks get deeper, initialization becomes more important. If the initial weights are too small, you get a vanishing gradient. If the initial weights are too large, you get an exploding gradient. Consider more advanced initializations such as Xavier and He initialization.   
 
 In Keras, you can specify kernel and bias initialization on each Dense layer. See all available [keras initializations](https://keras.io/initializers/). Glorot (aka Xavier) initialization is the default.  
+
+- Xavier (Glorot) Initializations are typically used on symmetric activation functions like Tanh or Sigmoid.  
+- Kaiming (He) initializations are typically used on non-linear activations like ReLU or LeakyReLU
 
 ### Forward Propagation
 If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
@@ -103,7 +106,9 @@ a2 = activation(z2)
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
 ### Loss Function 
-The next step is to choose and implement a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared errors is a common loss function for regression. Cross entropy is a common loss function for classification. Here are implementations in pytorch: [MSELoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.MSELoss.html#torch.nn.MSELoss) and [CrossEntropyLoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss)
+The next step is to choose and implement a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared errors is a common loss function for regression. Cross entropy is a common loss function for classification.   
+pytorch: [MSELoss()](https://docs.pytorch.org/docs/stable/generated/torch.nn.MSELoss.html#torch.nn.MSELoss)   
+[CrossEntropyLoss()](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss)
 
 Cross entropy (aka log loss, negative log probability) function is frequently used with classification models that use a softmax activation function for the output layer. The output of the softmax activation is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
 
@@ -119,8 +124,7 @@ def logloss(true_label, predicted_prob):
  ```
 
 
-[Keras loss functions](https://keras.io/losses/)  
-[pytorch loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions) 
+pytorch [loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions) 
 
 - The term loss function applies to a single example.  
 - The term error function refers to a single example and whether it's right or wrong for performance measurment, not training.  
@@ -181,7 +185,7 @@ The learning rate is often reduced to a smaller number over time. This is often 
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov accelerated gradient descent is a variation that builds on moment and adds a look ahead step.  
 
 Other optimization algorithms include: AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
-See [Pytorch optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
+pytorch [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
 
 #### Regularization
 Underfitting - output doesn't fit the training data well.  
