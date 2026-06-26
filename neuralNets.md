@@ -29,14 +29,8 @@ The weights and biases are often refered to as parameters.
 **Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
 [pytorch activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
-#### Sigmoid
-Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues. Historically popular, but not currently popular.  
-
-#### Tanh
-Tanh activation function outputs value between -1 and 1. Tanh is a rescaled sigmoid function. Tanh is zero centered but still suffers from activation saturation issues similar to sigmoid. Historically popular, but not currently popular.  
-
 #### ReLu
-ReLu activation is currently (2018) the most popular activation function. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus (vanishing gradient?)    
+ReLu activation is currently popular in linear layers and cnns. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus (vanishing gradient?)    
 pytorch [nn.ReLU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.ReLU.html)  
 
 ```python
@@ -47,14 +41,16 @@ def relu(x):
     return x
 ```
 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/activation.png" />
+#### GELU
+GELU is popular in transformers. GELU stands for Gaussian Error Linear Units function.  
+pytorch [nn.GELU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.GELU.html)
 
-#### More activations
-There are newer, experimental variants of the relu: Leaky ReLu (solves the dead relu issue) Elu (exponential relu), and MaxOut.   
+#### Sigmoid
+Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues. Historically popular, but not currently popular. Might be used for binary classification.  
+pytorch [nn.Sigmoid()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html)
 
 #### Softmax
-The softmax function is often used as the model's final output activation function for classification. Softmax is used for modeling probability distributions for classification where outputs are mutually exclusive (MNIST is an example). 
-Softmax is a "soft" maximum function. It's properties are:  
+The softmax function is often used as the model's final output activation function for multi-class classification. The output is similar to a probability distribution accross the labels however it's a point of debate if it should be consider a probability distribution in the freuqentist sense. Softmax is a "soft" maximum function. It's properties are:  
 Output values are in the range [0, 1].  
 The sum of output nodes is 1.  
 
@@ -66,7 +62,7 @@ def softmax(X):
     exps = np.exp(X)
     return exps / np.sum(exps)
 ```
-[pytorch nn.Softmax()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html)  
+pytorch [nn.Softmax()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html)  
 
 ### Training a neural network
 Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
