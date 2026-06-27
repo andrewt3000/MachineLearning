@@ -262,7 +262,7 @@ Overfitting - output fits training data well, but doesn't work well on validatio
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/over_under.png"/>
 
-Regularization - a technique to minimize overfitting.  
+**Regularization** is a technique to prevent overfitting.  
 
 L1 regularization uses sum of absolute value of weights. L1 works best with sparse outputs.  
 L2 regularization uses sum of squared weights. L2 doesn't work well with yielding sparse outputs.    
@@ -275,7 +275,7 @@ L2 regularization uses sum of squared weights. L2 doesn't work well with yieldin
 Overfitting</a> - Srivastava et al 2014 </sub>
 
 ### Early termination
-**Early termination** is to stop training when the training error is getting lower but the validation error is increasing. This indicates overfitting.  
+**Early termination** is a regularization technique. Early termination is to stop training when the training error is getting lower but the validation error is increasing. Testing poorly on the validation set indicates overfitting.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
