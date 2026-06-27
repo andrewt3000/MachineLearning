@@ -7,22 +7,23 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 
 ### Types of machine learning
 Machine learning problems are categorize as discriminative or generative.  
-1. Supervised learning - learns from labeled training data.
+1. **Supervised learning** - learns from **labeled** training data.
    - svm, knn, random forests, gradient boosting machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
-3. Unsupervised learning - learns from unlabled training data.
+3. **Unsupervised learning** - learns from unlabled training data.
    - principal component analysis, clustering. 
-4. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
+4. **Reinforcement learning** - Maximize a reward. An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
-6. Transfer learning - storing knowledge gained while solving one problem and applying it to a different but related problem.
-7. Semi-Supervised learning - Use a mix mostly unlabeled, with a small labeled subset data.  
-8. Self-supervised learning - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
+6. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem.
+7. **Semi-Supervised learning** - Use a mix mostly unlabeled, with a small labeled subset data.  
+8. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
    - Autoregressive LLM pretraining (next word prediction), masked image modeling such as [MAE masked autoencoders](https://arxiv.org/abs/2111.06377).  
 
 ### Machine learning problems
-1. Regression - predicting a continuous value attribute (Example: house prices)
-2. Classification - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
+1. **Regression** - predicting a continuous value attribute (Example: house prices)
+2. **Classification** - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
    - Classification is further categorized as binary or multi-class classificaition.  
-4. Ranking - predicting the relative order or preference of a set of items contextually. (Example: search engine results, or movie recommendations)
+3. **Ranking** - predicting the relative order or preference of a set of items contextually.
+   - Example: search engine results, or movie recommendations
 
 ### Data
 Data is typically split into **training**, **validation** and **test** data. Typical mix is:
