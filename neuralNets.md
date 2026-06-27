@@ -193,7 +193,8 @@ def reluprime(x):
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
-pytorch [backward()](https://docs.pytorch.org/docs/stable/generated/torch.Tensor.backward.html)  
+#### pytorch
+In pytorch the messy details of backpropagation are abstracted in the function [backward()](https://docs.pytorch.org/docs/stable/generated/torch.Tensor.backward.html)
 
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
