@@ -96,9 +96,10 @@ As your neural networks get deeper, initialization becomes more important. If th
 - Kaiming (He) initializations are typically used on non-linear activations like ReLU or LeakyReLU
 
 ### Forward Propagation
-The forward propagation function is called at infernce.  
+The forward propagation function is called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
 
-Here is a very simple example using numpy. If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
+#### Numpy Example
+If X is the input matrix, and W1 is the weight matrix (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
 ```python
 def forward(self, X):
@@ -109,7 +110,25 @@ def forward(self, X):
 
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
+#### Pytorch Example 
 In pytorch, implement the forward() method of the [Module](https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html) class  
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class MyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc = nn.Linear(10, 5)
+
+    def forward(self, x):
+        # Passing the linear layer output through a ReLU activation
+        x = F.relu(self.fc(x)) 
+        return x
+
+```
 
 ### Loss Function 
 The next step is to choose and implement a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared error is a common loss function for regression. Cross entropy is a common loss function for classification.   
