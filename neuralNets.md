@@ -75,13 +75,9 @@ Steps to training a network.
 - [Implement forward propagation](#forward-propagation)  
 - [Implement loss function](#loss-function)
 - [Implement backpropagation](#backpropagation) 
-- [Run optimization algorithm](#optimization-algorithms) such as gradient descent adjusting weights using learning rate.  
+- [Run optimization algorithm](#optimization-algorithms) 
 
-You train until the model (hopefully) converges on an acceptablely low error level. An epoch means the network has been trained on every example once.  
-
-One tip is to begin by overtraining a small portion of your data by getting rid of regularization to see if you have a reasonalbe architecture. If you can't get the loss to zero, reconsider your architecture.   
-
-Start with small regularization and find a learning rate that makes the loss go down.  
+Training is typically implemented as a loop where each loop is an epoch. An **epoch** represents one complete pass of the entire training dataset through the neural network. On each iteration of the loop a loss function is calculated and backpropagation is performed. This is repeated until the decision to terminate is reached.  
 
 ### Prepare the data
 Begin by preparing and scaling the data. See [section on data and features](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
@@ -98,7 +94,7 @@ As your neural networks get deeper, initialization becomes more important. If th
 ### Forward Propagation
 The forward propagation function is called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
 
-#### Numpy Example
+#### numpy Example
 If X is the input matrix, and W1 is the weight matrix (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
 ```python
@@ -131,7 +127,7 @@ class MyModel(nn.Module):
 ```
 
 ### Loss Function 
-The next step is to choose and implement a loss function. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared error is a common loss function for regression. Cross entropy is a common loss function for classification.   
+The next step is to choose a loss function. Then implement the loss function or use a loss function from an existing library. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared error is a typical loss function for regression. Cross entropy is a typical loss function for classification.   
 
 | ML Problem | Loss Function | PyTorch Class |
 | :--- | :--- | :--- |
@@ -151,6 +147,7 @@ Cross entropy (aka log loss, negative log probability) function is frequently us
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
 
+### numpy example
 ```python
 def logloss(true_label, predicted_prob):
   if true_label == 1:
