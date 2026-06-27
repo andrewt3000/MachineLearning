@@ -6,7 +6,7 @@ These are my notes on machine learning, [neural networks](https://github.com/and
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
 ### Types of machine learning
-Machine learning problems are categorize as discriminative or generative.  
+Machine learning problems are categorize as **discriminative** or **generative**.  
 1. **Supervised learning** - learns from **labeled** training data.
    - svm, knn, random forests, gradient boosting machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
 2. **Unsupervised learning** - learns from unlabled training data.
