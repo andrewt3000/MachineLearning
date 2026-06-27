@@ -1,10 +1,30 @@
 ### Neural Networks
 **Neural networks** are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
+### Terminology
 Neural networks or artificial neural networks are a broad term that includes also other types of neural networks such as CNNs or transformers. The architecture we are discussing here is a feedforward neural network (as opposed to recurrent), vanilla neural networks, or MLP multilayer perceptron.  
 
 You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. These fully connected layers are used in other neural networks to combine features or change dimensionality.  
 pytorch: [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  
+
+### Training a neural network
+Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
+
+Steps to training a network.  
+- [Prepare the data](#prepare-the-data)
+- [Design Architecture](#neural-network-architecture)
+- [Initialize weights and biases](#initialization)  
+- [Implement forward propagation](#forward-propagation)  
+- [Implement loss function](#loss-function)
+- [Implement backpropagation](#backpropagation) 
+- [Run optimization algorithm](#optimization-algorithms) 
+
+Training is typically implemented as a loop where each loop is an epoch. An **epoch** represents one complete pass of the entire training dataset through the neural network. On each iteration of the loop a loss function is calculated and backpropagation is performed. This is repeated until the decision to terminate is reached.  
+
+### Prepare the data
+Begin by preparing and scaling the data. See [section on data and features](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
+
+
 
 ### Neural network architecture
 The architecture of a neural network is fixed before it is trained and has the following properties. 
@@ -66,21 +86,6 @@ def softmax(X):
 ```
 pytorch [nn.Softmax()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html)  
 
-### Training a neural network
-Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
-
-Steps to training a network.  
-- [Prepare the data](#prepare-the-data)
-- [initialize weights and biases](#initialization)  
-- [Implement forward propagation](#forward-propagation)  
-- [Implement loss function](#loss-function)
-- [Implement backpropagation](#backpropagation) 
-- [Run optimization algorithm](#optimization-algorithms) 
-
-Training is typically implemented as a loop where each loop is an epoch. An **epoch** represents one complete pass of the entire training dataset through the neural network. On each iteration of the loop a loss function is calculated and backpropagation is performed. This is repeated until the decision to terminate is reached.  
-
-### Prepare the data
-Begin by preparing and scaling the data. See [section on data and features](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
 
 
 ### Initialization
