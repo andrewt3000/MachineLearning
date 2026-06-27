@@ -223,12 +223,41 @@ Momentum sgd is a variation that accelerates sgd, dampens oscillations, and help
 Momement sgd is popular for vanilla neural networks. Adam with weight decay is popular with transformer models.  
 pytorch [SGD](https://docs.pytorch.org/docs/stable/generated/torch.optim.SGD.html) [AdamW](https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html)  
 
+
 Other optimization algorithms include: AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
+
+#### pytorch
 pytorch [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
 
-In pytorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model.  
+In pytorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model. 
+
+Here is a psuedocode example that pulls together the loss function (MSELoss), backprop, and the optimizer(SGD) all in an outer training loop that represents an epoch and an inner loop that represents a batch.   
+
+```
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# 1. Setup: Model, Loss Function, and Optimizer
+model = MyNeuralNetwork()
+criterion = nn.MSELoss()  # or nn.CrossEntropyLoss() depending on your task
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# 2. Training Loop
+for epoch in range(num_epochs):
+    for inputs, targets in data_loader:
+        
+        # Forward pass: Compute predicted outputs by passing inputs to the model
+        outputs = model(inputs)
+        loss = criterion(outputs, targets)
+        
+        # Backward pass and optimization
+        optimizer.zero_grad()  # Clear existing gradients from the last step
+        loss.backward()        # Compute gradients of the loss w.r.t. model parameters
+        optimizer.step()       # Update model weights based on the computed gradients
 
 
+```
 
 
 #### Regularization
