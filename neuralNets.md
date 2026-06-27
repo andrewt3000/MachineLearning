@@ -96,7 +96,9 @@ As your neural networks get deeper, initialization becomes more important. If th
 - Kaiming (He) initializations are typically used on non-linear activations like ReLU or LeakyReLU
 
 ### Forward Propagation
-If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
+The forward propagation function is called at infernce.  
+
+Here is a very simple example using numpy. If X is the input matrix, and W1 is the weight matrix for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
 ```python
 def forward(self, X):
