@@ -135,7 +135,9 @@ The next step is to choose a loss function. Then implement the loss function or 
 
 
 #### Cross entropy
-Cross entropy (aka log loss, negative log probability) function is frequently used with classification models that use a softmax activation function for the output layer. The output of the softmax activation is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
+Cross entropy (aka log loss, negative log probability) function is frequently used with classification models that use a softmax activation function for the output layer. The output of the softmax activation is a value between 0 and 1. 
+
+The cross entropy function makes sense intuitively. Consider the case where the label is 1 and the output is 1, the loss is 0 i.e. there is no loss, the output of 1 is correct and equals the label of 1. Conversely, the loss approaches infinity for the output of 0, the incorrect classification.  
 
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
