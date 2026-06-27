@@ -7,24 +7,6 @@ Neural networks or artificial neural networks are a broad term that includes als
 You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. These fully connected layers are used in other neural networks to combine features or change dimensionality.  
 pytorch: [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  
 
-### Training a neural network
-Training a neural network - minimize a cost function. Use backpropagation and gradient descent to adjust weights to make model more accurate. 
-
-Steps to training a network.  
-- [Prepare the data](#prepare-the-data)
-- [Design Architecture](#neural-network-architecture)
-- [Initialize weights and biases](#initialization)  
-- [Implement forward propagation](#forward-propagation)  
-- [Implement loss function](#loss-function)
-- [Implement backpropagation](#backpropagation) 
-- [Run optimization algorithm](#optimization-algorithms) 
-
-Training is typically implemented as a loop where each loop is an epoch. An **epoch** represents one complete pass of the entire training dataset through the neural network. On each iteration of the loop a loss function is calculated and backpropagation is performed. This is repeated until the decision to terminate is reached.  
-
-### Prepare the data
-Begin by preparing and scaling the data. See [section on data and features](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
-
-
 
 ### Neural network architecture
 The architecture of a neural network is fixed before it is trained and has the following properties. 
@@ -86,6 +68,19 @@ def softmax(X):
 ```
 pytorch [nn.Softmax()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html)  
 
+### Training a neural network
+Training a neural network is an iterative process and the goal is to minimize a cost function. Training is typically implemented as a loop where each loop is an epoch. An **epoch** represents one complete pass of the entire training dataset through the neural network. On each iteration of the loop a forward pass is made then the loss function is calculated, the loss is used with backpropagation to calculate the gradients. Then gradient descent is performed to adjust the weights of the model to minimize the error. This is repeated until the decision to terminate is reached.  
+
+Steps to training a network.  
+- [Prepare the data](#prepare-the-data)
+- [Initialize weights and biases](#initialization)  
+- [Implement forward propagation](#forward-propagation)  
+- [Implement loss function](#loss-function)
+- [Implement backpropagation](#backpropagation) 
+- [Run optimization algorithm](#optimization-algorithms)  
+
+### Prepare the data
+Begin by preparing and scaling the data. See [section on data and features](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
 
 
 ### Initialization
@@ -97,7 +92,7 @@ As your neural networks get deeper, initialization becomes more important. If th
 - Kaiming (He) initializations are typically used on non-linear activations like ReLU or LeakyReLU
 
 ### Forward Propagation
-The forward propagation function is called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
+The forward propagation function is called during training and it's output is tested for loss. To implement the forward pass function is implicitly to design the neural network architecture. The forward pass function is also called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
 
 #### Numpy example
 If X is the input matrix, and W1 is the weight matrix (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
@@ -132,7 +127,7 @@ class MyModel(nn.Module):
 ```
 
 ### Loss Function 
-The next step is to choose a loss function. Then implement the loss function or use a loss function from an existing library. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared error is a typical loss function for regression. Cross entropy is a typical loss function for classification.   
+The next step is to choose a loss function. Then implement the loss function or use a loss function from an existing library. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. The loss function of a neural network is a function of the problem you are trying to solve. Mean squared error is a typical loss function for regression. Cross entropy is a typical loss function for classification.   
 
 - The term loss function applies to a single example.  
 - The term error function refers to a single example and whether it's right or wrong for performance measurment, not training.  
@@ -221,17 +216,18 @@ The learning rate is often reduced to a smaller number over time. This is often 
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov accelerated gradient descent is a variation that builds on moment and adds a look ahead step.  
 
 Momement sgd is popular for vanilla neural networks. Adam with weight decay is popular with transformer models.  
-pytorch [SGD](https://docs.pytorch.org/docs/stable/generated/torch.optim.SGD.html) [AdamW](https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html)  
+https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html)  
 
 
 Other optimization algorithms include: AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
 
 #### pytorch
-pytorch [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
+pytorch list of [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
+[SGD](https://docs.pytorch.org/docs/stable/generated/torch.optim.SGD.html) [AdamW]  
 
 In pytorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model. 
 
-Here is a psuedocode example that pulls together the loss function (MSELoss), backprop, and the optimizer(SGD) all in an outer training loop that represents an epoch and an inner loop that represents a batch.   
+Here is a psuedocode example that pulls together the forward pass, loss function (MSELoss), backprop, and the optimizer(SGD) all in an outer training loop that represents an epoch and an inner loop that represents a batch.   
 
 ```
 import torch
