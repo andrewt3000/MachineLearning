@@ -9,13 +9,15 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 Machine learning problems are categorize as discriminative or generative.  
 1. **Supervised learning** - learns from **labeled** training data.
    - svm, knn, random forests, gradient boosting machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
-3. **Unsupervised learning** - learns from unlabled training data.
+2. **Unsupervised learning** - learns from unlabled training data.
    - principal component analysis, clustering. 
-4. **Reinforcement learning** - Maximize a reward. An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
+3. **Reinforcement learning** - Maximize a reward. An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
-6. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem typically by **fine tuning** a base model.
-7. **Semi-Supervised learning** - Use a mix mostly unlabeled, with a small labeled subset data.  
-8. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
+4. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem.
+   - **fine tuning** is additional training to a base model for a specific task.  
+   - **lora** (Low-Rank Adaptation) is an add on for base models or stable diffusion model that adds ability for a specific task.  
+5. **Semi-Supervised learning** - Use a mix mostly unlabeled, with a small labeled subset data.  
+6. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
    - Autoregressive LLM pretraining (next word prediction), masked image modeling such as [MAE masked autoencoders](https://arxiv.org/abs/2111.06377).  
 
 ### Machine learning problems
