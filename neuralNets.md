@@ -218,14 +218,12 @@ The learning rate is often reduced to a smaller number over time. This is often 
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov accelerated gradient descent is a variation that builds on moment and adds a look ahead step.  
 
 Momement sgd is popular for vanilla neural networks. Adam with weight decay is popular with transformer models.  
-https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html)  
-
 
 Other optimization algorithms include: AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
 
 #### pytorch
 pytorch list of [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
-[SGD](https://docs.pytorch.org/docs/stable/generated/torch.optim.SGD.html) [AdamW]  
+[SGD](https://docs.pytorch.org/docs/stable/generated/torch.optim.SGD.html) [AdamW](https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html)    
 
 In pytorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model. 
 
