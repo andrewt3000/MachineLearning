@@ -13,7 +13,7 @@ Machine learning problems are categorize as discriminative or generative.
    - principal component analysis, clustering. 
 4. **Reinforcement learning** - Maximize a reward. An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
-6. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem.
+6. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem typically by **fine tuning** a base model.
 7. **Semi-Supervised learning** - Use a mix mostly unlabeled, with a small labeled subset data.  
 8. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
    - Autoregressive LLM pretraining (next word prediction), masked image modeling such as [MAE masked autoencoders](https://arxiv.org/abs/2111.06377).  
