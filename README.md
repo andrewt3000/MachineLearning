@@ -8,7 +8,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 ### Types of machine learning
 Machine learning problems are categorize as discriminative or generative.  
 1. Supervised learning - learns from labeled training data.
-   - svm, knn, random forests, Gradient Boosting Machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
+   - svm, knn, random forests, gradient boosting machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
 3. Unsupervised learning - learns from unlabled training data.
    - principal component analysis, clustering. 
 4. Reinforcement learning - Maximize a reward. An agent interacts with an environment and learns to take action by maximizing a cumulative reward.
