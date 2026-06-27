@@ -6,7 +6,7 @@ Neural networks or artificial neural networks are a broad term that includes als
 You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. These fully connected layers are used in other neural networks to combine features or change dimensionality.  
 pytorch: [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  
 
-### Neural network Architecture
+### Neural network architecture
 The architecture of a neural network is fixed before it is trained and has the following properties. 
 - Neural networks are composed of input layers, hidden layers and output layers.  
 - Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
@@ -94,7 +94,7 @@ As your neural networks get deeper, initialization becomes more important. If th
 ### Forward Propagation
 The forward propagation function is called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
 
-#### numpy Example
+#### Numpy example
 If X is the input matrix, and W1 is the weight matrix (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
 ```python
@@ -106,7 +106,7 @@ def forward(self, X):
 
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
-#### Pytorch Example 
+#### Pytorch example 
 In pytorch, implement the forward() method of the [Module](https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html) class  
 
 ```python
@@ -129,17 +129,10 @@ class MyModel(nn.Module):
 ### Loss Function 
 The next step is to choose a loss function. Then implement the loss function or use a loss function from an existing library. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. Mean squared error is a typical loss function for regression. Cross entropy is a typical loss function for classification.   
 
-| ML Problem | Loss Function | PyTorch Class |
-| :--- | :--- | :--- |
-| **Regression** | Mean Squared Error (MSE) | [`nn.MSELoss()`](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html) |
-| **Classification** | Cross Entropy | [`nn.CrossEntropyLoss()`](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html) |
-
-
 - The term loss function applies to a single example.  
 - The term error function refers to a single example and whether it's right or wrong for performance measurment, not training.  
 - The terms cost function, objective function, and total loss refer to the entire dataset or mini-batch and may also include regularization in addition to the sum of the loss.  
 
-pytorch [loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions) 
 
 #### Cross entropy
 Cross entropy (aka log loss, negative log probability) function is frequently used with classification models that use a softmax activation function for the output layer. The output of the softmax activation is a value between 0 and 1. The loss will be 0 if the output value is 1 and that is the correct classification. Conversely, the loss approaches infinity as the output approaches 0 for the correct classification.  
@@ -147,7 +140,7 @@ Cross entropy (aka log loss, negative log probability) function is frequently us
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cross_entropy.png" />
 
-### numpy example
+#### numpy example
 ```python
 def logloss(true_label, predicted_prob):
   if true_label == 1:
@@ -156,6 +149,14 @@ def logloss(true_label, predicted_prob):
     return -log(1 - predicted_prob)
  ```
 
+#### pytorch 
+List of pytorch [loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions) 
+
+
+| ML Problem | Loss Function | PyTorch Class |
+| :--- | :--- | :--- |
+| **Regression** | Mean Squared Error (MSE) | [`nn.MSELoss()`](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html) |
+| **Classification** | Cross Entropy | [`nn.CrossEntropyLoss()`](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html) |
 
 
 ### Backpropagation 
