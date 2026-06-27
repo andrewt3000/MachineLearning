@@ -245,7 +245,8 @@ L2 regularization uses sum of squared weights. L2 doesn't work well with yieldin
 <sub> <a href="https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf">Dropout: A Simple Way to Prevent Neural Networks from
 Overfitting</a> - Srivastava et al 2014 </sub>
 
-Early termination - Stop training when the training error is getting lower but the validation error is increasing. This indicates overfitting.  
+### Early termination
+**Early termination** is to stop training when the training error is getting lower but the validation error is increasing. This indicates overfitting.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
