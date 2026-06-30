@@ -1,5 +1,4 @@
 # Transformers
-## Attention is All you need 
 A Transformer is a neural network architecture built with attention layers. It was introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). Transformers are the large language models in multimodal foundation models such as Google Gemini, Open AI Chat GPT, Anthropic Claude.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/transformer.png" height='460px' width='326px'/>  
@@ -54,6 +53,12 @@ Encoder only models were popular from 2018 - 2022.
 Autoregressive decoder only models, such as ChatGPT, generate text.  
 These models became popular starting in 2022 with the success of ChatGPT.  
 
+### Academic history
+- 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
+- 2018 bert paper [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+Jacob](https://arxiv.org/abs/1810.04805)
+- 2019 T5 paper [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
+- Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
 ## Additional Transformer References
 [Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Tranformers & Large Language Models
