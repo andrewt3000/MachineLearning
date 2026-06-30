@@ -1,5 +1,5 @@
 # Reinforcement learning
-
+An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
 - **Agent**: The AI system, decision-maker, or learner (e.g., a self-driving car software or a chess-playing bot).
 - **Environment**: Everything outside the agent that it interacts with (e.g., the physical roads or the chessboard).
 - **State** ($S$): The current situation or configuration of the environment at a specific time.
