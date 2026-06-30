@@ -6,7 +6,7 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - **Action** ($A$): The choices available to the agent (e.g., turn left, move pawn to E4).
 - **Reward** ($R$): The feedback signal sent from the environment to evaluate the agent's last action. It can be positive (a reward) or negative (a penalty).
 
-<img width="4284" height="5712" alt="IMG_0157" src="https://github.com/user-attachments/assets/770af073-5dc6-45d7-bb55-b1e0f3415af9" />
+
 
 
 ### Real-world application
