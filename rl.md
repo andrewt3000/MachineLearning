@@ -22,6 +22,6 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
 
 - 2015 Silver et al. DQN nature paper [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
-https://github.com/google-deepmind/dqn
+ [code](https://github.com/google-deepmind/dqn)
 
 - 2017 Open AI PPO paper [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
