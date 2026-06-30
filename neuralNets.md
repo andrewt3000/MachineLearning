@@ -98,10 +98,28 @@ The forward propagation function is called during training and it's output is te
 If X is the input vector, and W1 is the weight vector (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
 ```python
-def forward(self, X):
-  z2 = np.dot(X, self.W1)
-  a2 = activation(z2)
-  return a2
+class Neural_Network(object):
+    def __init__(self):        
+        #Define Hyperparameters
+        self.inputLayerSize = 2
+        self.outputLayerSize = 1
+        self.hiddenLayerSize = 3
+        
+        #Weights (parameters)
+        self.W1 = np.random.randn(self.inputLayerSize, self.hiddenLayerSize)
+        self.W2 = np.random.randn(self.hiddenLayerSize, self.outputLayerSize)
+        
+    def forward(self, X):
+        #Propagate inputs though network
+        self.z2 = np.dot(X, self.W1)
+        self.a2 = self.sigmoid(self.z2)
+        self.z3 = np.dot(self.a2, self.W2)
+        yHat = self.sigmoid(self.z3) 
+        return yHat
+        
+    def sigmoid(self, z):
+        #Apply sigmoid activation function to scalar, vector, or matrix
+        return 1/(1+np.exp(-z))
 ```
 
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
@@ -229,7 +247,7 @@ In pytorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/genera
 
 Here is a psuedocode example that pulls together the forward pass, loss function (MSELoss), backprop, and the optimizer(SGD) all in an outer training loop that represents an epoch and an inner loop that represents a batch.   
 
-```
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
