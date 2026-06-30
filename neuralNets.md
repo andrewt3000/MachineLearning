@@ -285,6 +285,7 @@ Overfitting</a> - Srivastava et al 2014 </sub>
 INFORMATION STORAGE AND ORGANIZATION
 IN THE BRAIN](https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf)
 - 1986 Rumelhart backprop paper [Learning representations by back-propagating errors](https://www.nature.com/articles/323533a0)
+- 1989 Cybenko univerisal approximation theorem paper - Approximation by superpositions of a sigmoidal function
 - 2012 Alexnet paper [ImageNet Classification with Deep Convolutional
 Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
 ### Tutorials, demos
