@@ -306,6 +306,8 @@ IN THE BRAIN](https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf)
 - 1989 Cybenko univerisal approximation theorem paper - Approximation by superpositions of a sigmoidal function
 - 2012 Alexnet paper [ImageNet Classification with Deep Convolutional
 Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+- 2014 Srivastava Dropout paper [Dropout: A Simple Way to Prevent Neural Networks from
+Overfitting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
 ### Tutorials, demos
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
 
