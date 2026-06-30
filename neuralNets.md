@@ -280,10 +280,15 @@ Overfitting</a> - Srivastava et al 2014 </sub>
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
 
-### Other resources
+### Academic History
+- 1958 Rosenblatt perceptron paper [THE PERCEPTRON: A PROBABILISTIC MODEL FOR
+INFORMATION STORAGE AND ORGANIZATION
+IN THE BRAIN](https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf)
+- 1986 Rumelhart backprop paper [Learning representations by back-propagating errors](https://www.nature.com/articles/323533a0)
+- 2012 Alexnet paper [ImageNet Classification with Deep Convolutional
+Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+### Tutorials, demos
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
-
-[Stanford CS231n](http://cs231n.github.io/neural-networks-1/)  
 
 [TensorFlow Neural Network Playground](http://playground.tensorflow.org)  - This demo lets you run a neural network in your browser and see results graphically. I wrote about the lessons on [intuition about deep learning](https://medium.com/@andrewt3000/understanding-tensorflow-playground-c20cdb7a250b).   
 
