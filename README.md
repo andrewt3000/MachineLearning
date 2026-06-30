@@ -11,7 +11,7 @@ Machine learning problems are categorize as **discriminative** or **generative**
    - svm, knn, random forests, gradient boosting machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
 2. **Unsupervised learning** - learns from unlabled training data.
    - principal component analysis, clustering. 
-3. **Reinforcement learning** - Maximize a reward. An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
+3. [**Reinforcement learning**](rl.md) - Maximize a reward. An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
 4. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem.
    - **fine tuning** is additional training to a base model for a specific task.  
