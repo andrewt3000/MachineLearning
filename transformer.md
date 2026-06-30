@@ -56,7 +56,7 @@ These models became popular starting in 2022 with the success of ChatGPT.
 
 
 ## Additional Transformer References
-[Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy)
+[Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Tranformers & Large Language Models
 
 
 ### LLMS
