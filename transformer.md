@@ -9,12 +9,12 @@ The attention paper model has an encoder on the left and a decoder on the right.
 The encoder "understands" the input language, the decoder generates the output language.  
 Both encoder and decoder contain “Multi-head attention” MHA layers. [pytorch implementation](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
 
-## 🔢 Input Representation
+### Input Representation
 - The model receives a sequence of tokens (words/subwords), each mapped to a vector embedding.
 - A positional encoding is added to each token so the model knows the order.
 - Together, these embeddings form a matrix where each row is a token vector.
 
-## 🔍 Self-Attention
+### Self-Attention
 Self-attention computes how much each token should “pay attention” to every other token in the sequence.
 To do this, the model learns 3 projection matrices:
 
@@ -27,23 +27,15 @@ $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
-## 🧠 Multi-Head Attention
+### Multi-Head Attention
 Instead of one attention operation, the model uses h attention heads:
 - Each head learns different relationships (syntax, long-range dependencies, semantics, etc.).
 - Heads are concatenated and combined into a single output.
 
 This lets the model analyze many patterns in parallel.
 
-## 🎯 Training Tricks
+### Training Tricks
 Label Smoothing is a regularization technique.  
-
-Residual Connections + Layer Norm
-- Help gradients flow
-- Stabilize deep models
-
-Feed-Forward Networks
-- After attention, each token passes through a small MLP
-- Adds non-linearity and additional modeling capacity
 
 ## Bert
 [Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
@@ -53,14 +45,14 @@ Encoder only models were popular from 2018 - 2022.
 Autoregressive decoder only models, such as ChatGPT, generate text.  
 These models became popular starting in 2022 with the success of ChatGPT.  
 
-### Academic history
+## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 - 2018 bert paper [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 Jacob](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
-- Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+- 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
-## Additional Transformer References
+### Additional Transformer References
 [Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Tranformers & Large Language Models
 
 
