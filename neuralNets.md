@@ -95,7 +95,7 @@ As your neural networks get deeper, initialization becomes more important. If th
 The forward propagation function is called during training and it's output is tested for loss. To implement the forward pass function is implicitly to design the neural network architecture. The forward pass function is also called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
 
 #### Numpy example
-If X is the input matrix, and W1 is the weight matrix (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
+If X is the input vector, and W1 is the weight vector (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
 
 ```python
 def forward(self, X):
