@@ -53,11 +53,8 @@ Jacob](https://arxiv.org/abs/1810.04805)
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
-### Additional Transformer References
-[Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Tranformers & Large Language Models
-
-
 ### LLMS
+- Google [gemini](https://gemini.google.com/), Open AI [Chat GPT](https://chatgpt.com/), Anthropic [Claude](https://claude.ai/), xAI [grok](https://grok.com/), [mistral](https://chat.mistral.ai/chat), 
 - open weight facebook [llama](https://www.llama.com/)
 - open source Andrej Karpathy [nanochat](https://github.com/karpathy/nanochat) [nanogpt](https://github.com/karpathy/nanoGPT)
 
@@ -68,3 +65,5 @@ Jacob](https://arxiv.org/abs/1810.04805)
 - [DINO](https://arxiv.org/abs/2104.14294)
 - [iBOT](https://arxiv.org/abs/2111.07832)
 
+### Tutorials / classes
+[Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Tranformers & Large Language Models
