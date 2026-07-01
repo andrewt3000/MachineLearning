@@ -54,8 +54,8 @@ Jacob](https://arxiv.org/abs/1810.04805)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
 ### LLMS
-- Google [gemini](https://gemini.google.com/), Open AI [Chat GPT](https://chatgpt.com/), Anthropic [Claude](https://claude.ai/), xAI [grok](https://grok.com/), [mistral](https://chat.mistral.ai/chat), 
-- open weight facebook [llama](https://www.llama.com/)
+- Google [gemini](https://gemini.google.com/), Open AI [Chat GPT](https://chatgpt.com/), Anthropic [Claude](https://claude.ai/), xAI [grok](https://grok.com/), [perplexity](https://www.perplexity.ai/), [mistral](https://chat.mistral.ai/chat), 
+- open weight Facebook [llama](https://www.llama.com/), [deepseek v3](https://github.com/deepseek-ai/deepseek-v3), Alibaba [Qwen](https://qwen.ai/home)  (See [models on hugging face](https://huggingface.co/models) for up to date directory)  
 - open source Andrej Karpathy [nanochat](https://github.com/karpathy/nanochat) [nanogpt](https://github.com/karpathy/nanoGPT)
 
 ### Vision Transformers (ViT) Papers
