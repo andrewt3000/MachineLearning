@@ -46,7 +46,8 @@ LLMs became popular starting in 2022 with the success of ChatGPT.
 LLMs are language models in that they predict the next word.  
 They are large in terms of parameter count, and tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
 The architecture of an llm is typically an autoregressive decoder only tranformer models.  
-LLMs often use an architecture, mixture of experts, that places a router before "expert" networks that evaluate which network can best handle the request.  
+LLMs often use an architecture, mixture of experts, that places a router before "expert" networks that evaluate which network can best handle the request. 
+*Temperature* is a hyperparameter that controls the randomness and creativity of the model's generated text. 
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
