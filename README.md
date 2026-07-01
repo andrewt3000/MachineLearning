@@ -18,7 +18,7 @@ Machine learning problems are categorize as **discriminative** or **generative**
    - **lora** (Low-Rank Adaptation) is an add on for base models or stable diffusion model that adds ability for a specific task.  
 5. **Semi-Supervised learning** - Use a mix mostly unlabeled, with a small labeled subset data.  
 6. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
-   - Autoregressive LLM pretraining (next word prediction), masked image modeling such as [MAE masked autoencoders](https://arxiv.org/abs/2111.06377).  
+   - Autoregressive LLM pretraining (next word prediction), and masked image modeling.  
 
 ### Machine learning problems
 1. **Regression** - predicting a continuous value attribute (Example: house prices)
