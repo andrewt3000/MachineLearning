@@ -41,7 +41,7 @@ Label Smoothing is a regularization technique.
 [Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
 Encoder only models were popular from 2018 - 2022.  
 
-## LLMS
+## LLMs Large Language Models
 Autoregressive decoder only models, such as ChatGPT, generate text.  
 These models became popular starting in 2022 with the success of ChatGPT.  
 
@@ -50,6 +50,7 @@ These models became popular starting in 2022 with the success of ChatGPT.
 - 2018 bert paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 Jacob](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
+- 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
 ### Additional Transformer References
