@@ -46,7 +46,7 @@ LLMs became popular starting in 2022 with the success of ChatGPT.
 LLMs are language models in that they predict the next word.  
 They are large in terms of parameter count, and tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
 The architecture of an llm is typically an autoregressive decoder only tranformer models.  
-LLMs often use an architecture, mixture of experts, that places a router before "expert" networks that evaluate which network can best handle the request.  
+**Mixture of experts (MoE)** is an llm architecture that places a learned gate that routes to the "expert" network that can best handle the token. Typically, a sparse MoE will only use a fraction (top-1 or top-2 routing) of the parameters of the model, increasing efficiency.    
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. 
 
 ## Academic history
