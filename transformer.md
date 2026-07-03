@@ -42,15 +42,18 @@ Intuitively, each head learns different relationships (syntax, long-range depend
 In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model analyze many patterns in parallel.
 Heads are concatenated and combined into a single output.
 
+- In attention is all you need, layer normalization is added after fully connected networks. 
+
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 
 ### Pytorch implmenation 
-“Multi-head attention” layers. [pytorch implementation](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
-
+- [Multi-head attention layers](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
+- [Layer Normalization layers](https://docs.pytorch.org/docs/2.12/generated/torch.nn.LayerNorm.html)
 
 
 ## Bert
-[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
+[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations. 
+Bert is fine tuned on tasks such as classification and sentiment analysis.  
 Encoder only models were popular from 2018 - 2022.  
 
 # LLMs Large Language Models
