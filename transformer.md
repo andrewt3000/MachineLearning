@@ -51,7 +51,7 @@ Heads are concatenated and combined into a single output.
 
 
 ## Bert
-[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. Bert is pretrained with proxy tasks, namely 2 objective functions, MLM (masked language modeling) and NSP (next sentence prediction). The pretraining creates a base model that is is fine tuned on tasks such as classification, spam detection, and sentiment analysis.  
+[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. Bert is trained with transfer learning. Bert is pretrained with proxy tasks, namely 2 objective functions, MLM (masked language modeling) and NSP (next sentence prediction). The pretraining creates a base model that is fine tuned on tasks such as classification like spam detection, and sentiment analysis.  
 Encoder only models were popular from 2018 - 2022.  
 
 # LLMs Large Language Models
