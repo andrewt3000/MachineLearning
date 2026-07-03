@@ -45,11 +45,14 @@ Heads are concatenated and combined into a single output.
 [Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
 Encoder only models were popular from 2018 - 2022.  
 
-## LLMs Large Language Models
+# LLMs Large Language Models
 LLMs became popular starting in 2022 with the success of ChatGPT.  
 LLMs are language models in that they predict the next word.  
 They are large in terms of parameter count, and tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
+
+### LLM Architecture
 The architecture of an llm is typically an autoregressive decoder only tranformer models.  
+LLMs are trained using self supervised learning. They are trained on a large corpus and they mask the next word. 
 **Mixture of experts (MoE)** is an llm architecture that places a learned gate that routes to the "expert" network that can best handle the token. Typically, a sparse MoE will only use a fraction (top-1 or top-2 routing) of the parameters of the model, increasing efficiency.    
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. 
 
