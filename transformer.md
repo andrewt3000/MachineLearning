@@ -1,22 +1,22 @@
 # Transformers
-A Transformer is a neural network architecture built with attention layers. It was introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). Transformers are the large language models in multimodal foundation models such as Google Gemini, Open AI Chat GPT, Anthropic Claude.  
+A **Transformer** is a neural network architecture that contain an **attention layer**.  Tranformers largely replaced rnns, grus and lstms for processing variable length sequences of inputs, such as text. Transformers are the primary architecture in large language models and vision transformers.  
+
+### Attention is all you need
+Attention layers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper was for language translation. It was a supervised learning task trained on parallel corpus of data in different languages.
+
+The attention paper model has an encoder on the left that "understands" the input language and a decoder on the right that generates the output language.  Both encoder and decoder contain attention layers.
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/transformer.png" height='460px' width='326px'/>  
 <sub>Transformer from <a href='https://arxiv.org/abs/1706.03762'>Attention Is All You Need</a> (Vaswani et al., 2017)</sub>
 
-The original “attention is all you need” paper was for language translation. 
-The attention paper model has an encoder on the left and a decoder on the right.
-The encoder "understands" the input language, the decoder generates the output language.  
-Both encoder and decoder contain “Multi-head attention” MHA layers. [pytorch implementation](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
+## Attention Layers
 
 ### Input Representation
-- The model receives a sequence of tokens (words/subwords), each mapped to a vector embedding.
-- A positional encoding is added to each token so the model knows the order.
-- Together, these embeddings form a matrix where each row is a token vector.
+In text based transformers, words are tokenized, then encoded to embeddings, then a positional encoding is added and an end of sequence token is added. Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with max number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations will eliminate empty slots.  
 
-### Self-Attention
-Self-attention computes how much each token should “pay attention” to every other token in the sequence.
-To do this, the model learns 3 projection matrices:
+### Attention
+Intuitively, attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
+In practice, attemtion layers learns 3 projection matrices:
 
 These transform each token vector into:
 - Q (Query) – represents the current token.
@@ -28,14 +28,18 @@ $$
 $$
 
 ### Multi-Head Attention
-Instead of one attention operation, the model uses h attention heads:
-- Each head learns different relationships (syntax, long-range dependencies, semantics, etc.).
-- Heads are concatenated and combined into a single output.
+The number of heads (h) is a hyperparater.  
+Intuitively, each head learns different relationships (syntax, long-range dependencies, semantics, etc.).
+In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model analyze many patterns in parallel.
+Heads are concatenated and combined into a single output.
 
-This lets the model analyze many patterns in parallel.
+- **self attention** has a single input, whereas **cross attention** merges 2 input sources.  
+- **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 
-### Training Tricks
-Label Smoothing is a regularization technique.  
+### Pytorch implmenation 
+“Multi-head attention” layers. [pytorch implementation](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
+
+
 
 ## Bert
 [Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations and then perform tasks such as sentiment analysis.  
