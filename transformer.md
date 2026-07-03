@@ -16,8 +16,8 @@ In text based transformers, words are tokenized, then encoded to embeddings, the
 
 Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes such as **RoPe** (Rotary Position Embedding), and **ALiBi** (Attention with Linear Biases).  
 
-### Attention
-Intuitively, attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
+### Self Attention
+Intuitively, self attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
 In practice, attention layers learns 3 projection matrices:
 
 These transform each token vector into:
@@ -29,9 +29,8 @@ $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
-In **self attention** all input is from a single source input X.
-
-In **cross attention** we have 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
+### Cross attention.
+**Self attention** has a single source input X. **Cross attention** merges 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
 -  Q = Y $\bullet$ W<sub>Q</sub>
 -  K = X $\bullet$ W<sub>K</sub>
 -  V = X $\bullet$ W<sub>V</sub>
