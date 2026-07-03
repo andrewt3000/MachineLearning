@@ -54,7 +54,7 @@ They are large in terms of parameter count, and tokens they are trained on. They
 The architecture of an llm is typically an autoregressive decoder only tranformer models.  
 LLMs are trained using self supervised learning. They are trained on a large corpus and they mask the next word. 
  - **Mixture of experts (MoE)** is an llm architecture that places a learned gate that routes to the "expert" network that between the attention network and the fully connected networks. Typically, a sparse MoE will only use a fraction (top-1 or top-2 routing) of the parameters of the model, increasing efficiency.   
-- When the llm outputs the word prediction rather than just choosing the next "best" word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
+- When the llm outputs the word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
 - **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spikey distribution and has a more predictable output. 
 
 ## Academic history
