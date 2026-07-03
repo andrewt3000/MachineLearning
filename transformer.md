@@ -29,7 +29,7 @@ $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
-### Cross attention.
+### Cross attention
 **Self attention** has a single source input X. **Cross attention** merges 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
 -  Q = Y $\bullet$ W<sub>Q</sub>
 -  K = X $\bullet$ W<sub>K</sub>
