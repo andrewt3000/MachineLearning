@@ -18,20 +18,23 @@ Modern positional encoding schemes include **RoPe** (Rotary Position Embedding),
 
 ### Attention
 Intuitively, attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
-In practice, attemtion layers learns 3 projection matrices:
+In practice, attention layers learns 3 projection matrices:
 
 These transform each token vector into:
-- Q (Query) – represents the current token.
-- K (Key) – represents the tokens being compared against.
-- V (Value) – carries the actual information to mix together.
+- Q (Query) – represents the current token. Q = X $\bullet$ W<sub>Q</sub>
+- K (Key) – represents the tokens being compared against. K = X $\bullet$ W<sub>K</sub>
+- V (Value) – carries the actual information to mix together. V = X $\bullet$ W<sub>V</sub>
 
 $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
-In **self attention** all input is from a single source, typically input X.
+In **self attention** all input is from a single source input X.
 
 In **cross attention** we have 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
+-  Q = Y $\bullet$ W<sub>Q</sub>
+-  K = X $\bullet$ W<sub>K</sub>
+-  V = X $\bullet$ W<sub>V</sub>
 
 ### Multi-Head Attention
 The number of heads (h) is a hyperparater.  
