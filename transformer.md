@@ -51,14 +51,13 @@ Heads are concatenated and combined into a single output.
 
 
 ## Bert
-[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. It produce contextual representations. 
-Bert is fine tuned on tasks such as classification and sentiment analysis.  
+[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. Bert is pretrained with proxy tasks, namely 2 objective functions, MLM (masked language modeling and NSP (next sentence prediction). The pretraining creates a base model that is is fine tuned on tasks such as classification, spam detection, and sentiment analysis.  
 Encoder only models were popular from 2018 - 2022.  
 
 # LLMs Large Language Models
 LLMs became popular starting in 2022 with the success of ChatGPT.  
 LLMs are language models in that they predict the next word.  
-They are large in terms of parameter count, and tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
+LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
 
 ### LLM Architecture
 The architecture of an llm is typically an autoregressive decoder only tranformer models.  
