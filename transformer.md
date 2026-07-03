@@ -14,7 +14,7 @@ The attention paper model has an encoder on the left that "understands" the inpu
 ### Input Representation
 In text based transformers, words are tokenized, then encoded to embeddings, then a positional encoding is added and an end of sequence token is added. Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with max number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations will eliminate empty slots.  
 
-Modern positional encoding schemes include RoPe (Rotary Position Embedding), and ALiBi (Attention with Linear Biases).  
+Modern positional encoding schemes include **RoPe** (Rotary Position Embedding), and **ALiBi** (Attention with Linear Biases).  
 
 ### Attention
 Intuitively, attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
@@ -29,7 +29,7 @@ $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
-In **self attention** all input is from a single source, typically denoted X.
+In **self attention** all input is from a single source, typically input X.
 
 In **cross attention** we have 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
 
