@@ -27,13 +27,16 @@ $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
+In **self attention** all input is from a single source, typically denoted X.
+
+In **cross attention** we have 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
+
 ### Multi-Head Attention
 The number of heads (h) is a hyperparater.  
 Intuitively, each head learns different relationships (syntax, long-range dependencies, semantics, etc.).
 In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model analyze many patterns in parallel.
 Heads are concatenated and combined into a single output.
 
-- **self attention** has a single input, whereas **cross attention** merges 2 input sources.  
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 
 ### Pytorch implmenation 
