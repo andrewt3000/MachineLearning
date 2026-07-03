@@ -42,7 +42,7 @@ Intuitively, each head learns different relationships (syntax, long-range depend
 In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model analyze many patterns in parallel.
 Heads are concatenated and combined into a single output.
 
-- In attention is all you need, layer normalization is added after each network. Layer norm is to stabilizes and therefor accelerates training by preventing exploading and vanishing gradient problems.  
+- In attention is all you need, layer normalization is added after each network. Layer norm stabilizes and therefor accelerates training by mitigating exploding and vanishing gradient issues.  
 
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 
