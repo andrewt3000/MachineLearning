@@ -81,17 +81,28 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 ### Machine learning models
 
-[Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are a suitable model for fixed input features.  
+[Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are machine learning models suitable for fixed inputs and they fully connected layers in more complex models.  
 
-[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attemtion mechansim. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
+[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attention mechansim. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
 
 ## Machine Learing Problems
 
 Machine learning problems are categorize as **discriminative** or **generative**.  
 
 ### Computer Vision 
-These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime and mobile devices because they require less resources.      
+These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime and mobile devices because they require less resources.     
 
+### Vision Transformers (ViT) Papers
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
+- [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030)
+- [MAE Masked autoencoders ](https://arxiv.org/abs/2111.06377)
+- [DINO](https://arxiv.org/abs/2104.14294)
+- [iBOT](https://arxiv.org/abs/2111.07832)
+
+### Generative Computer Vision
+- text 2 image, image 2 image - [latent diffusion](https://arxiv.org/abs/2112.10752)
+
+### Realtime discriminative computer vision
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS are suitable models for computer vision problems.   
 
 - Image classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
