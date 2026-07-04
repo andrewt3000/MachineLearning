@@ -39,7 +39,7 @@ Data is typically split into **training**, **validation** and **test** data. Typ
 
 **Training data** is the data used to learn.  
 **Validation data** is evaluated while the model is training and indicates if the model is generalizing.  
-**Test data** is evaluated after you training to indicate the model's accuracy.  
+**Test data** is evaluated after training to indicate the model's accuracy.  
 
 An **example** (or **sample**) is a single instance from your dataset.  
 
@@ -57,13 +57,13 @@ An **example** (or **sample**) is a single instance from your dataset.
 **Concept drift** occurs when there is a change in input-output relationship over time compared to the data the model was trained on.  
 
 ### Features
-**Features** are the inputs to a machine learning model. Features are the measurable property being observed.  An example of a features is pixel brightness in computer vision tasks or the square footgage of a house in home pricing prediction.  
+**Features** are the inputs to a machine learning model. Features are the measurable property being observed.  An example of a feature is pixel brightness in computer vision tasks or the square footage of a house in home pricing prediction.  
   
 **Feature selection** is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
 
 **Feature engineering** is manual, hand-crafted feature extraction. In deep learning, feature engineering is largely replaced by feature learning where the network figures out features automatically.     
 
-**Feature Encoding** is converting non-numeric data, like text or categories, into numerical formats such as one-hot (or muli-hot) encodings or embeddings, such as word embeddings for llms.  
+**Feature Encoding** is converting non-numeric data, like text or categories, into numerical formats such as one-hot (or multi-hot) encodings or embeddings, such as word embeddings for llms.  
 
 An **encoding** is any representation in vector form.  
 
@@ -83,7 +83,7 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 [Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are machine learning models suitable for fixed inputs and they are fully connected layers in more complex models.  
 
-[Transformers and llms](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attention mechansim. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
+[Transformers and llms](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attention mechanism. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
 
 ## Machine Learning Problems
 Machine learning problems are categorized as discriminative or generative.  
