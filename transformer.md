@@ -18,12 +18,12 @@ Originally attention is all you need used sinusoidal positional encodings. Howev
 
 ### Self Attention
 Intuitively, self attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
-In practice, attention layers learns 3 projection matrices:
+In practice, attention layers learns 3 projection matrices. The 3 matrices borrow an analogy from information retrieval and use the name query, key and value.  
 
 These transform each token vector into:
-- Q (Query) – represents the current token. Q = X $\bullet$ W<sub>Q</sub>
+- Q (Query) – represents the current token searched for. Q = X $\bullet$ W<sub>Q</sub>
 - K (Key) – represents the tokens being compared against. K = X $\bullet$ W<sub>K</sub>
-- V (Value) – carries the actual information to mix together. V = X $\bullet$ W<sub>V</sub>
+- V (Value) – represents the information retrieved. V = X $\bullet$ W<sub>V</sub>
 
 $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
