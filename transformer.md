@@ -1,5 +1,5 @@
 # Transformers and LLMs
-A **Transformer** is a neural network architecture that processes sequences through **self attention** and feed-forward layers with no recurrence. Tranformers largely replaced rnns, grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models, vision transformers, and latent diffusion models.  
+A **Transformer** is a neural network architecture that processes sequences through **self attention** and feed-forward layers with no recurrence. Tranformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
  
 ### Attention is all you need
 Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on parallel corpus of data in different languages.
