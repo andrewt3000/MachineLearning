@@ -89,9 +89,6 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 Machine learning problems are categorize as **discriminative** or **generative**.  
 
-### Computer Vision 
-These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime and mobile devices because they require less resources.     
-
 ### Vision Transformers (ViT) Papers
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
 - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030)
@@ -103,6 +100,8 @@ These are common computer vision tasks methods for solving them. CNNs have gone 
 - text 2 image, image 2 image - [latent diffusion](https://arxiv.org/abs/2112.10752)
 
 ### Realtime discriminative computer vision
+These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime and mobile devices because they require less resources.     
+
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS are suitable models for computer vision problems.   
 
 - Image classification: [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
