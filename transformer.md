@@ -60,7 +60,7 @@ LLMs are language models in that they predict the next word.
 LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
 
 ### LLM Architecture
-The architecture of an llm is typically an **autoregressive** decoder only tranformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. The predicted next word output is then fed to the input and the the next word is predicted recursively until the model generates an end of sequence token.  
+The architecture of an llm is typically an **autoregressive** decoder only tranformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. At inference, the predicted next word output is then fed to the input and the the next word is predicted recursively until the model generates an end of sequence token.  
 
 When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
 
