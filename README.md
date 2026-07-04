@@ -1,5 +1,5 @@
 # My Notes on Machine Learning
-These are my notes on machine learning, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md), and [transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md).  
+These are my notes on machine learning, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md), and [transformers and llms](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md).  
 
 
 ## Machine Learning
@@ -83,7 +83,7 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 [Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are machine learning models suitable for fixed inputs and they fully connected layers in more complex models.  
 
-[Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attention mechansim. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
+[Transformers and llms](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attention mechansim. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
 
 ## Machine Learing Problems
 
