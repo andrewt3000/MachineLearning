@@ -21,9 +21,9 @@ Intuitively, self attention computes how much each token in the matrix should �
 In practice, attention layers learns 3 projection matrices. The 3 matrices borrow an analogy from information retrieval and use the names query, key and value.  
 
 These transform each token vector into:
-- Q (Query) – represents the current token searched for. Q = X $\bullet$ W<sub>Q</sub>
-- K (Key) – represents the tokens being compared against. K = X $\bullet$ W<sub>K</sub>
-- V (Value) – represents the information retrieved. V = X $\bullet$ W<sub>V</sub>
+- Q (Query) – represents what this token is looking for. Q = X $\bullet$ W<sub>Q</sub>
+- K (Key) – represents what each token offers to be matched against. K = X $\bullet$ W<sub>K</sub>
+- V (Value) – represents the content retrieved. V = X $\bullet$ W<sub>V</sub>
 
 $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
@@ -71,8 +71,7 @@ When the llm outputs the next word prediction rather than greedily choosing the 
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
-- 2018 bert paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
-Jacob](https://arxiv.org/abs/1810.04805)
+- 2018 bert paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
@@ -84,7 +83,7 @@ Jacob](https://arxiv.org/abs/1810.04805)
 
 ### Vision Transformers (ViT) Papers
 - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030)
-- [simCLR](https://arxiv.org/abs/2002.05709)
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
 - [MAE Masked autoencoders ](https://arxiv.org/abs/2111.06377)
 - [DINO](https://arxiv.org/abs/2104.14294)
 - [iBOT](https://arxiv.org/abs/2111.07832)
