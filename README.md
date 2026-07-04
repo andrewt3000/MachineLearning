@@ -16,7 +16,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 4. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem.
    - **fine tuning** is additional training to a base model for a specific task.  
    - **lora** (Low-Rank Adaptation) is an add on for base models or stable diffusion model that adds ability for a specific task.  
-5. **Semi-Supervised learning** - Use a mix mostly unlabeled, with a small labeled subset data.  
+5. **Semi-Supervised learning** - trains on a mix of mostly unlabeled with a small labeled subset data.  
 6. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
    - Autoregressive LLM pretraining (next word prediction), and masked image modeling.  
 
@@ -43,7 +43,7 @@ Data is typically split into **training**, **validation** and **test** data. Typ
 
 An **example** (or **sample**) is a single instance from your dataset.  
 
-**Labels** are the correct outputs in categorical supervised learning data, also refered to as **ground truth**.  
+**Labels** are the correct outputs in supervised learning data, also refered to as **ground truth**.  
 
 **Features** are the inputs to a machine learning model. See [below](#features)    
 
@@ -75,19 +75,20 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 **Standardization** is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by sickit learn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
 
-**Dimensionality Reduction** is transforming data from high to low dimension but retaining the properties. Examples include singular value decomposition, variational auto-encoders, and t-SNE (for visualizations), and max pooling layers for CNNs.
+**Dimensionality Reduction** is transforming data from high to low dimension but retaining the properties. Examples include PCA, singular value decomposition, variational auto-encoders, and t-SNE (for visualizations). Downsampling such as max pooling layers for CNNs is simply removing dimensions regardless of whether they retain properties or not.
 
 
 
 ### Machine learning models
 
-[Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are machine learning models suitable for fixed inputs and they fully connected layers in more complex models.  
+[Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are machine learning models suitable for fixed inputs and they are fully connected layers in more complex models.  
 
 [Transformers and llms](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attention mechansim. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
 
-## Machine Learing Problems
-
-Machine learning problems are categorize as **discriminative** or **generative**.  
+## Machine Learning Problems
+Machine learning problems are categorized as discriminative or generative.  
+- **discriminative** models predict labels from inputs (classification, regression).
+- **generative** models learn to synthesize new samples (diffusion models, LLMs).
 
 ### Vision Transformers (ViT) Papers
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
@@ -100,7 +101,7 @@ Machine learning problems are categorize as **discriminative** or **generative**
 - text 2 image, image 2 image - [latent diffusion](https://arxiv.org/abs/2112.10752)
 
 ### Realtime discriminative computer vision
-These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime and mobile devices because they require less resources.     
+CNNs were historically popular but are largely being replaced by transformer models. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources.     
 
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNS are suitable models for computer vision problems.   
 
