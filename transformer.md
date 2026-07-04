@@ -36,7 +36,7 @@ $$
 -  V = X $\bullet$ W<sub>V</sub>
 
 ### Multi-Head Attention
-The number of heads (h) is a hyperparater.  
+The number of heads (h) is a hyperparameter.  
 Intuitively, each head learns different relationships (syntax, long-range dependencies, semantics, etc.).
 In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model analyze many patterns in parallel.
 Heads are concatenated and combined into a single output.
@@ -45,7 +45,7 @@ Heads are concatenated and combined into a single output.
 
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 
-### Pytorch implmenation 
+### Pytorch implementation 
 - [Multi-head attention layers](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
 - [Layer Normalization layers](https://docs.pytorch.org/docs/2.12/generated/torch.nn.LayerNorm.html)
 
@@ -57,10 +57,10 @@ Encoder only models were popular from 2018 - 2022.
 # LLMs Large Language Models
 LLMs became popular starting in 2022 with the success of ChatGPT.  
 LLMs are language models in that they predict the next word.  
-LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
+LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resources to create frontier models.
 
 ### LLM Architecture
-The architecture of an llm is typically an **autoregressive** decoder only tranformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. At inference, the predicted next word output is then fed to the input and the the next word is predicted recursively until the model generates an end of sequence token.  
+The architecture of an llm is typically an **autoregressive** decoder only tranformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. At inference, the predicted next word output is then fed to the input and the next word is predicted recursively until the model generates an end of sequence token.  
 
 When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
 
@@ -89,4 +89,4 @@ When the llm outputs the next word prediction rather than greedily choosing the 
 - [iBOT](https://arxiv.org/abs/2111.07832)
 
 ### Tutorials / classes
-[Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Tranformers & Large Language Models
+[Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Transformers & Large Language Models
