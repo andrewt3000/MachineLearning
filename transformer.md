@@ -60,11 +60,15 @@ LLMs are language models in that they predict the next word.
 LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resrouces to create frontier models.
 
 ### LLM Architecture
-The architecture of an llm is typically an autoregressive decoder only tranformer models.  
-LLMs are trained using self supervised learning. They are trained on a large corpus and they mask the next word. 
- - **Mixture of experts (MoE)** is an llm architecture that places a learned gate that routes to the "expert" network that between the attention network and the fully connected networks. Typically, a sparse MoE will only use a fraction (top-1 or top-2 routing) of the parameters of the model, increasing efficiency.   
-- When the llm outputs the word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
-- **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spikey distribution and has a more predictable output. 
+The architecture of an llm is typically an **autoregressive** decoder only tranformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. The predicted next word output is then fed to the input and the the next word is predicted recursively until the model generates an end of sequence token.  
+
+When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
+
+**Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spikey distribution and has a more predictable output. 
+
+ - **Mixture of experts (MoE)** is an llm architecture that places a learned gate that routes to the "expert" network that between the attention network and the fully connected networks. Typically, a sparse MoE will only use a fraction (top-1 or top-2 routing) of the parameters of the model, increasing efficiency.
+
+
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
