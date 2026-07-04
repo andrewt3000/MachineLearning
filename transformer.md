@@ -66,9 +66,8 @@ When the llm outputs the next word prediction rather than greedily choosing the 
 
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spikey distribution and has a more predictable output. 
 
- - **Mixture of experts (MoE)** is an llm architecture that places a learned gate that routes to the "expert" network that between the attention network and the fully connected networks. Typically, a sparse MoE will only use a fraction (top-1 or top-2 routing) of the parameters of the model, increasing efficiency.
-
-
+###Mixture of experts 
+***Mixture of experts (MoE)** is an llm architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
