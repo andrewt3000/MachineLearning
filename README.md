@@ -6,7 +6,7 @@ These are my notes on machine learning, [neural networks](https://github.com/and
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
 ### Types of machine learning
-Machine learning problems are categorize as **discriminative** or **generative**.  
+
 1. **Supervised learning** - learns from **labeled** training data.
    - svm, knn, random forests, gradient boosting machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
 2. **Unsupervised learning** - learns from unlabled training data.
@@ -29,10 +29,14 @@ Machine learning problems are categorize as **discriminative** or **generative**
 
 ### Data
 Data is typically split into **training**, **validation** and **test** data. Typical mix is:
-- 70 - 80% training data
-- 10 - 15% validation data
-- 10 - 15% test data
-  
+| Dataset size | Split (train / val / test) | Val size | Test size | Notes |
+|---|---|---|---|---|
+| ≤ 10k examples | 70 / 15 / 15 (or 60 / 20 / 20) | ~1.5k | ~1.5k | Consider k-fold cross-validation instead |
+| ~100k examples | 90 / 5 / 5 | ~5k | ~5k | Val/test now large enough for stable estimates |
+| ~1M examples | 98 / 1 / 1 | ~10k | ~10k | The canonical big-data split |
+| ~10M examples | 99.8 / 0.1 / 0.1 | ~10k | ~10k | Hold-out counts stay fixed; fraction shrinks |
+| 100M+ examples | ~99.99 / fixed / fixed | ~10k–50k | ~10k–50k | Fixed-size held-out samples, well under 1% |
+
 **Training data** is the data used to learn.  
 **Validation data** is evaluated while the model is training and indicates if the model is generalizing.  
 **Test data** is evaluated after you training to indicate the model's accuracy.  
@@ -75,12 +79,15 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 
 
-### Machine learning models and applications
+### Machine learning models
 
 [Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md) - Neural networks are a suitable model for fixed input features.  
 
 [Transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) - Transformers are a neural network architecture designed to process sequences using attemtion mechansim. Transformers are the architecture for large language models and vision transformers.  Transformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) for sequential models.    
 
+## Machine Learing Problems
+
+Machine learning problems are categorize as **discriminative** or **generative**.  
 
 ### Computer Vision 
 These are common computer vision tasks methods for solving them. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. However the trend is towards transformers. CNNs are still used on realtime and mobile devices because they require less resources.      
