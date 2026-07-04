@@ -1,4 +1,4 @@
-# Transformers
+# Transformers and LLMs
 A **Transformer** is a neural network architecture that processes sequences through **self attention** and feed-forward layers with no recurrence. Tranformers largely replaced rnns, grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models, vision transformers, and latent diffusion models.  
  
 ### Attention is all you need
