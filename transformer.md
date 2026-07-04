@@ -1,5 +1,5 @@
 # Transformers
-A **Transformer** is a neural network architecture that processes sequences through **self attention** and feedword layers with no recurrence. Tranformers largely replaced rnns, grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models, vision transformers, and latent diffusion models.  
+A **Transformer** is a neural network architecture that processes sequences through **self attention** and feed-forward layers with no recurrence. Tranformers largely replaced rnns, grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models, vision transformers, and latent diffusion models.  
  
 ### Attention is all you need
 Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on parallel corpus of data in different languages.
@@ -64,10 +64,10 @@ The architecture of an llm is typically an **autoregressive** decoder only tranf
 
 When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
 
-**Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spikey distribution and has a more predictable output. 
+**Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spiky distribution and has a more predictable output. 
 
-###Mixture of experts 
-***Mixture of experts (MoE)** is an llm architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
+### Mixture of experts 
+**Mixture of experts (MoE)** is an llm architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
