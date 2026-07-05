@@ -56,7 +56,7 @@ Heads are concatenated and combined into a single output.
 
 ## Bert
 [Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. Bert is trained with transfer learning. Bert is pretrained with proxy tasks, namely 2 objective functions, MLM (masked language modeling) and NSP (next sentence prediction). The pretraining creates a base model that is fine tuned on tasks such as classification like spam detection, and sentiment analysis.  
-Encoder only models were popular from 2018 - 2022.  
+Encoder only models were dominant from 2018 - 2022.  
 
 # LLMs Large Language Models
 LLMs became popular starting in 2022 with the success of ChatGPT.  
@@ -66,7 +66,7 @@ LLMs are large in terms of parameter count, and the number of tokens they are tr
 ### LLM Architecture
 The architecture of an llm is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. At inference, the predicted next word output is then fed to the input and the next word is predicted recursively until the model generates an end of sequence token.  
 
-When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
+When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Typically llms use top-k and top-p **sampling**. **Beam search** is a classic alternative for seq2seq tasks.  
 
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spiky distribution and has a more predictable output. 
 
