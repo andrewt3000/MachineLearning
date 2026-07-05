@@ -43,7 +43,7 @@ Heads are concatenated and combined into a single output.
 
 
 ### Misc attention concepts
-- In attention is all you need, **layer normalization** is added after each network. Layer norm stabilizes and therefor accelerates training by mitigating internal covariate shift and exploding and vanishing gradient issues.  
+- In attention is all you need, **layer normalization** is added after each network. Layer norm stabilizes and accelerates training by mitigating internal covariate shift and exploding/vanishing gradient issues.  
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 - **Attention map** shwos how strongly tokens relate to one another at a specific layer and attention head.
 - **Key-Value Cache** is a memory optimization technique for autoregressive text generation.  
