@@ -2,7 +2,7 @@
 A **Transformer** is a neural network architecture that processes sequences through **self attention** and feed-forward layers with no recurrence. Tranformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
  
 ### Attention is all you need
-Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on parallel corpus of data in different languages.
+Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on a parallel corpus of data in different languages.
 
 The attention paper model has an encoder on the left that "understands" the input language and a decoder on the right that generates the output language.  Both encoder and decoder contain attention layers.
 
@@ -14,7 +14,7 @@ The attention paper model has an encoder on the left that "understands" the inpu
 ### Input Representation
 In text based transformers, words are tokenized, then encoded to embeddings, then a positional encoding is added and an end of sequence token is added. Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with max number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations will eliminate empty slots.  
 
-Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes such as **RoPe** (Rotary Position Embedding), and **ALiBi** (Attention with Linear Biases).  
+Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes primarily **RoPe** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
 
 ### Self Attention
 Intuitively, self attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
@@ -38,20 +38,20 @@ $$
 ### Multi-Head Attention
 The number of heads (h) is a hyperparameter.  
 Intuitively, each head learns different relationships (syntax, long-range dependencies, semantics, etc.).
-In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model analyze many patterns in parallel.
+In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model to analyze many patterns in parallel.
 Heads are concatenated and combined into a single output.
 
 
-### Misc attention concepts
-- In attention is all you need, **layer normalization** is added after each network. Layer norm stabilizes and accelerates training by mitigating internal covariate shift and exploding/vanishing gradient issues.  
+### Transformer block
+- In attention is all you need, **layer normalization** is added after each sub-layer with residual connections. In the original paper Layer norm is post; nearly all modern LLMs use pre-LN. Layer norm stabilizes and accelerates training by mitigating internal covariate shift and exploding/vanishing gradient issues.  
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
-- **Attention map** shwos how strongly tokens relate to one another at a specific layer and attention head.
+- **Attention map** shows how strongly tokens relate to one another at a specific layer and attention head.
 - **Key-Value Cache** is a memory optimization technique for autoregressive text generation.  
 
 
 ### Pytorch implementation 
-- [Multi-head attention layers](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
-- [Layer Normalization layers](https://docs.pytorch.org/docs/2.12/generated/torch.nn.LayerNorm.html)
+- [Multi-head attention layers](https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) 
+- [Layer Normalization layers](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html)
 
 
 ## Bert
@@ -64,7 +64,7 @@ LLMs are language models in that they predict the next word.
 LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resources to create frontier models.
 
 ### LLM Architecture
-The architecture of an llm is typically an **autoregressive** decoder only tranformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. At inference, the predicted next word output is then fed to the input and the next word is predicted recursively until the model generates an end of sequence token.  
+The architecture of an llm is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. They mask the next word in the corpus in order to train to predict the next word. At inference, the predicted next word output is then fed to the input and the next word is predicted recursively until the model generates an end of sequence token.  
 
 When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Algorithms include  **beam search**, and top-k and top-p **sampling**.  
 
