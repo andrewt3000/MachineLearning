@@ -14,8 +14,8 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 3. [**Reinforcement learning**](rl.md) - An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
 4. **Transfer learning** - storing knowledge gained while solving one problem and applying it to a different but related problem.
-   - **fine tuning** is additional training to a base model for a specific task.  
-   - **lora** (Low-Rank Adaptation) is an add on for base models or stable diffusion model that adds ability for a specific task.  
+   - **fine tuning** is additional training to a base model weight's for a specific task.  
+   - **LoRa** (Low-Rank Adaptation) is a fine-tuning method that freezes the base model's weights and trains small low-rank matrices that are added to existing layers.
 5. **Semi-Supervised learning** - trains on a mix of mostly unlabeled with a small labeled subset data.  
 6. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
    - Autoregressive LLM pretraining (next word prediction), and masked image modeling.  
