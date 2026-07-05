@@ -41,9 +41,13 @@ Intuitively, each head learns different relationships (syntax, long-range depend
 In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model analyze many patterns in parallel.
 Heads are concatenated and combined into a single output.
 
-- In attention is all you need, layer normalization is added after each network. Layer norm stabilizes and therefor accelerates training by mitigating internal covariate shift and exploding and vanishing gradient issues.  
 
+### Misc attention concepts
+- In attention is all you need, **layer normalization** is added after each network. Layer norm stabilizes and therefor accelerates training by mitigating internal covariate shift and exploding and vanishing gradient issues.  
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
+- **Attention map** shwos how strongly tokens relate to one another at a specific layer and attention head.
+- **Key-Value Cache** is a memory optimization technique for autoregressive text generation.  
+
 
 ### Pytorch implementation 
 - [Multi-head attention layers](https://docs.pytorch.org/docs/2.12/generated/torch.nn.MultiheadAttention.html) 
