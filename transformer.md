@@ -70,11 +70,12 @@ When the llm outputs the next word prediction rather than greedily choosing the 
 
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spiky distribution and has a more predictable output. 
 
-### Mixture of experts 
 **Mixture of experts (MoE)** is an llm architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
 
-### System prompt
+### Prompting
 A **System prompt** is instructions given to an llm before the user input. It sets the model's context, instructions and constraints.  
+
+**Chain of thought** (CoT) prompting is a technique that instructs large language models to "show their work" before giving an answer. By breaking complex problems down into small, logical steps, the AI mimics human reasoning.  
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
