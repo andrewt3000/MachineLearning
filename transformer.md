@@ -73,6 +73,9 @@ When the llm outputs the next word prediction rather than greedily choosing the 
 ### Mixture of experts 
 **Mixture of experts (MoE)** is an llm architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
 
+### System prompt
+A **System prompt** is instructions given to an llm before the user input. It sets the model's context, instructions and constraints.  
+
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 - 2018 bert paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
