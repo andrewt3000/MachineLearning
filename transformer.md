@@ -75,6 +75,8 @@ When the llm outputs the next word prediction rather than greedily choosing the 
 ### Prompting
 A **System prompt** is instructions given to an llm before the user input. It sets the model's context, instructions and constraints.  
 
+**Adversarial prompting** is the practice of intentionally crafting inputs to trick, manipulate, or test Large Language Models (LLMs) into behaving outside their intended parameters.   
+
 **Chain of thought** (CoT) prompting is a technique that instructs large language models to "show their work" before giving an answer. By breaking complex problems down into small, logical steps, the AI mimics human reasoning.  
 
 ## Academic history
