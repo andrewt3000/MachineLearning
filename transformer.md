@@ -12,7 +12,7 @@ The attention paper model has an encoder on the left that "understands" the inpu
 ## Attention Layers
 
 ### Input Representation
-In text based transformers, words are tokenized, then encoded to embeddings, then a positional encoding is added and an end of sequence token is added. Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with max number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations will eliminate empty slots.  
+In text based transformers, words are tokenized including an end of sequence token, then encoded to embeddings. Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with max number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations will eliminate empty slots.  
 
 Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes primarily **RoPe** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
 
