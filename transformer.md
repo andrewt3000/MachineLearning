@@ -1,5 +1,5 @@
 # Transformers and LLMs
-A **Transformer** is a neural network architecture that processes sequences and consists of two sub-layers: multi-head attention and a position-wise feed-forward network (FFN), each wrapped with a residual connection and layer normalization. Tranformers have no recurrence and largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
+A **Transformer** is a neural network architecture that processes sequences and consists of two sub-layers: multi-head attention and a position-wise feed-forward network (FFN), each wrapped with a residual connection and layer normalization. Tranformers have no recurrence and largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  GRUs and LSTMs for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
  
 ### Attention is all you need
 Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on a parallel corpus of data in different languages.
@@ -12,7 +12,7 @@ The attention paper model has an encoder on the left that "understands" the inpu
 ## Attention Layers
 
 ### Input Representation
-In text based transformers, words are tokenized (including an end of sequence token), then tokens are mapped to embeddings, and positional information is added. The positional encoding maintains the information about the position of the token that would otherwise be lost in the permution invariant attention block. Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes primarily **RoPe** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
+In text based transformers, words are tokenized (including an end of sequence token), then tokens are mapped to embeddings, and positional information is added. The positional encoding maintains the information about the position of the token that would otherwise be lost in the permution invariant attention block. Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes primarily **RoPE** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
 
 Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with maximum number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations eliminate empty slots. The maximum number of tokens is referred to by many different names such as context window, context length, context size, attention window, and token size.   
 
@@ -42,7 +42,7 @@ In practice, each head has its own set of learnable projection matrices ($W_Q, W
 Heads are concatenated and combined into a single output.
 
 
-### Transformer block
+### Misc
 - In attention is all you need, **layer normalization** is added after each sub-layer with residual connections. In the original paper Layer norm is post; nearly all modern LLMs use pre-LN. Layer norm stabilizes and accelerates training by mitigating internal covariate shift and exploding/vanishing gradient issues.  
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 - **Attention map** shows how strongly tokens relate to one another at a specific layer and attention head.
