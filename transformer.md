@@ -87,9 +87,21 @@ A **System prompt** is instructions given to an llm before the user input. It se
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 
 ### LLMS
-- Google [gemini](https://gemini.google.com/), Open AI [Chat GPT](https://chatgpt.com/), Anthropic [Claude](https://claude.ai/), xAI [grok](https://grok.com/), [mistral](https://chat.mistral.ai/chat), 
-- open weight Facebook [llama](https://www.llama.com/), [deepseek v3](https://github.com/deepseek-ai/deepseek-v3), Alibaba [Qwen](https://qwen.ai/home), [GLM](https://huggingface.co/zai-org/GLM-5.2) (See [models on hugging face](https://huggingface.co/models) for up to date directory)  
-- open source Andrej Karpathy [nanochat](https://github.com/karpathy/nanochat) [nanogpt](https://github.com/karpathy/nanoGPT)
+- Google [Gemini](https://gemini.google.com/)
+- Open AI [Chat GPT](https://chatgpt.com/)
+- Anthropic [Claude](https://claude.ai/)
+- xAI [grok](https://grok.com/)
+- Meta [llama](https://www.llama.com/)
+- [Mistral](https://chat.mistral.ai/chat)
+
+### Open Weight llms
+- [Latest models on hugging face](https://huggingface.co/models)
+- [deepseek v3](https://github.com/deepseek-ai/deepseek-v3)
+- Alibaba [Qwen](https://qwen.ai/home)
+- z.ai [GLM 5.2](https://huggingface.co/zai-org/GLM-5.2) [paper](https://arxiv.org/abs/2602.15763)  
+
+
+Toy, open source models by Andrej Karpathy [nanochat](https://github.com/karpathy/nanochat) [nanogpt](https://github.com/karpathy/nanoGPT)
 
 
 ### Tutorials / classes
