@@ -91,11 +91,11 @@ A **System prompt** is instructions given to an llm before the user input. It se
 - Open AI [Chat GPT](https://chatgpt.com/)
 - Anthropic [Claude](https://claude.ai/)
 - xAI [grok](https://grok.com/)
-- Meta [llama](https://www.llama.com/)
 - [Mistral](https://chat.mistral.ai/chat)
 
 ### Open Weight llms
 - [Latest models on hugging face](https://huggingface.co/models)
+- Meta [llama](https://www.llama.com/)
 - [deepseek v3](https://github.com/deepseek-ai/deepseek-v3)
 - Alibaba [Qwen](https://qwen.ai/home)
 - z.ai [GLM 5.2](https://huggingface.co/zai-org/GLM-5.2) [paper](https://arxiv.org/abs/2602.15763)  
