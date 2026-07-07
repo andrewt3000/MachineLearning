@@ -1,5 +1,5 @@
 # Transformers and LLMs
-A **Transformer** is a neural network architecture that processes sequences and consists of two sub-layers: multi-head attention and a position-wise feed-forward network (FFN), each wrapped with a residual connection and layer normalization. Tranformers have no recurrence and largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  GRUs and LSTMs for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
+A **Transformer** is a neural network architecture that processes sequences and consists of two sub-layers: multi-head attention and a position-wise feed-forward network (FFN), each wrapped with a residual connection and layer normalization. Transformers have no recurrence and largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  GRUs and LSTMs for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
  
 ### Attention is all you need
 Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on a parallel corpus of data in different languages.
@@ -72,12 +72,19 @@ When the llm outputs the next token prediction rather than greedily choosing the
 
 **Mixture of experts (MoE)** is an llm architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
 
+### LLM Training Pipeline
+LLMs are trained in stages. 
+- **Pretraining** uses self-supervised next-token prediction on a massive text corpus to produce a base model with broad knowledge but no assistant behavior.
+- **SFT** (supervised fine-tuning) then trains on curated prompt → response demonstrations, teaching the base model to follow instructions and respond in an assistant format. 
+- **Preference optimization** aligns the model with human preferences using ranked response pairs, either via **RLHF** (a learned reward model plus reinforcement learning, typically PPO) or **DPO** (a direct classification-style loss on preference pairs that skips the reward model and RL loop entirely).
+
 ### Prompting
 A **System prompt** is instructions given to an llm before the user input. It sets the model's context, instructions and constraints.  
 
 **Adversarial prompting** is the practice of intentionally crafting inputs to trick, manipulate, or test Large Language Models (LLMs) into behaving outside their intended parameters.   
 
 **Chain of thought** (CoT) prompting is a technique that instructs large language models to "show their work" before giving an answer. By breaking complex problems down into small, logical steps, the AI mimics human reasoning.  
+
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
