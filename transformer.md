@@ -1,10 +1,10 @@
 # Transformers and LLMs
-A **Transformer** is a neural network architecture that processes sequences through **self attention** and feed-forward layers with no recurrence. Tranformers largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
+A **Transformer** is a neural network architecture that processes sequences and consists of two sub-layers: multi-head attention and a position-wise feed-forward network (FFN), each wrapped with a residual connection and layer normalization. Tranformers have no recurrence and largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  grus and lstms for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
  
 ### Attention is all you need
 Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on a parallel corpus of data in different languages.
 
-The attention paper model has an encoder on the left that "understands" the input language and a decoder on the right that generates the output language.  Both encoder and decoder contain attention layers.
+The attention paper model has an encoder on the left that "understands" the input language and a decoder on the right that generates the output language.  Both encoder and decoder contain attention blocks.
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/transformer.png" height='460px' width='326px'/>  
 <sub>Transformer from <a href='https://arxiv.org/abs/1706.03762'>Attention Is All You Need</a> (Vaswani et al., 2017)</sub>
@@ -12,9 +12,9 @@ The attention paper model has an encoder on the left that "understands" the inpu
 ## Attention Layers
 
 ### Input Representation
-In text based transformers, words are tokenized including an end of sequence token, then encoded to embeddings. Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with max number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations will eliminate empty slots.  
+In text based transformers, words are tokenized (including an end of sequence token), then tokens are mapped to embeddings, and positional information is added. The positional encoding maintains the information about the position of the token that would otherwise be lost in the permution invariant attention block. Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes primarily **RoPe** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
 
-Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes primarily **RoPe** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
+Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with maximum number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations eliminate empty slots. The maximum number of tokens is referred to by many different names such as context window, context length, context size, attention window, and token size.   
 
 ### Self Attention
 Intuitively, self attention computes how much each token in the matrix should “pay attention” to every other token in the sequence. Each token can attend to every token in the sequence. 
@@ -60,13 +60,13 @@ Encoder only models were dominant from 2018 - 2022.
 
 # LLMs Large Language Models
 LLMs became popular starting in 2022 with the success of ChatGPT.  
-LLMs are language models in that they predict the next word.  
+LLMs are language models in that they predict the next token.  
 LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resources to create frontier models.
 
 ### LLM Architecture
-The architecture of an llm is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. During training, the model predicts every next token in the corpus in parallel; a causal mask prevents each position from attending to future tokens. At inference, the predicted next word output is then fed to the input and the next word is predicted recursively until the model generates an end of sequence token.  
+The architecture of an llm is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. During training, the model predicts every next token in the corpus in parallel; a causal mask prevents each position from attending to future tokens. At inference, the predicted next token output is then fed to the input and the next token is predicted recursively until the model generates an end of sequence token.  
 
-When the llm outputs the next word prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Typically llms use top-k and top-p **sampling**. **Beam search** is a classic alternative for seq2seq tasks.  
+When the llm outputs the next token prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Typically llms use top-k and top-p **sampling**. **Beam search** is a classic alternative for seq2seq tasks.  
 
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spiky distribution and has a more predictable output. 
 
