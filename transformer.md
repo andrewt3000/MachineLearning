@@ -1,5 +1,5 @@
 # Transformers and LLMs
-A **Transformer** is a neural network architecture that processes sequences and consists of two sub-layers: multi-head attention and a position-wise feed-forward network (FFN), each wrapped with a residual connection and layer normalization. Transformers have no recurrence and largely replaced [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  GRUs and LSTMs for processing sequences, such as text. Transformers are the primary architecture in large language models and vision transformers.  
+A **Transformer** is a neural network architecture that processes sequences without recurrence, largely replacing [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  GRUs and LSTMs. The transformer block architecture consists of two sub-layers: multi-head attention and a position-wise feed-forward network (FFN), each wrapped with a residual connection and layer normalization. Transformers are the primary architecture in large language models, vision transformers, automatic speech recognition systems such as whisper, and other state of the art machine learning domains and models.  
  
 ### Attention is all you need
 Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/). The original “attention is all you need” paper is for language translation. It is a supervised learning task trained on a parallel corpus of data in different languages.
@@ -29,21 +29,23 @@ $$
 \mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 $$
 
-### Cross attention
-**Self attention** has a single source input X. **Cross attention** merges 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
--  Q = Y $\bullet$ W<sub>Q</sub>
--  K = X $\bullet$ W<sub>K</sub>
--  V = X $\bullet$ W<sub>V</sub>
-
 ### Multi-Head Attention
 The number of heads (h) is a hyperparameter.  
 Intuitively, each head learns different relationships (syntax, long-range dependencies, semantics, etc.).
 In practice, each head has its own set of learnable projection matrices ($W_Q, W_K, W_V$). So multiple heads allows the model to analyze many patterns in parallel.
 Heads are concatenated and combined into a single output.
 
+### Attention Block
+In attention is all you need, **layer normalization** is added after each sub-layer with residual connections. In the original paper Layer norm is post; nearly all modern LLMs use pre-LN. Layer norm stabilizes and accelerates training by mitigating internal covariate shift and exploding/vanishing gradient issues. The attention block also contains a residual connection.  
+
+### Cross attention
+**Self attention** has a single source input X. **Cross attention** merges 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
+-  Q = Y $\bullet$ W<sub>Q</sub>
+-  K = X $\bullet$ W<sub>K</sub>
+-  V = X $\bullet$ W<sub>V</sub>
+
 
 ### Misc
-- In attention is all you need, **layer normalization** is added after each sub-layer with residual connections. In the original paper Layer norm is post; nearly all modern LLMs use pre-LN. Layer norm stabilizes and accelerates training by mitigating internal covariate shift and exploding/vanishing gradient issues.  
 - **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 - **Attention map** shows how strongly tokens relate to one another at a specific layer and attention head.
 - **Key-Value Cache** is a memory optimization technique for autoregressive text generation.  
