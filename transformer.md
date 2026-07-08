@@ -80,6 +80,8 @@ LLMs are trained in stages.
 - **SFT** (supervised fine-tuning) then trains on curated prompt → response demonstrations, teaching the base model to follow instructions and respond in an assistant format. 
 - **Preference optimization** aligns the model with human preferences using ranked response pairs, either via **RLHF** (a learned reward model plus reinforcement learning, typically PPO) or **DPO** (a direct classification-style loss on preference pairs that skips the reward model and RL loop entirely).
 
+**Chincilla scaling law** asserts the optimal split between token count and parameter count is 20:1.  
+
 ### Prompting
 A **System prompt** is instructions given to an llm before the user input. It sets the model's context, instructions and constraints.  
 
@@ -94,6 +96,7 @@ A **System prompt** is instructions given to an llm before the user input. It se
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+- 2022 Chinicilla scalling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
 
 ### LLMS
 - Google [Gemini](https://gemini.google.com/)
