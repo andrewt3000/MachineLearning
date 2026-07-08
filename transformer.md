@@ -82,6 +82,8 @@ LLMs are trained in stages.
 
 **Chincilla scaling law** asserts the optimal split between token count and parameter count is 20:1.  
 
+**Knowledge cutoff date** is final point in time covered by a Large Language Model’s (LLM) static training data.  
+
 ### Prompting
 A **System prompt** is instructions given to an llm before the user input. It sets the model's context, instructions and constraints.  
 
