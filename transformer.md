@@ -61,9 +61,7 @@ In attention is all you need, **layer normalization** is added after each sub-la
 Encoder only models were dominant from 2018 - 2022.  
 
 # LLMs Large Language Models
-LLMs became popular starting in 2022 with the success of ChatGPT.  
-LLMs are language models in that they predict the next token.  
-LLMs are large in terms of parameter count, and the number of tokens they are trained on. They also require large amount of compute resources to create frontier models.
+Large language models (LLMs) are text to text models that receive prompts and generate human-like responses. LLMs became popular starting in 2022 with the success of ChatGPT. LLMs are language models as they predict the next token. LLMs are large in terms of parameter count, the number of tokens for training, and the compute resources to create frontier models.  
 
 ### LLM Architecture
 The architecture of an llm is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. LLMs are trained using self supervised learning on a large corpus of text. During training, the model predicts every next token in the corpus in parallel; a causal mask prevents each position from attending to future tokens. At inference, the predicted next token output is then fed to the input and the next token is predicted recursively until the model generates an end of sequence token.  
