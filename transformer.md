@@ -12,7 +12,7 @@ The attention paper model has an encoder on the left that "understands" the inpu
 ## Attention Layers
 
 ### Input Representation
-In text based transformers, words are tokenized (including an end of sequence token), then tokens are mapped to embeddings, and positional information is added. The positional encoding maintains the information about the position of the token that would otherwise be lost in the permution invariant attention block. Originally attention is all you need used sinusoidal positional encodings. However, modern llms use positional encoding schemes primarily **RoPE** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
+In text based transformers, words are tokenized (including an end of sequence token), then tokens are mapped to embeddings, and positional information is added. The positional encoding maintains the information about the position of the token that would otherwise be lost in the permutation invariant attention block. Originally attention is all you need used sinusoidal positional encodings. However, modern LLMs use positional encoding schemes primarily **RoPE** (Rotary Position Embedding), and to a lesser extent **ALiBi** (Attention with Linear Biases).  
 
 Externally, the transformer appears to accept a variable length input of tokens. Internally, transformer's input is a matrix with maximum number of input embeddings. The program masks out the empty slots in the matrix with padding tokens. Advanced implementations eliminate empty slots. The maximum number of tokens is referred to by many different names such as context window, context length, context size, attention window, and token size.   
 
@@ -46,7 +46,7 @@ In attention is all you need, **layer normalization** is added after each sub-la
 
 
 ### Misc
-- **label Smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
+- **Label smoothing** is a regularization technique that prevents a model from becoming overly confident in its predictions.  
 - **Attention map** shows how strongly tokens relate to one another at a specific layer and attention head.
 - **Key-Value Cache** is a memory optimization technique for autoregressive text generation.  
 
@@ -56,21 +56,21 @@ In attention is all you need, **layer normalization** is added after each sub-la
 - [Layer Normalization layers](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html)
 
 
-## Bert
-[Bert](https://arxiv.org/abs/1810.04805) is an encoder only model. Bert is trained with transfer learning. Bert is pretrained with proxy tasks, namely 2 objective functions, MLM (masked language modeling) and NSP (next sentence prediction). The pretraining creates a base model that is fine tuned on tasks such as classification like spam detection, and sentiment analysis.  
+## BERT
+[BERT](https://arxiv.org/abs/1810.04805) is an encoder only model. BERT is trained with transfer learning. BERT is pretrained with proxy tasks, namely 2 objective functions, MLM (masked language modeling) and NSP (next sentence prediction). The pretraining creates a base model that is fine tuned on tasks such as classification like spam detection, and sentiment analysis.  
 Encoder only models were dominant from 2018 - 2022.  
 
 # LLMs Large Language Models
 Large language models (LLMs) are text to text models that receive prompts and generate human-like responses. LLMs became popular starting in 2022 with the success of ChatGPT. LLMs are language models as they predict the next token. LLMs are large in terms of parameter count, the number of tokens for training, and the compute resources to create frontier models.  
 
 ### LLM Architecture
-The architecture of an llm is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. At inference, the predicted next token output is then fed to the input and the next token is predicted recursively until the model generates an end of sequence token. LLMs are trained using self supervised learning on a large corpus of text. During training, the model predicts every next token in the corpus in parallel; a causal mask prevents each position from attending to future tokens.   
+The architecture of an LLM is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. At inference, the predicted next token output is then fed to the input and the next token is predicted recursively until the model generates an end of sequence token. LLMs are trained using self supervised learning on a large corpus of text. During training, the model predicts every next token in the corpus in parallel; a causal mask prevents each position from attending to future tokens.   
 
-When the llm outputs the next token prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Typically llms use top-k and top-p **sampling**. **Beam search** is a classic alternative for seq2seq tasks.  
+When the LLM outputs the next token prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Typically LLMs use top-k and top-p **sampling**. **Beam search** is a classic alternative for seq2seq tasks.  
 
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spiky distribution and has a more predictable output. 
 
-**Mixture of experts (MoE)** is an llm architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
+**Mixture of experts (MoE)** is an LLM architecture where the FFN in each block is replaced by multiple expert FFNs plus a router that sends each token to the top-k experts. 
 
 ### LLM Training Pipeline
 LLMs are trained in stages. 
@@ -83,7 +83,7 @@ LLMs are trained in stages.
 **Knowledge cutoff date** is final point in time covered by a Large Language Model’s (LLM) static training data.  
 
 ### Prompting
-A **System prompt** is instructions given to an llm before the user input. It sets the model's context, instructions and constraints.  
+A **System prompt** is instructions given to an LLM before the user input. It sets the model's context, instructions and constraints.  
 
 **Adversarial prompting** is the practice of intentionally crafting inputs to trick, manipulate, or test Large Language Models (LLMs) into behaving outside their intended parameters.   
 
@@ -92,11 +92,11 @@ A **System prompt** is instructions given to an llm before the user input. It se
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
-- 2018 bert paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+- 2018 BERT paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
-- 2022 Chinicilla scalling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
+- 2022 Chincilla scalling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
 
 ### LLMS
 - Google [Gemini](https://gemini.google.com/)
@@ -105,7 +105,7 @@ A **System prompt** is instructions given to an llm before the user input. It se
 - xAI [grok](https://grok.com/)
 - [Mistral](https://chat.mistral.ai/chat)
 
-### Open Weight llms
+### Open Weight LLMs
 - [Latest models on hugging face](https://huggingface.co/models)
 - Meta [llama](https://www.llama.com/)
 - [deepseek v3](https://github.com/deepseek-ai/deepseek-v3)
