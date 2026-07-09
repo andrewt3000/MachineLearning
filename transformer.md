@@ -52,9 +52,43 @@ In attention is all you need, **layer normalization** is added after each sub-la
 
 
 ### Pytorch implementation 
-- [Multi-head attention layers](https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) 
-- [Layer Normalization layers](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html)
+[MultiheadAttention](https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) implements a multi-head attention based on the attention is all you need paper.  Use  [Linear](https://docs.pytorch.org/docs/2.13/generated/torch.nn.modules.linear.Linear.html) and [LayerNorm](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html) to fill out the attenion block. Consider more advanced libraries for production code.  
 
+``` python
+class SimpleTransformerBlock(nn.Module):
+    def __init__(self, d_model: int, n_heads: int, d_ff: int, dropout: float = 0.1):
+        super().__init__()
+        
+        # Self-Attention
+        self.ln1 = nn.LayerNorm(d_model)
+        self.attn = nn.MultiheadAttention(d_model, n_heads, dropout=dropout, batch_first=True)
+        
+        # Feed-Forward
+        self.ln2 = nn.LayerNorm(d_model)
+        self.ffn = nn.Sequential(
+            nn.Linear(d_model, d_ff),
+            nn.GELU(),
+            nn.Linear(d_ff, d_model),
+            nn.Dropout(dropout),
+        )
+        
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        # Self-Attention
+        residual = x
+        x = self.ln1(x)
+        attn_out, _ = self.attn(x, x, x, need_weights=False)
+        x = residual + self.dropout(attn_out)
+
+        # Feed-Forward
+        residual = x
+        x = self.ln2(x)
+        x = residual + self.ffn(x)
+        
+        return x
+
+```
 
 ## BERT
 [BERT](https://arxiv.org/abs/1810.04805) is an encoder only model. BERT is trained with transfer learning. BERT is pretrained with proxy tasks, namely 2 objective functions, MLM (masked language modeling) and NSP (next sentence prediction). The pretraining creates a base model that is fine tuned on tasks such as classification like spam detection, and sentiment analysis.  
