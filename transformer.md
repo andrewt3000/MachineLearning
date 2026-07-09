@@ -78,7 +78,7 @@ LLMs are trained in stages.
 - **SFT** (supervised fine-tuning) then trains on curated prompt → response demonstrations, teaching the base model to follow instructions and respond in an assistant format. 
 - **Preference optimization** aligns the model with human preferences using ranked response pairs, either via **RLHF** (a learned reward model plus reinforcement learning, typically PPO) or **DPO** (a direct classification-style loss on preference pairs that skips the reward model and RL loop entirely).
 
-**Chincilla scaling law** asserts the optimal split between token count and parameter count is 20:1.  
+**Chincilla scaling law** showed that compute-optimal training uses roughly 20 tokens per parameter.  
 
 **Knowledge cutoff date** is final point in time covered by a Large Language Model’s (LLM) static training data.  
 
