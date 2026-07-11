@@ -52,7 +52,8 @@ In attention is all you need, **layer normalization** is added after each sub-la
 
 
 ### Pytorch implementation 
-[MultiheadAttention](https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) implements a multi-head attention based on the attention is all you need paper.  Use  [Linear](https://docs.pytorch.org/docs/2.13/generated/torch.nn.modules.linear.Linear.html) and [LayerNorm](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html) to fill out the attenion block. Consider more advanced libraries for production code.  
+[TransformerEncoderLayer](https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html) implements an attention block as described in Attention is all you need. It default to layer norm last but can be changed with a parametter norm_first=True. You can also implement an attention block in more detail. 
+[MultiheadAttention](https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) implements a multi-head attention sublayer based on the attention is all you need paper.  Use  [Linear](https://docs.pytorch.org/docs/2.13/generated/torch.nn.modules.linear.Linear.html) and [LayerNorm](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html) to fill out the attenion block. Consider more advanced libraries for production code such as [flash-attn](https://github.com/dao-ailab/flash-attention).  
 
 ``` python
 class SimpleTransformerBlock(nn.Module):
