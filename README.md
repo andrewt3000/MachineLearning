@@ -26,6 +26,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
    - Classification is further categorized as binary or multi-class classificaition.  
 3. **Ranking** - predicting the relative order or preference of a set of items contextually.
    - Example: search engine results, or movie recommendations
+4. **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). Used for face verification, signature verification, one-shot learning, and sentence embeddings.  
 
 ### Data
 Data is typically split into **training**, **validation** and **test** data. Typical mix is:
