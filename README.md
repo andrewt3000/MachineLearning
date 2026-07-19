@@ -25,8 +25,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 2. **Classification** - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
    - Classification is further categorized as binary or multi-class classificaition.  
 3. **Ranking** - predicting the relative order or preference of a set of items contextually.
-   - Example: search engine results, or movie recommendations
-4. **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). Used for face verification, signature verification, one-shot learning, and sentence embeddings.  
+   - Example: search engine results, or movie recommendations 
 
 ### Data
 Data is typically split into **training**, **validation** and **test** data. Typical mix is:
@@ -110,3 +109,7 @@ CNNs were historically popular but are largely being replaced by transformer mod
 - Object detection: (with bounding boxes) [ultralytics yolo](https://github.com/ultralytics/ultralytics) (In 2026, sota for realtime/edge object detection)   
 - Instance segmentation: [mask r-cnn](https://arxiv.org/abs/1703.06870)  
 - Semantic segmentation:  [U-Net](https://arxiv.org/abs/1505.04597)
+
+### Metric Learning
+**Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). Used for face verification, signature verification, one-shot learning, and sentence embeddings. 
+
