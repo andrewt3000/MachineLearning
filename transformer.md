@@ -124,6 +124,7 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 
 **Chain of thought** (CoT) prompting is a technique that instructs large language models to "show their work" before giving an answer. By breaking complex problems down into small, logical steps, the AI mimics human reasoning.  
 
+**Reasoning models** the current generation trains the CoT behavior directly with RL rather than eliciting it via prompting. The first public example being DeepSeek-R1 and RL with verifiable rewards (RLVR).  
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
