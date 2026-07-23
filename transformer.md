@@ -36,7 +36,7 @@ In practice, each head has its own set of learnable projection matrices ($W_Q, W
 Heads are concatenated and combined into a single output.
 
 ### Attention Block
-In attention is all you need, **layer normalization** is added after each sub-layer with residual connections. In the original paper Layer norm is post; nearly all modern LLMs use pre-LN. Layer norm stabilizes and accelerates training by mitigating internal covariate shift and exploding/vanishing gradient issues. The attention block also contains a residual connection.  
+In attention is all you need, **layer normalization** is added after each sub-layer with residual connections. In the original paper Layer norm is post; nearly all modern LLMs use pre-LN. Layer norm stabilizes training, mitigates exploding/vanishing gradient issues, and permits training deep stacks. 
 
 ### Cross attention
 **Self attention** has a single source input X. **Cross attention** merges 2 input sources. Q comes from the target sentence matrix ($Y$), while $K$ and $V$ come from the source sentence matrix ($X$).  
@@ -52,7 +52,7 @@ In attention is all you need, **layer normalization** is added after each sub-la
 
 
 ### Pytorch implementation 
-[TransformerEncoderLayer](https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html) implements an attention block as described in Attention is all you need. It default to layer norm last but can be changed with a parametter norm_first=True. You can also implement an attention block in more detail. 
+[TransformerEncoderLayer](https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html) implements an attention block as described in Attention is all you need. It defaults to layer norm last but can be changed with a parametter norm_first=True. You can also implement an attention block in more detail. 
 [MultiheadAttention](https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html) implements a multi-head attention sublayer based on the attention is all you need paper.  Use  [Linear](https://docs.pytorch.org/docs/2.13/generated/torch.nn.modules.linear.Linear.html) and [LayerNorm](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html) to fill out the attenion block. Consider more advanced libraries for production code such as [flash-attn](https://github.com/dao-ailab/flash-attention).  
 
 ``` python
@@ -118,7 +118,7 @@ LLMs are trained in stages.
 
 **Chincilla scaling law** showed that compute-optimal training uses roughly 20 tokens per parameter.  
 
-**Knowledge cutoff date** is final point in time covered by a Large Language Model’s (LLM) static training data.  
+**Knowledge cutoff date** is the final point in time covered by a Large Language Model’s (LLM) static training data.  
 
 **FlashAttention** is a GPU IO-bandwidth optimization. It keeps the intermediate data of attention in fast on-chip SRAM rather than writing it out to slower HBM, eliminating the memory traffic that makes standard attention slow. See [paper](https://arxiv.org/abs/2205.14135)  
 
