@@ -132,6 +132,7 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 - 2022 Chincilla scalling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
+- 2022 CoT paper [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
 
 ### LLMS
 - Google [Gemini](https://gemini.google.com/)
