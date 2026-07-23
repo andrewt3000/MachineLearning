@@ -113,7 +113,7 @@ When the LLM outputs the next token prediction rather than greedily choosing the
 ### LLM Training Pipeline
 LLMs are trained in stages. 
 - **Pretraining** uses self-supervised next-token prediction on a massive text corpus, such as [fineWeb](https://huggingface.co/datasets/HuggingFaceFW/fineweb), to produce a base model with broad knowledge but no assistant behavior. 
-- **SFT** (supervised fine-tuning) then trains on curated prompt → response demonstrations, teaching the base model to follow instructions and respond in an assistant format. 
+- **SFT** (supervised fine-tuning) then trains on curated prompt → response demonstrations, teaching the base model to follow instructions and respond in an assistant format. Example dataset: [smoltalk](https://huggingface.co/datasets/HuggingFaceTB/smoltalk)
 - **Preference optimization** aligns the model with human preferences using ranked response pairs, either via **RLHF** (a learned reward model plus reinforcement learning, typically PPO) or **DPO** (a direct classification-style loss on preference pairs that skips the reward model and RL loop entirely).
 
 **Chincilla scaling law** showed that compute-optimal training uses roughly 20 tokens per parameter.  
