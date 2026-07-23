@@ -101,6 +101,9 @@ Large language models (LLMs) are text to text models that receive prompts and ge
 ### LLM Architecture
 The architecture of an LLM is typically an **autoregressive** decoder only transformer model. Autoregressive means that the model uses its own outputs as inputs for the next step. At inference, the predicted next token output is then fed to the input and the next token is predicted recursively until the model generates an end of sequence token. LLMs are trained using self supervised learning on a large corpus of text. During training, the model predicts every next token in the corpus in parallel; a causal mask prevents each position from attending to future tokens.   
 
+<img width="352" height="680" alt="llm architecture" src="https://github.com/user-attachments/assets/3cc524dd-dd88-481a-930d-b1214c2841bb" />
+
+
 When the LLM outputs the next token prediction rather than greedily choosing the next highest probability word it typically uses an algorithm to choose the next best sequence of words. Typically LLMs use top-k and top-p **sampling**. **Beam search** is a classic alternative for seq2seq tasks.  
 
 **Temperature** is a hyperparameter that controls the randomness and creativity of the model's generated text. A high temperature has a more uniform output distribution and will be more random. A low temperature has a spiky distribution and has a more predictable output. 
