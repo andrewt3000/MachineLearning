@@ -129,7 +129,7 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 
 **Chain of thought** (CoT) prompting is a technique that instructs large language models to "show their work" before giving an answer. By breaking complex problems down into small, logical steps, the AI mimics human reasoning.  
 
-**Reasoning models** the current generation trains the CoT behavior directly with RL rather than eliciting it via prompting. The first public example being DeepSeek-R1 and RL with verifiable rewards (RLVR).  
+**Reasoning models** train CoT behavior directly with RL rather than eliciting it via prompting. OpenAI's o1 (2024) was the first public example; DeepSeek-R1 (2025) was the first open-weight model with a published method (RL with verifiable rewards, RLVR).    
 
 ## Academic history
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
@@ -137,6 +137,7 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+- 2022 RLHF, InstructGPT paper [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
 - 2022 Chincilla scalling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
 - 2022 CoT paper [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
 - 2022 Flash attention [Flash Attention](https://arxiv.org/abs/2205.14135) 
