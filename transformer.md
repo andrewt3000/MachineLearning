@@ -168,5 +168,5 @@ Toy, open source models by Andrej Karpathy [nanochat](https://github.com/karpath
 
 
 ### Tutorials / classes
-- [Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Transformers & Large Language Models
+- [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Transformers & Large Language Models
 - [attention is all you need blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
