@@ -30,7 +30,7 @@ Models that predict labels from inputs (as in the problems above) are called **d
 
 ### Transfer learning
 Transfer learning is storing knowledge gained while solving one problem and applying it to a different but related problem.
-   - **fine tuning** is additional training to a base model weights for a specific task.  
+   - **fine tuning** is additional training to a base model for a specific task.  
    - **LoRA** (Low-Rank Adaptation) is a fine-tuning method that freezes the base model's weights and trains small low-rank matrices that are added to existing layers.
 
 ### Metric Learning
