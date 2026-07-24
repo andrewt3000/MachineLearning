@@ -80,7 +80,7 @@ Steps to training a network.
 - [Run optimization algorithm](#optimization-algorithms)  
 
 ### Prepare the data
-Begin by preparing and scaling the data. See [section on data and features](https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data).  
+Begin by preparing and scaling the data. See [data and features]([https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data](https://github.com/andrewt3000/MachineLearning/blob/master/data.md)).  
 
 
 ### Initialization
