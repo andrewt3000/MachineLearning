@@ -20,9 +20,12 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
    - Autoregressive LLM pretraining (next word prediction), and masked image modeling.
   
 ### Machine learning problems
-1. **Regression** - predicting a continuous value attribute (Example: house prices)
-2. **Classification** - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
-   - Classification is further categorized as binary or multi-class classificaition.  
+1. **Regression** - predicting a continuous value attribute.
+   - Example: predicting house prices
+2. **Classification** - predicting a discrete value. 
+   - Classification is further categorized as binary or multi-class classificaition.
+   - Binary Example: predicting pass or fail, benign or malignant, spam or not spam, hot dog or not hot dog :-)
+   - Multi-Class Example: Handwritten Digit Recognition (0 through 9)
 3. **Ranking** - predicting the relative order or preference of a set of items contextually.
    - Example: search engine results, or movie recommendations 
 
@@ -34,7 +37,8 @@ Transfer learning is storing knowledge gained while solving one problem and appl
    - **LoRA** (Low-Rank Adaptation) is a fine-tuning method that freezes the base model's weights and trains small low-rank matrices that are added to existing layers.
 
 ### Metric Learning
-**Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). Used for face verification, signature verification, one-shot learning, and sentence embeddings. 
+**Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). 
+- Example: face verification, signature verification
 
 ### CNNs
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs were historically popular but are largely being replaced by transformer models and VLMs. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
