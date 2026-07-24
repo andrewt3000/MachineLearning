@@ -120,7 +120,7 @@ LLMs are trained in stages.
 
 **Knowledge cutoff date** is the final point in time covered by a Large Language Model’s (LLM) static training data.  
 
-**FlashAttention** is a GPU IO-bandwidth optimization. It keeps the intermediate data of attention in fast on-chip SRAM rather than writing it out to slower HBM, eliminating the memory traffic that makes standard attention slow. See [paper](https://arxiv.org/abs/2205.14135)  
+**FlashAttention** is a GPU IO-bandwidth optimization. It keeps the intermediate data of attention in fast on-chip SRAM rather than writing it out to slower HBM, eliminating the memory traffic that makes standard attention slow.  
 
 ### Prompting
 A **System prompt** is instructions given to an LLM before the user input. It sets the model's context, instructions and constraints.  
@@ -140,7 +140,8 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 - 2022 RLHF, InstructGPT paper [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
 - 2022 Chincilla scalling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
 - 2022 CoT paper [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
-- 2022 Flash attention [Flash Attention](https://arxiv.org/abs/2205.14135) 
+- 2022 [Flash Attention](https://arxiv.org/abs/2205.14135)
+- 2025 [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/abs/2506.14245)
 
 ### LLMS
 - Google [Gemini](https://gemini.google.com/)
