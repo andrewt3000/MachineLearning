@@ -1,5 +1,5 @@
 ### Neural Networks
-**Neural networks** are machine learning models and [universal approximators](https://en.wikipedia.org/wiki/Universal_approximation_theorem). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
+**Neural networks** are machine learning models and [universal approximators](#references). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
 ### Terminology
 Neural networks or artificial neural networks are a broad term that includes also other types of neural networks such as CNNs or transformers. The architecture we are discussing here is a feedforward neural network (as opposed to recurrent), vanilla neural networks, or MLP multilayer perceptron.  
@@ -298,7 +298,7 @@ Overfitting</a> - Srivastava et al 2014 </sub>
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
 
-### Academic History
+### References
 - 1958 Rosenblatt perceptron paper [THE PERCEPTRON: A PROBABILISTIC MODEL FOR
 INFORMATION STORAGE AND ORGANIZATION
 IN THE BRAIN](https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf)
