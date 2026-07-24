@@ -140,8 +140,8 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 - 2022 RLHF, InstructGPT paper [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
 - 2022 Chincilla scalling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
 - 2022 CoT paper [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
-- 2022 [Flash Attention](https://arxiv.org/abs/2205.14135)
-- 2025 [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/abs/2506.14245)
+- 2022 Flash attention paper [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)
+- 2025 RLVR paper [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/abs/2506.14245)
 
 ### LLMS
 - Google [Gemini](https://gemini.google.com/)
