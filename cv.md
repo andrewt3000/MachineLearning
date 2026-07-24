@@ -1,3 +1,6 @@
+### Vision Transformers
+Vision [transformers](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md) are similar to language transformers but split the image into "tokens" of image patches that are typically 16x16 pixels for the input. 
+
 ### Vision Transformers (ViT) Papers
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
 - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030)
