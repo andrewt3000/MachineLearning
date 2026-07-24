@@ -25,7 +25,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 2. **Classification** - predicting a discrete value. 
    - Classification is further categorized as binary or multi-class classificaition.
    - Binary Example: predicting pass or fail, benign or malignant, spam or not spam, hot dog or not hot dog :-)
-   - Multi-Class Example: Handwritten Digit Recognition (0 through 9)
+   - Multi-Class Example: Handwritten Digit Recognition (0 through 9) [mnist](https://huggingface.co/datasets/ylecun/mnist), 1,000 words for image classification [imagenet](https://huggingface.co/datasets/ILSVRC/imagenet-1k)  
 3. **Ranking** - predicting the relative order or preference of a set of items contextually.
    - Example: search engine results, or movie recommendations 
 
