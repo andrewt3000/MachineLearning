@@ -16,7 +16,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 3. [**Reinforcement learning**](rl.md) - An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
 4. **Semi-Supervised learning** - trains on a mix of mostly unlabeled with a small labeled subset data.  
-5. **Self-supervised learning** - A form of unsupervised learning where the model is trained on a task using the data itself, rather than labels. 
+5. **Self-supervised learning** - A form of unsupervised learning where training labels are constructed automatically from the data itself. 
    - Autoregressive LLM pretraining (next word prediction), and masked image modeling.  
 
 ### Machine learning problems
@@ -33,11 +33,11 @@ Machine learning models are categorized as discriminative or generative.
 
 ### Transfer learning
 Transfer learning is storing knowledge gained while solving one problem and applying it to a different but related problem.
-   - **fine tuning** is additional training to a base model weight's for a specific task.  
-   - **LoRa** (Low-Rank Adaptation) is a fine-tuning method that freezes the base model's weights and trains small low-rank matrices that are added to existing layers.
+   - **fine tuning** is additional training to a base model weights for a specific task.  
+   - **LoRA** (Low-Rank Adaptation) is a fine-tuning method that freezes the base model's weights and trains small low-rank matrices that are added to existing layers.
 
 ### Metric Learning
 **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). Used for face verification, signature verification, one-shot learning, and sentence embeddings. 
 
-### Edge Computing
+### CNNs
 [Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs were historically popular but are largely being replaced by transformer models and VLMs. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
