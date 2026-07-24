@@ -1,5 +1,8 @@
 # Convolutional Neural Networks for image processing
-[Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers. Typically used for grids of input such as images.   
+[Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers. Typically used for grids of input such as images.  
+
+<img width="1462" height="536" alt="cnn" src="https://github.com/user-attachments/assets/90e05230-e747-46f6-8bf3-ee58197ed40f" />
+
 
 ### CNN HyperParameters
 
