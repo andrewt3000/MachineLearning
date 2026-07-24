@@ -136,7 +136,7 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 **RAG** (retrieval augmented generation) supplies an LLM with text retrieved from an external sources. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.  
 
 ## References
-- 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
+- 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
 - 2018 BERT paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
@@ -169,3 +169,4 @@ Toy, open source models by Andrej Karpathy [nanochat](https://github.com/karpath
 
 ### Tutorials / classes
 [Stanford CME 295](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) - Transformers & Large Language Models
+[attention is all you need blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
