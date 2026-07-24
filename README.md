@@ -32,10 +32,10 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 ## Machine Learning Problems
 Machine learning problems are categorized as discriminative or generative.  
 - **discriminative** models predict labels from inputs (classification, regression).
-- **generative** models learn to synthesize new samples (diffusion models, LLMs).
+- **generative** models learn to synthesize new samples (diffusion models, LLMs).  
 
 ### Metric Learning
 **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). Used for face verification, signature verification, one-shot learning, and sentence embeddings. 
 
-### Legacy information
-[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs were historically popular but are largely being replaced by transformer models and VLN. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources such as [yolo](https://github.com/ultralytics/ultralytics).     
+### Edge Computing
+[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) CNNs were historically popular but are largely being replaced by transformer models and VLMs. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
