@@ -131,7 +131,7 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 
 **Reasoning models** train CoT behavior directly with RL rather than eliciting it via prompting. OpenAI's o1 (2024) was the first public example; DeepSeek-R1 (2025) was the first open-weight model with a published method (RL with verifiable rewards, RLVR).    
 
-## Academic history
+## References
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 - 2018 BERT paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
