@@ -17,8 +17,8 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
 4. **Semi-Supervised learning** - trains on a mix of mostly unlabeled with a small labeled subset data.  
 5. **Self-supervised learning** - A form of unsupervised learning where training labels are constructed automatically from the data itself. 
-   - Autoregressive LLM pretraining (next word prediction), and masked image modeling.  
-
+   - Autoregressive LLM pretraining (next word prediction), and masked image modeling.
+  
 ### Machine learning problems
 1. **Regression** - predicting a continuous value attribute (Example: house prices)
 2. **Classification** - predicting a discrete value. (Example: pass or fail, hot dog/not hot dog)
@@ -26,10 +26,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 3. **Ranking** - predicting the relative order or preference of a set of items contextually.
    - Example: search engine results, or movie recommendations 
 
-## Machine Learning Models
-Machine learning models are categorized as discriminative or generative.  
-- **discriminative** models predict labels from inputs (classification, regression).
-- **generative** models learn to synthesize new samples (diffusion models, LLMs).  
+Models that predict labels from inputs (as in the problems above) are called **discriminative**; models that learn the data distribution to synthesize new samples (diffusion, LLMs) are **generative**.
 
 ### Transfer learning
 Transfer learning is storing knowledge gained while solving one problem and applying it to a different but related problem.
