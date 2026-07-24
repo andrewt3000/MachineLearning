@@ -133,13 +133,14 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 
 **GRPO** (Group Relative Policy Optimization), introduced in DeepSeekMath is an RL algorithm, a PPO variant, that is currently widely used as an optimizer for reasoning training.  
 
-**RAG** retrieval augmented generation   
+**RAG** (retrieval augmented generation) supplies an LLM with text retrieved from an external sources. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.  
 
 ## References
 - 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) [blog](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 - 2018 BERT paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 - 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- 2020 RAG paper [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
 - 2020 Scaling laws paper [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
 - 2022 RLHF, InstructGPT paper [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
 - 2022 Chinchilla scaling law paper [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
