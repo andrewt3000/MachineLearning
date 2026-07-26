@@ -2,7 +2,7 @@
 **Neural networks** are machine learning models and [universal approximators](#references). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
 ### Terminology
-Neural networks or artificial neural networks are a broad term that includes also other types of neural networks such as CNNs or transformers. The architecture we are discussing here is a feedforward neural network (as opposed to recurrent), vanilla neural networks, or MLP multilayer perceptron.  
+Neural networks or artificial neural networks are a broad term that includes also other types of neural networks such as [CNNs](cnn.md) or [transformers](transformer.md). The architecture we are discussing here is a **feedforward neural network** (as opposed to recurrent), vanilla neural networks, or **MLP multilayer perceptron**.  
 
 You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. These fully connected layers are used in other neural networks to combine features or change dimensionality.  
 pytorch: [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  
