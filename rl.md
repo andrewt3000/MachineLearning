@@ -14,7 +14,7 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - Autonomous Driving: Optimizing trajectory planning, lane-changing behavior, and collision avoidance systems.
 - Large Language Models (LLMs): Fine-tuning models using RLHF (Reinforcement Learning from Human Feedback) to ensure AI responses align with human preferences regarding safety and helpfulness.
 
-### Academic history
+### References
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
 
 - 2015 Silver et al. DQN nature paper [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
