@@ -1,4 +1,5 @@
-CNNs were historically popular but are largely being replaced by [transformer](transformer.md] models. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
+# Legacy Warning
+CNNs were historically popular but are largely being replaced by [transformer](transformer.md) models. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. As of 2026, See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
 
 # Convolutional Neural Networks for image processing
 [Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers. Typically used for grids of input such as images.  
@@ -33,13 +34,12 @@ W1 is original width of image. F is filter witdth, P is padding, S is stride. ex
 
 
 ### Computer Vision tasks
-**Object classification** - identifying an object in an image.  
+**Object classification** - identifying an object in an image.  [res net](https://arxiv.org/abs/1512.03385), [Inception v4](https://arxiv.org/abs/1602.07261), [dense net](https://arxiv.org/abs/1608.06993)   
 **Classification + Localization** - drawing a bounding box around an object. One or fixed number of objects. Train a CNN to classify but also train box coordinates as a regression problem finding (x, y, w, h)    
-**Semantic segmentation** - Label every pixel between classes. Don’t distinguish between different instances. Use a cnn, downsample and then upsample for efficiency.     
-**Object detection** - drawing a bounding box around an unlimited number of objects. Get regions of interest, and run algorithms such as R-CNN, fast R-CNN, faster R-CNN. There are also new single pass models such as [Yolo](https://pjreddie.com/darknet/yolo/), [V2](https://pjreddie.com/darknet/yolov2/), [V3](https://pjreddie.com/media/files/papers/YOLOv3.pdf)  
- and [SSD](https://arxiv.org/abs/1512.02325).  
-**Instance segmentation** - Segment between different instances of objects. State of the art is Mask R-CNN.  
-**Image cpationing** - describing the objects in an image.  
+**Semantic segmentation** - Label every pixel between classes. Don’t distinguish between different instances. Use a cnn, downsample and then upsample for efficiency. [U-Net](https://arxiv.org/abs/1505.04597)   
+**Object detection** - drawing a bounding box around an unlimited number of objects. Get regions of interest, and run algorithms such as R-CNN, fast R-CNN, faster R-CNN. There are also new single pass models such as 
+ [ultralytics yolo](https://github.com/ultralytics/ultralytics) (In 2026, sota for realtime/edge object detection) and [SSD](https://arxiv.org/abs/1512.02325).  
+**Instance segmentation** - Segment between different instances of objects. [mask r-cnn](https://arxiv.org/abs/1703.06870)  .  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/cv.png" />  
 
