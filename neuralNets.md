@@ -1,4 +1,4 @@
-### Neural Networks
+# Neural Networks
 **Neural networks** are machine learning models and [universal approximators](#references). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
 ### Terminology
