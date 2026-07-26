@@ -29,6 +29,8 @@ pytorch layers are compose in [Sequential()](https://docs.pytorch.org/docs/stabl
 
 **Capacity** is the model's storage space for patterns and is driven by parameter width (number of hidden units) and depth (number of layers). Generally, a higher number of parameters equates to a higher capacity.   
 
+**Parameter count** is the total number of learnable weights and biases in a network — every number that gets updated by gradient descent.
+
 ### Activation Functions
 **Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
 pytorch [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
@@ -80,7 +82,7 @@ Steps to training a network.
 - [Run optimization algorithm](#optimization-algorithms)  
 
 ### Prepare the data
-Begin by preparing and scaling the data. See [data and features]([https://github.com/andrewt3000/MachineLearning/blob/master/README.md#data](https://github.com/andrewt3000/MachineLearning/blob/master/data.md)).  
+Begin by preparing and scaling the data. See [data and features](data.md).  
 
 
 ### Initialization
