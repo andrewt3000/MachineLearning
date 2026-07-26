@@ -4,7 +4,7 @@
 - [neural networks](neuralNets.md)
 - [transformers and llms](transformer.md)
 - [vision transformers](cv.md)
-- Legacy: [cnn](cnn4images.md), [rnn](rnn.md)
+- Legacy: [cnn](cnn4Images.md), [rnn](rnn.md)
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
