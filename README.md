@@ -11,7 +11,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 
 1. **Supervised learning** - learns from **labeled** training data.
    - svm, knn, random forests, gradient boosting machines, [neural networks](neuralNets.md)
-2. **Unsupervised learning** - learns from unlabled training data.
+2. **Unsupervised learning** - learns from unlabeled training data.
    - principal component analysis, clustering. 
 3. [**Reinforcement learning**](rl.md) - An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
@@ -23,9 +23,9 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 1. **Regression** - predicting a continuous value attribute.
    - Example: predicting house prices
 2. **Classification** - predicting a discrete value. 
-   - Classification is further categorized as binary or multi-class classificaition.
+   - Classification is further categorized as binary or multi-class classification.
    - Binary Example: predicting pass or fail, benign or malignant, spam or not spam, hot dog or not hot dog :-)
-   - Multi-Class Example: Handwritten Digit Recognition (0 through 9) [mnist](https://huggingface.co/datasets/ylecun/mnist), 1,000 words for image classification [imagenet](https://huggingface.co/datasets/ILSVRC/imagenet-1k)  
+   - Multi-Class Example: Handwritten Digit Recognition (0 through 9) [mnist](https://huggingface.co/datasets/ylecun/mnist), 1,000 classes [ImageNet-1k](https://huggingface.co/datasets/ILSVRC/imagenet-1k)  
 3. **Ranking** - predicting the relative order or preference of a set of items contextually.
    - Example: search engine results, or movie recommendations 
 
