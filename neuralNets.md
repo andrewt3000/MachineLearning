@@ -1,5 +1,5 @@
 # Neural Networks
-**Neural networks** are machine learning models and [universal approximators](#references). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
+**Neural networks** are machine learning models and universal approximators [3](#references). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
 ### Terminology
 Neural networks or artificial neural networks are a broad term that includes also other types of neural networks such as [CNNs](cnn.md) or [transformers](transformer.md). The architecture we are discussing here is a **feedforward neural network** (as opposed to recurrent), vanilla neural networks, or **MLP multilayer perceptron**.  
@@ -301,14 +301,14 @@ Overfitting</a> - Srivastava et al 2014 </sub>
 
 
 ### References
-- 1958 Rosenblatt perceptron paper [THE PERCEPTRON: A PROBABILISTIC MODEL FOR
+1.  1958 Rosenblatt perceptron paper [THE PERCEPTRON: A PROBABILISTIC MODEL FOR
 INFORMATION STORAGE AND ORGANIZATION
 IN THE BRAIN](https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf)
-- 1986 Rumelhart backprop paper [Learning representations by back-propagating errors](https://www.nature.com/articles/323533a0)
-- 1989 Cybenko univerisal approximation theorem paper - Approximation by superpositions of a sigmoidal function
-- 2012 Alexnet paper [ImageNet Classification with Deep Convolutional
+2. 1986 Rumelhart backprop paper [Learning representations by back-propagating errors](https://www.nature.com/articles/323533a0)
+3. 1989 Cybenko univerisal approximation theorem paper - Approximation by superpositions of a sigmoidal function
+4. 2012 Alexnet paper [ImageNet Classification with Deep Convolutional
 Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
-- 2014 Srivastava Dropout paper [Dropout: A Simple Way to Prevent Neural Networks from
+5. 2014 Srivastava Dropout paper [Dropout: A Simple Way to Prevent Neural Networks from
 Overfitting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
 ### Tutorials, demos
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
