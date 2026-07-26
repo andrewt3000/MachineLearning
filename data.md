@@ -14,7 +14,7 @@ Data is typically split into **training**, **validation** and **test** data. Typ
 
 An **example** (or **sample**) is a single instance from your dataset.  
 
-**Labels** are the correct outputs in supervised learning data, also refered to as **ground truth**.  
+**Labels** are the correct outputs in supervised learning data, also referred to as **ground truth**.  
 
 **Features** are the inputs to a machine learning model. See [below](#features)    
 
@@ -44,7 +44,7 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 **Min-max scaling** squeezes values between a range typically 0 to 1. Min-max scaling is best for uniform distributions such as pixel values in image processing. Warning: If you have an outlier (like a single value of 10,000 when everything else is under 10), Min-Max will crush all your normal data into a tiny, indistinguishable band near 0. Min-max scaling is implemented in scikit learn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html).   
 
-**Standardization** is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by sickit learn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
+**Standardization** is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by scikit-learn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
 
 **Dimensionality Reduction** is transforming data from high to low dimension but retaining the properties. Examples include PCA, singular value decomposition, variational auto-encoders, and t-SNE (for visualizations). Downsampling such as max pooling layers for CNNs is simply removing dimensions regardless of whether they retain properties or not.
 
