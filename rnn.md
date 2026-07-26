@@ -1,4 +1,7 @@
-## Recurrent Neural Networks
+# Legacy Warning
+RNNs have largely been replaced by [transformers](transformer.md)
+
+# Recurrent Neural Networks
 [Recurrent Neural Network](https://en.wikipedia.org/wiki/Recurrent_neural_network) (RNN) - RNNs are an extension of neural networks that also pass the hidden state as output of each neuron via a weighted connection as an input to the neurons in the same layer during the next sequence. RNNs are trained by backpropagation through time. RNNs are used for input sequences such as text, audio, or video.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/rnn.png" />  
