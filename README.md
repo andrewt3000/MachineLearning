@@ -4,6 +4,7 @@
 - [neural networks](neuralNets.md)
 - [transformers and llms](transformer.md)
 - [vision transformers](cv.md)
+- Legacy: [cnn](cnn4images.md), [rnn](rnn.md)
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
@@ -39,12 +40,3 @@ Transfer learning is storing knowledge gained while solving one problem and appl
 ### Metric Learning
 **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). 
 - Example: face verification, signature verification
-
-## Legacy Documents
-
-### CNNs
-[Convolutional Neural Networks](cnn4Images.md) were historically popular but are largely being replaced by transformer models. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
-
-### RNNs
-[Recurrent Neural Networks](rnn.md)
-
