@@ -1,3 +1,5 @@
+CNNs were historically popular but are largely being replaced by [transformer](transformer.md] models. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
+
 # Convolutional Neural Networks for image processing
 [Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNNs) are variations of neural networks that contain convolutional layers. Typically used for grids of input such as images.  
 
