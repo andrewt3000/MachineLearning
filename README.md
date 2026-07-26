@@ -1,16 +1,16 @@
-# Overview of Machine Learning
-- [data and features](https://github.com/andrewt3000/MachineLearning/blob/master/data.md)
-- [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
-- [transformers and llms](https://github.com/andrewt3000/MachineLearning/blob/master/transformer.md)
-- [vision transformers](https://github.com/andrewt3000/MachineLearning/blob/master/cv.md) 
+# Machine Learning Overview
+- [data and features](data.md)
+- [reinforcement learning](rl.md)
+- [neural networks](neuralNets.md)
+- [transformers and llms](transformer.md)
+- [vision transformers](cv.md)
 
-## Machine Learning
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
-### Types of machine learning
+## Types of machine learning
 
 1. **Supervised learning** - learns from **labeled** training data.
-   - svm, knn, random forests, gradient boosting machines, [neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/neuralNets.md)
+   - svm, knn, random forests, gradient boosting machines, [neural networks](neuralNets.md)
 2. **Unsupervised learning** - learns from unlabled training data.
    - principal component analysis, clustering. 
 3. [**Reinforcement learning**](rl.md) - An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
@@ -19,7 +19,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
 5. **Self-supervised learning** - A form of unsupervised learning where training labels are constructed automatically from the data itself. 
    - Autoregressive LLM pretraining (next word prediction), and masked image modeling.
   
-### Machine learning problems
+## Machine learning problems
 1. **Regression** - predicting a continuous value attribute.
    - Example: predicting house prices
 2. **Classification** - predicting a discrete value. 
@@ -40,5 +40,11 @@ Transfer learning is storing knowledge gained while solving one problem and appl
 **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or triplet loss (anchor, positive, negative). 
 - Example: face verification, signature verification
 
+## Legacy Documents
+
 ### CNNs
-[Convolutional Neural Networks](https://github.com/andrewt3000/MachineLearning/blob/master/cnn4Images.md) were historically popular but are largely being replaced by transformer models. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
+[Convolutional Neural Networks](cnn4Images.md) were historically popular but are largely being replaced by transformer models. CNNs have gone through a hybrid period where it's common to use cnn backbones with vision transformers. CNNs are still used on realtime and mobile devices because they require less resources. See [yolo](https://github.com/ultralytics/ultralytics) library for real time edge device CV.    
+
+### RNNs
+[Recurrent Neural Networks](rnn.md)
+
