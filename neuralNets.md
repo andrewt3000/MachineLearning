@@ -155,7 +155,7 @@ The next step is to choose a loss function. Then implement the loss function or 
 
 
 #### Cross entropy
-Cross entropy (aka log loss, negative log probability) function is frequently used with classification models that use a softmax activation function for the output layer. The output of the softmax activation is a value between 0 and 1. 
+Cross entropy (aka log loss, negative log probability) function is typically used as a loss function with classification models that use a softmax activation function for the output layer. The output of the softmax activation is a value between 0 and 1. 
 
 The cross entropy function makes sense intuitively. Consider the case where the label is 1 and the output is 1, the loss is 0 i.e. there is no loss, the output of 1 is correct and equals the label of 1. Conversely, the loss approaches infinity for the output of 0, the incorrect classification.  
 
@@ -177,8 +177,8 @@ List of pytorch [loss functions](https://pytorch.org/docs/stable/nn.html#loss-fu
 
 | ML Problem | Loss Function | PyTorch Class |
 | :--- | :--- | :--- |
-| **Regression** | Mean Squared Error (MSE) | [`nn.MSELoss()`](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html) |
 | **Classification** | Cross Entropy | [`nn.CrossEntropyLoss()`](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html) |
+| **Regression** | Mean Squared Error (MSE) | [`nn.MSELoss()`](https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html) |
 
 
 ### Backpropagation 
