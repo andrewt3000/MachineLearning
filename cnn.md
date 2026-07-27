@@ -24,7 +24,7 @@ Types of hidden layers in cnns: convolutional layers, max pooling layers, fully 
 2. Max pool layer: max pooling is when you take a section and subsample only the largest value in the pool.  
   hyperparameter: size of the section to subsample. example 2x2.
 
-3. Fully connected layers are the same as hidden layers in a vanilla neural network.  
+3. [Fully connected layers](neuralNets.md) are the same as hidden layers in a vanilla neural network.  
 
 #### Calculate output volume of convolutional layer
 The depth is the number of filters.  
