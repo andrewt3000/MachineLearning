@@ -12,7 +12,7 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - Game Playing: Beating world champions in complex board games (Go, Chess) and real-time strategy video games (Dota 2, StarCraft II).
 - Robotics: Training robotic arms to grasp objects, or teaching quadrupedal robots to walk over uneven terrain.
 - Autonomous Driving: Optimizing trajectory planning, lane-changing behavior, and collision avoidance systems.
-- Large Language Models (LLMs): Fine-tuning models using RLHF (Reinforcement Learning from Human Feedback) to ensure AI responses align with human preferences regarding safety and helpfulness.
+- [Large Language Models (LLMs)](transformer.md#llms-large-language-models): Fine-tuning models using RLHF (Reinforcement Learning from Human Feedback) to ensure AI responses align with human preferences regarding safety and helpfulness.
 
 ### Policy
 - **Policy** is the decision-making rule the agent is learning - a mapping from states to actions. Policy defines the agent's behavior.  
