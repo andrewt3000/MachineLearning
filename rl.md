@@ -5,7 +5,6 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - **State** ($S$): The current situation or configuration of the environment at a specific time.
 - **Action** ($A$): The choices available to the agent (e.g., turn left, move pawn to E4).
 - **Reward** ($R$): The feedback signal sent from the environment to evaluate the agent's last action. It can be positive (a reward) or negative (a penalty).
-- **Policy** is the decision-making rule the agent is learning - a mapping from states to actions.
 <img width="1025" height="415" alt="345fadfa-549a-462a-b757-9ab258e747f3" src="https://github.com/user-attachments/assets/67239e31-45fd-4195-b4ab-d5242e7380a8" />
 
 
@@ -15,6 +14,10 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - Autonomous Driving: Optimizing trajectory planning, lane-changing behavior, and collision avoidance systems.
 - Large Language Models (LLMs): Fine-tuning models using RLHF (Reinforcement Learning from Human Feedback) to ensure AI responses align with human preferences regarding safety and helpfulness.
 
+### Policy
+- **Policy** is the decision-making rule the agent is learning - a mapping from states to actions. Policy defines the agent's behavior.  
+Policy can be deterministic A = π(S) or stochastic A = π(A|S).  
+
 ### References
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
 
@@ -22,3 +25,6 @@ An **agent** interacts with an **environment** and learns to take **action** by 
  [code](https://github.com/google-deepmind/dqn)
 
 - 2017 Open AI PPO paper [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
+
+### Class
+[DeepMind RL class](https://www.youtube.com/watch?v=TCCjZe0y4Qc&list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm&index=1&)
