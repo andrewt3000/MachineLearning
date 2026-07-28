@@ -5,6 +5,7 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - **State** ($S$): The current situation or configuration of the environment at a specific time.
 - **Action** ($A$): The choices available to the agent (e.g., turn left, move pawn to E4).
 - **Reward** ($R$): The feedback signal sent from the environment to evaluate the agent's last action. It can be positive (a reward) or negative (a penalty).
+- **Policy** is the decision-making rule the agent is learning - a mapping from states to actions.
 <img width="1025" height="415" alt="345fadfa-549a-462a-b757-9ab258e747f3" src="https://github.com/user-attachments/assets/67239e31-45fd-4195-b4ab-d5242e7380a8" />
 
 
