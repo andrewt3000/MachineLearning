@@ -27,15 +27,24 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 
 - **Observation (0)** The information the agent receives from the environment at each step. If the observation captures the complete state, the environment is fully observable (like a chessboard); if not, it is partially observable (like a poker hand or a car's camera view).
 
-- **Policy** is the decision-making rule the agent is learning - a mapping from states to actions. Policy defines the agent's behavior.  
-Policy can be deterministic A = π(S) or stochastic A = π(A|S).
-
 - **Terminal state** is one where the episode ends — no further actions or rewards follow. Examples include:
    - Chess or Go: checkmate, resignation, or a draw
    - Robotics: A drone landing at its target — or crashing
    - Finance and wagering: Bankruptcy — bankroll hits zero
    - Finance: An options position expiring
    - A treatment-planning MDP in healthcare: patient recovery or death
+ 
+### Policy
+- **Policy** ($\pi$): The decision-making rule the agent is learning — a mapping from states to actions. The policy defines the agent's behavior.
+   - A **deterministic** policy returns a single action for each state: $A = \pi(S)$.
+   - A **stochastic** policy returns a probability distribution over actions: $\pi(A|S)$.
+- In small, tractable problems the policy can be derived from a **Q-table** — a lookup table storing an estimated value for every state-action pair, where the agent simply picks the action with the highest value. In complex problems the state space is too large to enumerate, so the mapping is approximated with a neural network (the "deep" in deep RL).
+
+### The Bellman Equation
+The **Bellman equation** expresses the core recursive idea of RL: the value of where you are now = the reward you get now + the value of where you end up next.
+- Instead of evaluating a state by playing out an entire episode, the agent can break the problem into one step at a time: take an action, collect the immediate reward, and rely on its estimate of the next state's value to account for everything after that.
+- Future rewards are typically discounted by a factor 𝛾 (gamma, between 0 and 1), meaning a reward now is worth slightly more than the same reward later. This keeps values finite and makes the agent prefer faster paths to reward.
+- This recursive structure is what makes learning practical: the agent doesn't need to see the end of the game to update its estimates — it can bootstrap, improving its value estimate for the current state using its estimate of the next one. Q-learning and DQN are built directly on this idea.
 
 ### References
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
