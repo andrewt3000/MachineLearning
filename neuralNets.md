@@ -155,6 +155,7 @@ The next step is to choose a loss function. Then implement the loss function or 
 
 - The term **loss function** measures how wrong the model is on a single example. **Error function** is generally a synonym (e.g. "sum of squared errors").
 - The terms **objective function**, or **cost function** refer to the average (or sum) of the loss over the entire dataset or mini-batch, and may also include a regularization term.
+- Loss functions are distinct from **metrics** such as accuracy or error rate.
 
 
 #### Cross entropy
@@ -298,7 +299,7 @@ L2 regularization uses sum of squared weights. L2 doesn't work well with yieldin
 Overfitting</a> - Srivastava et al 2014 </sub>
 
 ### Early Stopping
-**Early stopping** is a regularization technique. Early stopping is to stop training when the training error is getting lower but the validation error is increasing. Testing poorly on the validation set indicates overfitting.  
+**Early stopping** is a regularization technique. Early stopping is to stop training when the training error is getting lower but the validation error is increasing. Testing poorly on the validation set indicates overfitting. Early stopping is typically based on the loss function (not accuracy).  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
