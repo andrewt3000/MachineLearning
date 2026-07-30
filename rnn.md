@@ -2,9 +2,9 @@
 RNNs have largely been replaced by [transformers](transformer.md)
 
 # Recurrent Neural Networks
-[Recurrent Neural Network](https://en.wikipedia.org/wiki/Recurrent_neural_network) (RNN) - RNNs are an extension of neural networks that also pass the hidden state as output of each neuron via a weighted connection as an input to the neurons in the same layer during the next sequence. RNNs are trained by backpropagation through time. RNNs are used for input sequences such as text, audio, or video.  
+Recurrent Neural Network (RNN) - RNNs are an extension of neural networks that also pass the hidden state as output of each neuron via a weighted connection as an input to the neurons in the same layer during the next sequence. RNNs are trained by backpropagation through time. RNNs are used for input sequences such as text, audio, or video.  
 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/rnn.png" />  
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/rnn.png" width='800' />  
 
 This feedback architecture allows the network to have memory of previous inputs. The memory is limited by vanishing/exploding gradient problem. Exploding gradient can be mitigated by gradient clipping. A common hyperparameter is the number of steps to go back or "unroll" during training. 
 
@@ -16,7 +16,10 @@ GRU - Gated Recurrent Unit - Introduced by Cho. Another RNN variant similar but 
 ### LSTM
 LSTM - [Long Short Term Memory] - Introduced Hochreiter in 1997, a specialized RNN that is capable of long term dependencies and mitigates the vanishing gradient problem.  It contains memory cells and gate units. The number of memory cells is a hyperparameter. Memory cells pass memory information forward. The gates decide what information is stored in the memory cells. A vanilla LSTM has a forget gates, input gates and output gates. There are many variations of the LSTM.
 
-<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lstm.png" />  
+<img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lstm.png" width='600' />  
+
+### References
+- 2014 GRU paper [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/abs/1412.3555)
 
 [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Blog post by Chris Olah.  
 
