@@ -20,6 +20,9 @@ An **example** (or **sample**) is a single instance from your dataset.
 
 **Data augmentation** - artificially increase the diversity and size of a training dataset without actually collecting new data. An example of data augmentation for images is mirroring, flipping, rotating, and translating your images to create new examples.  
 
+**Data balance** - refers to how evenly examples are distributed across classes (or outcomes) in a training dataset. A **balanced** dataset has roughly equal representation of each class; an **imbalanced** dataset is dominated by one or more majority classes.  
+
+**Edge cases** - input or situation at the boundary of what a system was designed or trained to handle — rare, extreme, or unusual conditions that fall outside typical patterns. In machine learning, it is important that edge cases are not underrepresented (or absent) in the training data. Edge cases can be critical for high accuracy.  
 
 **Data leakage** is when information from outside the training dataset (such as the target variable or the validation/test set) accidentally contaminates the training process.  
 
