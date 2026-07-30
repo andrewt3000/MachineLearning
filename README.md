@@ -2,7 +2,7 @@
 - [data and features](data.md)
 - [neural networks](neuralNets.md)
 - [transformers](transformer.md)
-- [llms](llm.md)
+- [LLM](llm.md)
 - [vision transformers](cv.md)
 - [reinforcement learning](rl.md)
 - Legacy: [cnn](cnn.md), [rnn](rnn.md)
@@ -19,7 +19,7 @@ Machine Learning is a sub-field of artificial intelligence that uses data to tra
    - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
 4. **Semi-Supervised learning** - trains on a mix of mostly unlabeled with a small labeled subset data.  
 5. **Self-supervised learning** - A form of unsupervised learning where training labels are constructed automatically from the data itself. 
-   - Autoregressive LLM pretraining (next word prediction), and masked image modeling.
+   - Autoregressive [LLM](llm.md) pretraining (next word prediction), and masked image modeling.
   
 ## Machine learning problems
 1. **Regression** - predicting a continuous value attribute.
