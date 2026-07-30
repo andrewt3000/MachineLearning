@@ -9,7 +9,9 @@ Neural networks are a broad term that includes also other types of neural networ
 - vanilla neural networks
 
 You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. These fully connected layers are used in other neural networks to combine features or change dimensionality.  
-pytorch: [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  
+
+### PyTorch
+PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  layers are compose in [Sequential()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sequential.html) containers. 
 
 
 ### Neural network architecture
@@ -21,8 +23,6 @@ The architecture of a neural network is fixed before it is trained and has the f
 The weights and biases are often refered to as parameters.   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
-
-pytorch layers are compose in [Sequential()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sequential.html) containers.
 
 ### Hyperparameters
 **Hyperparameters** are the model’s parameters in a neural net such as architecture, learning rate, and regularization factor.	
@@ -37,11 +37,11 @@ pytorch layers are compose in [Sequential()](https://docs.pytorch.org/docs/stabl
 
 ### Activation Functions
 **Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
-pytorch [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
+**PyTorch** [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 #### ReLu
 ReLu activation is currently popular in linear layers and cnns. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus ()    
-pytorch [nn.ReLU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.ReLU.html)  
+**PyTorch** [nn.ReLU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.ReLU.html)  
 
 ```python
 def relu(x):
@@ -53,11 +53,11 @@ def relu(x):
 
 #### GELU
 GELU is popular in transformers. GELU stands for Gaussian Error Linear Units function.  
-pytorch [nn.GELU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.GELU.html)
+**PyTorch** [nn.GELU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.GELU.html)
 
 #### Sigmoid
 Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed out step function. Sigmoid is not zero centered and it suffers from activation saturation issues. Historically popular, but not currently popular. Might be used for binary classification.  
-pytorch [nn.Sigmoid()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html)
+**PyTorch** [nn.Sigmoid()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html)
 
 #### Softmax
 The softmax function is often used as the model's final output activation function for multi-class classification. The output is similar to a probability distribution accross the labels however it's a point of debate if it should be consider a probability distribution in the freuqentist sense. Softmax is a "soft" maximum function. It's properties are:  
@@ -72,7 +72,7 @@ def softmax(X):
     exps = np.exp(X)
     return exps / np.sum(exps)
 ```
-pytorch [nn.Softmax()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html)  
+**PyTorch** [nn.Softmax()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softmax.html)  
 
 ### Training a neural network
 Training a neural network is an iterative process and the goal is to minimize a cost function. Training is typically implemented as a loop where each loop is an epoch. An **epoch** represents one complete pass of the entire training dataset through the neural network. On each iteration of the loop a forward pass is made then the loss function is calculated, the loss is used with backpropagation to calculate the gradients. Then gradient descent is performed to adjust the weights of the model to minimize the error. This is repeated until the decision to terminate is reached.  
@@ -130,8 +130,8 @@ class Neural_Network(object):
 
 [Example of Forward propagation in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%202%20Forward%20Propagation-checkpoint.ipynb)
 
-#### Pytorch example 
-In pytorch, implement the forward() method of the [Module](https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html) class  
+#### PyTorch example 
+In PyTorch, implement the forward() method of the [Module](https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html) class  
 
 ```python
 import torch
@@ -175,7 +175,7 @@ def logloss(true_label, predicted_prob):
     return -log(1 - predicted_prob)
  ```
 
-#### pytorch 
+#### PyTorch 
 List of pytorch [loss functions](https://pytorch.org/docs/stable/nn.html#loss-functions) 
 
 
@@ -214,8 +214,8 @@ def reluprime(x):
   
 Here is an [example of backprop in numpy](https://github.com/stephencwelch/Neural-Networks-Demystified/blob/master/.ipynb_checkpoints/Part%204%20Backpropagation-checkpoint.ipynb) for a regression problem that uses sum of squared errors as a cost function and sigmoid activations.  
 
-#### pytorch
-In pytorch the messy details of backpropagation are abstracted in the function [backward()](https://docs.pytorch.org/docs/stable/generated/torch.Tensor.backward.html)
+#### PyTorch
+In PyTorch the details of backpropagation are abstracted in the function [backward()](https://docs.pytorch.org/docs/stable/generated/torch.Tensor.backward.html)
 
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
@@ -245,11 +245,11 @@ Momement sgd is popular for vanilla neural networks. Adam with weight decay is p
 
 Other optimization algorithms include: AdaGrad, AdaDelta, Adam, Adamax, NAdam, RMSProp, and AMSGrad.  
 
-#### pytorch
-pytorch list of [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
+#### PyTorch
+PyTorch list of [optimizers](https://pytorch.org/docs/stable/optim.html#algorithms)  
 [SGD](https://docs.pytorch.org/docs/stable/generated/torch.optim.SGD.html) [AdamW](https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html)    
 
-In pytorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model. 
+In PyTorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model. 
 
 Here is a psuedocode example that pulls together the forward pass, loss function (MSELoss), backprop, and the optimizer(SGD) all in an outer training loop that represents an epoch and an inner loop that represents a batch.   
 
