@@ -9,5 +9,6 @@ Vision [transformers](https://github.com/andrewt3000/MachineLearning/blob/master
 - 2022 [iBOT](https://arxiv.org/abs/2111.07832)
 
 ### Generative Computer Vision
-- Stable Diffusion paper 2022 - [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
+- Stable Diffusion paper using U-net 2022 - [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
+- Stable Diffusion 3 paper uses transformers 2024 - [Scaling Rectified Flow Transformers for High-Resolution Image Synthesis](https://arxiv.org/abs/2403.03206)
 
