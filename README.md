@@ -9,6 +9,13 @@
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
+## Training and Inference
+
+Machine learning problems follow a two-phase flow:
+
+- **Training**: The model learns from data — adjusting its parameters to minimize error (supervised learning) or maximize reward (RL). This phase is computationally expensive and done offline.
+- **Inference**: The trained model is deployed and makes predictions on new, unseen inputs. Parameters are frozen — the model applies what it learned. This phase must often be fast and cheap, since it runs in production (e.g., serving predictions in real time).
+
 ## Types of machine learning
 
 1. **Supervised learning** - learns from **labeled** training data.
