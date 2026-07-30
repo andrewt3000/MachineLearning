@@ -17,3 +17,7 @@ Vision [transformers](https://github.com/andrewt3000/MachineLearning/blob/master
 - Stability AI - Stable Diffusion
 - Black Forest Labs - Flux
 - Hugging Face trending models: [text to image](https://huggingface.co/models?pipeline_tag=text-to-image&sort=trending) [image to image](https://huggingface.co/models?pipeline_tag=image-to-image&sort=trending)
+
+### Commercial Gen AI
+- Google and OpenAI have dropped separate diffusion models (Nano Banana and Dall E) and use native multimodal models.
+- [Midjourney](https://www.midjourney.com/)
