@@ -1,5 +1,5 @@
 # Transformers and LLMs
-A **Transformer** is a neural network architecture that processes sequences without recurrence, largely [replacing](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/) [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  GRUs and LSTMs. The transformer block architecture consists of two sub-layers: multi-head attention and a position-wise [feed-forward network](neuralNets.md) (FFN), each wrapped with a residual connection and layer normalization. Transformers are the primary architecture in large language models, vision transformers, automatic speech recognition systems such as whisper, and other state of the art machine learning domains and models.  
+A **Transformer** is a neural network architecture that processes sequences without recurrence, largely replacing [recurrent neural networks](https://github.com/andrewt3000/MachineLearning/blob/master/rnn.md) such as  GRUs and LSTMs. The transformer block architecture consists of two sub-layers: multi-head attention and a position-wise [feed-forward network](neuralNets.md) (FFN), each wrapped with a residual connection and layer normalization. Transformers are the primary architecture in large language models, vision transformers, automatic speech recognition systems such as whisper, and other state of the art machine learning domains and models.  
  
 ### Attention is all you need
 Transformers were introduced in [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017). The original “attention is all you need” paper implements language translation. It is a supervised learning task trained on a parallel corpus of data in different languages.
@@ -101,4 +101,5 @@ class SimpleTransformerBlock(nn.Module):
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 
 ### Tutorials / classes
+- [attention is all you need blog post](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 - [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Transformers & Large Language Models
