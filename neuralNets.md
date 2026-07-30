@@ -2,8 +2,8 @@
 **Neural networks** are machine learning models and universal approximators [3](#references). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
 ### Terminology
-Neural networks are a broad term that includes also other types of neural networks such as [CNNs](cnn.md) or [transformers](transformer.md). The architecture we are discussing here goes by differnt names:
-- **ANN artificial neural networks** as opposed to biolgical 
+Neural networks are a broad term that also includes other types of neural networks such as [CNNs](cnn.md) or [transformers](transformer.md). The architecture we are discussing here goes by different names:
+- **ANN artificial neural networks** as opposed to biological 
 - **FNN feedforward neural network** as opposed to recurrent
 - **MLP multilayer perceptron** a reference to the original design that inspired neural networks [1](#references)
 - vanilla neural networks
@@ -17,10 +17,10 @@ PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Li
 ### Neural network architecture
 The architecture of a neural network is fixed before it is trained and has the following properties. 
 - Neural networks are composed of input layers, hidden layers and output layers.  
-- Layers are connected by weighted synapsis (the lines with arrows) that multiply their input times the weight. 
-- Hidden layer consists of neurons (the circles) that sum their inputs from synapsis and execute an activation function on the sum.  
+- Layers are connected by weighted synapses (the lines with arrows) that multiply their input times the weight. 
+- Hidden layer consists of neurons (the circles) that sum their inputs from synapses and execute an activation function on the sum.  
 - Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
-The weights and biases are often refered to as parameters.   
+The weights and biases are often referred to as parameters.   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
@@ -60,7 +60,7 @@ Sigmoid activation functions outputs a value between 0 and 1. It is a smoothed o
 **PyTorch** [nn.Sigmoid()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html)
 
 #### Softmax
-The softmax function is often used as the model's final output activation function for multi-class classification. The output is similar to a probability distribution accross the labels however it's a point of debate if it should be consider a probability distribution in the freuqentist sense. Softmax is a "soft" maximum function. It's properties are:  
+The softmax function is often used as the model's final output activation function for multi-class classification. The output is similar to a probability distribution across the labels however it's a point of debate if it should be consider a probability distribution in the frequentist sense. Softmax is a "soft" maximum function. Its properties are:  
 Output values are in the range [0, 1].  
 The sum of output nodes is 1.  
 
@@ -154,7 +154,7 @@ class MyModel(nn.Module):
 The next step is to choose a loss function. Then implement the loss function or use a loss function from an existing library. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. The loss function of a neural network is a function of the problem you are trying to solve. Mean squared error is a typical loss function for regression. Cross entropy is a typical loss function for classification.   
 
 - The term loss function applies to a single example.  
-- The term error function refers to a single example and whether it's right or wrong for performance measurment, not training.  
+- The term error function refers to a single example and whether it's right or wrong for performance measurement, not training.  
 - The terms cost function, objective function, and total loss refer to the entire dataset or mini-batch and may also include regularization in addition to the sum of the loss.  
 
 
@@ -186,7 +186,7 @@ List of pytorch [loss functions](https://pytorch.org/docs/stable/nn.html#loss-fu
 
 
 ### Backpropagation 
-The backpropagation algorithm applies the chain rule recursively to compute the gradient for each weight. The gradient is caulated by taking the partial derivative of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network. Backprop indicates how to adjust the weights to minimize the loss function. If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
+The backpropagation algorithm applies the chain rule recursively to compute the gradient for each weight. The gradient is calculated by taking the partial derivative of the loss function with respect to the weights at each layer of the network by moving backwards (output to input) through the network. Backprop indicates how to adjust the weights to minimize the loss function. If the gradient (i.e. partial derivative/slope) is positive, that means the loss is getting higher as the weight increases. If the derivative is 0, the weight is set to a minimum loss. The gradient indicates the magnitude and direction of adjustments to our weights that will reduce the loss.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
@@ -200,7 +200,7 @@ We then calculate the partial derivative of the loss function with respect to ea
 
 The result is a gradient for each set of weights, dJ/dW1 and dJ/dW2 which are the same size as W1, W2.  
 
-The derivative of the softmax cost function is the probablity for the incorrect labels and the probablity - 1 for the correct label. 
+The derivative of the softmax cost function is the probability for the incorrect labels and the probablity - 1 for the correct label. 
 
 The derivative of the relu function is:
 
@@ -219,7 +219,7 @@ In PyTorch the details of backpropagation are abstracted in the function [backwa
 
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
-if &alpha; is too low, convergance is slow.
+if &alpha; is too low, convergence is slow.
 if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
 The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
 
@@ -228,15 +228,15 @@ The learning rate is often reduced to a smaller number over time. This is often 
 
 
 ### Optimization algorithms
-**Gradient descent** is an iterative optimization algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to mimimize the loss function.  
+**Gradient descent** is an iterative optimization algorithm that, in the context of neural networks, adjusts the weight by learning rate times the negative of the gradient (calculated by backpropagation) to minimize the loss function.  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/gd.jpg"  height='360px' width='640px' />
 
 **Batch gradient descent** - The term batch refers to the fact it uses the entire dataset to make one gradient step. Batch works well for small datasets that have convex loss functions. The loss function needs to be convex or it may find a local minimum.    
 
-**Stochastic gradient descent** (sgd) is a variation of gradient descent that uses a single randomly choosen example to make an update to the weights. sgd is more scalable than batch graident descent and is used more often in practice for large scale deep learning. It's random nature makes it unlikely to get stuck in a local minima.  
+**Stochastic gradient descent** (sgd) is a variation of gradient descent that uses a single randomly chosen example to make an update to the weights. sgd is more scalable than batch gradient descent and is used more often in practice for large scale deep learning. Its random nature makes it unlikely to get stuck in a local minima.  
 
-**Mini batch gradient descent**: Stochastic gradient descent that considers more than one randomly choosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Values are typically in the range of 32-512.  Larger batches are faster to train, but can cause overfitting and require more memory.  Lower batch sizes are the opposite: slower to train, more regularized, and require less memory.  
+**Mini batch gradient descent**: Stochastic gradient descent that considers more than one randomly chosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Values are typically in the range of 32-512.  Larger batches are faster to train, but can cause overfitting and require more memory.  Lower batch sizes are the opposite: slower to train, more regularized, and require less memory.  
 
 #### Gradient Descent Optimization
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov accelerated gradient descent is a variation that builds on moment and adds a look ahead step.  
@@ -309,7 +309,7 @@ Overfitting</a> - Srivastava et al 2014 </sub>
 INFORMATION STORAGE AND ORGANIZATION
 IN THE BRAIN](https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf)
 2. 1986 Rumelhart backprop paper [Learning representations by back-propagating errors](https://www.nature.com/articles/323533a0)
-3. 1989 Cybenko univerisal approximation theorem paper - Approximation by superpositions of a sigmoidal function
+3. 1989 Cybenko universal approximation theorem paper - Approximation by superpositions of a sigmoidal function
 4. 2012 Alexnet paper [ImageNet Classification with Deep Convolutional
 Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
 5. 2014 Srivastava Dropout paper [Dropout: A Simple Way to Prevent Neural Networks from
