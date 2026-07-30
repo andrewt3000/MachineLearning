@@ -29,18 +29,18 @@ The weights and biases are often referred to as parameters.
 
 **Architecture** is the structure of a neural network i.e. number of hidden layers, and number of nodes. 
 
-**Number of hidden layers** is a hyperparmeter. The higher the number of layers the more layers of abstraction the network can represent. If the network has too many layers it may suffer from the vanishing or exploding gradient problem.  
+**Number of hidden layers** is a hyperparameter. The higher the number of layers the more layers of abstraction the network can represent. If the network has too many layers it may suffer from the vanishing or exploding gradient problem.  
 
 **Capacity** is the model's storage space for patterns and is driven by parameter width (number of hidden units) and depth (number of layers). Generally, a higher number of parameters equates to a higher capacity.   
 
 **Parameter count** is the total number of learnable weights and biases in a network — every number that gets updated by gradient descent.
 
 ### Activation Functions
-**Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLu is a popular modern activation function.  
+**Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLU is a popular modern activation function.  
 **PyTorch** [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
-#### ReLu
-ReLu activation is currently popular in linear layers and cnns. ReLu stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. Relu can suffer from "dead" relus ()    
+#### ReLU
+ReLU activation is currently popular in linear layers and cnns. ReLU stands for rectified linear unit. It returns 0 for negative values, and the same number for positive values. RelU can suffer from "dead" ReLUs ()    
 **PyTorch** [nn.ReLU()](https://docs.pytorch.org/docs/stable/generated/torch.nn.ReLU.html)  
 
 ```python
@@ -98,7 +98,7 @@ As your neural networks get deeper, initialization becomes more important. If th
 - Kaiming (He) initializations are typically used on non-linear activations like ReLU or LeakyReLU
 
 ### Forward Propagation
-The forward propagation function is called during training and it's output is tested for loss. To implement the forward pass function is implicitly to design the neural network architecture. The forward pass function is also called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
+The forward propagation function is called during training and its output is tested for loss. To implement the forward pass function is implicitly to design the neural network architecture. The forward pass function is also called at inference. The input is a vector of the features X and the output returned is a vector of the values after traversing the network.  
 
 #### Numpy example
 If X is the input vector, and W1 is the weight vector (initialized and trained outside of this scope) for the first hidden layer, we take the dot product to get the values passed to the activation functions. Then we apply the activation function to each element in the matrix. Repeat for each layer.  
@@ -190,7 +190,7 @@ The backpropagation algorithm applies the chain rule recursively to compute the 
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/descent.png"   height='360px' width='640px' />
 
-We can combine all these functions for cost and forward propagation to get one function. So for instance, the cost function for a NN with one hidden relu layer using a softmax output is (where W1 and W2 are weights for 1st and 2nd layers, and X1 is the input feature nodes:  
+We can combine all these functions for cost and forward propagation to get one function. So for instance, the cost function for a NN with one hidden ReLU layer using a softmax output is (where W1 and W2 are weights for 1st and 2nd layers, and X1 is the input feature nodes:  
   
 ```
 J = Cost(Softmax(DotProduct(Relu(DotProduct(X1,W1)), W2)))
@@ -202,7 +202,7 @@ The result is a gradient for each set of weights, dJ/dW1 and dJ/dW2 which are th
 
 The derivative of the softmax cost function is the probability for the incorrect labels and the probablity - 1 for the correct label. 
 
-The derivative of the relu function is:
+The derivative of the ReLU function is:
 
 ```
 def reluprime(x):
@@ -220,7 +220,7 @@ In PyTorch the details of backpropagation are abstracted in the function [backwa
 #### Learning Rate
 Learning rate (&alpha;) - controls the size of the adjustments made during the training process. Typical values are .1, .01, .001. Consider these values are relative to your input features which are typically scaled to ranges such as 0 to 1, or -1 to +1.  
 if &alpha; is too low, convergence is slow.
-if &alpha; is too high, there is no convergance, because it overshoots the local minimum.  
+if &alpha; is too high, there is no convergence, because it overshoots the local minimum.  
 The learning rate is often reduced to a smaller number over time. This is often called annealing or decay. (examples: step decay, exponential decay)  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/lr.jpg" />
@@ -236,7 +236,7 @@ The learning rate is often reduced to a smaller number over time. This is often 
 
 **Stochastic gradient descent** (sgd) is a variation of gradient descent that uses a single randomly chosen example to make an update to the weights. sgd is more scalable than batch gradient descent and is used more often in practice for large scale deep learning. Its random nature makes it unlikely to get stuck in a local minima.  
 
-**Mini batch gradient descent**: Stochastic gradient descent that considers more than one randomly chosen example before making an update. Batch size is a hyperparmeter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Values are typically in the range of 32-512.  Larger batches are faster to train, but can cause overfitting and require more memory.  Lower batch sizes are the opposite: slower to train, more regularized, and require less memory.  
+**Mini batch gradient descent**: Stochastic gradient descent that considers more than one randomly chosen example before making an update. Batch size is a hyperparameter that determines how many training examples you consider before making a weight update. Typical values are factors of 2, such as 32 or 128. Values are typically in the range of 32-512.  Larger batches are faster to train, but can cause overfitting and require more memory.  Lower batch sizes are the opposite: slower to train, more regularized, and require less memory.  
 
 #### Gradient Descent Optimization
 Momentum sgd is a variation that accelerates sgd, dampens oscillations, and helps skip over local minima and saddlepoints. It collects data on each update in a velocity vector to assist in calculating the gradient. The velocity matrix represents the momentum. Rho is a hyperparameter that represents the friction. Rho is in the range of 0 to 1. Typical values for rho are 0.9 and 0.99. Nesterov accelerated gradient descent is a variation that builds on moment and adds a look ahead step.  
@@ -251,7 +251,7 @@ PyTorch list of [optimizers](https://pytorch.org/docs/stable/optim.html#algorith
 
 In PyTorch, the optimizer's [step()](https://docs.pytorch.org/docs/stable/generated/torch.optim.Optimizer.step.html) method updates the model. 
 
-Here is a psuedocode example that pulls together the forward pass, loss function (MSELoss), backprop, and the optimizer(SGD) all in an outer training loop that represents an epoch and an inner loop that represents a batch.   
+Here is a pseudocode example that pulls together the forward pass, loss function (MSELoss), backprop, and the optimizer(SGD) all in an outer training loop that represents an epoch and an inner loop that represents a batch.   
 
 ```python
 import torch
