@@ -19,5 +19,5 @@ Vision [transformers](https://github.com/andrewt3000/MachineLearning/blob/master
 - Hugging Face trending models: [text to image](https://huggingface.co/models?pipeline_tag=text-to-image&sort=trending) [image to image](https://huggingface.co/models?pipeline_tag=image-to-image&sort=trending)
 
 ### Commercial Gen AI
-- Google and OpenAI have dropped separate diffusion models (Nano Banana and Dall E) and use native multimodal models.
+- Google and OpenAI have dropped separate diffusion models (Nano Banana and Dall E) and use native, multimodal models where the image is tokenized into the same representation space as text.  
 - [Midjourney](https://www.midjourney.com/)
