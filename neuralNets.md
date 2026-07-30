@@ -25,7 +25,7 @@ The weights and biases are often refered to as parameters.
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
 ### Hyperparameters
-**Hyperparameters** are configuration choices set before training the model’s parameters such as architecture, learning rate, and regularization factor.	
+**Hyperparameters** are configuration choices set before training the model. Examples include architecture, learning rate, and regularization factor.	Hyperparameters are in contrast to the parameters that are learned namely weights and biases.  
 
 **Architecture** is the structure of a neural network i.e. number of hidden layers, and number of nodes. 
 
