@@ -50,9 +50,9 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 - 2025 RLVR paper [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/abs/2506.14245)
 
 ### LLMS
-- Google [Gemini](https://gemini.google.com/)
-- Open AI [Chat GPT](https://chatgpt.com/)
 - Anthropic [Claude](https://claude.ai/)
+- Open AI [Chat GPT](https://chatgpt.com/)
+- Google [Gemini](https://gemini.google.com/)
 - xAI [grok](https://grok.com/)
 - [Mistral](https://chat.mistral.ai/chat)
 
