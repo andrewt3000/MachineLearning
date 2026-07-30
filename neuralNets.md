@@ -153,9 +153,8 @@ class MyModel(nn.Module):
 ### Loss Function 
 The next step is to choose a loss function. Then implement the loss function or use a loss function from an existing library. The loss function measures how inaccurate a model is for a single example. Training a model minimizes the loss function. The loss function of a neural network is a function of the problem you are trying to solve. Mean squared error is a typical loss function for regression. Cross entropy is a typical loss function for classification.   
 
-- The term loss function applies to a single example.  
-- The term error function refers to a single example and whether it's right or wrong for performance measurement, not training.  
-- The terms cost function, objective function, and total loss refer to the entire dataset or mini-batch and may also include regularization in addition to the sum of the loss.  
+- The term **loss function** measures how wrong the model is on a single example. **Error function** is generally a synonym (e.g. "sum of squared errors").
+- The terms **objective function**, or **cost function** refer to the average (or sum) of the loss over the entire dataset or mini-batch, and may also include a regularization term.
 
 
 #### Cross entropy
