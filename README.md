@@ -1,9 +1,10 @@
 # Machine Learning Overview
 - [data and features](data.md)
-- [reinforcement learning](rl.md)
 - [neural networks](neuralNets.md)
-- [transformers and llms](transformer.md)
+- [transformers](transformer.md)
+- [llms](llm.md)
 - [vision transformers](cv.md)
+- [reinforcement learning](rl.md)
 - Legacy: [cnn](cnn.md), [rnn](rnn.md)
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
