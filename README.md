@@ -6,6 +6,7 @@
 - [vision transformers](cv.md)
 - [reinforcement learning](rl.md)
 - Legacy: [cnn](cnn.md), [rnn](rnn.md)
+- Basics: [linear algebra](la.md)
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
