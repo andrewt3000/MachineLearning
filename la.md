@@ -13,11 +13,14 @@ By convention, vectors are lower case and matrices are upper case.
 a · b = a₁b₁ + a₂b₂ + ... + aₙbₙ
 ```
 
-The identity a · b = |a| |b| cos(θ) connects the arithmetic to the angle θ between the vectors:
-
-- **cosine similarity** is the dot product of the normalized vectors
+The identity a · b = |a| |b| cos(θ) connects the arithmetic to the angle θ between the vectors.
 
 In ML, dot product is used in attention, linear layer matrix multiplication, embedding similarity search in RAG.
+
+### Cosine Similarity
+**cosine similarity** is the dot product of the normalized vectors. Dot product measures alignment and magnitude; cosine similarity measures alignment only
+
+  cos_sim(a, b) = (a · b) / (|a| |b|) = cos(θ)
 
 ### Matrix Multiplication
 
