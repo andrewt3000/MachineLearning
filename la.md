@@ -61,6 +61,4 @@ In ML:
 - **transpose** (Aᵀ) - flip rows and columns. Turns an m×n matrix into n×m. Used constantly, e.g. QKᵀ in attention
 - **identity matrix** (I) - square matrix with 1s on the diagonal, 0s elsewhere. IA = A, the "multiply by 1" of matrices
 - **inverse** (A⁻¹) - the matrix that undoes A: A⁻¹A = I. Only square, full-rank matrices have one. Rarely computed directly in ML (numerically unstable; solvers are used instead)
-- **matrix multiplication** - each output entry is a dot product of a row of A with a column of B. Requires inner dimensions to match: (m×n)(n×p) → (m×p). The core operation of every linear layer
 - **eigenvector / eigenvalue** - an eigenvector of A is a vector whose direction is unchanged by A, only scaled: Av = λv, where λ is the eigenvalue. Foundation of PCA and spectral methods
-- **outer product** (abᵀ) - takes two vectors and produces a rank-1 matrix, entry (i,j) = aᵢbⱼ. The opposite of the inner product (which contracts to a scalar). Gradients of linear layers are outer products; LoRA's update is a sum of them
