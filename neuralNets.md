@@ -304,6 +304,35 @@ Overfitting</a> - Srivastava et al 2014 </sub>
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/early_term.png" />
 
+### Metrics
+**Metrics** measure model performance for evaluation and reporting. Unlike loss functions, metrics don't need to be differentiable because no gradients are computed from them. A model typically trains on one function (e.g. cross entropy) and is reported on another (e.g. accuracy).
+
+Common classification metrics:
+- **Accuracy** is the fraction of predictions that are correct. Accuracy is misleading on imbalanced datasets: a model that always predicts "no fraud" is 99% accurate if 1% of transactions are fraudulent.
+- **Precision** is the fraction of positive predictions that are actually positive. Precision answers: "when the model says yes, how often is it right?"
+- **Recall** is the fraction of actual positives the model finds. Recall answers: "of all the real positives, how many did the model catch?"
+- **F1 score** is the harmonic mean of precision and recall, useful when you need a single number that balances both.
+- A **confusion matrix** is a table of predicted vs actual classes that shows exactly where the model's mistakes are (false positives vs false negatives).
+- **ROC-AUC** measures how well the model ranks positives above negatives across all classification thresholds. 0.5 is random guessing, 1.0 is perfect ranking.
+
+Precision and recall trade off against each other via the **classification threshold** (default 0.5). Lowering the threshold catches more positives (higher recall) at the cost of more false alarms (lower precision).
+
+Common regression metrics include MSE, RMSE, MAE, and R².
+
+scikit-learn [metrics](https://scikit-learn.org/stable/modules/model_evaluation.html), [confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
+
+### Calibration
+A model is **calibrated** if its predicted probabilities match observed frequencies: among all predictions of 70%, the event should occur about 70% of the time. Calibration is distinct from accuracy — a model can rank outcomes correctly (high accuracy, high AUC) while its probabilities are systematically too confident or not confident enough. Calibration matters whenever the probability itself drives a decision, such as medical risk, bet sizing, or pricing, rather than just the argmax label.
+
+- A **reliability diagram** plots predicted probability (binned) against observed frequency. A calibrated model tracks the diagonal; a curve below the diagonal indicates overconfidence.
+- **Expected calibration error (ECE)** summarizes the reliability diagram as a single number: the weighted average gap between predicted probability and observed frequency across bins.
+- **Brier score** is the mean squared error between predicted probabilities and outcomes (0 or 1).
+- **Proper scoring rules** such as log loss and Brier score are minimized only when predicted probabilities equal the true probabilities, so they reward calibration. Accuracy is not a proper scoring rule — it ignores probability magnitudes entirely.
+
+Modern neural networks are often overconfident even when accurate. Post-hoc fixes include **temperature scaling** (dividing logits by a constant T fitted on the validation set), **Platt scaling**, and **isotonic regression**.
+
+scikit-learn [calibration](https://scikit-learn.org/stable/modules/calibration.html), [Brier score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.brier_score_loss.html)  
+2017 Guo et al. calibration paper [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599)
 
 ### References
 1.  1958 Rosenblatt perceptron paper [THE PERCEPTRON: A PROBABILISTIC MODEL FOR
