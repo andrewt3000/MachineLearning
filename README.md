@@ -1,6 +1,6 @@
 # Machine Learning Overview
 - [data and features](data.md)
-- [neural networks](neuralNets.md)
+- [training neural networks](neuralNets.md)
 - [transformers](transformer.md)
 - [LLM](llm.md)
 - [vision transformers](cv.md)
