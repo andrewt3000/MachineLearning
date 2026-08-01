@@ -14,11 +14,18 @@ PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Li
 
 
 ### Neural network architecture
-The **architecture** of a neural network is the fixed blueprint configured before it is trained and has the following properties. 
-- Neural networks are composed of layers: input, hidden and output. Output layers are the **predictions**
-- Layers are connected by weighted connections (the lines with arrows in the diagram below) that multiply their input X times the weight W.   
-- Hidden layer consists of *neurons* (the circles in the diagram below) that sum their inputs from connections and execute an **activation function** on the sum.  
-- Every hidden layer and the final output layer usually have a **bias** terms attached to their neuron. It's similar to the constant in a linear function in that it controls the intercept. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
+A neural network’s **architecture** is its structural blueprint — the fixed layout of layers, nodes, and connections defined before training begins.
+- Neural networks are composed of layers.
+  - **Input layers** receive the raw features.
+  - **Hidden layers** are the processing engine. A network can have one hidden layer (shallow) or dozens (deep).
+  - **Output layers** generate **predictions**.
+- The lines connecting nodes between layers represent **weights**.  Each connection multiplies the incoming value $X$ by its weight $W$
+- Each node (circle) in a hidden layer performs two sequential steps:
+  - Sums all incoming weighted signals
+  - Passes that sum through an **activation function** (e.g., ReLU, Sigmoid). This adds non-linearity, allowing the network to learn complex, non-linear patterns rather than simple straight lines. 
+- Every hidden and output node has a **bias** term added to its weighted sum.
+  - A bias term is similar to the constant in a linear function in that it controls the intercept. 
+  - The bias is missing in diagram below  
 - The equation for a single layer is output Y is the activation sigma of (weights W times input X  + b bias).  $$Y = \sigma(XW + b)$$
   
 
@@ -35,7 +42,7 @@ The **architecture** of a neural network is the fixed blueprint configured befor
 **Parameter count** is the total number of learnable weights and biases in a network — every number that gets updated by gradient descent.
 
 ### Activation Functions
-**Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". ReLU is a popular modern activation function.  
+**Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". 
 **PyTorch** [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 #### ReLU
