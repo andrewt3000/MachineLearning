@@ -1,12 +1,12 @@
 # Machine Learning Overview
+- Basics: [linear algebra](la.md)
 - [data and features](data.md)
 - [training neural networks](neuralNets.md)
 - [transformers](transformer.md)
 - [LLM](llm.md)
-- [vision transformers](cv.md)
 - [reinforcement learning](rl.md)
 - Legacy: [cnn](cnn.md), [rnn](rnn.md)
-- Basics: [linear algebra](la.md)
+- In progress: - [vision transformers](cv.md)
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
