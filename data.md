@@ -49,6 +49,8 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 **Standardization** is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by scikit-learn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
 
-**Dimensionality Reduction** is transforming data from high to low dimension but retaining the properties. Examples include PCA, singular value decomposition, variational auto-encoders, and t-SNE (for visualizations). Downsampling such as max pooling layers for CNNs is simply removing dimensions regardless of whether they retain properties or not.
+**Dimensionality Reduction** is transforming data from high to low dimension but retaining the properties. Examples include PCA, singular value decomposition, variational auto-encoders, and t-SNE (for visualizations).  
+
+**Downsampling** such as max pooling layers for [CNN](cnn.md)s is simply removing dimensions regardless of whether they retain properties or not.
 
 
