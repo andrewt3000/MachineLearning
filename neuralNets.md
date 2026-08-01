@@ -2,33 +2,31 @@
 **Neural networks** are machine learning models and universal approximators [3](#references). This document explains their architecture and how to [train a neural network](#training-a-neural-network).    
 
 ### Terminology
-Neural networks are a broad term that also includes other types of neural networks such as [CNNs](cnn.md) or [transformers](transformer.md). The architecture we are discussing here goes by different names:
+Neural networks are a broad term that also includes other types of neural networks such as [CNNs](cnn.md) or [transformers](transformer.md). The architecture we are discussing is a vanilla neural network, a directed acyclical graph (DAG), that that also goes by different names:
 - **ANN artificial neural networks** as opposed to biological 
 - **FNN feedforward neural network** as opposed to recurrent
 - **MLP multilayer perceptron** a reference to the original design that inspired neural networks [1](#references)
-- vanilla neural networks
 
-You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. Fully connected layers are used in more complex neural networks to combine features or change dimensionality.  
+You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. Fully connected layers are used in more complex neural networks, such as [CNNs](cnn.md) or [transformers](transformer.md) to combine features or change dimensionality.  
 
 ### PyTorch
 PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  layers are compose in [Sequential()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sequential.html) containers. 
 
 
 ### Neural network architecture
-The architecture of a neural network is fixed before it is trained and has the following properties. 
-- Neural networks are composed of input layers, hidden layers and output layers.
-- Output layers are **predictions**
-- Layers are connected by weighted synapses (the lines with arrows) that multiply their input times the weight. 
-- Hidden layer consists of neurons (the circles) that sum their inputs from synapses and execute an activation function on the sum.  
-- Neural networks also typically have a single **bias** input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
-- **Parameters** are the learnable weights and biases.   
+The **architecture** of a neural network is the fixed blueprint configured before it is trained and has the following properties. 
+- Neural networks are composed of layers: input, hidden and output. Output layers are the **predictions**
+- Layers are connected by weighted connections (the lines with arrows in the diagram below) that multiply their input X times the weight W.   
+- Hidden layer consists of *neurons* (the circles in the diagram below) that sum their inputs from connections and execute an **activation function** on the sum.  
+- Every hidden layer and the final output layer usually have a **bias** terms attached to their neuron. It's similar to the constant in a linear function in that it controls the intercept. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
+- The equation for a single layer is output Y is the activation sigma of (weights W times input X  + b bias).  $$Y = \sigma(XW + b)$$
+  
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
-### Hyperparameters
-**Hyperparameters** are configuration choices set before training the model. Examples include architecture, learning rate, and regularization factor.	Hyperparameters are in contrast to the parameters that are learned namely weights and biases.  
+**Parameters** are the learnable weights and biases.   
 
-**Architecture** is the structure of a neural network i.e. number of hidden layers, and number of nodes. 
+**Hyperparameters** are configuration choices set before training the model. Examples include architecture, learning rate, and regularization factor. 
 
 **Number of hidden layers** is a hyperparameter. The higher the number of layers the more layers of abstraction the network can represent. If the network has too many layers it may suffer from the vanishing or exploding gradient problem.  
 
