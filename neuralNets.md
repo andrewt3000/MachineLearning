@@ -20,8 +20,8 @@ The architecture of a neural network is fixed before it is trained and has the f
 - Output layers are **predictions**
 - Layers are connected by weighted synapses (the lines with arrows) that multiply their input times the weight. 
 - Hidden layer consists of neurons (the circles) that sum their inputs from synapses and execute an activation function on the sum.  
-- Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
-The weights and biases are often referred to as parameters.   
+- Neural networks also typically have a single **bias** input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
+- **Parameters** are the learnable weights and biases.   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
 
