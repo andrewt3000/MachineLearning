@@ -6,7 +6,7 @@
 - [LLM](llm.md)
 - [reinforcement learning](rl.md)
 - Legacy: [cnn](cnn.md), [rnn](rnn.md)
-- In progress: - [vision transformers](cv.md)
+- In progress: - [vision transformers](cv.md) 
 
 Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
 
@@ -20,7 +20,7 @@ Machine learning problems follow a two-phase flow:
 ## Types of machine learning
 
 1. **Supervised learning** - learns from **labeled** training data.
-   - svm, knn, random forests, gradient boosting machines, [neural networks](neuralNets.md)
+   - svm, knn, random forests, [gradient boosting machines](gbm.md), [neural networks](neuralNets.md)
 2. **Unsupervised learning** - learns from unlabeled training data.
    - principal component analysis, clustering. 
 3. [**Reinforcement learning**](rl.md) - An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
