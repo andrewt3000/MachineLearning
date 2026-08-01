@@ -64,10 +64,9 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 - z.ai [GLM 5.2](https://huggingface.co/zai-org/GLM-5.2) [paper](https://arxiv.org/abs/2602.15763)  
 
 
-Toy, open source models by Andrej Karpathy [nanochat](https://github.com/karpathy/nanochat) [nanogpt](https://github.com/karpathy/nanoGPT)
-
-
 ### Tutorials / classes
 - [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Transformers & Large Language Models
 - [The Smol Training Playbook:
 The Secrets to Building World-Class LLMs](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook)
+- [nanochat](https://github.com/karpathy/nanochat) Minimal GPT training in ~300 lines of PyTorch by Andrej Karpathy 
+- [nanogpt](https://github.com/karpathy/nanoGPT) Full ChatGPT clone training pipeline by Andrej Karpathy [tutorial](https://github.com/karpathy/build-nanogpt) and [video](https://youtu.be/l8pRSuU81PU)
