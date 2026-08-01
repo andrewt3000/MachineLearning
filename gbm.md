@@ -25,6 +25,6 @@ Tabular features are heterogeneous (different units, scales, and meanings) and o
 
 #### GBDT References
 1. 2022 Grinsztajn et al. [Why do tree-based models still outperform deep learning on tabular data?](https://arxiv.org/abs/2207.08815)
-2. 2001 Friedman, the original gradient boosting paper [Greedy Function Approximation: A Gradient Boosting Machine]([https://jerryfriedman.su.domains/ftp/trebst.pdf](https://projecteuclid.org/journals/annals-of-statistics/volume-29/issue-5/Greedy-function-approximation-A-gradient-boosting-machine/10.1214/aos/1013203451.full)
+2. 2001 Friedman, the original gradient boosting paper [Greedy Function Approximation: A Gradient Boosting Machine](https://projecteuclid.org/journals/annals-of-statistics/volume-29/issue-5/Greedy-function-approximation-A-gradient-boosting-machine/10.1214/aos/1013203451.full)
 3. 2016 XGBoost paper [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754)
 4. 2017 LightGBM paper [LightGBM: A Highly Efficient Gradient Boosting Decision Tree](https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf)
