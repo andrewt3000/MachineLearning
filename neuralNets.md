@@ -24,7 +24,8 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
   - Sums all incoming weighted signals
   - Passes that sum through an **activation function** (e.g., ReLU, Sigmoid). This adds non-linearity, allowing the network to learn complex, non-linear patterns rather than simple straight lines. 
 - Every hidden and output node has a **bias** term added to its weighted sum.
-  - A bias term is similar to the constant in a linear function in that it controls the intercept. 
+  - A bias term is similar to the constant in a linear function in that it controls the intercept.
+  - Typically turn off bias term if using batch normalization.  
   - The bias is missing in diagram below  
 - The equation for a single layer is output Y is the activation sigma of (weights W times input X  + b bias).  $$Y = \sigma(XW + b)$$
   
