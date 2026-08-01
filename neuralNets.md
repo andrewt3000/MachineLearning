@@ -16,7 +16,8 @@ PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Li
 
 ### Neural network architecture
 The architecture of a neural network is fixed before it is trained and has the following properties. 
-- Neural networks are composed of input layers, hidden layers and output layers.  
+- Neural networks are composed of input layers, hidden layers and output layers.
+- Output layers are **predictions**
 - Layers are connected by weighted synapses (the lines with arrows) that multiply their input times the weight. 
 - Hidden layer consists of neurons (the circles) that sum their inputs from synapses and execute an activation function on the sum.  
 - Neural networks also typically have a single bias input node that is a constant value. It's similar to the constant in a linear function. Biases ensure that even when all input features are zero, a neuron can still output a non-zero value. (The bias is missing in diagram below)  
