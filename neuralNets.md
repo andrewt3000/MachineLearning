@@ -8,7 +8,7 @@ Neural networks are a broad term that also includes other types of neural networ
 - **MLP multilayer perceptron** a reference to the original design that inspired neural networks [1](#references)
 - vanilla neural networks
 
-You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. These fully connected layers are used in other neural networks to combine features or change dimensionality.  
+You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. Fully connected layers are used in more complex neural networks to combine features or change dimensionality.  
 
 ### PyTorch
 PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  layers are compose in [Sequential()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sequential.html) containers. 
