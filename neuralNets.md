@@ -333,7 +333,7 @@ A model is **calibrated** if its predicted probabilities match observed frequenc
 Modern neural networks are often overconfident even when accurate. Post-hoc fixes include **temperature scaling** (dividing logits by a constant T fitted on the validation set), **Platt scaling**, and **isotonic regression**.
 
 scikit-learn [calibration](https://scikit-learn.org/stable/modules/calibration.html), [Brier score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.brier_score_loss.html)  
-2017 Guo et al. calibration paper [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599)
+
 
 ### References
 1.  1958 Rosenblatt perceptron paper [THE PERCEPTRON: A PROBABILISTIC MODEL FOR
@@ -345,6 +345,7 @@ IN THE BRAIN](https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf)
 Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
 5. 2014 Srivastava Dropout paper [Dropout: A Simple Way to Prevent Neural Networks from
 Overfitting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
+6. 2017 Guo et al. calibration paper [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599)
 ### Tutorials, demos
 [Neural Networks demystified video](https://www.youtube.com/watch?v=bxe2T-V8XRs) - videos explaining neural networks. Includes [notes](https://github.com/stephencwelch/Neural-Networks-Demystified).    
 
