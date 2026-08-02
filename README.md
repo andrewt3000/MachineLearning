@@ -50,3 +50,6 @@ Models that predict labels from inputs (as in the problems above) are called **d
 
 - **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or **triplet loss** (anchor, positive, negative). 
    - Example: face verification, signature verification
+
+## Classes
+- [Stanford CS229 Machine Learning](https://www.youtube.com/watch?v=DATnpGoGhM8&list=PLaqpC4kq8Gpw)
