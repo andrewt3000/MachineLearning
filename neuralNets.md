@@ -28,6 +28,7 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
   - Typically turn off bias term if using batch normalization.  
   - The bias is missing in diagram below  
 - The equation for a single layer is output Y is the activation sigma of (weights W times input X  + b bias).  $$Y = \sigma(XW + b)$$
+- The vector X is multiplied by the vector W into a sum by the [dot product](la.md#dot-product).  
   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
