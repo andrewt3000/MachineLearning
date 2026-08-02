@@ -287,11 +287,14 @@ for epoch in range(num_epochs):
 
 
 ```
+### Bias and Variance
+**Bias** is the error introduced by approximating a complex real-world problem with a model that is too simple.
 
+**Variance** is the error caused by a model's sensitivity to small fluctuations or noise in the training set.
 
-#### Regularization
-Underfitting - output doesn't fit the training data well.  
-Overfitting - output fits training data well, but doesn't work well on validation or test data.  
+**Underfitting** - output doesn't fit the training data well. (high bias).  
+
+**Overfitting** - output fits training data well, but doesn't work well on validation or test data. (high variance)   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/over_under.png"/>
 
