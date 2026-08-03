@@ -58,11 +58,11 @@ A **System prompt** is instructions given to an LLM before the user input. It se
 
 ### Open Weight LLMs
 - [Latest models on hugging face](https://huggingface.co/models)
-- Meta [llama](https://www.llama.com/)
-- [deepseek v3](https://github.com/deepseek-ai/deepseek-v3)
 - Alibaba [Qwen](https://qwen.ai/home)
+- [Kimi K3](https://www.kimi.com/)
+- [deepseek v3](https://github.com/deepseek-ai/deepseek-v3)
 - z.ai [GLM 5.2](https://huggingface.co/zai-org/GLM-5.2) [paper](https://arxiv.org/abs/2602.15763)  
-
+- Meta [llama](https://www.llama.com/)
 
 ### Tutorials / classes
 - [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Transformers & Large Language Models
