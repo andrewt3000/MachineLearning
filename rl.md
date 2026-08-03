@@ -46,6 +46,9 @@ The **Bellman equation** expresses the core recursive idea of RL: the value of w
 - Future rewards are typically discounted by a factor 𝛾 (gamma, between 0 and 1), meaning a reward now is worth slightly more than the same reward later. This keeps values finite and makes the agent prefer faster paths to reward.
 - This recursive structure is what makes learning practical: the agent doesn't need to see the end of the game to update its estimates — it can bootstrap, improving its value estimate for the current state using its estimate of the next one. Q-learning and DQN are built directly on this idea.
 
+### PPO
+**PPO (Proximal Policy Optimization)** is a policy gradient algorithm that improves training stability by clipping each update so the new policy can't move too far from the old one.
+
 ### References
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
 
