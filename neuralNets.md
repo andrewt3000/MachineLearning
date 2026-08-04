@@ -19,7 +19,7 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
   - **Input layers** receive the raw features.
   - **Hidden layers** are the processing engine. A network can have one hidden layer (shallow) or dozens (deep).
   - **Output layers** generate **predictions**.
-- The lines connecting nodes between layers represent **weights**.  Each connection multiplies the incoming value $X$ by its weight $W$
+- The lines connecting nodes between layers represent **weights**. Each connection multiplies the incoming value $x$ by its weight $w$.
 - Each node (circle) in a hidden layer performs two sequential steps:
   - Sums all incoming weighted signals
   - Passes that sum through an **activation function** (e.g., ReLU, Sigmoid). This adds non-linearity, allowing the network to learn complex, non-linear patterns rather than simple straight lines. 
@@ -28,7 +28,7 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
   - Typically turn off bias term if using batch normalization.  
   - The bias is missing in diagram below  
 - The equation for a single layer is output Y is the activation sigma of (weights W times input X  + b bias).  $$Y = \sigma(XW + b)$$
-- The vector X is multiplied by the vector W into a sum by the [dot product](la.md#dot-product).  
+- The input vector X is multiplied by the weight vector W into a sum by the [dot product](la.md#dot-product).  
   
 
 <img src="https://github.com/andrewt3000/MachineLearning/blob/master/img/nn.png" height='250px' width='250px'/>  
@@ -44,7 +44,7 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
 **Parameter count** is the total number of learnable weights and biases in a network — every number that gets updated by gradient descent.
 
 ### Activation Functions
-**Activation function** - the "neuron" in the neural network executes an activation function on the sum of the weighted inputs. In the neuron metaphor you can assume as the value approaches 1 the neuron is "firing". 
+**Activation function** - Each node executes an activation function on the sum of its weighted inputs. The activation function is what makes a neural network non-linear: without it, stacked layers collapse into a single linear transformation, and the universal approximation theorem [3](#references) requires a non-linear activation. Below are typical activation functions.
 **PyTorch** [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 #### ReLU
