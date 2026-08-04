@@ -44,7 +44,7 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
 **Parameter count** is the total number of learnable weights and biases in a network — every number that gets updated by gradient descent.
 
 ### Activation Functions
-**Activation function** - Each node executes an activation function on the sum of its weighted inputs. The activation function is what makes a neural network non-linear: without it, stacked layers collapse into a single linear transformation, and the universal approximation theorem [3](#references) requires a non-linear activation. Below are typical activation functions.
+**Activation function** - Each node executes an activation function on the sum of its weighted inputs. The activation function is what makes a neural network non-linear: without it, stacked layers collapse into a single linear transformation, and the universal approximation theorem [3](#references) requires a non-linear activation. Below are typical activation functions.  
 **PyTorch** [activations](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity)  
 
 #### ReLU
