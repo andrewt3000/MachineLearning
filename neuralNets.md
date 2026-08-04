@@ -22,7 +22,7 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
 - The lines connecting nodes between layers represent **weights**. Each connection multiplies the incoming value $x$ by its weight $w$.
 - Each node (circle) in a hidden layer performs two sequential steps:
   - Sums all incoming weighted signals
-  - Passes that sum through an **[activation function](activation-functions)** (e.g., ReLU, Sigmoid). This adds non-linearity, allowing the network to learn complex, non-linear patterns rather than simple straight lines. 
+  - Passes that sum through an **[activation function](#activation-functions)** (e.g., ReLU, Sigmoid). This adds non-linearity, allowing the network to learn complex, non-linear patterns rather than simple straight lines. 
 - Every hidden and output node has a **bias** term added to its weighted sum.
   - A bias term is similar to the constant in a linear function in that it controls the intercept.
   - Typically turn off bias term if using batch normalization.  
