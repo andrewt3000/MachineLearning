@@ -32,7 +32,7 @@ Machine learning problems follow a two-phase flow:
 2. **Classification** - predicting a discrete value. 
    - Classification is further categorized as binary or multi-class classification.
    - Binary Example: predicting pass or fail, benign or malignant, spam or not spam, hot dog or not hot dog :-)
-   - Multi-Class Example: Handwritten Digit Recognition (0 through 9) [mnist](https://huggingface.co/datasets/ylecun/mnist), 1,000 classes [ImageNet-1k](https://huggingface.co/datasets/ILSVRC/imagenet-1k)  
+   - Multi-Class Example: Handwritten Digit Recognition (0 through 9) [mnist](https://huggingface.co/datasets/ylecun/mnist), Image classification with 1,000 classes [ImageNet-1k](https://huggingface.co/datasets/ILSVRC/imagenet-1k)  
 3. **Ranking** - predicting the relative order or preference of a set of items contextually.
    - Example: search engine results, or movie recommendations 
 
