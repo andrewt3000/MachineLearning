@@ -6,7 +6,7 @@ Machine learning is applied statistics: a model estimates patterns from a sample
 - **Mean** (μ) - the average. Sensitive to outliers.
 - **Median** - the middle value. Robust to outliers, which is why median error metrics are preferred for heavy-tailed data.
 - **Variance** (σ²) - the average squared distance from the mean, measuring spread.
-- **Standard deviation** (σ) - the square root of variance, in the same units as the data. [Standardization](README.md#features) (z-score normalization) rescales a feature to mean 0 and standard deviation 1.
+- **Standard deviation** (σ) - the square root of variance, in the same units as the data. [Standardization](data.md) (z-score normalization) rescales a feature to mean 0 and standard deviation 1.
 - **Percentiles / quantiles** - the value below which a given fraction of the data falls. Used in outlier clipping (e.g. winsorizing at the 1st/99th percentile) and in reporting latency (p95, p99).
 - **Correlation** - measures linear association between two variables, from −1 to +1. Highly correlated (collinear) features carry redundant information, which is why square footage plus width, length, and volume make poor feature sets together. Correlation is not causation, and correlation of 0 does not imply independence (the relationship may be nonlinear).
 
