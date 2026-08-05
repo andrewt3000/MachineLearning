@@ -9,9 +9,6 @@ Neural networks are a broad term that also includes other types of neural networ
 
 You can also refer to a single layer or block of **fully connected layers** (also called **dense layers** or **linear layers**) in other types of neural networks. Fully connected layers are used in more complex neural networks, such as [CNNs](cnn.md) or [transformers](transformer.md) to combine features or change dimensionality.  
 
-### PyTorch
-PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  layers are compose in [Sequential()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sequential.html) containers. 
-
 
 ### Neural network architecture
 A neural network’s **architecture** is its structural blueprint — the fixed layout of layers, nodes, and connections defined before training begins.
@@ -42,6 +39,9 @@ A neural network’s **architecture** is its structural blueprint — the fixed 
 **Capacity** is the model's storage space for patterns and is driven by parameter width (number of hidden units) and depth (number of layers). Generally, a higher number of parameters equates to a higher capacity.   
 
 **Parameter count** is the total number of learnable weights and biases in a network — every number that gets updated by gradient descent.
+
+### PyTorch
+PyTorch [nn.Linear()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Linear.html)  layers are compose in [Sequential()](https://docs.pytorch.org/docs/stable/generated/torch.nn.Sequential.html) containers. 
 
 ### Activation Functions
 **Activation function** - Each node executes an activation function on the sum of its weighted inputs. The activation function is what makes a neural network non-linear: without it, stacked layers collapse into a single linear transformation, and the universal approximation theorem [3](#references) requires a non-linear activation. Below are typical activation functions.  
