@@ -46,8 +46,18 @@ The **Bellman equation** expresses the core recursive idea of RL: the value of w
 - Future rewards are typically discounted by a factor 𝛾 (gamma, between 0 and 1), meaning a reward now is worth slightly more than the same reward later. This keeps values finite and makes the agent prefer faster paths to reward.
 - This recursive structure is what makes learning practical: the agent doesn't need to see the end of the game to update its estimates — it can bootstrap, improving its value estimate for the current state using its estimate of the next one. Q-learning and DQN are built directly on this idea.
 
+### Categories of RL agents
+RL algorithms differ in *what* the agent learns:
+- **Value-based**: The agent learns a value function (like a Q-table or DQN) and derives its policy implicitly by picking the highest-value action. Examples: Q-learning, DQN.
+- **Policy-based**: The agent learns the policy directly, optimizing the parameters of $\pi(A|S)$ to maximize expected reward without ever estimating state values. Examples: REINFORCE.
+- **Actor-critic**: A hybrid — the **actor** learns the policy while the **critic** learns a value function that evaluates the actor's actions, reducing the variance of policy updates. Examples: A2C, PPO.
+
+A separate axis is whether the agent models the environment:
+- **Model-free**: The agent learns purely from experience, with no model of how the environment transitions between states. Most deep RL (DQN, PPO) is model-free.
+- **Model-based**: The agent learns or is given a model of the environment's dynamics and can plan by simulating outcomes before acting. Example: AlphaZero, which uses tree search over a learned model.
+
 ### PPO
-**PPO (Proximal Policy Optimization)** is a policy gradient algorithm that improves training stability by clipping each update so the new policy can't move too far from the old one.
+**PPO (Proximal Policy Optimization)** is an actor-critic policy gradient algorithm that improves training stability by clipping each update so the new policy can't move too far from the old one.
 
 ### References
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
