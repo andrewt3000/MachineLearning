@@ -1,7 +1,7 @@
 # Linear Algebra for deep learning
 
 - **scalar** - is a single number, rank-0 tensor (magnitude only)
-- **vector** - an ordered list of numbers, rank-1 tensor (length and magnitude)
+- **vector** - an ordered list of numbers, rank-1 tensor (magnitude and direction)
 - **matrix** - table of values with rows and columns, rank-2 tensor
 
 "**Rank**" in deep learning usually means the number of tensor axes (ndim); "**rank**" in linear algebra means the number of linearly independent rows/columns. LoRA's "low-rank" uses the linear algebra sense.  
