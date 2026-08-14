@@ -57,7 +57,7 @@ A separate axis is whether the agent models the environment:
 - **Model-based**: The agent learns or is given a model of the environment's dynamics and can plan by simulating outcomes before acting. Example: AlphaZero, which uses tree search over a learned model.
 
 ### PPO
-**PPO (Proximal Policy Optimization)** is an actor-critic policy gradient algorithm that improves training stability by clipping each update so the new policy can't move too far from the old one. PPO is the workhorse of **RLHF** (Reinforcement Learning from Human Feedback): in LLM fine-tuning, the language model is the actor, and responses are scored by a reward model — a network trained on human preference data, where humans compare two model responses and pick the better one (comparisons are used because humans are inconsistent at absolute scoring but reliable at relative judgments).
+**PPO (Proximal Policy Optimization)** is an actor-critic policy gradient algorithm that improves training stability by clipping each update so the new policy can't move too far from the old one. PPO is the workhorse of **RLHF** (Reinforcement Learning from Human Feedback): in [LLM](llm.md) fine-tuning, the language model is the actor, and responses are scored by a reward model — a network trained on human preference data, where humans compare two model responses and pick the better one (comparisons are used because humans are inconsistent at absolute scoring but reliable at relative judgments).
 
 ### References
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
