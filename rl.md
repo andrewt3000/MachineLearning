@@ -69,4 +69,6 @@ A separate axis is whether the agent models the environment:
 
 ### Class
 [DeepMind RL class](https://www.youtube.com/watch?v=TCCjZe0y4Qc&list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm&index=1&)   
-[Stanford 230 lecture](https://www.youtube.com/watch?v=4E27qlfYw0A&list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X&index=5)
+[Stanford 230 lecture](https://www.youtube.com/watch?v=4E27qlfYw0A&list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X&index=5)  
+[Andrej Karpathy on RL](https://www.youtube.com/watch?v=36OBX5lQjGc)  
+
