@@ -1,5 +1,5 @@
 # Machine Learning Overview
-- Basics: [linear algebra](la.md)
+- Basics: [linear algebra](la.md) [calculus](calculus.md)
 - [data and features](data.md)
 - [training neural networks](neuralNets.md)
 - [transformers](transformer.md)
