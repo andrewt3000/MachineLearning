@@ -47,10 +47,16 @@ An **embedding** is an encoding where numerical closeness indicates similarity.
 
 **Min-max scaling** squeezes values between a range typically 0 to 1. Min-max scaling is best for uniform distributions such as pixel values in image processing. Warning: If you have an outlier (like a single value of 10,000 when everything else is under 10), Min-Max will crush all your normal data into a tiny, indistinguishable band near 0. Min-max scaling is implemented in scikit learn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html).   
 
-**Standardization** is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by scikit-learn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
+<span id='standardization'>**Standardization**</span> is appropriate for Gaussian distributions, and centers the data on a mean of zero, and a standard deviation of 1. Standardization is implemented by scikit-learn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html).    
 
 **Dimensionality Reduction** is transforming data from high to low dimension but retaining the properties. Examples include PCA, singular value decomposition, variational auto-encoders, and t-SNE (for visualizations).  
 
 **Downsampling** such as max pooling layers for [CNN](cnn.md)s is simply removing dimensions regardless of whether they retain properties or not.
+
+
+
+
+
+
 
 
