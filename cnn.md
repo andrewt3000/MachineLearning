@@ -102,6 +102,7 @@ Breakthrough: "For each layer, the feature-maps of all preceding layers are used
 #### Additional Resources
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)   
+[2016 videos](https://www.youtube.com/watch?v=NfnWJUyUJYU&list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)  
 [2017 videos](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)  
 [Spring 2025 videos](https://www.youtube.com/watch?v=2fq9wYslV0A&list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16)  
 
