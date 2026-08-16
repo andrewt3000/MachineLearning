@@ -35,9 +35,27 @@ Examples: [Claude System prompts](https://platform.claude.com/docs/en/release-no
 
 **Reasoning models** train CoT behavior directly with RL rather than eliciting it via prompting. OpenAI's o1 (2024) was the first public example; DeepSeek-R1 (2025) was the first open-weight model with a published method (RL with verifiable rewards, RLVR).    
 
-**GRPO** (Group Relative Policy Optimization), introduced in DeepSeekMath is an RL algorithm, a [PPO](rl.md) variant, that is currently widely used as an optimizer for reasoning training.  
+**GRPO** (Group Relative Policy Optimization), introduced in DeepSeekMath is an RL algorithm, a [PPO](rl.md#ppo) variant, that is currently widely used as an optimizer for reasoning training.  
 
 **RAG** (retrieval augmented generation) supplies an LLM with text retrieved from an external sources. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.[2](#references)  
+
+### Agents
+An **agent** is an LLM that runs in a loop: it decides on an action, calls a **tool**, observes the result, and repeats until the task is done. Prompting and RAG give the model information; agents give it the ability to *act* — run code, search the web, read and write files, query databases, or call APIs. The LLM is the reasoning engine; a surrounding program (the **agent harness**) executes the tool calls and feeds results back as new context.
+
+**Tool use** (also called **function calling**) is the mechanism that makes agents possible. The tools are described to the model in the prompt (name, purpose, parameters — typically as a JSON schema). When the model decides a tool is needed, it emits a structured call rather than prose text; the harness executes it and returns the output as the next message. Tool use is trained into the model during SFT and preference optimization, not just prompted.  
+
+The basic loop was formalized in **ReAct** (Reason + Act) [10](#references): the model alternates between a reasoning step ("I need to look up the current price") and an action step (call `get_price`), with the observation appended before the next reasoning step. Modern agents fold this into a single loop of chain of thought and tool calls.  
+
+**MCP** (Model Context Protocol) is an open standard for connecting LLMs to tools and data sources, so a tool written once (e.g. a database connector) can be used by any MCP-compatible model or harness. It plays the role for agents that USB plays for peripherals.  
+
+**Agentic coding** is currently the most successful application: tools such as Claude Code and Codex CLI give the model a terminal, a file system, and a test runner, and let it iterate on code autonomously — writing, running, reading errors, and fixing — over many steps.  
+
+Distinctive challenges of agents relative to single-turn LLM use:
+- **Compounding errors** - each step is a chance to go wrong, so a 95%-reliable step yields ~36% success over 20 steps. Reliability, not raw capability, is often the bottleneck.
+- **Context management** - long tasks accumulate tool outputs that exhaust the context window; agents summarize, compress, or offload state to files and memory.
+- **Prompt injection** - text a tool returns (a web page, an email) can contain instructions the model may mistakenly follow. This is the primary security concern for agents with access to real systems.
+- **Evaluation** - benchmarks measure end-to-end task completion (e.g. SWE-bench for resolving real GitHub issues) rather than next-token accuracy.
+- **Multi-agent systems** - an orchestrator delegates subtasks to specialized subagents (a researcher, a coder, a reviewer), each with its own context window.
 
 ## References
 1. 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
@@ -49,6 +67,8 @@ Examples: [Claude System prompts](https://platform.claude.com/docs/en/release-no
 7. 2022 Flash attention paper [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)
 8. 2024 DeepSeekMath paper [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300)
 9. 2025 RLVR paper [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/abs/2506.14245)
+10. 2022 ReAct paper [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
+11. 2023 Toolformer paper [Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)
 
 ### LLMS
 - Anthropic [Claude](https://claude.ai/)
