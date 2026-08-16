@@ -27,6 +27,7 @@ LLMs are trained in stages.
 
 ### Prompting
 A **System prompt** is instructions given to an LLM before the user input. It sets the model's context, instructions and constraints.  
+Examples: [Claude System prompts](https://platform.claude.com/docs/en/release-notes/system-prompts)
 
 **Adversarial prompting** is the practice of intentionally crafting inputs to trick, manipulate, or test Large Language Models (LLMs) into behaving outside their intended parameters.   
 
