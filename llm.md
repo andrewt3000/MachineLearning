@@ -35,9 +35,9 @@ Examples: [Claude System prompts](https://platform.claude.com/docs/en/release-no
 
 **Reasoning models** train CoT behavior directly with RL rather than eliciting it via prompting. OpenAI's o1 (2024) was the first public example; DeepSeek-R1 (2025) was the first open-weight model with a published method (RL with verifiable rewards, RLVR).    
 
-**GRPO** (Group Relative Policy Optimization), introduced in DeepSeekMath is an RL algorithm, a PPO variant, that is currently widely used as an optimizer for reasoning training.  
+**GRPO** (Group Relative Policy Optimization), introduced in DeepSeekMath is an RL algorithm, a [PPO](rl.md) variant, that is currently widely used as an optimizer for reasoning training.  
 
-**RAG** (retrieval augmented generation) supplies an LLM with text retrieved from an external sources. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.[2](#references]  
+**RAG** (retrieval augmented generation) supplies an LLM with text retrieved from an external sources. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.[2](#references)  
 
 ## References
 1. 2020 GPT3 autoregressive language model [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
