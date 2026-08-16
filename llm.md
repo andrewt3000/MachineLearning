@@ -88,6 +88,7 @@ Distinctive challenges of agents relative to single-turn LLM use:
 ### Tutorials / classes
 - [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Transformers & Large Language Models
 - [Stanford CS336 Language Modeling from Scratch I 2025](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
+- [by hand ai](https://www.byhand.ai/)
 - [RAG deeplearning.ai](https://www.deeplearning.ai/courses/retrieval-augmented-generation)
 - [The Smol Training Playbook:
 The Secrets to Building World-Class LLMs](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook)
