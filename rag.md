@@ -1,5 +1,5 @@
 # RAG: Retrieval Augmented Generation
-**RAG (retrieval augmented generation)** supplies an LLM with text retrieved from an external source [1](#references). RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers. Rather than retraining the model to know something, RAG puts the relevant text in the prompt and lets the model read it.
+**RAG (retrieval augmented generation)** supplies an [LLM](llm.md) with text retrieved from an external source [1](#references). RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers. Rather than retraining the model to know something, RAG puts the relevant text in the prompt and lets the model read it.
 
 RAG has three stages:
 1. **Retrieve** - search a knowledge base for the chunks most relevant to the user's query.
