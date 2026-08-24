@@ -2,8 +2,9 @@
 - Basics: [stats](stats.md), [linear algebra](la.md), [calculus](calculus.md)
 - [data and features](data.md)
 - [training neural networks](neuralNets.md)
-- [transformers](transformer.md)
+- [transformers](transformer.md),
 - [LLM](llm.md)
+- [RAG](rag.md)
 - [reinforcement learning](rl.md)
 - Legacy: [cnn](cnn.md), [rnn](rnn.md)
 - In progress: - [vision transformers](cv.md) 
