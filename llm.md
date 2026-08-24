@@ -37,7 +37,7 @@ Examples: [Claude System prompts](https://platform.claude.com/docs/en/release-no
 
 **GRPO** (Group Relative Policy Optimization), introduced in DeepSeekMath is an RL algorithm, a [PPO](rl.md#ppo) variant, that is currently widely used as an optimizer for reasoning training.  
 
-**RAG** (retrieval augmented generation) supplies an LLM with text retrieved from an external source. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.[2](#references)  
+[**RAG** (retrieval augmented generation)](rag.md) supplies an LLM with text retrieved from an external source. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.[2](#references)  
 
 ### Agents
 An **agent** is an LLM that runs in a loop: it decides on an action, calls a **tool**, observes the result, and repeats until the task is done. Prompting and RAG give the model information; agents give it the ability to *act* — run code, search the web, read and write files, query databases, or call APIs. The LLM is the reasoning engine; a surrounding program (the **agent harness**) executes the tool calls and feeds results back as new context.
