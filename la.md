@@ -15,7 +15,7 @@ a · b = a₁b₁ + a₂b₂ + ... + aₙbₙ
 
 The identity a · b = |a| |b| cos(θ) connects the arithmetic to the angle θ between the vectors.
 
-In ML, dot product is used in attention, linear layer matrix multiplication, embedding similarity search in RAG.
+In ML, dot product is used in attention, linear layer matrix multiplication, embedding similarity search in [RAG](rag.md).
 
 ### Cosine Similarity
 **cosine similarity** is the dot product of the normalized vectors. Dot product measures alignment and magnitude; cosine similarity measures alignment only
