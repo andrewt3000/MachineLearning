@@ -13,7 +13,7 @@ Indexing pipeline: documents → chunks → embeddings → vector database.
 
 **Chunks** are the units of retrieval. Documents are split into passages because embedding whole documents blurs their meaning into one vector, and because retrieved text must fit in the prompt. Chunking strategies range from fixed-size token windows (often with overlap so sentences aren't cut mid-thought) to structure-aware splitting on paragraphs, sections, or markdown headers.
 
-**Embeddings** are vectors that represent each chunk's meaning, produced by an [embedding model](transformer.md) (typically an encoder trained so that semantically similar text maps to nearby vectors). Each chunk's embedding is stored in a **vector database** (e.g. FAISS, Chroma, pgvector, Pinecone). At query time the question is embedded with the same model, and the database returns the chunks whose vectors are closest — nearest neighbors by [cosine similarity](la.md#cosine-similarity) or dot product.
+**Embeddings** are vectors that represent each chunk's meaning, produced by an [embedding model](transformer.md) (typically an encoder trained so that semantically similar text maps to nearby vectors). Each chunk's embedding is stored in a **vector database** (e.g. FAISS, Chroma, pgvector, Pinecone). At query time the question is embedded with the same model, and the database returns the chunks whose vectors are closest — nearest neighbors by [cosine similarity](la.md#cosine-similarity) or [dot product](la.md#dot-product).
 
 #### Hyperparameters
 - **Chunk size** (in tokens) - small chunks (~100-300 tokens) give precise matches but lose surrounding context; large chunks (~500-1000) preserve context but dilute the embedding and spend more of the prompt. Chunk **overlap** is a related setting.
