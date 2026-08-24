@@ -41,6 +41,27 @@ RAG quality is measured at two levels: did the retriever find the right chunks (
 
 <img width="2628" height="1476" alt="unnamed" src="https://github.com/user-attachments/assets/ed75110f-d550-416a-b594-0f269f8cddb8" />
 
+### Vector stores
+A **vector store** (vector database) stores chunk embeddings and answers nearest-neighbor queries. Under the hood they use **approximate nearest neighbor (ANN)** indexes such as HNSW — exact search over millions of vectors is too slow, so they trade a small amount of recall for large speedups.
+
+#### Dedicated vector databases
+Purpose-built for vector search:
+- **Pinecone** - fully managed and serverless (zero-ops); the default choice for teams that don't want to run infrastructure.
+- **Milvus** - open source, built for billion-scale enterprise deployments; the most operationally demanding. Zilliz is the managed version.
+- **Weaviate** - open source, known for strong hybrid search (vector + BM25 + metadata filters) out of the box.
+- **Qdrant** - open source, written in Rust, known for speed and filtered search.
+- **Chroma** - open source, developer-friendly; the standard choice for prototyping and small projects.
+
+#### General-purpose databases with vector search
+Existing databases that added vector indexes, so embeddings can live next to the rest of your data:
+- **MongoDB** (Atlas Vector Search) - vector queries integrated with document data.
+- **pgvector** - a PostgreSQL extension; the default when your data is already in Postgres.
+- **Elasticsearch / OpenSearch** - vector search alongside mature keyword (BM25) search, making hybrid natural.
+- **Redis** - in-memory vector search for low-latency use cases.
+- **FAISS** - not a database but a similarity-search library; an index in a file, useful for local experiments and research.
+
+The practical tradeoff: a dedicated store is optimized purely for vector workloads, while a general-purpose database avoids running a second system and keeps embeddings joined to the data they describe. For most applications at moderate scale, using the database you already have is the right call; dedicated stores earn their complexity at large scale or demanding latency requirements.
+
 ## Class
 [Deeplearning.ai](https://www.deeplearning.ai/courses/retrieval-augmented-generation)
 
