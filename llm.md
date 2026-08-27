@@ -40,7 +40,7 @@ Examples: [Claude System prompts](https://platform.claude.com/docs/en/release-no
 [**RAG** (retrieval augmented generation)](rag.md) supplies an LLM with text retrieved from an external source. RAG addresses limitations such as knowledge cutoff date, proprietary or private data absent from pretraining, and hallucination on facts the model half-remembers.[2](#references)  
 
 ### Agents
-An **agent** is an LLM that runs in a loop: it decides on an action, calls a **tool**, observes the result, and repeats until the task is done. Prompting and RAG give the model information; agents give it the ability to *act* — run code, search the web, read and write files, query databases, or call APIs. The LLM is the reasoning engine; a surrounding program (the **agent harness**) executes the tool calls and feeds results back as new context.
+An **agent** is an LLM that runs in a loop: it decides on an action, calls a **tool**, observes the result, and repeats until the task is done. Prompting and [RAG](rag.md) give the model information; agents give it the ability to *act* — run code, search the web, read and write files, query databases, or call APIs. The LLM is the reasoning engine; a surrounding program (the **agent harness**) executes the tool calls and feeds results back as new context.
 
 **Tool use** (also called **function calling**) is the mechanism that makes agents possible. The tools are described to the model in the prompt (name, purpose, parameters — typically as a JSON schema). When the model decides a tool is needed, it emits a structured call rather than prose text; the harness executes it and returns the output as the next message. Tool use is trained into the model during SFT and preference optimization, not just prompted.  
 
