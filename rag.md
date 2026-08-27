@@ -28,7 +28,11 @@ The **retriever** is the search component that maps a query to the most relevant
 
 **Hybrid search** runs both and merges the ranked lists (commonly with reciprocal rank fusion), getting the exact-match strength of keywords and the paraphrase strength of embeddings. Hybrid is the standard production choice.
 
-A **reranker** is an optional second stage: a model that takes the query paired with each candidate chunk and scores relevance directly. It is more accurate than embedding similarity (it reads query and chunk together rather than comparing vectors computed separately) but too slow to run over the whole knowledge base — so the retriever fetches a broad candidate set (say 50) and the reranker picks the best few.
+#### Two-stage retrieval
+Production retrievers are typically structured as two stages that trade off speed and accuracy:
+
+- Stage 1 — candidate retrieval: a fast, cheap search fetches a broad candidate set (commonly 50–100 chunks) from the full knowledge base. For vector search this is embedding similarity (typically cosine similarity), made fast at scale by approximate nearest neighbor (ANN) indexes such as HNSW, which trade a small amount of recall for large speedups over exact search. Keyword search (BM25) and hybrid search also serve as stage-1 retrieval.
+- Stage 2 — reranking: a reranker (typically a cross-encoder) takes the query paired with each candidate chunk and scores relevance directly. It is more accurate than embedding similarity — it reads query and chunk together rather than comparing vectors computed separately — but too slow to run over the whole knowledge base, so it only rescores the stage-1 candidates and passes the best few to the LLM.
 
 ### Evaluation
 RAG quality is measured at two levels: did the retriever find the right chunks (**recall@k**, precision), and did the model answer faithfully from them (**groundedness** — answers supported by retrieved text rather than hallucinated). A RAG system can fail at either stage independently, so they are diagnosed separately.
