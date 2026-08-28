@@ -46,7 +46,7 @@ An **agent** is an LLM that runs in a loop: it decides on an action, calls a **t
 
 The basic loop was formalized in **ReAct** (Reason + Act) [10](#references): the model alternates between a reasoning step ("I need to look up the current price") and an action step (call `get_price`), with the observation appended before the next reasoning step. Modern agents fold this into a single loop of chain of thought and tool calls.  
 
-**MCP** (Model Context Protocol) is an open standard, [introduced by Anthropic](https://www.anthropic.com/news/model-context-protocol), for connecting LLMs to tools and data sources, so a tool written once (e.g. a database connector) can be used by any MCP-compatible model or harness.  
+**MCP** (Model Context Protocol) is an [open standard](https://modelcontextprotocol.io/), [introduced by Anthropic](https://www.anthropic.com/news/model-context-protocol), for connecting LLMs to tools and data sources, so a tool written once (e.g. a database connector) can be used by any MCP-compatible model or harness.  
 
 **Agentic coding** is currently the most successful application: tools such as Claude Code and Codex CLI give the model a terminal, a file system, and a test runner, and let it iterate on code autonomously — writing, running, reading errors, and fixing — over many steps.  
 
