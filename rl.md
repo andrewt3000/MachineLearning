@@ -46,6 +46,14 @@ The **Bellman equation** expresses the core recursive idea of RL: the value of w
 - Future rewards are typically discounted by a factor 𝛾 (gamma, between 0 and 1), meaning a reward now is worth slightly more than the same reward later. This keeps values finite and makes the agent prefer faster paths to reward.
 - This recursive structure is what makes learning practical: the agent doesn't need to see the end of the game to update its estimates — it can bootstrap, improving its value estimate for the current state using its estimate of the next one. Q-learning and DQN are built directly on this idea.
 
+### Exploration vs exploitation
+
+The agent faces a constant dilemma: **exploit** the best action it currently knows, or **explore** other actions that might be better. Pure exploitation gets stuck on the first decent strategy found; pure exploration never cashes in on what's been learned.  
+
+- **ε-greedy** is the simplest solution: act greedily, but with probability ε (e.g. 0.1) pick a random action instead. ε is typically annealed from high to low over training explore early, exploit late.
+- Stochastic policies explore naturally by sampling from π(A∣S); an entropy bonus in the loss keeps the distribution from collapsing prematurely.
+- The **multi-armed bandit** is the minimal version of the problem — one state, many actions, which slot machine do you pull? — and the setting where the tradeoff was first studied.
+
 ### Categories of RL agents
 RL algorithms differ in *what* the agent learns:
 - **Value-based**: The agent learns a value function (like a Q-table or DQN) and derives its policy implicitly by picking the highest-value action. Examples: Q-learning, DQN.
