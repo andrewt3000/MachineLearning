@@ -1,13 +1,13 @@
-# Machine Learning Overview
+# Deep Learning
 - Basics: [stats](stats.md), [linear algebra](la.md), [calculus](calculus.md)
 - [Machine Learning basics](ml.md)
 - [data and features](data.md)
 - [training neural networks](neuralNets.md)
 - [transformers](transformer.md)
 - [LLM: large language models](llm.md), [RAG](rag.md)
+- [vision transformers](cv.md)  (Legacy: [cnn](cnn.md) )
 - [reinforcement learning](rl.md)
-- [vision transformers](cv.md) 
-- Legacy: [cnn](cnn.md), [rnn](rnn.md)
+
 
 
 ## Classes
