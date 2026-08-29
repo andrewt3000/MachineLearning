@@ -3,7 +3,7 @@
 - [Machine Learning basics](ml.md)
 - [data and features](data.md)
 - [training neural networks](neuralNets.md)
-- [transformers](transformer.md),
+- [transformers](transformer.md)
 - [LLM: large language models](llm.md), [RAG](rag.md)
 - [reinforcement learning](rl.md)
 - [vision transformers](cv.md) 
