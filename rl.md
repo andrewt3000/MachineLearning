@@ -75,8 +75,10 @@ A separate axis is whether the agent models the environment:
 
 - 2017 Open AI PPO paper [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
 
+
+
 ### Class
 [DeepMind RL class](https://www.youtube.com/watch?v=TCCjZe0y4Qc&list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm&index=1&)   
 [Stanford 230 lecture](https://www.youtube.com/watch?v=4E27qlfYw0A&list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X&index=5)  
-[Andrej Karpathy on RL](https://www.youtube.com/watch?v=36OBX5lQjGc)  
+[Andrej Karpathy on RL](https://www.youtube.com/watch?v=36OBX5lQjGc)  discussing RL and reasoning such as Google paper [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](https://arxiv.org/abs/2509.25140)
 
