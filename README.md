@@ -1,55 +1,14 @@
 # Machine Learning Overview
 - Basics: [stats](stats.md), [linear algebra](la.md), [calculus](calculus.md)
+- [Machine Learning basics](ml.md)
 - [data and features](data.md)
 - [training neural networks](neuralNets.md)
 - [transformers](transformer.md),
 - [LLM: large language models](llm.md), [RAG](rag.md)
 - [reinforcement learning](rl.md)
+- [vision transformers](cv.md) 
 - Legacy: [cnn](cnn.md), [rnn](rnn.md)
-- In progress: - [vision transformers](cv.md) 
 
-Machine Learning is a sub-field of artificial intelligence that uses data to train predictive models.  
-
-## Training and Inference
-
-Machine learning problems follow a two-phase flow:
-
-- **Training**: The model learns from data — adjusting its parameters to minimize error (supervised learning) or maximize reward (RL). This phase is computationally expensive and done offline.
-- **Inference**: The trained model is deployed and makes predictions on new, unseen inputs. Parameters are frozen — the model applies what it learned. This phase must often be fast and cheap, since it runs in production (e.g., serving predictions in real time).
-
-## Types of machine learning
-
-1. **Supervised learning** - learns from **labeled** training data.
-   - svm, knn, random forests, [gradient boosting machines](gbm.md), [neural networks](neuralNets.md)
-2. **Unsupervised learning** - learns from unlabeled training data.
-   - principal component analysis, clustering. 
-3. [**Reinforcement learning**](rl.md) - An **agent** interacts with an **environment** and learns to take **action** by maximizing a cumulative **reward**.
-   - Q-Learning, Deep Q-Networks (DQN), Proximal Policy Optimization (PPO)
-  
-## Machine learning problems
-1. **Regression** - predicting a continuous value attribute.
-   - Example: predicting house prices
-2. **Classification** - predicting a discrete value. 
-   - Classification is further categorized as binary or multi-class classification.
-   - Binary Example: predicting pass or fail, benign or malignant, spam or not spam, hot dog or not hot dog :-)
-   - Multi-Class Example: Handwritten Digit Recognition (0 through 9) [mnist](https://huggingface.co/datasets/ylecun/mnist), Image classification with 1,000 classes [ImageNet-1k](https://huggingface.co/datasets/ILSVRC/imagenet-1k)  
-3. **Ranking** - predicting the relative order or preference of a set of items contextually.
-   - Example: search engine results, or movie recommendations 
-
-Models that predict labels from inputs (as in the problems above) are called **discriminative**; models that learn the data distribution to synthesize new samples (diffusion, LLMs) are **generative**.
-
-## Additional Machine learning techniques
-- **Transfer learning** is storing knowledge gained while solving one problem and applying it to a different but related problem.
-   - **fine tuning** is additional training to a base model for a specific task.  
-   - **LoRA** (Low-Rank Adaptation) is a fine-tuning method that freezes the base model's weights and trains small low-rank matrices that are added to existing layers.
-
-- **Semi-Supervised learning** trains on a mix of mostly unlabeled with a small labeled subset data.  
-
-- **Self-supervised learning** is a form of unsupervised learning where training labels are constructed automatically from the data itself. 
-   - Autoregressive [LLM](llm.md) pretraining (next word prediction), and masked image modeling.
-
-- **Metric learning** trains a model to produce embeddings where distance reflects similarity. A **siamese network** passes two inputs through identical networks with shared weights and compares the resulting embeddings. Trained with **contrastive loss** (pull matching pairs together, push non-matching pairs apart) or **triplet loss** (anchor, positive, negative). 
-   - Example: face verification, signature verification
 
 ## Classes
 - [Stanford CS229 Machine Learning](https://www.youtube.com/watch?v=DATnpGoGhM8&list=PLaqpC4kq8Gpw)
