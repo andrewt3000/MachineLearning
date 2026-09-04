@@ -10,6 +10,9 @@ Machine learning is applied statistics: a model estimates patterns from a sample
   $$\sigma^2 = \frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2 \qquad $$
 
 - **Standard deviation** (σ) - the square root of variance, in the same units as the data. [Standardization](data.md) (z-score normalization) rescales a feature to mean 0 and standard deviation 1.
+   
+  $$\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}$$
+
 - **Percentiles / quantiles** - the value below which a given fraction of the data falls. Used in outlier clipping (e.g. winsorizing at the 1st/99th percentile) and in reporting latency (p95, p99).
 - **Correlation** - measures linear association between two variables, from −1 to +1. Highly correlated (collinear) features carry redundant information, which is why square footage plus width, length, and volume make poor feature sets together. Correlation is not causation, and correlation of 0 does not imply independence (the relationship may be nonlinear).
 
@@ -31,7 +34,13 @@ Training data is a **sample** from a larger **population** (the true data distri
 - **Law of large numbers** - estimates converge to true values as sample size grows. Small validation sets give noisy metric estimates; this is why [split fractions shrink but holdout counts stay fixed](data.md) as datasets grow.
 - **Sampling bias** - the sample doesn't represent the population (e.g. training a model only on races from one track). No amount of data cures a biased sampling process.
 - **i.i.d. assumption** - standard ML assumes examples are independent and identically distributed. Time series and race data violate independence, which is why temporal train/test splits are required to avoid lookahead [data leakage](data.md).
-- **Confidence intervals** - a range that quantifies uncertainty in an estimate. A model's "accuracy of 71%" measured on 200 examples is really 71% ± several points; report intervals when validation sets are small.
+- **Standard error (SE)** - the standard deviation of an *estimate* (as opposed to the data). It shrinks with sample size, which is why bigger validation sets give more trustworthy metrics.
+  - For a mean: $SE = \frac{\sigma}{\sqrt{n}}$ where σ is the sample standard deviation.
+  - For a proportion such as accuracy: $SE = \sqrt{\frac{p(1-p)}{n}}$
+- **Confidence intervals** - a range that quantifies uncertainty in an estimate, computed as estimate ± z · SE. For a 95% interval, z ≈ 1.96 (the "±2 standard errors" rule of thumb).
+  - A model's "accuracy of 71%" measured on 200 examples has $SE = \sqrt{\frac{0.71 \times 0.29}{200}} \approx 0.032$, so the 95% interval is roughly 71% ± 6.3%, or 65% to 77%. A rival model scoring 74% is not meaningfully better.
+  - Note the $\sqrt{n}$: halving the interval requires 4× the data.
+  - **Interpretation** - strictly, "95% confidence" describes the *procedure*, not this particular interval: if you repeated the experiment many times, 95% of the intervals constructed this way would contain the true value. It does not mean there is a 95% probability the true value lies in the interval you computed — in frequentist statistics the true value is fixed, and the interval is what's random. The intuitive "95% probability it's in here" reading is a **credible interval**, the Bayesian analogue, which requires a prior. In practice the two often nearly coincide, and the distinction rarely changes a decision — but it is the same category error as reading a p-value as "the probability the null hypothesis is true."
 
 ### Bias and variance
 The **bias-variance tradeoff** decomposes generalization error into two sources:
