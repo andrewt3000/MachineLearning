@@ -69,16 +69,15 @@ A separate axis is whether the agent models the environment:
 
 ### References
 - 2013 deep mind DQN paper: [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
-
 - 2015 Silver et al. DQN nature paper [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
  [code](https://github.com/google-deepmind/dqn)
-
 - 2017 Open AI PPO paper [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
 
 
 
 ### Class
-[DeepMind RL class](https://www.youtube.com/watch?v=TCCjZe0y4Qc&list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm&index=1&)   
-[Stanford 230 lecture](https://www.youtube.com/watch?v=4E27qlfYw0A&list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X&index=5)  
-[Andrej Karpathy on RL](https://www.youtube.com/watch?v=36OBX5lQjGc)  discussing RL and reasoning such as Google paper [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](https://arxiv.org/abs/2509.25140)
+- [Stanford CS224R Deep Reinforcement Learning - Spring 2025](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
+- [DeepMind RL class](https://www.youtube.com/watch?v=TCCjZe0y4Qc&list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm&index=1&)   
+- [Stanford 230 lecture](https://www.youtube.com/watch?v=4E27qlfYw0A&list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X&index=5)  
+- [Andrej Karpathy on RL](https://www.youtube.com/watch?v=36OBX5lQjGc)  discussing RL and reasoning such as Google paper [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](https://arxiv.org/abs/2509.25140)
 
