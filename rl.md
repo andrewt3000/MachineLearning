@@ -3,7 +3,7 @@
 - Reinforcement learning is **teaching by experience**: the agent tries actions, observes outcomes, and learns from reward signals. No one tells the agent the correct action - it must discover which actions yield the most reward through trial and error.
 - Supervised learning is **teaching by example**: the model is shown labeled examples of correct answers and learns to imitate them.
 
-RL is fundamentally about making a **sequence of decisions**, not a single prediction. Each action changes the state of the environment, which affects what actions and rewards are available later. Rewards may be **delayed** - a chess move may only pay off many moves later - so the agent must learn which earlier decisions deserve **credit** for eventual outcomes (the credit assignment problem). This sequential, delayed-feedback structure is what distinguishes RL from supervised learning, where each prediction is independent and feedback is immediate.
+RL is fundamentally about making a **sequence of decisions**, not a single prediction. Each action changes the state of the environment, which affects what actions and rewards are available later. Rewards may be **delayed** - a chess move may only pay off many moves later - so the agent must learn which earlier decisions deserve **credit** for eventual outcomes (the credit assignment problem). This sequential, delayed-feedback structure is what distinguishes RL from supervised learning, where each prediction is [independent](stats.md#independence) and feedback is immediate.
 
 ### Real-world application
 - Game Playing: Beating world champions in complex board games (Go, Chess) and real-time strategy video games (Dota 2, StarCraft II).
