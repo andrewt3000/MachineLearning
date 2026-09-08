@@ -31,6 +31,8 @@ A **probability distribution** describes how likely each value of a random varia
 
 The **central limit theorem** says the average of many independent samples is approximately Gaussian regardless of the underlying distribution. This is why averages stabilize as datasets grow, and why estimates from small samples are noisy.
 
+<img width="680" height="735" alt="distributions" src="https://github.com/user-attachments/assets/df2efc22-64c1-4892-bead-04cdb22f92e5" />
+
 
 ### Independence
 Two events are **independent** if knowing one tells you nothing about the other:
