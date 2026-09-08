@@ -6,7 +6,7 @@
 RL is fundamentally about making a **sequence of decisions**, not a single prediction. Each action changes the state of the environment, which affects what actions and rewards are available later. Rewards may be **delayed** - a chess move may only pay off many moves later - so the agent must learn which earlier decisions deserve **credit** for eventual outcomes (the credit assignment problem). This sequential, delayed-feedback structure is what distinguishes RL from supervised learning, where each prediction is [independent](stats.md#independence) and feedback is immediate.
 
 ### Real-world application
-- Game Playing: Beating world champions in complex board games (Go, Chess) and real-time strategy video games (Dota 2, StarCraft II).
+- Game Playing: Beating world champions in complex board games ([Go](https://www.youtube.com/watch?v=WXuK6gekU1Y), Chess) and real-time strategy video games (Dota 2, StarCraft II).
 - Robotics: Training robotic arms to grasp objects, or teaching quadrupedal robots to walk over uneven terrain.
 - Autonomous Driving: Optimizing trajectory planning, lane-changing behavior, and collision avoidance systems.
 - Advertising: Real-time bid optimization in ad auctions, budget pacing across campaigns, and sequential ad selection that maximizes long-term conversions instead of immediate clicks.
