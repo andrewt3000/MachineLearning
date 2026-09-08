@@ -33,7 +33,7 @@ An **example** (or **sample**) is a single instance from your dataset.
 # Features
 **Features** are the inputs to a machine learning model. Features are the measurable property being observed.  An example of a feature is pixel brightness in computer vision tasks or the square footage of a house in home pricing prediction.  
   
-**Feature selection** is the process of choosing the features. Effective features are discriminating and independent. As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
+**Feature selection** is the process of choosing the features. Effective features are discriminating and [independent](stats.md#independence). As an example, for predicting house prices you might choose the square feet and number of floors as features whereas width, length and volume are unsuitable features.  
 
 **Feature engineering** is manual, hand-crafted feature extraction. In deep learning, feature engineering is largely replaced by feature learning where the network figures out features automatically.     
 
