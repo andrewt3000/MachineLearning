@@ -14,7 +14,7 @@ Machine learning is applied statistics: a model estimates patterns from a sample
   $$\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}$$
 
 - **Percentiles / quantiles** - the value below which a given fraction of the data falls. Used in outlier clipping (e.g. winsorizing at the 1st/99th percentile) and in reporting latency (p95, p99).
-- **Correlation** - measures linear association between two variables, from −1 to +1. Highly correlated (collinear) features carry redundant information, which is why square footage plus width, length, and volume make poor feature sets together. Correlation is not causation, and correlation of 0 does not imply independence (the relationship may be nonlinear).
+- **Correlation** - measures linear association between two variables, from −1 to +1. Highly correlated (collinear) features carry redundant information, which is why square footage plus width, length, and volume make poor feature sets together. Correlation is not causation, and correlation of 0 does not imply [independence](#independence) (the relationship may be nonlinear).
 
 ### Distributions
 A **probability distribution** describes how likely each value of a random variable is. Distributions you will encounter:
@@ -28,12 +28,38 @@ A **probability distribution** describes how likely each value of a random varia
 
 The **central limit theorem** says the average of many independent samples is approximately Gaussian regardless of the underlying distribution. This is why averages stabilize as datasets grow, and why estimates from small samples are noisy.
 
+
+### Independence
+Two events are **independent** if knowing one tells you nothing about the other:
+
+$$P(A \cap B) = P(A)P(B) \qquad \text{equivalently} \qquad P(A|B) = P(A)$$
+
+The conditional form is the more intuitive one: conditioning on B doesn't change the probability of A. Successive coin flips are independent; drawing cards without replacement is not, because each draw changes what remains. Misjudging independence has a name in both directions: the **gambler's fallacy** treats independent events as if they correct themselves ("red is due"), while the **hot hand fallacy** treats them as if they streak. Assuming independence where it doesn't hold is the error that matters more in ML — see [when the assumption breaks](#when-the-assumption-breaks).  
+
+**Conditional independence** is the weaker and more useful version: A and B may be dependent overall but independent once you know C. Ice cream sales and drownings are correlated, but conditional on temperature they are roughly independent — the "common cause" pattern.
+
+#### Why it matters in ML
+- **Likelihoods factor.** If examples are independent, the probability of the whole dataset is the product of the individual probabilities — and taking logs turns that product into a *sum*. This is why the loss over a dataset is the sum (or average) of per-example losses, and why mini-batches give unbiased gradient estimates. Nearly all of ML's optimization machinery rests on this assumption.
+- **Errors accumulate slowly.** Averaging n independent estimates reduces standard error by $\sqrt{n}$ ([central limit theorem](#distributions)). If the samples are correlated, the effective sample size is smaller than n and the true uncertainty is larger than the formula suggests.
+- **Ensembles need diversity.** Averaging models only reduces variance to the extent their errors are independent. Bagging deliberately decorrelates trees via random subsampling; averaging ten identical models buys nothing.
+- **Naive Bayes** assumes features are conditionally independent given the label. This is usually false, hence "naive" — yet the classifier often works anyway, because the decision boundary can be right even when the probabilities are miscalibrated.
+
+#### Independence vs correlation
+Independence implies zero correlation, but not the reverse. Correlation only measures *linear* association: $y = x^2$ over a symmetric range has correlation ≈ 0 while y is completely determined by x. Zero correlation is a weak check; independence is a strong claim.
+
+#### When the assumption breaks
+Real data is often not independent, and the failure is usually invisible until results don't replicate:
+- **Time series** - today's value depends on yesterday's (autocorrelation). Random train/test splits leak future into past; use temporal splits.
+- **Grouped data** - multiple rows from the same entity (patients in a hospital, horses in a race, users in a session) are correlated with each other. Random splits put related rows on both sides of the split, inflating validation scores. Split by group instead.
+- **Repeated measurements** - 1,000 frames from one video are not 1,000 independent images. The effective sample size is closer to the number of videos.
+
+The consequence is nearly always the same: uncertainty is underestimated, and models look better in validation than they perform in deployment.
 ### Sampling and estimation
 Training data is a **sample** from a larger **population** (the true data distribution). Everything a model learns is an estimate from that sample.
 
 - **Law of large numbers** - estimates converge to true values as sample size grows. Small validation sets give noisy metric estimates; this is why [split fractions shrink but holdout counts stay fixed](data.md) as datasets grow.
 - **Sampling bias** - the sample doesn't represent the population (e.g. training a model only on races from one track). No amount of data cures a biased sampling process.
-- **i.i.d. assumption** - standard ML assumes examples are independent and identically distributed. Time series and race data violate independence, which is why temporal train/test splits are required to avoid lookahead [data leakage](data.md).
+- **i.i.d. assumption** - standard ML assumes examples are [independent](#independence) and identically distributed. Time series data may violate [independence](#independence), which is why temporal train/test splits are required to avoid lookahead [data leakage](data.md).
 - **Standard error (SE)** - the standard deviation of an *estimate* (as opposed to the data). It shrinks with sample size, which is why bigger validation sets give more trustworthy metrics.
   - For a mean: $SE = \frac{\sigma}{\sqrt{n}}$ where σ is the sample standard deviation.
   - For a proportion such as accuracy: $SE = \sqrt{\frac{p(1-p)}{n}}$
