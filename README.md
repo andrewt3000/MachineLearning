@@ -15,8 +15,8 @@ Notes and references on deep learning, from math prerequisites through transform
 
 ## Classes
 - [Stanford CS224R Deep Reinforcement Learning - Spring 2025](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
-- [Stanford CS229 Machine Learning](https://www.youtube.com/watch?v=DATnpGoGhM8&list=PLaqpC4kq8Gpw)
+- [Stanford CS229 Machine Learning - Spring 2026](https://www.youtube.com/watch?v=DATnpGoGhM8&list=PLaqpC4kq8Gpw)
 - [Stanford CS230 Deep Learning - Autumn 2025](https://www.youtube.com/playlist?list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X)
 - [Stanford CS231 Deep Learning for Computer Vision - Spring 2025](https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16)
 - [Stanford CS336 Language Models from scratch - Spring 2025](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
-- [Stanford CME295 Transformers and LLMs](https://www.youtube.com/watch?v=Ub3GoFaUcds&list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy)
+- [Stanford CME295 Transformers and LLMs - Autumn 2025](https://www.youtube.com/watch?v=Ub3GoFaUcds&list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy)
