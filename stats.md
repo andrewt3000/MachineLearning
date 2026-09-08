@@ -20,14 +20,22 @@ Machine learning is applied statistics: a model estimates patterns from a sample
 - **Correlation** - measures linear association between two variables, from −1 to +1. Highly correlated (collinear) features carry redundant information, which is why square footage plus width, length, and volume make poor feature sets together. Correlation is not causation, and correlation of 0 does not imply [independence](#independence) (the relationship may be nonlinear).
 
 ### Distributions
-A **probability distribution** describes how likely each value of a random variable is. Distributions you will encounter:
+A **probability distribution** describes how likely each value of a random variable is. 
 
-- **Gaussian (normal)** - the bell curve, defined by mean and standard deviation. Many natural quantities are approximately Gaussian, standardization assumes it, and weight [initialization](neuralNets.md#initialization) samples from it.
-- **Uniform** - all values in a range equally likely. Pixel intensities are closer to uniform, which is why min-max scaling suits them.
-- **Bernoulli** - a single yes/no trial with probability p. The distribution behind binary classification labels.
-- **Categorical** - one of K outcomes with probabilities summing to 1. The output of a [softmax](neuralNets.md#softmax) layer.
-- **Binomial** - the count of successes in n Bernoulli trials. Useful for reasoning about how many wins to expect from n bets or n test predictions.
-- **Power law / heavy-tailed** - rare extreme values dominate (word frequencies, wealth, race payouts). Means are unstable for heavy-tailed data; use medians and quantiles.
+Distributions are either **discrete** or **continuous**:
+- **Discrete** distributions describe outcomes you can count — a coin flip, a class label, a number of wins. Each outcome has a probability, given by a **probability mass function (PMF)**, and the probabilities sum to 1.
+- **Continuous** distributions describe outcomes on a continuous scale — a height, a time, a price. Any single exact value has probability 0, so instead a **probability density function (PDF)** gives density, and probability is the *area* under the curve over a range: P(a ≤ X ≤ b) is the [integral](calculus.md#integrals) of the PDF from a to b. The total area is 1.
+
+The practical consequence is how you sum: discrete distributions sum over outcomes, continuous ones integrate. This is the difference between a bar chart and a smooth curve.
+
+Distributions you will encounter:  
+
+- **Gaussian (normal)** - (*continuous*) the bell curve, defined by mean and standard deviation. Many natural quantities are approximately Gaussian, standardization assumes it, and weight [initialization](neuralNets.md#initialization) samples from it.
+- **Uniform** - (*continuous*) all values in a range equally likely. Pixel intensities are closer to uniform, which is why min-max scaling suits them.
+- **Bernoulli** - (*discrete*) a single yes/no trial with probability p. The distribution behind binary classification labels.
+- **Categorical** - (*discrete*) one of K outcomes with probabilities summing to 1. The output of a [softmax](neuralNets.md#softmax) layer.
+- **Binomial** - (*discrete*) the count of successes in n Bernoulli trials. Useful for reasoning about how many wins to expect from n bets or n test predictions.
+- **Power law / heavy-tailed** - (both. Zipf is *discrete*, Pareto is *continuous*) rare extreme values dominate (word frequencies, wealth, race payouts). Means are unstable for heavy-tailed data; use medians and quantiles.
 
 The **central limit theorem** says the average of many independent samples is approximately Gaussian regardless of the underlying distribution. This is why averages stabilize as datasets grow, and why estimates from small samples are noisy.
 
