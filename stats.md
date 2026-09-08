@@ -4,6 +4,9 @@ Machine learning is applied statistics: a model estimates patterns from a sample
 
 ### Descriptive statistics
 - **Mean** (μ) - the average. Sensitive to outliers.
+  
+  $$\mu = \frac{1}{N}\sum_{i=1}^{N}x_i$$
+  
 - **Median** - the middle value. Robust to outliers, which is why median error metrics are preferred for heavy-tailed data.
 - **Variance** (σ²) - the average squared distance from the mean, measuring spread.
 
