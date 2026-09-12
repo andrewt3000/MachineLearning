@@ -53,7 +53,7 @@ The state is a sufficient statistic for the future.
 - **Policy** ($\pi$): The decision-making rule the agent is learning — a mapping from states to actions. The policy defines the agent's behavior.
    - A **deterministic** policy returns a single action for each state: $A = \pi(S)$.
    - A **stochastic** policy returns a probability distribution over actions: $\pi(A|S)$.
-- In small, tractable problems the policy can be derived from a **Q-table** — a lookup table storing an estimated value for every state-action pair, where the agent simply picks the action with the highest value. In complex problems the state space is too large to enumerate, so the mapping is approximated with a neural network (the "deep" in deep RL).
+- In small, tractable problems the policy can be derived from a **Q-table** — a lookup table storing an estimated value for every state-action pair, where the agent simply picks the action with the highest value. In complex problems the state space is too large to enumerate, so the mapping is approximated with a [neural network](neuralNets.md) (the "deep" in deep RL).
 
 ### The Bellman Equation
 The **Bellman equation** expresses the core recursive idea of RL: the value of where you are now = the reward you get now + the value of where you end up next.
