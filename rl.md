@@ -97,9 +97,9 @@ The agent faces a constant dilemma: **exploit** the best action it currently kno
 
 ### Categories of RL agents
 RL algorithms differ in *what* the agent learns:
-- **Value-based**: The agent learns a value function (like a Q-table or DQN) and derives its policy implicitly by picking the highest-value action. Examples: Q-learning, DQN.
+- **Value-based**: The agent learns a value function (like a Q-table or DQN) and derives its [policy](#policy) implicitly by picking the highest-value action. Examples: Q-learning, DQN.
 - **Policy-based**: The agent learns the policy directly, optimizing the parameters of $\pi(A|S)$ to maximize expected reward without ever estimating state values. Examples: REINFORCE.
-- **Actor-critic**: A hybrid — the **actor** learns the policy while the **critic** learns a value function that evaluates the actor's actions, reducing the variance of policy updates. Examples: A2C, [PPO](#PPO).
+- **Actor-critic**: A hybrid — the **actor** learns the [policy](#policy) while the **critic** learns a value function that evaluates the actor's actions, reducing the variance of policy updates. Examples: A2C, [PPO](#PPO).
 
 A separate axis is whether the agent models the environment:
 - **Model-free**: The agent learns purely from experience, with no model of how the environment transitions between states. Most deep RL (DQN, PPO) is model-free.
