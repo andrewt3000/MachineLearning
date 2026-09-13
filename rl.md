@@ -60,6 +60,25 @@ The state is a sufficient statistic for the future.
 #### POMDP
 A **partially observable MDP (POMDP)** is the generalization where the agent can't see the full state, only an [observation](#rl-terminology) of it. Poker (hidden cards), a robot with a limited camera view, and a race where fitness and intent aren't in the data are all POMDPs. The standard workaround is to make the observation more Markov — stack recent frames, or carry history in a recurrent or attention-based network — so the agent's internal representation approximates the state it can't see.
 
+### Return and value functions
+The agent maximizes the **return** ($G$) — the discounted sum of all future rewards from a point onward, not the immediate reward. Discounting by $\gamma$ (0 to 1) keeps the sum finite and weights sooner rewards more heavily.
+
+$$G_t = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + \ldots = \sum_{k=0}^{\infty} \gamma^k r_{t+k}$$
+
+A **value function** is the [expected](stats.md#expected-value) return — an average over the many ways the future could unfold, since both the environment and the policy are stochastic. Values are always relative to a policy: a state is only as good as what the agent does from there.
+
+- **State-value** $V^\pi(s)$ — the expected return from state $s$ following policy $\pi$. "How good is it to be here?"
+- **Action-value** $Q^\pi(s, a)$ — the expected return from taking action $a$ in state $s$, then following $\pi$. "How good is this move from here?"
+
+Q is the more directly useful of the two for choosing actions: given Q, the policy is simply $\arg\max_a Q(s,a)$ — no model of the environment required. This is what a Q-table stores and what the "Q" in Q-learning and DQN refers to.
+
+
+The goal of RL is to find the **optimal policy** $\pi^*$ — the one maximizing expected return:
+
+$$\pi^* = \arg\max_\pi \mathbb{E}_\pi\left[\sum_{t=0}^{\infty} \gamma^t r_t\right]$$
+
+The expectation matters: outcomes are stochastic, so the agent maximizes the *average* return over many possible futures, not the return of any single run. The subscript $\pi$ is the subtle part — the policy determines which trajectories you experience, so changing the policy changes the distribution you're averaging over. That circularity is what makes RL harder than supervised learning, where the data distribution is fixed.
+
 ### The Bellman Equation
 The **Bellman equation** expresses the core recursive idea of RL: the value of where you are now = the reward you get now + the value of where you end up next.
 - Instead of evaluating a state by playing out an entire episode, the agent can break the problem into one step at a time: take an action, collect the immediate reward, and rely on its estimate of the next state's value to account for everything after that.
