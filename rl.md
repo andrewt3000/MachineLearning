@@ -18,7 +18,7 @@ An **agent** interacts with an **environment** and learns to take **action** by 
 - **Environment**: Everything outside the agent that it interacts with (e.g., the physical roads or the chessboard).
 - **State** ($s$): The current situation or configuration of the environment at a specific time.
 - **Action** ($a$): The choices available to the agent (e.g., turn left, move pawn to E4).
-- **Reward** ($R$): The feedback signal from the environment evaluating the agent's last action. It is a function of the state and action, $R(s, a)$ — the same action can be good in one state and bad in another. Rewards can be positive (a reward) or negative (a penalty). Examples include:
+- **Reward** ($r$): The feedback signal from the environment evaluating the agent's last action. It is a function of the state and action, $r(s, a)$ — the same action can be good in one state and bad in another. Rewards can be positive (a reward) or negative (a penalty). Examples include:
    - Games: win, maximize score
    - Finance: gains, gains minus risk
    - Drone delivery: positive delivery reward, penalty for collision.
