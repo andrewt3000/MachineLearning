@@ -7,7 +7,7 @@ RL is fundamentally about making a **sequence of decisions**, not a single predi
 
 **Imitation learning** sits between supervised and rl: the agent learns from expert demonstrations rather than reward. **Behavioral cloning** is the simplest form — plain supervised learning on (state, expert action) pairs. Its weakness is compounding error: once the agent drifts into a state the expert never visited, it has no idea what to do, and the mistake grows. **Inverse RL** instead infers the reward function the expert appears to be optimizing, then runs normal RL on it.
 
-### Real-world application
+### Real-world RL applications
 - Game Playing: Beating world champions in complex board games ([Go](https://www.youtube.com/watch?v=WXuK6gekU1Y), Chess) and real-time strategy video games (Dota 2, StarCraft II).
 - Robotics: Training robotic arms to grasp objects, or teaching quadrupedal robots to walk over uneven terrain.
 - Autonomous Driving: Optimizing trajectory planning, lane-changing behavior, and collision avoidance systems.
