@@ -41,6 +41,22 @@ The **central limit theorem** says the average of many independent samples is ap
 
 <img width="680" height="735" alt="distributions" src="https://github.com/user-attachments/assets/df2efc22-64c1-4892-bead-04cdb22f92e5" />
 
+### Expected value
+The **expected value** E[X] of a random variable is its long-run average — each outcome weighted by its probability. For a discrete variable it is a sum; for a continuous one, an [integral](calculus.md#integrals).
+
+$$E[X] = \sum_{i} x_i \, P(x_i)$$
+
+A die roll has expected value $(1+2+3+4+5+6)/6 = 3.5$ — a value the die can never actually show. Expectation is a property of the distribution, not a prediction of any single outcome.
+
+- **Expectation is linear**: $E[X + Y] = E[X] + E[Y]$, whether or not X and Y are independent. This is why the loss over a dataset can be decomposed into per-example terms, and why gradient estimates from mini-batches are unbiased.
+- **Variance in terms of expectation**: $\sigma^2 = E[(X - \mu)^2]$ — the variance formula above is just the expected squared deviation, with each outcome equally likely.
+- **The mean is the empirical expectation**: averaging your data estimates E[X] for the distribution it came from. The [law of large numbers](#sampling-and-estimation) is the statement that this estimate converges as n grows.
+
+#### Why it matters in ML
+- **Every loss is an expectation.** Training minimizes the expected loss over the data distribution, approximated by the average loss over your sample. The gap between the two is generalization error.
+- **Expected value governs decisions under uncertainty.** A bet with a 10% chance to win $100 and a 90% chance to lose $5 has $E = 0.10(100) + 0.90(-5) = +\$5.50$ — positive expected value even though it loses most of the time. Any decision policy built on model probabilities is an expected-value calculation.
+- **Expectation ignores risk.** Two strategies with identical expected value can differ enormously in variance, and a high-variance positive-EV strategy can still go broke before the average arrives. This is why risk-adjusted criteria (Sharpe ratios, Kelly sizing, variance penalties in RL reward functions) exist alongside raw expected value.
+- **E[f(X)] ≠ f(E[X])** for nonlinear f. Averaging inputs and then transforming gives a different answer than transforming and then averaging — the source of subtle bugs when averaging probabilities, log-odds, or ensemble outputs (**Jensen's inequality**).
 
 ### Independence
 Two events are **independent** if knowing one tells you nothing about the other:
