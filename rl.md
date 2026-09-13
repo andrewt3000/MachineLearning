@@ -13,7 +13,7 @@ RL is fundamentally about making a **sequence of decisions**, not a single predi
 - [Large Language Models (LLMs)](transformer.md#llms-large-language-models): Fine-tuning models using RLHF (Reinforcement Learning from Human Feedback) to ensure AI responses align with human preferences regarding safety and helpfulness.
 
 ### RL Terminology
-An **agent** interacts with an **environment** and learns to take **action** by maximizing an expected cumulative **reward**.
+An **agent** interacts with an **environment** and learns to take **action** by maximizing an [expected](stats.md#expected-value) cumulative **reward**.
 - **Agent**: The AI system, decision-maker, or learner (e.g., a self-driving car software or a chess-playing bot).
 - **Environment**: Everything outside the agent that it interacts with (e.g., the physical roads or the chessboard).
 - **State** ($s$): The current situation or configuration of the environment at a specific time.
