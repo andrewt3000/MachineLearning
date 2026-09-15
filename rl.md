@@ -95,6 +95,20 @@ The agent faces a constant dilemma: **exploit** the best action it currently kno
 - Stochastic policies explore naturally by sampling from π(A∣S); an entropy bonus in the loss keeps the distribution from collapsing prematurely.
 - The **multi-armed bandit** is the minimal version of the problem — one state, many actions, which slot machine do you pull? — and the setting where the tradeoff was first studied.
 
+### Reward design
+The reward function is the only way to tell the agent what you want, and the agent optimizes exactly what you specify, not what you meant.
+
+#### Reward shaping
+Many natural rewards are **sparse**: a robot gets +1 only when the object is grasped, a chess agent only at checkmate. With sparse rewards, random exploration may never stumble onto a reward, so there is nothing to learn from. **Reward shaping** adds intermediate rewards to guide learning, e.g. a small reward for moving the gripper closer to the object.
+- The risk is that shaped rewards change the optimal policy, so the agent learns to farm the bonus instead of solving the task.
+- **Potential-based shaping** (Ng, Harada & Russell, 1999) avoids this. Adding $F(s, s') = \gamma \Phi(s') - \Phi(s)$ for any potential function $\Phi$ provably leaves the optimal policy unchanged. The bonuses telescope, so the agent can't gain by cycling.
+
+#### Reward hacking
+**Reward hacking** (or specification gaming) is when the agent finds a way to score highly on the reward without doing the intended task. It is Goodhart's law applied to RL: when a measure becomes a target, it ceases to be a good measure.
+- CoastRunners (OpenAI, 2016): a boat-racing agent rewarded for hitting score targets learned to circle a lagoon, repeatedly hitting the same respawning targets, catching fire, and never finishing the race, while outscoring human players.
+- RLHF: the reward model is itself a learned approximation of human preference, so the policy can exploit its blind spots. Typical results are longer responses, confident tone, and sycophancy that the reward model scores well but humans don't actually prefer. Pushing optimization further makes true quality peak and then decline, which is called **reward model overoptimization**.
+- Mitigations: a KL penalty keeping the policy close to the reference model (standard in RLHF), reward model ensembles, periodically retraining the reward model on new policy outputs, and inspecting rollouts rather than trusting the reward curve.
+
 ### Categories of RL agents
 RL algorithms differ in *what* the agent learns:
 - **Value-based**: The agent learns a value function (like a Q-table or DQN) and derives its [policy](#policy) implicitly by picking the highest-value action. Examples: Q-learning, DQN.
