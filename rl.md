@@ -3,6 +3,10 @@
 - Reinforcement learning is **teaching by experience**: the agent tries actions, observes outcomes, and learns from reward signals. No one tells the agent the correct action - it must discover which actions yield the most reward through trial and error.
 - Supervised learning is **teaching by example**: the model is shown labeled examples of correct answers and learns to imitate them.
 
+Supervised learning **minimizes a loss function** against known correct answers, whereas RL **maximizes expected cumulative reward** without ever being told the correct action.
+
+In practice, deep RL code still minimizes. Optimizers such as SGD and Adam only descend, so policy gradient methods negate the objective and minimize $-\mathbb{E}[G]$. The training loop looks the same as in supervised learning: compute the loss, call `loss.backward()`, and step the optimizer. Value-based methods like DQN minimize a regression loss on the TD error instead of a negated reward. Either way, the minus sign or the regression target is an implementation detail. The goal is still to maximize return.
+
 RL is fundamentally about making a **sequence of decisions**, not a single prediction. Each action changes the state of the environment, which affects what actions and rewards are available later. Rewards may be **delayed** - a chess move may only pay off many moves later - so the agent must learn which earlier decisions deserve **credit** for eventual outcomes (the credit assignment problem). This sequential, delayed-feedback structure is what distinguishes RL from supervised learning, where each prediction is [independent](stats.md#independence) and feedback is immediate.
 
 **Imitation learning** sits between supervised and rl: the agent learns from expert demonstrations rather than reward. **Behavioral cloning** is the simplest form — plain supervised learning on (state, expert action) pairs. Its weakness is compounding error: once the agent drifts into a state the expert never visited, it has no idea what to do, and the mistake grows. **Inverse RL** instead infers the reward function the expert appears to be optimizing, then runs normal RL on it.
