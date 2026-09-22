@@ -103,3 +103,4 @@ class SimpleTransformerBlock(nn.Module):
 ### Tutorials / classes
 - [attention is all you need blog post](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 - [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Transformers & Large Language Models
+- [Transformer Explainer](https://poloclub.github.io/transformer-explainer/)
