@@ -96,11 +96,10 @@ class SimpleTransformerBlock(nn.Module):
 
 
 ## References
-- 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  
+- 2017 transformer paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762)  [blog post](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 - 2018 BERT paper, encoder only [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 - 2019 T5 paper, encoder-decoder, text to text [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
 
 ### Tutorials / classes
-- [attention is all you need blog post](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
-- [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Transformers & Large Language Models
+- [Stanford CME 295 videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) [syllabus](https://cme295.stanford.edu/syllabus/) - Autumn 2025. Transformers & Large Language Models. 9 Lectures. 
 - [Transformer Explainer](https://poloclub.github.io/transformer-explainer/)
