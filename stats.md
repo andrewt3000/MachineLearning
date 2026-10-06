@@ -58,6 +58,27 @@ A die roll has expected value $(1+2+3+4+5+6)/6 = 3.5$ — a value the die can ne
 - **Expectation ignores risk.** Two strategies with identical expected value can differ enormously in variance, and a high-variance positive-EV strategy can still go broke before the average arrives. This is why risk-adjusted criteria (Sharpe ratios, Kelly sizing, variance penalties in RL reward functions) exist alongside raw expected value.
 - **E[f(X)] ≠ f(E[X])** for nonlinear f. Averaging inputs and then transforming gives a different answer than transforming and then averaging — the source of subtle bugs when averaging probabilities, log-odds, or ensemble outputs (**Jensen's inequality**).
 
+### Joint, marginal, and conditional probability
+Three ways of asking about two variables at once:
+
+- **Joint** $P(A, B)$ — the probability both happen. "Rainy *and* cold."
+- **Marginal** $P(A)$ — the probability of A alone, ignoring B. Obtained by summing the joint over every value of B $P(A) = \sum_{B} P(A, B)$, which is called **marginalizing out** B. The name comes from writing the row and column totals in the margins of a table.
+- **Conditional** $P(A|B)$ — the probability of A *given* that B occurred. The bar separates what's uncertain (left) from what's known (right).
+
+Conditioning shrinks the world you're measuring in: instead of asking what fraction of all outcomes are A, you discard every outcome where B didn't happen and re-measure A inside what's left. Dividing by P(B) renormalizes so the remaining probabilities sum to 1 again.
+
+$$P(A|B) = \frac{P(A, B)}{P(B)}$$
+
+Draw one card: P(King) = 4/52 ≈ 7.7%. Told the card is a face card, P(King | face card) = 4/12 = 33%. The card didn't change — the information did.
+
+**Order matters.** $P(A|B) \neq P(B|A)$. P(positive test | disease) might be 99% while P(disease | positive test) is 9%; confusing the two is the "prosecutor's fallacy," and [Bayes' theorem](#bayes-theorem) is the machinery for converting one into the other.
+
+#### Why it matters in ML
+- **Supervised learning is conditional probability.** A classifier outputs $P(y|x)$ — the label given the features. That bar is the entire setup: features known, label uncertain.
+- **An LLM models $P(\text{next token} | \text{previous tokens})$** — the causal mask exists to enforce what is allowed on the right side of the bar.
+- **Generative vs discriminative models** split on this: discriminative models learn $P(y|x)$ directly, generative models learn the joint $P(x, y)$ and can sample new data from it.
+- **Likelihood is conditional too**: $P(\text{data}|\theta)$, read as a function of the parameters θ rather than the data.
+
 ### Independence
 Two events are **independent** if knowing one tells you nothing about the other:
 
