@@ -17,6 +17,11 @@ Machine learning is applied statistics: a model estimates patterns from a sample
   $$\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}$$
 
 - **Percentiles / quantiles** - the value below which a given fraction of the data falls. Used in outlier clipping (e.g. winsorizing at the 1st/99th percentile) and in reporting latency (p95, p99).
+- **Covariance** - measures how two variables vary together: positive if they rise together, negative if one rises as the other falls.
+
+  $$\text{Cov}(X, Y) = E[(X - \mu_X)(Y - \mu_Y)]$$
+
+  Variance is the special case $\text{Cov}(X, X)$. Covariance is in the product of the two variables' units, so its magnitude is hard to interpret — which is what correlation fixes. The **covariance matrix** (every pairwise covariance for a set of features) is the object PCA decomposes and that defines a multivariate Gaussian.
 - **Correlation** - measures linear association between two variables, from −1 to +1. Highly correlated (collinear) features carry redundant information, which is why square footage plus width, length, and volume make poor feature sets together. Correlation is not causation, and correlation of 0 does not imply [independence](#independence) (the relationship may be nonlinear).
 
 ### Distributions
