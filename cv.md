@@ -24,3 +24,6 @@
 ### Commercial Gen AI
 - Google and OpenAI have dropped separate diffusion models (Nano Banana and Dall E) and use native, multimodal models where the image is tokenized into the same representation space as text.  
 - [Midjourney](https://www.midjourney.com/)
+
+# Classes
+[Stanford CME 296 Diffusion & Large Vision Models: Spring 2026](https://www.youtube.com/watch?v=tr-CUpw--ck&list=PLoROMvodv4rNdy8rt2rZ4T2xM0OjADnfu)
