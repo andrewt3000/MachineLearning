@@ -1,4 +1,4 @@
-# Statistics for Machine Learning
+# Probability and Statistics for Machine Learning
 
 Machine learning is applied statistics: a model estimates patterns from a sample of data and is judged on how well those estimates generalize. This page covers the statistical concepts that show up constantly in ML — distributions, sampling, bias and variance, and hypothesis testing for comparing models.
 
