@@ -1,7 +1,7 @@
 # Deep Learning
 Notes and references on deep learning, from math prerequisites through [transformers](transformer.md) and [LLMs](llm.md). Written as a personal reference and kept current — each page is a short, opinionated summary with links to primary papers.  
 
-- Foundations: [stats](stats.md), [linear algebra](la.md), [calculus](calculus.md)
+- Foundations: [probability](stats.md), [linear algebra](la.md), [calculus](calculus.md)
 - [Machine Learning basics](ml.md)
 - [data and features](data.md)
 - [gradient boosted decision trees](gbm.md)
