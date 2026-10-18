@@ -1,6 +1,6 @@
 # Probability and Statistics for Machine Learning
 
-Statistics is the foundation of machine learning: a model estimates patterns from a sample of data and is evaluated on how well those estimates generalize. Probability supplies the language — distributions, expected value, likelihood — that those estimates are expressed in.
+Statistics is the foundation of machine learning: a model estimates patterns from a sample of data and is evaluated on how well those estimates generalize. Probability supplies the language for expressing those estimates: distributions, expected value, likelihood.
 
 ### Descriptive statistics
 These quantities describe a dataset. By convention, Greek letters denote the true **population** values — $\mu$, $\sigma$ — while Latin letters denote **sample** estimates computed from data you actually have: $\bar{x}$ (x-bar) for the mean, $s$ for the standard deviation. In ML you almost always have a sample, so what you compute is an estimate of a population value you never see. See [sampling and estimation](#sampling-and-estimation).
